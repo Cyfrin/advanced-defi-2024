@@ -7,6 +7,11 @@
 
 - TODO: Simple apps for each protocol
 
+## Install
+
+- foundry
+- python?
+
 ## Topics
 
 - [ ] Syllabus ✅
