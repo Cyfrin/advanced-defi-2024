@@ -9,79 +9,79 @@
 
 ## Topics
 
-- Syllabus ✅
-- MEV ✅
-  - Sandwich, front run, back run and examples and tx hashes 🚧
-  - flashbots 🚧
-  - Summary
-- AMM ✅
-  - AMM vs orderbook
-  - Different AMMs (constant product, constant sum, concentrated liquidity)
-  - Uni v2
-    - Math
-    - Contract overview
-    - Swap
-    - Add / remove liquidity
-    - Flash swap
-    - TWAP
-  - Uni v3
-    - Math
-    - Contract overview
-    - Swap
-    - Add / remove liquidity
-    - Flash swap
-    - TWAP
-  - Curve v1
-    - Math
-    - Swap
-    - Add / remove liquidity
-    - TWAP🤔
-    - VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
-  - Curve v2🤔
-    - Math
-  - Summary
-- Price oracle ✅
-  - Chainlink
-- Stablecoin ✅
-  - DAI
-    - Overview
-    - CDP and vaults
-    - Math (wad, ray, rad)
-    - Debt math
-    - Contract overview
-    - Add collateral
-    - Borrow
-    - Repay
-    - Liquidation, math and auction
-    - Debt auction
-    - Surplus auction
-    - DSR (math)
-    - PSsM
-    - Flash
-    - Flash mint DAI -> Sell DAI for USDC on Uniswap -> Sell USDC to PSM -> Repay flash loan
-    - What can we do with DAI and Maker protocol?🤔
-    - Leverage🤔
-    - Summary
-- Lending
-  - AAVE 🚧
-    - supply
-    - borrow
-    - repay
-    - withdraw
-    - flash loan
-    - liquidation
-    - GHO 🤔
-    - portal 🤔
-    - stake AAVE 🤔
-    - govenance 🤔
-    - apps -> flash loan, farm gov tokens, leverage, short 🤔
-  - Compound 🤔
-  - Flash loan
-  - Rebase tokens
-  - Summary
-- Liquid staking 🚧
-  - Lido
-  - Rocket pool 🤔
+- [ ] Syllabus ✅
+- [ ] MEV ✅
+  - [ ] Sandwich, front run, back run and examples and tx hashes 🚧
+  - [ ] Flashbots 🚧
+  - [ ] Summary
+- [ ] AMM ✅
+  - [ ] AMM vs orderbook
+  - [ ] Different AMMs (constant product, constant sum, concentrated liquidity)
+  - [ ] Uni v2
+    - [ ] Math
+    - [ ] Contract overview
+    - [ ] Swap
+    - [ ] Add / remove liquidity
+    - [ ] Flash swap
+    - [ ] TWAP
+  - [ ] Uni v3
+    - [ ] Math
+    - [ ] Contract overview
+    - [ ] Swap
+    - [ ] Add / remove liquidity
+    - [ ] Flash swap
+    - [ ] TWAP
+  - [ ] Curve v1
+    - [ ] Math
+    - [ ] Swap
+    - [ ] Add / remove liquidity
+    - [ ] TWAP🤔
+    - [ ] VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
+  - [ ] Curve v2🤔
+    - [ ] Math
+  - [ ] Summary
+- [ ] Price oracle ✅
+  - [ ] Chainlink
+- [ ] Stablecoin ✅
+  - [ ] DAI
+    - [ ] Overview
+    - [ ] CDP and vaults
+    - [ ] Math (wad, ray, rad)
+    - [ ] Debt math
+    - [ ] Contract overview
+    - [ ] Add collateral
+    - [ ] Borrow
+    - [ ] Repay
+    - [ ] Liquidation, math and auction
+    - [ ] Debt auction
+    - [ ] Surplus auction
+    - [ ] DSR (math)
+    - [ ] PSsM
+    - [ ] Flash
+    - [ ] Flash mint DAI -> Sell DAI for USDC on Uniswap -> Sell USDC to PSM -> Repay flash loan
+    - [ ] What can we do with DAI and Maker protocol?🤔
+    - [ ] Leverage🤔
+    - [ ] Summary
+- [ ] Lending
+  - [ ] AAVE 🚧
+    - [ ] supply
+    - [ ] borrow
+    - [ ] repay
+    - [ ] withdraw
+    - [ ] flash loan
+    - [ ] liquidation
+    - [ ] GHO 🤔
+    - [ ] portal 🤔
+    - [ ] stake AAVE 🤔
+    - [ ] govenance 🤔
+    - [ ] apps -> flash loan, farm gov tokens, leverage, short 🤔
+  - [ ] Compound 🤔
+  - [ ] Flash loan
+  - [ ] Rebase tokens
+  - [ ] Summary
+- [ ] Liquid staking 🚧
+  - [ ]Lido
+  - [ ]Rocket pool 🤔
 
 ## TODOs
 
