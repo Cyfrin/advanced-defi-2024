@@ -8,12 +8,13 @@
 
 Front run, back run and sandwich
 
-- Front run
+- Front run - execute transaction before target
   - DEX arbitrage [Example](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4)
   - Liquidation
-- Backrun
+- Backrun - execute transaction after target
   - DEX arbitrage
-- Sandwich TODO: xy = k calc
+- Sandwich - execute transaction before and after target
+  TODO: xy = k calc
   - DEX trade (1000 DAI / ETH, 1001 DAI / ETH -> 1002 DAI / ETH, ETH -> 1001 DAI / ETH)
   - JIT (Just in time) liquidity
 
