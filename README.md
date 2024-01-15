@@ -14,6 +14,8 @@
 
 ## Topics
 
+TODO: spot, execution price, slippage
+
 - [ ] Syllabus ✅
 - [ ] MEV ✅
   - [ ] Front run, back run and sandwich examples
