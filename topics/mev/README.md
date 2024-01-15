@@ -14,13 +14,12 @@ Front run, back run and sandwich
 - Backrun - execute transaction after target
   - DEX arbitrage
 - Sandwich - execute transaction before and after target
-  TODO: xy = k calc
-  - DEX trade (1000 DAI / ETH, 1001 DAI / ETH -> 1002 DAI / ETH, ETH -> 1001 DAI / ETH)
+  - DEX trade
   - JIT (Just in time) liquidity
 
 ### Protection
 
-- use Flashbots
+- Use Flashbots
 
 ### TODO: Code
 

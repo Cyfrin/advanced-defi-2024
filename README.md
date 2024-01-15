@@ -16,24 +16,26 @@
 
 - [ ] Syllabus ✅
 - [ ] MEV ✅
-  - [ ] Sandwich, front run, back run and examples and tx hashes 🚧
+  - [ ] Front run, back run and sandwich examples
   - [ ] Flashbots 🚧
   - [ ] Summary
 - [ ] AMM ✅
   - [ ] AMM vs orderbook
   - [ ] Different AMMs (constant product, constant sum, concentrated liquidity)
-  - [ ] Uni v2
+  - [ ] Uniswap v2
     - [ ] Math
     - [ ] Contract overview
     - [ ] Swap
+      - [ ] MEV sandwicsh 🤔
     - [ ] Add / remove liquidity
     - [ ] Flash swap
     - [ ] TWAP
-  - [ ] Uni v3
+  - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
     - [ ] Swap
     - [ ] Add / remove liquidity
+      - [ ] JIT liquidity
     - [ ] Flash swap
     - [ ] TWAP
   - [ ] Curve v1
