@@ -25,7 +25,7 @@ Front run, back run and sandwich
 
 Example of sending transcation through Flasbots RPC
 
-[Flashbotstest.sol](./FlashbotsTest.sol) deployed on Goerli testnet at [0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A]
+[FlashbotsTest.sol](./FlashbotsTest.sol) deployed on Goerli testnet at [0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160](https://goerli.etherscan.io/address/0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160)
 
 1. Import wallet into cast
 
@@ -51,19 +51,16 @@ rm -rf ~/.foundry/keystores/$ACCOUNT
 
 ```shell
 # Goerli FlashBotsTest address
-# 0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A
+# 0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160
 
 CHAIN=5
-DST=0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A
-FUNC_SIG="inc()"
-ARGS=""
+DST=0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160
+FUNC_SIG="unlock(string)"
+ARGS="cyfrin"
 RPC=https://rpc-goerli.flashbots.net
 
 # Send tx
 cast send --account $ACCOUNT --rpc-url $RPC --chain $CHAIN $DST $FUNC_SIG $ARGS
-
-# Query - get count
-cast call --rpc-url $RPC --chain $CHAIN $DST "count()(uint256)"
 ```
 
 ### References
