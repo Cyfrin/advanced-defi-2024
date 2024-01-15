@@ -19,15 +19,52 @@ Front run, back run and sandwich
 
 ### Protection
 
-- Use Flashbots
+- Use [Flashbots RPC](https://docs.flashbots.net/flashbots-protect)
 
-### TODO: Code
+### Code example using `cast`
 
-https://docs.flashbots.net/flashbots-auction/libraries/ethers-js-provider
+Example of sending transcation through Flasbots RPC
 
-- Ether.js
-- Web3.py
-- Foundry cast?
+[Flashbotstest.sol](./FlashbotsTest.sol) deployed on Goerli testnet at [0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A]
+
+1. Import wallet into cast
+
+```shell
+# Import private key
+ACCOUNT=burner
+PRIVATE_KEY=...
+cast wallet import $ACCOUNT --private-key $PRIVATE_KEY
+# Clear private key variable
+unset PRIVATE_KEY
+
+# List wallets
+cast wallet list
+
+# Wallet saved to ~/.foundry/keystores
+ls ~/.foundry/keystores/
+
+# Remove wallet
+rm -rf ~/.foundry/keystores/$ACCOUNT
+```
+
+2. Send transaction using Flashbots RPC
+
+```shell
+# Goerli FlashBotsTest address
+# 0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A
+
+CHAIN=5
+DST=0x6638872268bE680cD4fF6F66BB4aa5eaBE94875A
+FUNC_SIG="inc()"
+ARGS=""
+RPC=https://rpc-goerli.flashbots.net
+
+# Send tx
+cast send --account $ACCOUNT --rpc-url $RPC --chain $CHAIN $DST $FUNC_SIG $ARGS
+
+# Query - get count
+cast call --rpc-url $RPC --chain $CHAIN $DST "count()(uint256)"
+```
 
 ### References
 
