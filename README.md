@@ -16,12 +16,12 @@
 
 TODO: spot, execution price, slippage
 
-- [ ] Syllabus ✅
-- [ ] MEV ✅
+- [ ] Syllabus
+- [ ] MEV
   - [ ] Front run, back run and sandwich examples
   - [ ] Flashbots RPC example
   - [ ] Summary
-- [ ] AMM ✅
+- [ ] AMM
   - [ ] AMM vs orderbook
   - [ ] Different AMMs (constant product, constant sum, concentrated liquidity)
   - [ ] Uniswap v2
