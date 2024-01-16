@@ -92,6 +92,11 @@
 
 ## TODOs
 
+- [ ] Compound
+- [ ] TWAMM
+- [ ] AAVE GHO
+- [ ] Curve stablecoin
+
 - How to cover theses topics?
   - Algorithms used in DeFi
     - AMM
