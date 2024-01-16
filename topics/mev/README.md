@@ -65,4 +65,5 @@ cast send --account $ACCOUNT --rpc-url $RPC --chain $CHAIN $DST $FUNC_SIG $ARGS
 
 ### References
 
+- [cyfrin updraft](https://updraft.cyfrin.io/courses/security/mev-and-governance/mev-introduction?lesson_format=video)
 - [Flashbots](https://docs.flashbots.net/)

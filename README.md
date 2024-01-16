@@ -4,7 +4,6 @@
 
 - Be able to integrate a simple dapp into another defi protocol
 - Understand the fundamentals of protocols
-
 - TODO: Simple apps for each protocol
 
 ## Install
@@ -14,8 +13,6 @@
 
 ## Topics
 
-TODO: spot, execution price, slippage
-
 - [ ] Syllabus
 - [ ] MEV
   - [ ] Front run, back run and sandwich examples
@@ -23,11 +20,12 @@ TODO: spot, execution price, slippage
   - [ ] Summary
 - [ ] AMM
   - [ ] AMM vs orderbook
-  - [ ] Different AMMs (constant product, constant sum, concentrated liquidity)
+  - [ ] Different AMMs (constant product, constant sum, curve stable swap, concentrated liquidity)
   - [ ] Uniswap v2
     - [ ] Math
     - [ ] Contract overview
     - [ ] Swap
+      - [ ] spot price, execution price, slippage
       - [ ] MEV sandwicsh 🤔
     - [ ] Add / remove liquidity
     - [ ] Flash swap
@@ -112,6 +110,7 @@ TODO: spot, execution price, slippage
 
 #### Aave
 
-- https://calnix.gitbook.io/aave-unleashed/
+- [Aave Unleashed](https://calnix.gitbook.io/aave-unleashed/)
 - https://github.com/aave/protocol-v2/blob/master/aave-v2-whitepaper.pdf
 - https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf
+- [Curve](https://resources.curve.fi/)
