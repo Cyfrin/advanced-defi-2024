@@ -15,8 +15,9 @@
 
 - [ ] Syllabus
 - [ ] AMM
+  - [ ] What is an AMM?
   - [ ] AMM vs orderbook
-  - [ ] Different AMMs
+  - [ ] Different AMM Equations
   - [ ] Uniswap v2
     - [ ] Contract overview
     - [ ] Swap
