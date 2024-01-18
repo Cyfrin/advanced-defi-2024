@@ -14,17 +14,13 @@
 ## Topics
 
 - [ ] Syllabus
-- [ ] MEV
-  - [ ] Front run, back run and sandwich examples
-  - [ ] Flashbots RPC example
-  - [ ] Summary
 - [ ] AMM
   - [ ] AMM vs orderbook
-  - [ ] Different AMMs (constant product, constant sum, curve stable swap, concentrated liquidity)
+  - [ ] Different AMMs
   - [ ] Uniswap v2
-    - [ ] Math
     - [ ] Contract overview
     - [ ] Swap
+      - [ ] Math 🤔
       - [ ] spot price, execution price, slippage
       - [ ] MEV sandwicsh 🤔
     - [ ] Add / remove liquidity
@@ -46,6 +42,10 @@
     - [ ] VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
   - [ ] Curve v2🤔
     - [ ] Math
+  - [ ] Summary
+- [ ] MEV
+  - [ ] Front run, back run and sandwich examples
+  - [ ] Flashbots RPC example
   - [ ] Summary
 - [ ] Price oracle ✅
   - [ ] Chainlink
