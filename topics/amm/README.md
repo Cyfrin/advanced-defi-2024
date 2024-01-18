@@ -1,5 +1,7 @@
 # AMM - Automated market maker
 
+[What is an AMM?](./what_is_amm.md)
+
 ### AMM vs orderbook
 
 #### Orderbook
