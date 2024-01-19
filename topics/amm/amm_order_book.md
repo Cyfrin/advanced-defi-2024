@@ -14,7 +14,7 @@ Liquidity - ease with which an asset can be converted into cash
             without affecting its market price (Investopedia.com)
 ```
 
-### On-chain Order book
+### On-chain order book
 
 ##### Operations
 
