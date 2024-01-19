@@ -1,6 +1,22 @@
 # AMM vs Order Book
 
-### Orderbook
+Why not use on-chain order books? What problem does AMM solve?
+
+```
+Gas - AMMs execute trade with lower gas cost than order books
+Liquidity - Better liquidity than on-chain order books
+```
+
+### What is liquidity
+
+```
+Liquidity - ease with which an asset can be converted into cash
+            without affecting its market price (Investopedia.com)
+```
+
+### On-chain Order book
+
+##### Operations
 
 - Buyer
   - Deposit money
@@ -12,16 +28,19 @@
   - Ask - submit sell order
   - Update order
   - Cancel order
-- Orderbook
+- Order book
   - Sort orders by price
   - Match and execute orders
 
-Cons
+##### Cons
 
-- Use high amounts of gas 🔥
+- Expensive gas cost 🔥
+- Low liquidity 💧
 - Low trading volume 🔈
 
 ### AMM
+
+##### Operations
 
 - Liquidity provider
   - Deposit tokens
@@ -29,14 +48,15 @@ Cons
   - Swap tokens with the AMM
 - AMM
   - Execute trades
-  - Algorithmicly calculate the price
+  - Algorithmically calculate the exchange rates
   - Give swap fees to liquidity providers
 
-Pros
+##### Pros
 
 - Gas efficient ✅
+- High liquidity 💧💧💧
 - High trading volume 🔊
 
-Cons
+##### Cons
 
 - Liquidity providers usually operate at a loss 💸
