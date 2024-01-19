@@ -114,6 +114,8 @@
 - https://defillama.com/
 - https://www.youtube.com/@blockchain-web3moocs635/playlists
 
+[Whitepapers](./whitepapers)
+
 #### Aave
 
 - [Aave Unleashed](https://calnix.gitbook.io/aave-unleashed/)
