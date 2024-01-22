@@ -15,18 +15,38 @@
 
 - [ ] Syllabus
 - [ ] AMM
+
   - [ ] What is an AMM?
   - [ ] AMM vs orderbook
   - [ ] Different AMM Equations
   - [ ] Uniswap v2
+    - [ ] Math overview, graph and examples
     - [ ] Contract overview
     - [ ] Swap
-      - [ ] Math 🤔
-      - [ ] spot price, execution price, slippage
+      - [ ] Contract calls diagram
+      - [ ] Swap math
+      - [ ] Code
+      - [ ] Spot price, execution price, slippage
       - [ ] MEV sandwicsh 🤔
-    - [ ] Add / remove liquidity
+    - [ ] Create pool
+      - [ ] Contract calls diagram
+      - [ ] Code
+    - [ ] Add liquidity
+      - [ ] Contract calls diagram
+      - [ ] Add liquidity math, example and graph
+      - [ ] Code
+    - [ ] Remove liquidity
+      - [ ] Contract calls diagram
+      - [ ] Remove liquidity math and example
+      - [ ] Code
     - [ ] Flash swap
+      - [ ] Contract calls diagram
+      - [ ] Flash swap fee math
+      - [ ] Flash swap code
     - [ ] TWAP
+      - [ ] TWAP math
+      - [ ] TWAP code
+    - [ ] Application 🤔
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
@@ -44,6 +64,8 @@
   - [ ] Curve v2🤔
     - [ ] Math
   - [ ] Summary
+  - [ ] dy / dx = dfdx / dfdy 🤔
+
 - [ ] MEV
   - [ ] Front run, back run and sandwich examples
   - [ ] Flashbots RPC example
@@ -116,9 +138,13 @@
 
 [Whitepapers](./whitepapers)
 
+#### Uniswap
+
+- [Uniswap](https://uniswap.org/)
+
 #### Aave
 
+- [Aave](https://aave.com/)
 - [Aave Unleashed](https://calnix.gitbook.io/aave-unleashed/)
-- https://github.com/aave/protocol-v2/blob/master/aave-v2-whitepaper.pdf
-- https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf
+
 - [Curve](https://resources.curve.fi/)
