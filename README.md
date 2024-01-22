@@ -24,7 +24,7 @@
     - [ ] Contract overview
     - [ ] Swap
       - [ ] Contract calls diagram
-      - [ ] Swap math
+      - [ ] Swap math, example and graph
       - [ ] Code
       - [ ] Spot price, execution price, slippage
       - [ ] MEV sandwicsh 🤔
