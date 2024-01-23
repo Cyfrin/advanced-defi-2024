@@ -6,4 +6,4 @@
 
 [Different AMM Equations](./amm_equations.md)
 
-[Uniswap V2 Graph](https://www.desmos.com/calculator/ntvyojuzlg)
+[Uniswap V2](./uniswap-v2/README.md)
