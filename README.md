@@ -21,12 +21,12 @@
   - [ ] Different AMM Equations
   - [ ] Uniswap v2
     - [ ] Math overview, graph and examples
-    - [ ] Contract overview
+    - [ ] Contracts overview
     - [ ] Swap
       - [ ] Swap math, example and graph
       - [ ] Contract calls diagram
       - [ ] Code walkthrough
-      - [ ] Code exercises (TODO)
+      - [ ] Code exercises
       - [ ] Code solutions
       - [ ] Spot price, execution price, slippage 🤔
       - [ ] MEV sandwicsh 🤔
@@ -36,20 +36,20 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Add liquidity
-      - [ ] Contract calls diagram
       - [ ] Add liquidity math, example and graph
+      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Remove liquidity
-      - [ ] Contract calls diagram
       - [ ] Remove liquidity math and example
+      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Flash swap
-      - [ ] Contract calls diagram
       - [ ] Flash swap fee math
+      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
@@ -60,7 +60,6 @@
       - [ ] Code solutions
     - [ ] Application 🤔
       - [ ] Flash swaparbitrage? 🤔
-      -
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
