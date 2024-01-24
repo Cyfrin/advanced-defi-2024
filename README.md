@@ -76,8 +76,8 @@
     - [ ] VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
   - [ ] Curve v2🤔
     - [ ] Math
-  - [ ] Summary
   - [ ] dy / dx = dfdx / dfdy 🤔
+  - [ ] Summary
 
 - [ ] MEV
   - [ ] Front run, back run and sandwich examples
