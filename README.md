@@ -31,7 +31,6 @@
       - [ ] Spot price, execution price, slippage 🤔
       - [ ] MEV sandwicsh 🤔
     - [ ] Create pool
-      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
@@ -49,7 +48,6 @@
       - [ ] Code solutions
     - [ ] Flash swap
       - [ ] Flash swap fee math
-      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
@@ -59,7 +57,7 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Application 🤔
-      - [ ] Flash swaparbitrage? 🤔
+      - [ ] Flash swap arbitrage? 🤔
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
@@ -161,3 +159,5 @@
 - [Aave Unleashed](https://calnix.gitbook.io/aave-unleashed/)
 
 - [Curve](https://resources.curve.fi/)
+
+- [Aave V3 Made Crystal Clear](https://www.youtube.com/watch?v=UzuZp3Q3xg0)
