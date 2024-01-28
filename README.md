@@ -130,6 +130,7 @@
 - [ ] TWAMM
 - [ ] AAVE GHO
 - [ ] Curve stablecoin
+- [ ] Dex aggregator (CowSwap, ParaSwap)
 
 - How to cover theses topics?
   - Algorithms used in DeFi
