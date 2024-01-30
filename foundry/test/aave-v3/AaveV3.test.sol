@@ -5,6 +5,7 @@ import {Test, console2} from "forge-std/Test.sol";
 
 address constant WETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 address constant USDC = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48;
+address constant DAI = 0x6B175474E89094C44Da98b954EedeAC495271d0F;
 
 address constant AAVE_PROTOCOL_DATA_PROVIDER =
     0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3;
@@ -119,6 +120,61 @@ contract AaveV3Test is Test {
     }
 }
 
+contract AaveV3FlashLoanSimpleTest is Test {
+    IPool private constant pool = IPool(POOL_PROXY);
+    IERC20 private constant dai = IERC20(DAI);
+
+    function setUp() public {
+        deal(DAI, address(this), 1e6 * 1e18);
+        dai.approve(address(pool), type(uint256).max);
+    }
+
+    function executeOperation(
+        address asset,
+        uint256 amount,
+        uint256 premium,
+        address initiator,
+        bytes calldata params
+    ) external returns (bool) {
+        require(asset == DAI, "not DAI");
+        require(amount == 1e6 * 1e18, "invalid amount");
+
+        console2.log("DAI", dai.balanceOf(address(this)));
+        console2.log("fee", premium);
+
+        require(msg.sender == address(pool), "not authorized");
+        require(initiator == address(this), "invalid initiator");
+
+        (uint256 num, address addr) = abi.decode(params, (uint256, address));
+        console2.log("NUM", num);
+        console2.log("addr", addr);
+
+        return true;
+    }
+
+    function test_flash_loan_simple() public {
+        bytes memory params = abi.encode(uint256(123), address(this));
+
+        pool.flashLoanSimple({
+            receiverAddress: address(this),
+            asset: DAI,
+            amount: 1e6 * 1e18,
+            params: params,
+            referralCode: 0
+        });
+    }
+}
+
+interface IFlashLoanSimpleReceiver {
+    function executeOperation(
+        address asset,
+        uint256 amount,
+        uint256 premium,
+        address initiator,
+        bytes calldata params
+    ) external returns (bool);
+}
+
 interface IWrappedTokenGatewayV3 {
     function depositETH(address, address onBehalfOf, uint16 referralCode)
         external
@@ -161,6 +217,13 @@ interface IPool {
             uint256 ltv,
             uint256 healthFactor
         );
+    function flashLoanSimple(
+        address receiverAddress,
+        address asset,
+        uint256 amount,
+        bytes calldata params,
+        uint16 referralCode
+    ) external;
 }
 
 interface IAToken {
