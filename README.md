@@ -26,6 +26,9 @@
       - [ ] Swap math, example and graph
       - [ ] Contract calls diagram
       - [ ] Code walkthrough
+        - [ ] Periphery and Core
+        - [ ] swapExactTokensForTokens
+        - [ ] swapTokensForExactTokens
       - [ ] Code exercises
       - [ ] Code solutions
       - [ ] Spot price, execution price, slippage 🤔
