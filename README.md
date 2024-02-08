@@ -28,7 +28,9 @@
       - [ ] Code walkthrough
         - [ ] Periphery and Core
         - [ ] swapExactTokensForTokens
+          - [ ] getAmountsOut
         - [ ] swapTokensForExactTokens
+          - [ ] getAmountsIn
       - [ ] Code exercises
       - [ ] Code solutions
       - [ ] Spot price, execution price, slippage 🤔
