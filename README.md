@@ -33,7 +33,9 @@
           - [ ] getAmountsIn
       - [ ] Code exercises
       - [ ] Code solutions
-      - [ ] Spot price, execution price, slippage 🤔
+      - [ ] Spot price graph
+      - [ ] Spot price math
+      - [ ] Slippage 🤔
       - [ ] MEV sandwicsh 🤔
     - [ ] Create pool
       - [ ] Code walkthrough
