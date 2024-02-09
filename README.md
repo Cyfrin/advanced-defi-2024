@@ -35,7 +35,7 @@
       - [ ] Code solutions
       - [ ] Spot price graph
       - [ ] Spot price math
-      - [ ] Slippage 🤔
+      - [ ] Slippage
       - [ ] MEV sandwicsh 🤔
     - [ ] Create pool
       - [ ] Code walkthrough
