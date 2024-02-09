@@ -35,8 +35,8 @@ contract UniswapV2SwapTest is Test {
         path[1] = DAI;
         path[2] = MKR;
 
-        uint amountIn = 1e18;
-        uint amountOutMin = 1;
+        uint256 amountIn = 1e18;
+        uint256 amountOutMin = 1;
 
         // Write your code here
         // Don’t change any other code
@@ -52,8 +52,8 @@ contract UniswapV2SwapTest is Test {
         path[1] = DAI;
         path[2] = MKR;
 
-        uint amountOut = 0.1 * 1e18;
-        uint amountInMax = 1e18;
+        uint256 amountOut = 0.1 * 1e18;
+        uint256 amountInMax = 1e18;
 
         // Write your code here
         // Don’t change any other code
