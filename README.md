@@ -137,6 +137,7 @@
 - [ ] TWAMM
 - [ ] AAVE GHO
 - [ ] Curve stablecoin
+- [ ] RAI
 - [ ] Dex aggregator (CowSwap, ParaSwap)
 
 - How to cover theses topics?
