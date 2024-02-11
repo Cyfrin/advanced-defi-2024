@@ -29,8 +29,12 @@
         - [ ] Periphery and Core
         - [ ] swapExactTokensForTokens
           - [ ] getAmountsOut
+          - [ ] getAmountsOut fork
+          - [ ] getAmountsOut example
         - [ ] swapTokensForExactTokens
           - [ ] getAmountsIn
+          - [ ] getAmountsIn fork
+          - [ ] getAmountsIn example
       - [ ] Code exercises
       - [ ] Code solutions
       - [ ] Spot price graph
