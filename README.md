@@ -46,6 +46,7 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Add liquidity
+      - [ ] Pool shares math - mint and burn
       - [ ] Add liquidity math, example and graph
       - [ ] Contract calls diagram
       - [ ] Code walkthrough
