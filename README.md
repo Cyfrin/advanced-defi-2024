@@ -40,7 +40,6 @@
       - [ ] Spot price graph
       - [ ] Spot price math
       - [ ] Slippage
-      - [ ] MEV sandwicsh 🤔
     - [ ] Create pool
       - [ ] Code walkthrough
       - [ ] Code exercises
@@ -92,6 +91,7 @@
 - [ ] MEV
   - [ ] Front run, back run and sandwich examples
   - [ ] Flashbots RPC example
+  - [ ] MEV sandwicsh uni v2 🤔
   - [ ] Summary
 - [ ] Price oracle ✅
   - [ ] Chainlink
