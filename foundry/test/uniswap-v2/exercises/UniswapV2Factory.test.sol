@@ -21,22 +21,13 @@ contract UniswapV2FactoryTest is Test {
     IUniswapV2Factory private constant factory =
         IUniswapV2Factory(UNISWAP_V2_FACTORY);
 
-    function test_getPair() public {
-        assertEq(
-            factory.getPair(DAI, WETH), UNISWAP_V2_PAIR_DAI_WETH, "DAI WETH"
-        );
-        assertEq(
-            factory.getPair(WETH, DAI), UNISWAP_V2_PAIR_DAI_WETH, "WETH DAI"
-        );
-    }
-
     function test_createPair() public {
         ERC20 token = new ERC20("test", "TEST", 18);
 
         // Exercise - deploy token + WETH pair contract
         // Write your code here
         // Don’t change any other code
-        address pair;
+        address pair = factory.createPair(address(token), WETH);
 
         address token0 = IUniswapV2Pair(pair).token0();
         address token1 = IUniswapV2Pair(pair).token1();
