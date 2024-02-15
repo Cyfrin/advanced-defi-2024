@@ -82,7 +82,6 @@
     - [ ] Swap
     - [ ] Add / remove liquidity
     - [ ] TWAP🤔
-    - [ ] VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
   - [ ] Curve v2🤔
     - [ ] Math
   - [ ] dy / dx = dfdx / dfdy 🤔
@@ -142,6 +141,7 @@
 - [ ] TWAMM
 - [ ] AAVE GHO
 - [ ] Curve stablecoin
+- [ ] Curve VE gauge🤔 (liquidity -> better price for users -> more trade -> more fee -> more liquidity)?
 - [ ] RAI
 - [ ] Dex aggregator (CowSwap, ParaSwap)
 
