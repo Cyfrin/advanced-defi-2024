@@ -1,6 +1,6 @@
 # Uniswap V2
 
-[Uniswap V2 Graph](https://www.desmos.com/calculator/w2cbfsvqcn)
+[Uniswap V2 Graph](https://www.desmos.com/calculator/z7z2donayo)
 
 ### Resources
 
