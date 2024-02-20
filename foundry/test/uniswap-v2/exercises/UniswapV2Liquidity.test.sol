@@ -46,57 +46,7 @@ contract UniswapV2LiquidityTest is Test {
         // Write your code here
         // Don’t change any other code
         vm.prank(user);
-        (uint256 amountA, uint256 amountB, uint256 liquidity) = router
-            .addLiquidity({
-            tokenA: DAI,
-            tokenB: WETH,
-            amountADesired: 1000000 * 1e18,
-            amountBDesired: 100 * 1e18,
-            amountAMin: 1,
-            amountBMin: 1,
-            to: user,
-            deadline: block.timestamp
-        });
-
-        console2.log("DAI", amountA);
-        console2.log("WETH", amountB);
-        console2.log("LP", liquidity);
 
         assertGt(pair.balanceOf(user), 0, "LP = 0");
-    }
-
-    function test_removeLiquidity() public {
-        vm.startPrank(user);
-        (,, uint256 liquidity) = router.addLiquidity({
-            tokenA: DAI,
-            tokenB: WETH,
-            amountADesired: 1000000 * 1e18,
-            amountBDesired: 100 * 1e18,
-            amountAMin: 1,
-            amountBMin: 1,
-            to: user,
-            deadline: block.timestamp
-        });
-
-        // Exercise - Remove liquidity from DAI / WETH pool
-        // Write your code here
-        // Don’t change any other code
-        pair.approve(address(router), liquidity);
-
-        (uint256 amountA, uint256 amountB) = router.removeLiquidity({
-            tokenA: DAI,
-            tokenB: WETH,
-            liquidity: liquidity,
-            amountAMin: 1,
-            amountBMin: 1,
-            to: user,
-            deadline: block.timestamp
-        });
-        vm.stopPrank();
-
-        console2.log("DAI", amountA);
-        console2.log("WETH", amountB);
-
-        assertEq(pair.balanceOf(user), 0, "LP = 0");
     }
 }
