@@ -49,6 +49,8 @@
       - [ ] Add liquidity math, example and graph
       - [ ] Contract calls diagram
       - [ ] Code walkthrough
+        - [ ] addLiquidity
+        - [ ] mint
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Remove liquidity
