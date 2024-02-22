@@ -54,7 +54,8 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Remove liquidity
-      - [ ] Remove liquidity math and example
+      - [ ] Remove liquidity graph
+      - [ ] Remove liquidity math
       - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
