@@ -23,19 +23,12 @@ contract UniswapV2FlashSwap {
         // Don’t change any other code
 
         // 1. Determine amount0Out and amount1Out
-        (uint256 amount0Out, uint256 amount1Out) =
-            token == token0 ? (amount, uint256(0)) : (uint256(0), amount);
+        (uint256 amount0Out, uint256 amount1Out) = (0, 0);
 
         // 2. Encode token and msg.sender as bytes
-        bytes memory data = abi.encode(token, msg.sender);
+        bytes memory data;
 
         // 3. Call pair.swap
-        pair.swap({
-            amount0Out: amount0Out,
-            amount1Out: amount1Out,
-            to: address(this),
-            data: data
-        });
     }
 
     // Uniswap V2 callback
@@ -50,22 +43,17 @@ contract UniswapV2FlashSwap {
 
         // 1. Require msg.sender is pair contract
         // 2. Require sender is this contract
-        require(msg.sender == address(pair), "not pair");
-        require(sender == address(this), "not sender");
 
         // 3. Decode token and caller from data
-        (address token, address caller) = abi.decode(data, (address, address));
         // 4. Determine amount borrowed (only one of them is > 0)
-        uint256 amount = token == token0 ? amount0 : amount1;
+        uint256 amount = 0;
 
         // 5. Calculate flash swap fee and amount to repay
         // About 0.3% fee, +1 to round up
-        uint256 fee = ((amount * 3) / 997) + 1;
-        uint256 amountToRepay = amount + fee;
+        uint256 fee = 0;
+        uint256 amountToRepay = 0;
 
         // 6. Get flash swap fee from caller
-        IERC20(token).transferFrom(caller, address(this), fee);
         // 7. Repay Uniswap V2 pair
-        IERC20(token).transfer(address(pair), amountToRepay);
     }
 }

@@ -13,6 +13,8 @@
 
 ## Topics
 
+// TODO: rename videos
+
 - [ ] Syllabus
 - [ ] AMM
 
@@ -62,6 +64,7 @@
       - [ ] Code solutions
     - [ ] Flash swap
       - [ ] Flash swap fee math
+      - [ ] Contract calls diagram
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
