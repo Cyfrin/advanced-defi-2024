@@ -15,6 +15,8 @@
 
 // TODO: rename videos
 
+// TODO: one click download cheatsheet
+
 - [ ] Syllabus
 - [ ] AMM
 
@@ -74,7 +76,7 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] Application 🤔
-      - [ ] Flash swap arbitrage? 🤔
+      - [ ] Flash swap arbitrage? (flash swap -> swap -> swap -> repay) 🤔
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
