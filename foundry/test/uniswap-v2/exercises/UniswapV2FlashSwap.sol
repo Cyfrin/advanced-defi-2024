@@ -49,6 +49,7 @@ contract UniswapV2FlashSwap {
         //          FlashSwap <-- sender = Eve --------
 
         // 3. Decode token and caller from data
+        (address token, address caller) = (address(0), address(0));
         // 4. Determine amount borrowed (only one of them is > 0)
         uint256 amount = 0;
 
