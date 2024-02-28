@@ -50,6 +50,10 @@ contract UniswapV2FlashSwap {
 
         // 1. Require msg.sender is pair contract
         // 2. Require sender is this contract
+        // Alice -> FlashSwap ---- to = FlashSwap ----> UniswapV2Pair
+        //                    <-- sender = FlashSwap --
+        // Eve ------------ to = FlashSwap -----------> UniswapV2Pair
+        //          FlashSwap <-- sender = Eve --------
         require(msg.sender == address(pair), "not pair");
         require(sender == address(this), "not sender");
 
