@@ -53,7 +53,7 @@ contract UniswapV2FlashSwap {
         uint256 amount = 0;
 
         // 5. Calculate flash swap fee and amount to repay
-        // About 0.3% fee, +1 to round up
+        // fee = borrowed amount * 3 / 997 + 1 to round up
         uint256 fee = 0;
         uint256 amountToRepay = 0;
 
