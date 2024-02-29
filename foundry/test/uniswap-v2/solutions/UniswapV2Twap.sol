@@ -17,7 +17,7 @@ contract UniswapV2Twap {
 
     uint256 public price0CumulativeLast;
     uint256 public price1CumulativeLast;
-    uint32 public lastUpdatedAt;
+    uint32 public updatedAt;
 
     // NOTE: binary fixed point numbers
     // range: [0, 2**112 - 1]
@@ -31,7 +31,7 @@ contract UniswapV2Twap {
         token1 = pair.token1();
         price0CumulativeLast = pair.price0CumulativeLast();
         price1CumulativeLast = pair.price1CumulativeLast();
-        (,, lastUpdatedAt) = pair.getReserves();
+        (,, updatedAt) = pair.getReserves();
     }
 
     function _approximateCurrentCumulativePrices()
@@ -71,7 +71,7 @@ contract UniswapV2Twap {
             uint256 price1Cumulative,
             uint32 blockTimestamp
         ) = _approximateCurrentCumulativePrices();
-        uint32 dt = blockTimestamp - lastUpdatedAt;
+        uint32 dt = blockTimestamp - updatedAt;
         require(dt >= MIN_WAIT, "dt < min wait");
 
         // overflow is desired, casting never truncates
@@ -88,7 +88,7 @@ contract UniswapV2Twap {
 
         price0CumulativeLast = price0Cumulative;
         price1CumulativeLast = price1Cumulative;
-        lastUpdatedAt = blockTimestamp;
+        updatedAt = blockTimestamp;
     }
 
     function consult(address token, uint256 amountIn)
