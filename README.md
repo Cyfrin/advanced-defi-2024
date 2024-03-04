@@ -71,7 +71,13 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] TWAP
+      - [ ] TODO: why twap?
       - [ ] TWAP math
+        - [ ] Intro
+        - [ ] Cumulative price
+        - [ ] Example
+        - [ ] TWAP approximation to current time
+        - [ ] Misconception
       - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
