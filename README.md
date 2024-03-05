@@ -81,6 +81,7 @@
       - [ ] Code walkthrough (talk about UQ112x112)
       - [ ] Code exercises
       - [ ] Code solutions
+    - [ ] sandwich 🤔
     - [ ] Application 🤔
       - [ ] Flash swap arbitrage? (flash swap -> swap -> swap -> repay) 🤔
   - [ ] Uniswap v3
