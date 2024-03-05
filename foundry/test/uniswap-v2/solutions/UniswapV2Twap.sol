@@ -5,56 +5,78 @@ import {IUniswapV2Pair} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Pair.sol";
 import {FixedPoint} from "../../../src/uniswap-v2/FixedPoint.sol";
 
-// Modified from https://github.com/Uniswap/v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol
+// NOTE: Modified from https://github.com/Uniswap/v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol
+// NOTE: Do not use this contract in production
 contract UniswapV2Twap {
     using FixedPoint for *;
 
+    // Minimum wait time in seconds before the function update can be called again
+    // TWAP of time > MIN_WAIT
     uint256 private constant MIN_WAIT = 300;
 
     IUniswapV2Pair public immutable pair;
     address public immutable token0;
     address public immutable token1;
 
+    // NOTE: Cumulative prices are uq112x112 price * seconds
     uint256 public price0CumulativeLast;
     uint256 public price1CumulativeLast;
+    // Last timestamp cumulative prices were updated
     uint32 public updatedAt;
 
-    // NOTE: binary fixed point numbers
+    // TWAP of token 0 and token 1
     // range: [0, 2**112 - 1]
     // resolution: 1 / 2**112
+    // NOTE: 1<<112 represents 1
+    // TWAP of token0 in terms of token1
     FixedPoint.uq112x112 public price0Avg;
+    // TWAP of token1 in terms of token0
     FixedPoint.uq112x112 public price1Avg;
 
     constructor(address _pair) {
+        // Exercise 1
+        // 1. Set pair contract from constructor input
         pair = IUniswapV2Pair(_pair);
+        // 2. Set token0 and token1 from pair contract
         token0 = pair.token0();
         token1 = pair.token1();
+        // 3. Store price0CumulativeLast and price1CumulativeLast from pair contract
         price0CumulativeLast = pair.price0CumulativeLast();
         price1CumulativeLast = pair.price1CumulativeLast();
+        // 4. Call pair.getReserve to get last timestamp the reserves were updated
+        //    and store it into the state variable updatedAt
         (,, updatedAt) = pair.getReserves();
     }
 
-    function _approximateCurrentCumulativePrices()
+    // Calculates cumulative prices up to current timestamp
+    function _getCurrentCumulativePrices()
         internal
         view
-        returns (
-            uint256 price0Cumulative,
-            uint256 price1Cumulative,
-            uint32 blockTimestamp
-        )
+        returns (uint256 price0Cumulative, uint256 price1Cumulative)
     {
-        blockTimestamp = uint32(block.timestamp);
+        // Exercise 2
+        // 1. Get latest cumulative prices from the pair contract
         price0Cumulative = pair.price0CumulativeLast();
         price1Cumulative = pair.price1CumulativeLast();
 
-        // if time has elapsed since the last update on the pair,
-        // mock the accumulated price values
+        // If current block time stamp > last timestamp reserves were updated,
+        // calculate cumulative prices until current time
+
+        // 2. Get reserves and last timestamp the reserves were updated from
+        // the pair contract
         (uint112 reserve0, uint112 reserve1, uint32 blockTimestampLast) =
             pair.getReserves();
+        // 3. Cast block.timestamp to uint32
+        uint32 blockTimestamp = uint32(block.timestamp);
         if (blockTimestampLast != blockTimestamp) {
+            // 4. Calculate elapsed time
             uint32 timeElapsed = blockTimestamp - blockTimestampLast;
-            // addition overflow is desired
+            // NOTE: addition overflow is desired
             unchecked {
+                // 5. Add spot price * elapsed time to cumulative prices.
+                //    - Use FixedPoint.fraction to calculate spot price.
+                //    - FixedPoint.fraction returns UQ112x112, so cast it into uint256.
+                //    - Multiply spot price by time elapsed
                 price0Cumulative += uint256(
                     FixedPoint.fraction(reserve1, reserve0)._x
                 ) * timeElapsed;
@@ -65,19 +87,31 @@ contract UniswapV2Twap {
         }
     }
 
+    // Updates cumulative prices
     function update() external {
-        (
-            uint256 price0Cumulative,
-            uint256 price1Cumulative,
-            uint32 blockTimestamp
-        ) = _approximateCurrentCumulativePrices();
+        // Exercise 3
+        // 1. Cast block.timestamp to uint32
+        uint32 blockTimestamp = uint32(block.timestamp);
+        // 2. Calculate elapsed time since last time cumulative prices were
+        //    updated in this contract
         uint32 dt = blockTimestamp - updatedAt;
+        // 3. Require time elapsed > MIN_WAIT
         require(dt >= MIN_WAIT, "dt < min wait");
 
-        // overflow is desired, casting never truncates
+        // 4. Call the internal function _getCurrentCumulativePrices to get
+        //    cumulative prices
+        (uint256 price0Cumulative, uint256 price1Cumulative) =
+            _getCurrentCumulativePrices();
+
+        // NOTE: overflow is desired, casting never truncates
+        // https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/building-an-oracle
+        // Subtracting between two cumulative price values will result in
+        // a number that fits within the range of uint256 as long as the
+        // observations are made for periods of max 2^32 seconds, or ~136 years
         unchecked {
-            // cumulative price is in (uq112x112 price * seconds) units
-            // so we simply wrap it after division by time elapsed
+            // 5. Calculate TWAP price0Avg and price1Avg
+            // TWAP = (current cumulative price - last cumulative price) / dt
+            // Cast TWAP into uint224 and then into FixedPoint.uq112x112
             price0Avg = FixedPoint.uq112x112(
                 uint224((price0Cumulative - price0CumulativeLast) / dt)
             );
@@ -86,20 +120,34 @@ contract UniswapV2Twap {
             );
         }
 
+        // 6. Update state variables price0Cumulative, price1Cumulative and updatedAt
         price0CumulativeLast = price0Cumulative;
         price1CumulativeLast = price1Cumulative;
         updatedAt = blockTimestamp;
     }
 
-    function consult(address token, uint256 amountIn)
+    // Returns the amount out corresponding to the amount in for a given token
+    function consult(address tokenIn, uint256 amountIn)
         external
         view
         returns (uint256 amountOut)
     {
-        require(token == token0 || token == token1, "invalid token");
+        // Exercise 4
+        // 1. Require tokenIn is either token0 or token1
+        require(tokenIn == token0 || tokenIn == token1, "invalid token");
 
-        if (token == token0) {
-            // NOTE: decode144 decodes uq144x112 to uint144
+        // 2. Calculate amountOut
+        //    - amountOut = TWAP of tokenIn * amountIn
+        //    - Use FixePoint.mul to multiply TWAP of tokenIn with amountIn
+        //    - FixedPoint.mul returns uq144x112, use FixedPoint.decode144 to return uint144
+        if (tokenIn == token0) {
+            // Example
+            //   token0 = WETH
+            //   token1 = USDC
+            //   price0Avg = avg price of WETH in terms of USDC = 2000 USDC / 1 WETH
+            //   tokenIn = WETH
+            //   amountIn = 2
+            //   amountOut = price0Avg * amountIn = 4000 USDC
             amountOut = FixedPoint.mul(price0Avg, amountIn).decode144();
         } else {
             amountOut = FixedPoint.mul(price1Avg, amountIn).decode144();
