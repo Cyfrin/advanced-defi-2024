@@ -93,7 +93,7 @@ contract UniswapV2Twap {
         // 2. Calculate elapsed time since last time cumulative prices were
         //    updated in this contract
         uint32 dt = blockTimestamp - updatedAt;
-        // 3. Require time elapsed > MIN_WAIT
+        // 3. Require time elapsed >= MIN_WAIT
         require(dt >= MIN_WAIT, "dt < min wait");
 
         // 4. Call the internal function _getCurrentCumulativePrices to get
@@ -118,7 +118,7 @@ contract UniswapV2Twap {
             );
         }
 
-        // 6. Update state variables price0Cumulative, price1Cumulative and updatedAt
+        // 6. Update state variables price0CumulativeLast, price1CumulativeLast and updatedAt
         price0CumulativeLast = price0Cumulative;
         price1CumulativeLast = price1Cumulative;
         updatedAt = blockTimestamp;

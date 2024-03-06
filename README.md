@@ -78,7 +78,7 @@
         - [ ] Example
         - [ ] TWAP approximation to current time
         - [ ] Misconception
-      - [ ] Code walkthrough (talk about UQ112x112)
+      - [ ] Code walkthrough
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] sandwich 🤔

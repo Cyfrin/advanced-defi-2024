@@ -88,7 +88,7 @@ contract UniswapV2Twap {
         // 2. Calculate elapsed time since last time cumulative prices were
         //    updated in this contract
         uint32 dt = 0;
-        // 3. Require time elapsed > MIN_WAIT
+        // 3. Require time elapsed >= MIN_WAIT
 
         // 4. Call the internal function _getCurrentCumulativePrices to get
         //    current cumulative prices
@@ -107,7 +107,7 @@ contract UniswapV2Twap {
             price1Avg = FixedPoint.uq112x112(0);
         }
 
-        // 6. Update state variables price0Cumulative, price1Cumulative and updatedAt
+        // 6. Update state variables price0CumulativeLast, price1CumulativeLast and updatedAt
     }
 
     // Exercise 4
@@ -118,7 +118,6 @@ contract UniswapV2Twap {
         returns (uint256 amountOut)
     {
         // 1. Require tokenIn is either token0 or token1
-        require(tokenIn == token0 || tokenIn == token1, "invalid token");
 
         // 2. Calculate amountOut
         //    - amountOut = TWAP of tokenIn * amountIn
