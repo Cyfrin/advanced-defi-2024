@@ -17,6 +17,8 @@
 
 // TODO: one click download cheatsheet
 
+// TODO: update sol to 0.8.24
+
 - [ ] Syllabus
 - [ ] AMM
 
@@ -71,7 +73,7 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] TWAP
-      - [ ] TODO: why twap?
+      - [ ] Spot price manipulation
       - [ ] TWAP math
         - [ ] Intro
         - [ ] Cumulative price
@@ -82,8 +84,14 @@
       - [ ] Code exercises
       - [ ] Code solutions
     - [ ] sandwich 🤔
-    - [ ] Application 🤔
-      - [ ] Flash swap arbitrage? (flash swap -> swap -> swap -> repay) 🤔
+    - [ ] Application - Flash swap arbitrage
+      - [ ] Intro
+        - [ ] arbitrage, flash swap -> swap -> swap)
+        - [ ] flash swap -> swap
+      - [ ] Exercise
+      - [ ] Solution 1
+      - [ ] Solution 2
+      - [ ] Optimal amount in math
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
