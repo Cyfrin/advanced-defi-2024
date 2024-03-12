@@ -82,11 +82,9 @@ contract UniswapV2Arb1 {
         uint256 amount1Out,
         bytes calldata data
     ) external {
+        // NOTE anyone can call
         (address caller, address pair, SwapParams memory params) =
             abi.decode(data, (address, address, SwapParams));
-
-        require(msg.sender == address(pair), "not pair");
-        require(sender == address(this), "not sender");
 
         uint256 amountOut = _swap(params);
 
