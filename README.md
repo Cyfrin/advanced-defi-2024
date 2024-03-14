@@ -91,7 +91,7 @@
       - [ ] Exercise
       - [ ] Solution 1
       - [ ] Solution 2
-      - [ ] Optimal amount in math
+      - [ ] Optimal amount in math 🤔
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
