@@ -7,15 +7,31 @@ import {IERC20} from "../../../src/interfaces/IERC20.sol";
 
 contract UniswapV2Arb2 {
     struct FlashSwapData {
+        // Caller of flashSwap (msg.sender inside flashSwap)
         address caller;
+        // Pair to flash swap from
         address pair0;
+        // Pair to swap from
         address pair1;
+        // True if flash swap is token0 in and token1 out
         bool isZeroForOne;
+        // Amount in to repay flash swap
         uint256 amountIn;
+        // Amount to borrow from flash swap
         uint256 amountOut;
+        // Revert if profit is less than this minimum
         uint256 minProfit;
     }
 
+    // Exercise 1
+    // - Flash swap to borrow tokenOut
+    /**
+     * @param pair0 Pair contract to flash swap
+     * @param pair1 Pair contract to swap
+     * @param isZeroForOne True if flash swap is token0 in and token1 out
+     * @param amountIn Amount in to repay flash swap
+     * @param minProfit Minimum profit that this arbitrage must make
+     */
     function flashSwap(
         address pair0,
         address pair1,
@@ -23,9 +39,12 @@ contract UniswapV2Arb2 {
         uint256 amountIn,
         uint256 minProfit
     ) external {
+        // Write your code here
+        // Don’t change any other code
         (uint112 reserve0, uint112 reserve1,) =
             IUniswapV2Pair(pair0).getReserves();
 
+        // Hint - use getAmountOut to calculate amountOut to borrow
         uint256 amountOut = isZeroForOne
             ? getAmountOut(amountIn, reserve0, reserve1)
             : getAmountOut(amountIn, reserve1, reserve0);
@@ -56,6 +75,9 @@ contract UniswapV2Arb2 {
         uint256 amount1Out,
         bytes calldata data
     ) external {
+        // Write your code here
+        // Don’t change any other code
+
         // NOTE - anyone can call
 
         FlashSwapData memory params = abi.decode(data, (FlashSwapData));
@@ -66,7 +88,6 @@ contract UniswapV2Arb2 {
         (address tokenIn, address tokenOut) =
             params.isZeroForOne ? (token0, token1) : (token1, token0);
 
-        // 2. pair1.swap
         (uint112 reserve0, uint112 reserve1,) =
             IUniswapV2Pair(params.pair1).getReserves();
 
@@ -83,27 +104,12 @@ contract UniswapV2Arb2 {
             data: ""
         });
 
-        // 3. Repay pair0
-        // TODO: correct fee?
-        // uint256 fee = ((params.amountIn * 3) / 997) + 1;
-        // uint256 amountToRepay = params.amountIn + fee;
+        // NOTE - no need to calculate flash swap fee
         IERC20(tokenIn).transfer(params.pair0, params.amountIn);
 
-        // 4. Transfer profit to caller
         uint256 profit = amountOut - params.amountIn;
         require(profit >= params.minProfit, "profit < min");
         IERC20(tokenIn).transfer(params.caller, profit);
-    }
-
-    // TODO: clean
-    function getAmountIn(
-        uint256 amountOut,
-        uint256 reserveIn,
-        uint256 reserveOut
-    ) internal pure returns (uint256 amountIn) {
-        uint256 numerator = reserveIn * amountOut * 1000;
-        uint256 denominator = (reserveOut - amountOut) * 997;
-        amountIn = (numerator / denominator) + 1;
     }
 
     function getAmountOut(
