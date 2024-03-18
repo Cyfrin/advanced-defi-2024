@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.20;
+pragma solidity 0.8.24;
 
 // Modified from https://github.com/Uniswap/solidity-lib
 // DO NOT USE IN PRODUCTION
