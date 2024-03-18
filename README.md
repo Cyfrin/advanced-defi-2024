@@ -20,12 +20,11 @@ forge build
 - [ ] Syllabus
 - [ ] AMM
 
-  - [ ] What is an AMM?
-  - [ ] AMM vs orderbook
-  - [ ] Different AMM Equations
-
+  - [ ] Intro
+    - [ ] 1. What is an AMM?
+    - [ ] 2. AMM vs orderbook
+    - [ ] 3. Different AMM Equations
   - [ ] Uniswap v2
-
     - [ ] 1. Math overview, graph and examples
     - [ ] 2 Contracts overview
     - [ ] Swap
@@ -112,7 +111,6 @@ forge build
       - [ ] 71. Solution 1
       - [ ] 72. Exercise 2
       - [ ] 73. Solution 2
-
   - [ ] Uniswap v3
     - [ ] Math
     - [ ] Contract overview
