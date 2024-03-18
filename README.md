@@ -22,9 +22,9 @@ TODO: links
 - [ ] Syllabus
 - [ ] AMM
   - [x] Intro
-    - [x] 1. What is an AMM?
-    - [x] 2. AMM vs orderbook
-    - [x] 3. Different AMM Equations
+    - [x] 1. [What is an AMM?](./topics/amm/intro/what_is_amm.md)
+    - [x] 2. [AMM vs orderbook](./topics/amm/intro/amm_order_book.md)
+    - [x] 3. [Different AMM equations](./topics/amm/intro/amm_equations.md)
   - [x] [Uniswap V2](./topics/amm/uniswap-v2/README.md)
     - [x] 1. Math overview, graph and examples
     - [x] 2 Contracts overview

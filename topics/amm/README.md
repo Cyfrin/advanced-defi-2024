@@ -1,9 +1,0 @@
-# AMM - Automated market maker
-
-[What is an AMM?](./what_is_amm.md)
-
-[AMM vs Order Book](./amm_order_book.md)
-
-[Different AMM Equations](./amm_equations.md)
-
-[Uniswap V2](./uniswap-v2/README.md)
