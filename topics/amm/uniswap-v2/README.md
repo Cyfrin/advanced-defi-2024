@@ -4,6 +4,8 @@
 
 ### Resources
 
+[Uniswap](https://uniswap.org/)
+
 [Uniswap V2 Core](https://github.com/Uniswap/v2-core/)
 
 [Uniswap V2 Periphery](https://github.com/Uniswap/v2-periphery/)
