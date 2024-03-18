@@ -17,8 +17,6 @@ forge build
 
 ## Topics
 
-TODO: links
-
 - [ ] Syllabus
 - [ ] AMM
   - [x] Intro
