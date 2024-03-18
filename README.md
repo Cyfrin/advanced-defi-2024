@@ -8,6 +8,13 @@ curl -L https://foundry.paradigm.xyz | bash
 foundryup
 ```
 
+## Exercises and solutions
+
+```shell
+cd foundry
+forge build
+```
+
 ## Topics
 
 - [ ] Syllabus
