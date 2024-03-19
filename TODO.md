@@ -1,13 +1,39 @@
 ### Topics
 
 - [ ] Uniswap v3
+
+  - [ ] Concentrated liquidity
+  - [ ] Difference between v2 and v3
+    - [ ] v2 = x,y -> liquidity and price, passive liquidity, v3 = liquidity, price -> x, y, active liquidity
+  - [ ] TODO - pratical math questions and answers
+  - [ ] ticks
+  - [ ] sqrt price x 96
+  - [ ] fee growth
+  - [ ] tick bitmap
+
   - [ ] Math
+  - [ ] Graph
   - [ ] Contract overview
   - [ ] Swap
+    - [ ] Exercise 1 - single pool
+    - [ ] Solution 1 - single pool
+    - [ ] Exercise 2 - multi pool
+    - [ ] Solution 2 - multi pool
+  - [ ] factory
   - [ ] Add / remove liquidity
     - [ ] JIT liquidity
   - [ ] Flash swap
   - [ ] TWAP
+  - [ ] TODO Final project 🤔
+  - [ ] TODO panoptics?
+
+### uni v3 resource
+
+- https://github.com/Sabnock01/uniswap-resources
+- https://uniswapv3book.com/
+
+### TODOs
+
 - [ ] Curve v1
   - [ ] Math
   - [ ] Swap
