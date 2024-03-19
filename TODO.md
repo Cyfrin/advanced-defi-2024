@@ -19,11 +19,29 @@
     - [ ] Solution 1 - single pool
     - [ ] Exercise 2 - multi pool
     - [ ] Solution 2 - multi pool
-  - [ ] factory
-  - [ ] Add / remove liquidity
-    - [ ] JIT liquidity
+  - [ ] Factory
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Add liquidity
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Remove liquidity
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Collect fee and remove liquidity
+    - [ ] Exercise 1
+    - [ ] Solution 1
+    - [ ] Exercise 2
+    - [ ] Solution 2
   - [ ] Flash swap
-  - [ ] TWAP
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Price oracle
+    - [ ] TWAP
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Fee algorithm
+  - [ ] JIT liquidity
   - [ ] TODO Final project 🤔
   - [ ] TODO panoptics?
 
