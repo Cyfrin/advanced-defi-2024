@@ -3,7 +3,6 @@
 TODO:
 
 - [ ] Uniswap v3
-
   - [ ] Concentrated liquidity
     - [ ] Example (DAI/WETH, DAI/USDC)
     - [ ] Graph
@@ -77,9 +76,9 @@ TODO:
     - [ ] Solution 1
   - [ ] Tick bitmap algorithm
   - [ ] Fee algorithm
-  - [ ] JIT liquidity
-  - [ ] TODO Final project 🤔
-  - [ ] TODO panoptics?
+  - [ ] TODO: Final project 🤔
+  - [ ] JIT liquidity 🤔
+  - [ ] panoptics 🤔
 
 ### uni v3 resource
 
