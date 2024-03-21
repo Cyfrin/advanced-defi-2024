@@ -55,6 +55,7 @@
   - [ ] Flash swap
     - [ ] Exercise 1
     - [ ] Solution 1
+  - [ ] Flash swap arbitrage
   - [ ] Price oracle
     - [ ] TWAP
     - [ ] Exercise 1
