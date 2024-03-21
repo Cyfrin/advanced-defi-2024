@@ -1,29 +1,30 @@
 ### Topics
 
+TODO:
+
 - [ ] Uniswap v3
 
   - [ ] Concentrated liquidity
+    - [ ] Example (DAI/WETH, DAI/USDC)
+    - [ ] Graph
+    - [ ] Math 🤔
   - [ ] Difference between v2 and v3
-    - [ ] v2 = x,y -> liquidity and price, passive liquidity, v3 = liquidity, price -> x, y, active liquidity
-  - [ ] TODO: - pratical math questions and answers
-    - [ ] How to get spot price?
-    - [ ] How much token out for a swap?,
-    - [ ] How much token in for a swap?,
-    - [ ] How much token to add liquidity?
-    - [ ] How much token to receive from remove liquidity?
-  - [ ] pool address, key, id
-  - [ ] ticks
-  - [ ] tick spacing
-  - [ ] sqrt price x 96
-  - [ ] tick bitmap
-  - [ ] fee growth
-  - [ ] position manager + fee calculation
-
-  - [ ] Math
-  - [ ] Graph
+    - [ ] v2 -> x, y -> liquidity and price
+    - [ ] v3 -> liquidity, price -> x, y
+    - [ ] passive vs active liquidity (fungible vs non-fungible liquidity)
+    - [ ] pool per fee
+    - [ ] TWAP
+  - [ ] Graph 🤔
+  - [ ] Math 🤔
   - [ ] Contract overview
-  - [ ] Contract call diagrams
+  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96)
   - [ ] Swap
+    - [ ] Swap math
+      - [ ] How much token out for a swap?,
+      - [ ] How much token in for a swap?,
+    - [ ] Swap algorithm?
+    - [ ] Contract call
+    - [ ] Code walk 🤔
     - [ ] Exercise 1 - single pool input
     - [ ] Solution 1 - single pool input
     - [ ] Exercise 2 - single pool output
@@ -33,33 +34,48 @@
     - [ ] Exercise 4 - multi pool output
     - [ ] Solution 4 - multi pool output
   - [ ] Factory
+    - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] Position manager
-  - [ ] Mint
-  - [ ] increase liquidity
-    - [ ] Exercise 1
-    - [ ] Solution 1
-  - [ ] decrease liquidity
-    - [ ] Exercise 1
-    - [ ] Solution 1
-  - [ ] Collect fee and remove liquidity
-    - [ ] Exercise 1
-    - [ ] Solution 1
-    - [ ] Exercise 2
-    - [ ] Solution 2
-  - [ ] Burn
+  - [ ] Liquidity
+    - [ ] Liquidity math
+      - [ ] How much tokens to add liquidity?
+      - [ ] How much token to receive from remove liquidity?
+    - [ ] Contract call
+    - [ ] Code walk 🤔
+    - [ ] Position manager
+      - [ ] pool address, key, id
+      - [ ] Mint
+        - [ ] Exercise 1
+        - [ ] Solution 1
+      - [ ] increase liquidity
+        - [ ] Exercise 1
+        - [ ] Solution 1
+      - [ ] decrease liquidity
+        - [ ] Exercise 1
+        - [ ] Solution 1
+      - [ ] Collect fee and remove liquidity
+        - [ ] Exercise 1
+        - [ ] Solution 1
+        - [ ] Exercise 2
+        - [ ] Solution 2
+      - [ ] Burn
+        - [ ] Exercise 1
+        - [ ] Solution 1
   - [ ] Flash
-    - [ ] Exercise 1
-    - [ ] Solution 1
-  - [ ] Flash swap
+    - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] Flash swap arbitrage
-  - [ ] Price oracle
-    - [ ] TWAP
+    - [ ] Contract call
     - [ ] Exercise 1
     - [ ] Solution 1
+  - [ ] TWAP Price oracle
+    - [ ] TWAP math
+    - [ ] Code walk 🤔
+    - [ ] Exercise 1
+    - [ ] Solution 1
+  - [ ] Tick bitmap algorithm
   - [ ] Fee algorithm
   - [ ] JIT liquidity
   - [ ] TODO Final project 🤔
