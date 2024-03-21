@@ -1,9 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.24;
 
+import {IERC20} from "../../../src/interfaces/IERC20.sol";
+import {ISwapRouter} from "../../../src/interfaces/uniswap-v3/ISwapRouter.sol";
+import {IUniswapV3Pool} from
+    "../../../src/interfaces/uniswap-v3/IUniswapV3Pool.sol";
+import {UNISWAP_V3_SWAP_ROUTER_02} from "../../../src/Constants.sol";
+
 contract UniswapV3FlashSwap {
-    ISwapRouter constant router =
-        ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);
+    ISwapRouter constant router = ISwapRouter(UNISWAP_V3_SWAP_ROUTER_02);
 
     uint160 internal constant MIN_SQRT_RATIO = 4295128739;
     uint160 internal constant MAX_SQRT_RATIO =
@@ -43,7 +48,6 @@ contract UniswapV3FlashSwap {
             tokenOut: tokenOut,
             fee: fee,
             recipient: address(this),
-            deadline: block.timestamp,
             amountIn: amountIn,
             amountOutMinimum: amountOutMin,
             sqrtPriceLimitX96: 0

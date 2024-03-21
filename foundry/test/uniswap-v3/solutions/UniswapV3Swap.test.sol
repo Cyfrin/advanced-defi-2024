@@ -12,17 +12,6 @@ import {
     UNISWAP_V3_SWAP_ROUTER_02
 } from "../../../src/Constants.sol";
 
-// swap
-// - single
-// - multi
-// factory
-// add liquidity
-// remove liquidity
-// collect
-// flash
-// twap
-// TODO: flash swap?
-
 contract UniswapV3SwapTest is Test {
     IWETH private weth = IWETH(WETH);
     IERC20 private dai = IERC20(DAI);
