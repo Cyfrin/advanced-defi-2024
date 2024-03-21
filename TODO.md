@@ -21,6 +21,7 @@ TODO:
     - [ ] Swap math
       - [ ] How much token out for a swap?,
       - [ ] How much token in for a swap?,
+      - [ ] How much token x and y in a position?
     - [ ] Swap algorithm?
     - [ ] Contract call
     - [ ] Code walk 🤔
