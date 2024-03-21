@@ -5,27 +5,42 @@
   - [ ] Concentrated liquidity
   - [ ] Difference between v2 and v3
     - [ ] v2 = x,y -> liquidity and price, passive liquidity, v3 = liquidity, price -> x, y, active liquidity
-  - [ ] TODO - pratical math questions and answers
+  - [ ] TODO: - pratical math questions and answers
+    - [ ] How to get spot price?
+    - [ ] How much token out for a swap?,
+    - [ ] How much token in for a swap?,
+    - [ ] How much token to add liquidity?
+    - [ ] How much token to receive from remove liquidity?
+  - [ ] pool address, key, id
   - [ ] ticks
+  - [ ] tick spacing
   - [ ] sqrt price x 96
-  - [ ] fee growth
   - [ ] tick bitmap
+  - [ ] fee growth
+  - [ ] position manager + fee calculation
 
   - [ ] Math
   - [ ] Graph
   - [ ] Contract overview
+  - [ ] Contract call diagrams
   - [ ] Swap
-    - [ ] Exercise 1 - single pool
-    - [ ] Solution 1 - single pool
-    - [ ] Exercise 2 - multi pool
-    - [ ] Solution 2 - multi pool
+    - [ ] Exercise 1 - single pool input
+    - [ ] Solution 1 - single pool input
+    - [ ] Exercise 2 - single pool output
+    - [ ] Solution 2 - single pool output
+    - [ ] Exercise 3 - multi pool input
+    - [ ] Solution 3 - multi pool input
+    - [ ] Exercise 4 - multi pool output
+    - [ ] Solution 4 - multi pool output
   - [ ] Factory
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] Add liquidity
+  - [ ] Position manager
+  - [ ] Mint
+  - [ ] increase liquidity
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] Remove liquidity
+  - [ ] decrease liquidity
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] Collect fee and remove liquidity
@@ -33,6 +48,10 @@
     - [ ] Solution 1
     - [ ] Exercise 2
     - [ ] Solution 2
+  - [ ] Burn
+  - [ ] Flash
+    - [ ] Exercise 1
+    - [ ] Solution 1
   - [ ] Flash swap
     - [ ] Exercise 1
     - [ ] Solution 1

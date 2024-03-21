@@ -10,6 +10,8 @@ TODO: Uniswap V3 Graph
 
 [Uniswap V3 Periphery](https://github.com/Uniswap/v3-periphery/)
 
+[Uniswap V3 Swap Router](https://github.com/Uniswap/swap-router-contracts)
+
 [Uniswap V3 Docs](https://docs.uniswap.org/contracts/v3/overview)
 
 [Uniswap V3 Analytics](https://info.uniswap.org/)

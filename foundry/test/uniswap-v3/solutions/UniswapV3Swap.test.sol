@@ -19,8 +19,9 @@ import {
 // add liquidity
 // remove liquidity
 // collect
-// flash swap
+// flash
 // twap
+// TODO: flash swap?
 
 contract UniswapV3SwapTest is Test {
     IWETH private weth = IWETH(WETH);
