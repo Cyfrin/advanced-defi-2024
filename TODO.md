@@ -2,20 +2,25 @@
 
 TODO:
 
+- USDC/DAI -> virtual reserve and real reserve -> concentrated liquidity
+
 - [ ] Uniswap v3
-  - [ ] Concentrated liquidity
-    - [ ] Example (DAI/WETH, DAI/USDC)
-    - [ ] Graph
+  - [ ] Intro
+    - [ ] Concentrated liquidity
+      - [ ] Example (DAI/WETH, DAI/USDC)
+      - [ ] Virtual reserve and real reserve
+      - [ ] Concentrated liquidity
+    - [ ] Difference between v2 and v3
+      - [ ] How v3 is an improvement
+      - [ ] How v3 is not an improvement
+      - [ ] v2 -> x, y -> liquidity and price
+      - [ ] v3 -> liquidity, price -> x, y
+      - [ ] passive vs active liquidity (fungible vs non-fungible liquidity)
+      - [ ] pool per fee
+      - [ ] TWAP
+    - [ ] Graph 🤔
     - [ ] Math 🤔
-  - [ ] Difference between v2 and v3
-    - [ ] v2 -> x, y -> liquidity and price
-    - [ ] v3 -> liquidity, price -> x, y
-    - [ ] passive vs active liquidity (fungible vs non-fungible liquidity)
-    - [ ] pool per fee
-    - [ ] TWAP
-  - [ ] Graph 🤔
-  - [ ] Math 🤔
-  - [ ] Contract overview
+    - [ ] Contract overview
   - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96)
   - [ ] Swap
     - [ ] Swap math
