@@ -25,7 +25,7 @@ Front run, back run and sandwich
 
 Example of sending transcation through Flasbots RPC
 
-[FlashbotsTest.sol](./FlashbotsTest.sol) deployed on Goerli testnet at [0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160](https://goerli.etherscan.io/address/0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160)
+[FlashbotsTest.sol](./FlashbotsTest.sol) deployed on Sepolia testnet at [0xA36Cc45540670B8699dE15596618a857f1AB9610](https://sepolia.etherscan.io/address/0xA36Cc45540670B8699dE15596618a857f1AB9610)
 
 1. Import wallet into cast
 
@@ -50,14 +50,14 @@ rm -rf ~/.foundry/keystores/$ACCOUNT
 2. Send transaction using Flashbots RPC
 
 ```shell
-# Goerli FlashBotsTest address
-# 0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160
+# Sepolia FlashBotsTest address
+# 0xA36Cc45540670B8699dE15596618a857f1AB9610
 
 CHAIN=5
-DST=0xeDBc7F796Af2aF8cd88B9C722fd6e3d94444c160
+DST=0xA36Cc45540670B8699dE15596618a857f1AB9610
 FUNC_SIG="unlock(string)"
 ARGS="cyfrin"
-RPC=https://rpc-goerli.flashbots.net
+RPC=https://rpc-sepolia.flashbots.net
 
 # Send tx
 cast send --account $ACCOUNT --rpc-url $RPC --chain $CHAIN $DST $FUNC_SIG $ARGS
