@@ -1,6 +1,8 @@
 # Uniswap V3
 
-TODO: Uniswap V3 Graph
+[Uniswap V3 single position graph](https://www.desmos.com/calculator/cuf36yjkjf)
+
+[Uniswap V3 multi positions graph](https://www.desmos.com/calculator/tvcwuspcbu)
 
 ### Resources
 
