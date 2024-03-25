@@ -53,7 +53,8 @@ rm -rf ~/.foundry/keystores/$ACCOUNT
 # Sepolia FlashBotsTest address
 # 0xA36Cc45540670B8699dE15596618a857f1AB9610
 
-CHAIN=5
+ACCOUNT=burner
+CHAIN=11155111
 DST=0xA36Cc45540670B8699dE15596618a857f1AB9610
 FUNC_SIG="unlock(string)"
 ARGS="cyfrin"
