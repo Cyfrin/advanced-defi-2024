@@ -1,9 +1,5 @@
 ### Topics
 
-TODO:
-
-- USDC/DAI -> virtual reserve and real reserve -> concentrated liquidity
-
 - [ ] Uniswap v3
   - [ ] Intro
     - [ ] Concentrated liquidity
@@ -19,6 +15,11 @@ TODO:
       - [ ] pool per fee
       - [ ] TWAP
     - [ ] Graph 🤔
+      - [ ] Single position
+        - [ ] Real and virtual reserves
+        - [ ] Liquidity price graph
+        - [ ] Tick
+      - [ ] Multi positions
     - [ ] Math 🤔
     - [ ] Contract overview
   - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96)
