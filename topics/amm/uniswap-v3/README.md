@@ -1,6 +1,10 @@
 # Uniswap V3
 
-[Uniswap V3 single position graph](https://www.desmos.com/calculator/cuf36yjkjf)
+[Uniswap V3 tick graph](https://www.desmos.com/calculator/i0jaqanhen)
+
+[Uniswap V3 tick on constant product curve](https://www.desmos.com/calculator/3xpagfgcl2)
+
+[Uniswap V3 single position graph](https://www.desmos.com/calculator/afw6llbs8z)
 
 [Uniswap V3 multi positions graph](https://www.desmos.com/calculator/tvcwuspcbu)
 

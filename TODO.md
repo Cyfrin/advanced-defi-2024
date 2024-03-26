@@ -1,11 +1,35 @@
 ### Topics
 
+✅
+
+🤔
+
+TODO: split concepts and math - math is optional
+
+#### Concepts and terminologies
+
+- [x] concentrated liquidity
+- [x] real and virtual reserves
+- [x] position
+- [x] tick
+- [ ] sqrt price x 96
+- [x] liquidity price graph
+- [ ] slot0
+- [ ] fee growth
+
 - [ ] Uniswap v3
   - [ ] Intro
     - [ ] Concentrated liquidity
-      - [ ] Example (DAI/WETH, DAI/USDC)
-      - [ ] Virtual reserve and real reserve
-      - [ ] Concentrated liquidity
+      - [ ] Example - DAI/USDC
+      - [ ] Virtual reserve and real reserve (concept)
+      - [ ] Concentrated liquidity (concept)
+      - [ ] Position (concept)
+      - [ ] Questions
+        - [ ] How many dx and dy to add between price ranges pa and pb?
+        - [ ] How many dx for dy when tokens are swapped?
+        - [ ] How to get the spot price?
+        - [ ] How does the AMM curve look like for multiple position?
+        - [ ] How to track swap fees for each liquidity provider?
     - [ ] Difference between v2 and v3
       - [ ] How v3 is an improvement
       - [ ] How v3 is not an improvement
@@ -14,11 +38,13 @@
       - [ ] passive vs active liquidity (fungible vs non-fungible liquidity)
       - [ ] pool per fee
       - [ ] TWAP
-    - [ ] Graph 🤔
+    - [ ] Graph
+      - [ ] Tick (concept)
+      - [ ] Tick on constant product curve
       - [ ] Single position
         - [ ] Real and virtual reserves
-        - [ ] Liquidity price graph
-        - [ ] Tick
+        - [ ] Position (concept)
+        - [ ] Liquidity price graph (concept)
       - [ ] Multi positions
     - [ ] Math 🤔
     - [ ] Contract overview
