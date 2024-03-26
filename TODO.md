@@ -12,9 +12,9 @@ TODO: split concepts and math - math is optional
 - [x] real and virtual reserves
 - [x] position
 - [x] tick
-- [ ] sqrt price x 96
+- [x] sqrt price x 96
 - [x] liquidity price graph
-- [ ] slot0
+- [x] slot0
 - [ ] fee growth
 
 - [ ] Uniswap v3
@@ -46,9 +46,13 @@ TODO: split concepts and math - math is optional
         - [ ] Position (concept)
         - [ ] Liquidity price graph (concept)
       - [ ] Multi positions
-    - [ ] Math 🤔
-    - [ ] Contract overview
-  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96)
+  - [ ] Math
+    - [ ] Tick
+    - [ ] Curve of real reserves
+    - [ ] Real reserve amounts
+  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
+    - [ ] slot0
+  - [ ] Contract overview
   - [ ] Swap
     - [ ] Swap math
       - [ ] How much token out for a swap?,

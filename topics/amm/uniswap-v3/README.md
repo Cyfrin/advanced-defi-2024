@@ -12,6 +12,8 @@
 
 [Uniswap](https://uniswap.org/)
 
+[Whitepaper](https://uniswap.org/whitepaper-v3.pdf)
+
 [Uniswap V3 Core](https://github.com/Uniswap/v3-core/)
 
 [Uniswap V3 Core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
@@ -25,3 +27,5 @@
 [Uniswap V3 Docs](https://docs.uniswap.org/contracts/v3/overview)
 
 [Uniswap V3 Analytics](https://info.uniswap.org/)
+
+[A Primer on Uniswap v3 Math](https://blog.uniswap.org/uniswap-v3-math-primer)
