@@ -1,5 +1,7 @@
 # Uniswap V3
 
+[Uniswap V3 concentrated liquidity](https://www.desmos.com/calculator/b2jllbh8xk)
+
 [Uniswap V3 tick graph](https://www.desmos.com/calculator/i0jaqanhen)
 
 [Uniswap V3 tick on constant product curve](https://www.desmos.com/calculator/3xpagfgcl2)

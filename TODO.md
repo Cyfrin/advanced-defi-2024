@@ -17,19 +17,18 @@ TODO: split concepts and math - math is optional
 - [x] slot0
 - [ ] fee growth
 
+- [ ] How to get the spot price?
+- [ ] How does the AMM curve look like for multiple position?
+- [ ] How many dx and dy to add between price ranges pa and pb?
+- [ ] How many dx for dy when tokens are swapped in a single position?
+- [ ] How to track swap fees for each liquidity provider?
+
 - [ ] Uniswap v3
   - [ ] Intro
     - [ ] Concentrated liquidity
       - [ ] Example - DAI/USDC
       - [ ] Virtual reserve and real reserve (concept)
       - [ ] Concentrated liquidity (concept)
-      - [ ] Position (concept)
-      - [ ] Questions
-        - [ ] How many dx and dy to add between price ranges pa and pb?
-        - [ ] How many dx for dy when tokens are swapped?
-        - [ ] How to get the spot price?
-        - [ ] How does the AMM curve look like for multiple position?
-        - [ ] How to track swap fees for each liquidity provider?
     - [ ] Difference between v2 and v3
       - [ ] How v3 is an improvement
       - [ ] How v3 is not an improvement
