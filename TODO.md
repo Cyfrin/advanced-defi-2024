@@ -39,13 +39,13 @@ TODO: split concepts and math - math is optional
       - [ ] pool per fee
       - [ ] TWAP
     - [ ] Graph
+      - [ ] Concentrated liquidity (concept)
       - [ ] Tick (concept)
       - [ ] Tick on constant product curve
       - [ ] Single position
         - [ ] Real and virtual reserves
         - [ ] Position (concept)
         - [ ] Liquidity price graph (concept)
-      - [ ] Concentrated liquidity
       - [ ] Multi positions
   - [ ] Math
     - [ ] Tick
