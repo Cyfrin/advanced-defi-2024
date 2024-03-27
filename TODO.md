@@ -45,6 +45,7 @@ TODO: split concepts and math - math is optional
         - [ ] Real and virtual reserves
         - [ ] Position (concept)
         - [ ] Liquidity price graph (concept)
+      - [ ] Concentrated liquidity
       - [ ] Multi positions
   - [ ] Math
     - [ ] Tick
