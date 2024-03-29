@@ -25,11 +25,11 @@ TODO: split concepts and math - math is optional
 
 - [ ] Uniswap v3
   - [ ] Intro
-    - [ ] Concentrated liquidity
-      - [ ] Example - DAI/USDC
-      - [ ] Virtual reserve and real reserve (concept)
-      - [ ] Concentrated liquidity (concept)
-    - [ ] Difference between v2 and v3
+    - [x] Concentrated liquidity
+      - [x] Example - DAI/USDC
+      - [x] Virtual reserve and real reserve (concept)
+      - [x] Concentrated liquidity (concept)
+    - [x] Difference between v2 and v3
     - [ ] Graph
       - [ ] Concentrated liquidity (concept)
       - [ ] Tick (concept)
@@ -41,10 +41,12 @@ TODO: split concepts and math - math is optional
       - [ ] Multi positions
   - [ ] Math
     - [ ] Tick
+    - [ ] X and Y in terms of L and P
     - [ ] Curve of real reserves
     - [ ] Real reserve amounts
   - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
     - [ ] slot0
+    - [ ] Code
   - [ ] Contract overview
   - [ ] Swap
     - [ ] Swap math
