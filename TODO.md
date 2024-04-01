@@ -31,14 +31,14 @@ TODO: split concepts and math - math is optional
       - [x] Concentrated liquidity (concept)
     - [x] Difference between v2 and v3
     - [ ] Graph
-      - [ ] Concentrated liquidity (concept)
-      - [ ] Tick (concept)
-      - [ ] Tick on constant product curve
-      - [ ] Single position
-        - [ ] Real and virtual reserves
-        - [ ] Position (concept)
-        - [ ] Liquidity price graph (concept)
+      - [x] Concentrated liquidity (concept)
+      - [x] Tick (concept)
+      - [x] Tick on constant product curve
+      - [x] Single position
+        - [x] Position (concept)
+        - [x] Liquidity price graph (concept)
       - [ ] Multi positions
+      - [ ] Real and virtual reserves
   - [ ] Math
     - [ ] Tick
     - [ ] X and Y in terms of L and P
