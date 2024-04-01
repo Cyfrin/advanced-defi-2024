@@ -23,6 +23,8 @@ TODO: split concepts and math - math is optional
 - [ ] How many dx for dy when tokens are swapped in a single position?
 - [ ] How to track swap fees for each liquidity provider?
 
+TODO: embed link to resources
+
 - [ ] Uniswap v3
   - [ ] Intro
     - [x] Concentrated liquidity
@@ -44,6 +46,7 @@ TODO: split concepts and math - math is optional
   - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
     - [ ] Math - tick
     - [ ] slot0 (concept)
+    - [ ] [spot price from tick](./notebook/uniswap_v3_spot_price.ipynb)
     - [ ] Code
   - [ ] Math
     - [ ] X and Y in terms of L and P
