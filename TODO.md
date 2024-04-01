@@ -17,7 +17,7 @@ TODO: split concepts and math - math is optional
 - [x] slot0
 - [ ] fee growth
 
-- [ ] How to get the spot price?
+- [x] How to get the spot price?
 - [ ] How does the AMM curve look like for multiple position?
 - [ ] How many dx and dy to add between price ranges pa and pb?
 - [ ] How many dx for dy when tokens are swapped in a single position?
@@ -38,16 +38,18 @@ TODO: split concepts and math - math is optional
         - [x] Position (concept)
         - [x] Liquidity price graph (concept)
       - [ ] Multi positions
-      - [ ] Real and virtual reserves
+      - [ ] ETH/USDT liquiduity price graph example
+      - [ ] USDC/ETH liquidity price graph example
+      - [ ] Real and virtual reserves 🤔
+  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
+    - [ ] Math - tick
+    - [ ] slot0 (concept)
+    - [ ] Code
   - [ ] Math
-    - [ ] Tick
     - [ ] X and Y in terms of L and P
     - [ ] Curve of real reserves
     - [ ] Real reserve amounts
-  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
-    - [ ] slot0
-    - [ ] Code
-  - [ ] Contract overview
+  - [ ] Contracts overview
   - [ ] Swap
     - [ ] Swap math
       - [ ] How much token out for a swap?,
