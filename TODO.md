@@ -47,6 +47,7 @@ TODO: embed link to resources
     - [ ] Math - tick
     - [ ] slot0 (concept)
     - [ ] [spot price from tick](./notebook/uniswap_v3_spot_price.ipynb)
+    - TODO: spot price from sqrtpx96
     - [ ] Code
   - [ ] Math
     - [ ] X and Y in terms of L and P
