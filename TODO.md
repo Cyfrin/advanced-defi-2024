@@ -39,9 +39,8 @@ TODO: embed link to resources
       - [x] Single position
         - [x] Position (concept)
         - [x] Liquidity price graph (concept)
-      - [ ] Multi positions
-      - [ ] ETH/USDT liquiduity price graph example
-      - [ ] USDC/ETH liquidity price graph example
+      - [x] Multi positions
+      - [x] ETH/USDT liquiduity price graph example
       - [ ] Real and virtual reserves 🤔
   - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
     - [ ] Math - tick
