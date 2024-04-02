@@ -25,6 +25,7 @@ contract UniswapV3SwapTest is Test {
         // P has 1e18 / 1e6 decimals
         // 1 / P has 1e6 / 1e18 decimals
         // sqrtPriceX96 = sqrt(P) * Q96
+        // TODO: use muldiv?
         price = slot0.sqrtPriceX96 / Q96 * slot0.sqrtPriceX96 / Q96;
         price = 1e12 * 1e18 / price;
 
