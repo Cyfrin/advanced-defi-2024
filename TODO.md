@@ -42,18 +42,21 @@ TODO: embed link to resources
       - [x] Multi positions
       - [x] ETH/USDT liquiduity price graph example
       - [ ] Real and virtual reserves 🤔
-  - [ ] Spot price (sqrt price, tick, tick spacing, sqrt x 96) (concept)
-    - [ ] Math - tick
-    - [ ] slot0 (concept)
-    - [ ] [spot price from tick](./notebook/uniswap_v3_spot_price.ipynb)
-    - TODO: spot price from sqrtpx96
-    - [ ] Code
+  - [ ] Spot price (sqrt price, tick, sqrt x 96) (concept)
+    - [ ] slot0 (tick and sqrtPriceX96)
+    - [ ] Math - tick to price
+    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [ ] Math - sprtPriceX96 to price
+    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [ ] Solidity exercise
+    - [ ] Solidity solution
   - [ ] Math
     - [ ] X and Y in terms of L and P
     - [ ] Curve of real reserves
     - [ ] Real reserve amounts
   - [ ] Contracts overview
   - [ ] Swap
+    - [ ] tick spacing 🤔
     - [ ] Swap math
       - [ ] How much token out for a swap?,
       - [ ] How much token in for a swap?,
