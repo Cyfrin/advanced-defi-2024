@@ -27,19 +27,17 @@ TODO: embed link to resources
 
 - [ ] Uniswap v3
   - [ ] Intro
-    - [x] Concentrated liquidity
+    - [x] [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
       - [x] Example - DAI/USDC
       - [x] Virtual reserve and real reserve (concept)
       - [x] Concentrated liquidity (concept)
-    - [x] Difference between v2 and v3
-    - [ ] Graph
-      - [x] Concentrated liquidity (concept)
-      - [x] Tick (concept)
-      - [x] Tick on constant product curve
-      - [x] Single position
-        - [x] Position (concept)
-        - [x] Liquidity price graph (concept)
-      - [x] Multi positions
+    - [x] [Difference between v2 and v3](./excalidraw/amm/uniswap-v3/uniswap-v2-v3-diff.png)
+    - [x] Graph
+      - [x] [Concentrated liquidity](https://www.desmos.com/calculator/b2jllbh8xk)
+      - [x] [Tick](https://www.desmos.com/calculator/i0jaqanhen)
+      - [x] [Tick on constant product curve](https://www.desmos.com/calculator/3xpagfgcl2)
+      - [x] [Single position](https://www.desmos.com/calculator/afw6llbs8z)
+      - [x] [Multi positions](https://www.desmos.com/calculator/cunvngnzqx)
       - [x] ETH/USDT liquiduity price graph example
   - [ ] Spot price (sqrt price, tick, sqrt x 96) (concept)
     - [ ] slot0 (tick and sqrtPriceX96)
