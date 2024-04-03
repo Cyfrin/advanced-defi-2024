@@ -4,6 +4,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import {IUniswapV3Pool} from
     "../../../src/interfaces/uniswap-v3/IUniswapV3Pool.sol";
 import {UNISWAP_V3_POOL_USDC_WETH_500} from "../../../src/Constants.sol";
+import {FullMath} from "../../../src/uniswap-v3/FullMath.sol";
 
 contract UniswapV3SwapTest is Test {
     // token0 (X)
@@ -25,9 +26,11 @@ contract UniswapV3SwapTest is Test {
         // P has 1e18 / 1e6 decimals
         // 1 / P has 1e6 / 1e18 decimals
         // sqrtPriceX96 = sqrt(P) * Q96
-        // TODO: use muldiv?
-        price = slot0.sqrtPriceX96 / Q96 * slot0.sqrtPriceX96 / Q96;
-        price = 1e12 * 1e18 / price;
+        // sqrt(P) * Q96 * sqrt(P) * Q96 / Q96 = P * Q96
+        // 96 + 96 = 192
+        // 256 - 192 = 64
+        price = FullMath.mulDiv(slot0.sqrtPriceX96, slot0.sqrtPriceX96, Q96);
+        price = 1e12 * 1e18 * Q96 / price;
 
         assertGt(price, 0, "price = 0");
         console2.log("price %e", price);
