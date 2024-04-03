@@ -43,15 +43,17 @@ TODO: embed link to resources
     - [ ] slot0 (tick and sqrtPriceX96)
       - [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
       - [Etherscan WETH/USDT](https://etherscan.io/address/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36#code)
-    - [ ] Math - tick to price
+    - [ ] [Math - tick to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
     - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
-    - [ ] Math - sprtPriceX96 to price
+    - [ ] [Math - sqrtPriceX96 to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
+    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [ ] [Math - sqrtPriceX96 to tick](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
     - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
     - [ ] [Solidity exercise](./foundry/tests/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
     - [ ] [Solidity solution](./foundry/tests/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
   - [ ] Real and virtual reserves 🤔
   - [ ] tick spacing 🤔
-  - [ ] Math
+  - [ ] Math 🤔
     - [ ] X and Y in terms of L and P
     - [ ] Curve of real reserves
     - [ ] Real reserve amounts
