@@ -18,14 +18,19 @@ TODO: split concepts and math - math is optional
 - [ ] fee growth
 
 - [x] How to get the spot price?
-- [ ] How does the AMM curve look like for multiple position?
+- [x] How does the AMM curve look like for multiple position?
 - [ ] How many dx and dy to add between price ranges pa and pb?
 - [ ] How many dx for dy when tokens are swapped in a single position?
+- [ ] How does swap algorithm work?
+  - [ ] single position
+  - [ ] multi position
+    - [ ] liquidity net
+    - [ ] tick bit map
 - [ ] How to track swap fees for each liquidity provider?
 
 TODO: embed link to resources
 
-- [ ] Uniswap v3
+- [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
   - [ ] Intro
     - [x] [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
       - [x] Example - DAI/USDC
@@ -53,6 +58,8 @@ TODO: embed link to resources
     - [ ] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
   - [ ] Real and virtual reserves 🤔
   - [ ] tick spacing 🤔
+  - [ ] Current liquidity 🤔
+  - [ ] Liquidity net 🤔
   - [ ] Math 🤔
     - [ ] X and Y in terms of L and P
     - [ ] Curve of real reserves
@@ -63,17 +70,17 @@ TODO: embed link to resources
       - [ ] How much token out for a swap?,
       - [ ] How much token in for a swap?,
       - [ ] How much token x and y in a position?
-    - [ ] Swap algorithm?
     - [ ] Contract call
     - [ ] Code walk 🤔
-    - [ ] Exercise 1 - single pool input
-    - [ ] Solution 1 - single pool input
-    - [ ] Exercise 2 - single pool output
-    - [ ] Solution 2 - single pool output
-    - [ ] Exercise 3 - multi pool input
-    - [ ] Solution 3 - multi pool input
-    - [ ] Exercise 4 - multi pool output
-    - [ ] Solution 4 - multi pool output
+    - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 1 - single pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 2 - single pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 2 - single pool output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 3 - multi pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 3 - multi pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 4 - multi pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 4 - multi pool output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] Swap algorithm?
   - [ ] Factory
     - [ ] Code walk 🤔
     - [ ] Exercise 1
