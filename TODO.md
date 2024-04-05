@@ -49,8 +49,8 @@ TODO: embed link to resources
     - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
     - [ ] [Math - sqrtPriceX96 to tick](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
     - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
-    - [ ] [Solidity exercise](./foundry/tests/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
-    - [ ] [Solidity solution](./foundry/tests/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
+    - [ ] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
+    - [ ] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
   - [ ] Real and virtual reserves 🤔
   - [ ] tick spacing 🤔
   - [ ] Math 🤔
