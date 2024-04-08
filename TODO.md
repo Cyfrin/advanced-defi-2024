@@ -68,9 +68,12 @@ TODO: embed link to resources
   - [ ] Contracts overview
   - [ ] Swap
     - [ ] Swap math
+      - [ ] Overview
+      - [ ] Equation for x and y from liquidity and price
+      - [ ] Curve of real reserves
+      - [ ] How much token x and y between pa and pb?
       - [ ] How much token out for a swap?,
       - [ ] How much token in for a swap?,
-      - [ ] How much token x and y in a position?
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
