@@ -6,6 +6,12 @@
 
 TODO: split concepts and math - math is optional
 
+### Uniswap v3 - feedback - TODO:
+
+Great at pointing out that greater liquidity = less price impact, although it is not so clear why (for me it is obvious, but I can imagine someone with no background having this question, maybe add a little article with an example of the same swap attempt would help to make this easier to remember)
+
+I also like the graph, I would add one additional which just tracks the price in time (if possible) just show how everything operated in real time. I mean, in some way u do it right now, but given that different $P_{x}$ don't have a concrete value assigned I could understand if someone get a little lost here.
+
 #### Concepts and terminologies
 
 - [x] concentrated liquidity
@@ -19,13 +25,16 @@ TODO: split concepts and math - math is optional
 
 - [x] How to get the spot price?
 - [x] How does the AMM curve look like for multiple position?
-- [ ] How many dx and dy to add between price ranges pa and pb?
-- [ ] How many dx for dy when tokens are swapped in a single position?
+- [x] How many dx and dy to add between price ranges pa and pb?
+- [x] How many dx for dy when tokens are swapped in a single position?
 - [ ] How does swap algorithm work?
   - [ ] single position
   - [ ] multi position
     - [ ] liquidity net
     - [ ] tick bit map
+    - [ ] tick spacing 🤔
+    - [ ] Current liquidity 🤔
+    - [ ] Liquidity net 🤔
 - [ ] How to track swap fees for each liquidity provider?
 
 TODO: embed link to resources
@@ -56,20 +65,16 @@ TODO: embed link to resources
     - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
     - [ ] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
     - [ ] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
-  - [ ] Real and virtual reserves 🤔
-  - [ ] tick spacing 🤔
-  - [ ] Current liquidity 🤔
-  - [ ] Liquidity net 🤔
-  - [ ] Math 🤔
-    - [ ] X and Y in terms of L and P
-    - [ ] Curve of real reserves
-    - [ ] Real reserve amounts
   - [ ] Contracts overview
   - [ ] Swap
     - [ ] Swap math
       - [ ] How much token out for a swap?,
       - [ ] How much token in for a swap?,
       - [ ] How much token x and y in a position?
+      - [ ] Swap fee
+    - [ ] Swap algorithm 🤔
+      - [ ] single position
+      - [ ] multi position (liquidity net)
     - [ ] Contract call
     - [ ] Code walk 🤔
     - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
