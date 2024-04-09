@@ -53,18 +53,18 @@ TODO: embed link to resources
       - [x] [Single position](https://www.desmos.com/calculator/afw6llbs8z)
       - [x] [Multi positions](https://www.desmos.com/calculator/fyvzeasktd)
       - [x] ETH/USDT liquiduity price graph example
-  - [ ] Spot price (sqrt price, tick, sqrt x 96)
-    - [ ] slot0 (tick and sqrtPriceX96)
+  - [x] Spot price (sqrt price, tick, sqrt x 96)
+    - [x] slot0 (tick and sqrtPriceX96)
       - [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
       - [Etherscan WETH/USDT](https://etherscan.io/address/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36#code)
-    - [ ] [Math - tick to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
-    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
-    - [ ] [Math - sqrtPriceX96 to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
-    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
-    - [ ] [Math - sqrtPriceX96 to tick](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
-    - [ ] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
-    - [ ] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
-    - [ ] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
+    - [x] [Math - tick to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
+    - [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [x] [Math - sqrtPriceX96 to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
+    - [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [x] [Math - sqrtPriceX96 to tick](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
+    - [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
+    - [x] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
+    - [x] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
   - [ ] Contracts overview
   - [ ] Swap
     - [ ] Swap math
