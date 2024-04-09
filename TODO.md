@@ -69,11 +69,11 @@ TODO: embed link to resources
   - [ ] Swap
     - [ ] Swap math
       - [ ] Overview
-      - [ ] Equation for x and y from liquidity and price
-      - [ ] Curve of real reserves
-      - [ ] How much token x and y between pa and pb?
-      - [ ] How much token out for a swap?,
-      - [ ] How much token in for a swap?,
+      - [ ] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
+      - [ ] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
+      - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
+      - [ ] How many token out for a swap?,
+      - [ ] How many token in for a swap?,
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
