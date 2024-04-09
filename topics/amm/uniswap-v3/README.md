@@ -8,7 +8,7 @@
 
 [Uniswap V3 single position graph](https://www.desmos.com/calculator/afw6llbs8z)
 
-[Uniswap V3 multi positions graph](https://www.desmos.com/calculator/cunvngnzqx)
+[Uniswap V3 multi positions graph](https://www.desmos.com/calculator/fyvzeasktd)
 
 ### Resources
 

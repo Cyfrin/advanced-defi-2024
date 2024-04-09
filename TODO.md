@@ -51,7 +51,7 @@ TODO: embed link to resources
       - [x] [Tick](https://www.desmos.com/calculator/i0jaqanhen)
       - [x] [Tick on constant product curve](https://www.desmos.com/calculator/3xpagfgcl2)
       - [x] [Single position](https://www.desmos.com/calculator/afw6llbs8z)
-      - [x] [Multi positions](https://www.desmos.com/calculator/cunvngnzqx)
+      - [x] [Multi positions](https://www.desmos.com/calculator/fyvzeasktd)
       - [x] ETH/USDT liquiduity price graph example
   - [ ] Spot price (sqrt price, tick, sqrt x 96)
     - [ ] slot0 (tick and sqrtPriceX96)
