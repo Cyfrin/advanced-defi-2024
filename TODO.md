@@ -72,8 +72,9 @@ TODO: embed link to resources
       - [ ] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
       - [ ] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
       - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
-      - [ ] How many token out for a swap?,
-      - [ ] How many token in for a swap?,
+      - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
+      - [ ] How many token out for a swap (with fee)?,
+      - [ ] How many token in for a swap (with fee)?,
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
