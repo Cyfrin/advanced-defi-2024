@@ -65,12 +65,12 @@ TODO: embed link to resources
     - [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
     - [x] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
     - [x] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
-  - [ ] Contracts overview
+  - [ ] TODO: Contracts overview
+  - [ ] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
+  - [ ] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [ ] Swap
     - [ ] Swap math
-      - [ ] Overview
-      - [ ] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
-      - [ ] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
+      - [ ] TODO: Overview
       - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
       - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
       - [ ] How many token out for a swap (with fee)?,
@@ -78,6 +78,7 @@ TODO: embed link to resources
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
+        - [ ] exact in, exact out, max in, not max in
       - [ ] multi position (liquidity net)
     - [ ] Contract call
     - [ ] Code walk 🤔
