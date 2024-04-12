@@ -65,16 +65,16 @@ TODO: embed link to resources
     - [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
     - [x] [Solidity exercise](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
     - [x] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
+  - [x] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
+  - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
+  - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
+  - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
   - [ ] TODO: Contracts overview
-  - [ ] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
-  - [ ] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [ ] Swap
     - [ ] Swap math
       - [ ] TODO: Overview
-      - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
-      - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
-      - [ ] How many token out for a swap (with fee)?,
-      - [ ] How many token in for a swap (with fee)?,
+      - [ ] How many token out for a swap (without fee)?,
+      - [ ] How many token in for a swap (without fee)?,
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
