@@ -68,11 +68,10 @@ TODO: embed link to resources
   - [x] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
   - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
-  - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
   - [ ] TODO: Contracts overview
   - [ ] Swap
     - [ ] Swap math
-      - [ ] TODO: Overview
+      - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
       - [ ] How many token out for a swap (without fee)?,
       - [ ] How many token in for a swap (without fee)?,
       - [ ] Swap fee
@@ -90,7 +89,6 @@ TODO: embed link to resources
     - [ ] [Solution 3 - multi pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
     - [ ] [Exercise 4 - multi pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
     - [ ] [Solution 4 - multi pool output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
-    - [ ] Swap algorithm?
   - [ ] Factory
     - [ ] Code walk 🤔
     - [ ] Exercise 1
