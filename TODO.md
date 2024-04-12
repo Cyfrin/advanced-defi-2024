@@ -67,7 +67,7 @@ TODO: embed link to resources
     - [x] [Solidity solution](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
   - [x] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
   - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
-  - [ ] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
+  - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
   - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
   - [ ] TODO: Contracts overview
   - [ ] Swap
