@@ -53,7 +53,6 @@ TODO: embed link to resources
       - [x] [Single position](https://www.desmos.com/calculator/afw6llbs8z)
       - [x] [Multi positions](https://www.desmos.com/calculator/fyvzeasktd)
       - [x] ETH/USDT liquiduity price graph example
-  - [ ] TODO: Contracts overview
   - [x] Spot price (sqrt price, tick, sqrt x 96)
     - [x] slot0 (tick and sqrtPriceX96)
       - [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
@@ -69,6 +68,8 @@ TODO: embed link to resources
   - [x] [Equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
   - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
+  - [x] Repositories overview
+  - [x] Contracts overview
   - [ ] Swap
     - [ ] Swap math
       - [ ] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
