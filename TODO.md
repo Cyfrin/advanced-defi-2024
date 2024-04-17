@@ -73,6 +73,7 @@ TODO: embed link to resources
   - [ ] Swap
     - [ ] Swap math
       - [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
+      - [ ] algo swap amounts for a single position 🤔
       - [ ] Swap fee
     - [ ] Swap algorithm 🤔
       - [ ] single position
