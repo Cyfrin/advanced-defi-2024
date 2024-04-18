@@ -71,14 +71,12 @@ TODO: embed link to resources
   - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
   - [ ] Swap
+    - [ ] Swap algorithm
+      - [ ] [single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
+      - [ ] multi position (liquidity net)
     - [ ] Swap math
       - [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
-      - [ ] algo swap amounts for a single position 🤔
-      - [ ] Swap fee
-    - [ ] Swap algorithm 🤔
-      - [ ] single position
-        - [ ] exact in, exact out, max in, not max in
-      - [ ] multi position (liquidity net)
+      - [ ] [Swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
     - [ ] Contract call
     - [ ] Code walk 🤔
     - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
