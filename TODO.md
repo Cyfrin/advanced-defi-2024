@@ -72,10 +72,11 @@ TODO: embed link to resources
   - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
   - [ ] Swap
     - [ ] Swap algorithm
-      - [ ] [Single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
-      - [ ] Multi position
-        - [ ] [Liquidity net](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-net.png)
-        - [ ] [Graph - liquidity net](https://www.desmos.com/calculator/mkoyc4wm9t)
+      - [x] [Single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
+      - [x] Multi position
+        - [x] Liquidity net intro
+        - [x] [Liquidity net](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-net.png)
+        - [x] [Graph - liquidity net](https://www.desmos.com/calculator/mkoyc4wm9t)
     - [ ] Swap math
       - [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
       - [ ] [Swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
