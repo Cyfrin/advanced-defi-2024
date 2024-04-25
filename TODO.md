@@ -80,8 +80,13 @@ TODO: embed link to resources
     - [ ] Swap math
       - [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
       - [ ] [Swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
+    - [ ] Code walk swap
     - [ ] Contract call
-    - [ ] Code walk 🤔
+      - [ ] Exact input single
+      - [ ] Exact input
+      - [ ] Exact output single
+      - [ ] Exact output
+    - [ ] Code walk SwapRouter02
     - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
     - [ ] [Solution 1 - single pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
     - [ ] [Exercise 2 - single pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
