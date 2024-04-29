@@ -6,6 +6,10 @@
 
 TODO: split concepts and math - math is optional
 
+TODO:
+
+- uni v2 low liquidity high price impact example
+
 ### Uniswap v3 - feedback - TODO:
 
 Great at pointing out that greater liquidity = less price impact, although it is not so clear why (for me it is obvious, but I can imagine someone with no background having this question, maybe add a little article with an example of the same swap attempt would help to make this easier to remember)
@@ -71,17 +75,17 @@ TODO: embed link to resources
   - [x] [Curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
   - [x] [How many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
   - [ ] Swap
-    - [ ] Swap algorithm
+    - [x] Swap algorithm
       - [x] [Single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
       - [x] Multi position
         - [x] Liquidity net intro
         - [x] [Liquidity net](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-net.png)
         - [x] [Graph - liquidity net](https://www.desmos.com/calculator/mkoyc4wm9t)
-    - [ ] Swap math
+    - [x] Swap math
       - [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
       - [x] [Swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
-    - [ ] Code walk swap
-    - [ ] [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-contract-calls.png)
+    - [x] Code walk swap
+    - [x] [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-contract-calls.png)
       - [x] Exact input single
       - [x] Exact input
       - [x] Exact output single
