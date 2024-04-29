@@ -23,7 +23,7 @@
 - [ ] TODO: Add liquidity (tick spacing)
 
 - [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
-  - [ ] Intro
+  - [x] Intro
     - [x] [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
       - [x] Example - DAI/USDC
       - [x] Virtual reserve and real reserve (concept)
