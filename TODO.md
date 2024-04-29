@@ -4,18 +4,6 @@
 
 🤔
 
-TODO: split concepts and math - math is optional
-
-TODO:
-
-- uni v2 low liquidity high price impact example
-
-### Uniswap v3 - feedback - TODO:
-
-Great at pointing out that greater liquidity = less price impact, although it is not so clear why (for me it is obvious, but I can imagine someone with no background having this question, maybe add a little article with an example of the same swap attempt would help to make this easier to remember)
-
-I also like the graph, I would add one additional which just tracks the price in time (if possible) just show how everything operated in real time. I mean, in some way u do it right now, but given that different $P_{x}$ don't have a concrete value assigned I could understand if someone get a little lost here.
-
 #### Concepts and terminologies
 
 - [x] concentrated liquidity
@@ -31,17 +19,8 @@ I also like the graph, I would add one additional which just tracks the price in
 - [x] How does the AMM curve look like for multiple position?
 - [x] How many dx and dy to add between price ranges pa and pb?
 - [x] How many dx for dy when tokens are swapped in a single position?
-- [ ] How does swap algorithm work?
-  - [ ] single position
-  - [ ] multi position
-    - [ ] liquidity net
-    - [ ] tick bit map
-    - [ ] tick spacing 🤔
-    - [ ] Current liquidity 🤔
-    - [ ] Liquidity net 🤔
 - [ ] How to track swap fees for each liquidity provider?
-
-TODO: embed link to resources
+- [ ] TODO: Add liquidity (tick spacing)
 
 - [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
   - [ ] Intro
@@ -146,6 +125,8 @@ TODO: embed link to resources
   - [ ] TODO: Final project 🤔
   - [ ] JIT liquidity 🤔
   - [ ] panoptics 🤔
+  - Footnotes
+    - [ ] [Graph - Constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
 
 ### uni v3 resource
 
