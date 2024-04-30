@@ -69,7 +69,9 @@
       - [x] Exact input
       - [x] Exact output single
       - [x] Exact output
-    - [ ] Code walk SwapRouter02
+    - [x] Code walk SwapRouter02
+      - [x] Exact input
+      - [x] Exact output
     - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
     - [ ] [Solution 1 - single pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
     - [ ] [Exercise 2 - single pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
