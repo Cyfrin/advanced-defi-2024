@@ -72,14 +72,14 @@
     - [x] Code walk SwapRouter02
       - [x] Exact input
       - [x] Exact output
-    - [ ] [Exercise 1 - single pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
-    - [ ] [Solution 1 - single pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
-    - [ ] [Exercise 2 - single pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
-    - [ ] [Solution 2 - single pool output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
-    - [ ] [Exercise 3 - multi pool input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
-    - [ ] [Solution 3 - multi pool input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
-    - [ ] [Exercise 4 - multi pool output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
-    - [ ] [Solution 4 - multi pool output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 1 - single pool exact input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 1 - single pool exact input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 2 - multi pool exact input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 2 - multi pool exact input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 3 - single pool exact output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 4 - single pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
+    - [ ] [Exercise 4 - multi pool exact output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
+    - [ ] [Solution 4 - multi pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
   - [ ] Factory
     - [ ] Code walk 🤔
     - [ ] Exercise 1

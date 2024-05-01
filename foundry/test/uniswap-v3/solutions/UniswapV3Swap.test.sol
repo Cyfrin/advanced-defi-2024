@@ -24,8 +24,13 @@ contract UniswapV3SwapTest is Test {
         dai.approve(address(router), type(uint256).max);
     }
 
+    // Exercise 1
+    // - Swap 1000 DAI for WETH on DAI/WETH pool with 0.3% fee
+    // - Send WETH from Uniswap V3 to this contract
     function test_exactInputSingle() public {
-        uint256 amount_out = router.exactInputSingle(
+        // Write your code here
+        // Call router.exactInputSingle
+        uint256 amountOut = router.exactInputSingle(
             ISwapRouter.ExactInputSingleParams({
                 tokenIn: DAI,
                 tokenOut: WETH,
@@ -33,20 +38,28 @@ contract UniswapV3SwapTest is Test {
                 recipient: address(this),
                 amountIn: 1000 * 1e18,
                 amountOutMinimum: 1,
-                // NOTE 0 -> (zeroForOne ? TickMath.MIN_SQRT_RATIO + 1 : TickMath.MAX_SQRT_RATIO - 1)
                 sqrtPriceLimitX96: 0
             })
         );
 
-        console2.log("Amount out %e", amount_out);
+        console2.log("WETH amount out %e", amountOut);
+        assertGt(amountOut, 0);
+        assertEq(weth.balanceOf(address(this)), amountOut);
     }
 
+    // Exercise 2
+    // Swap 1000 DAI for WETH and then WETH to WBTC
+    // - Swap DAI to WETH on pool with 0.3% fee
+    // - Swap WETH to WBTC on pool with 0.3% fee
+    // - Send WBTC from Uniswap V3 to this contract
+    // NOTE: WBTC has 8 decimals
     function test_exactInput() public {
-        // DAI -> WETH -> WBTC
+        // Write your code here
+        // Call router.exactInput
         bytes memory path =
             abi.encodePacked(DAI, uint24(3000), WETH, uint24(3000), WBTC);
 
-        uint256 amount_out = router.exactInput(
+        uint256 amountOut = router.exactInput(
             ISwapRouter.ExactInputParams({
                 path: path,
                 recipient: address(this),
@@ -55,12 +68,18 @@ contract UniswapV3SwapTest is Test {
             })
         );
 
-        console2.log("Amount out %e", amount_out);
-        console2.log("WBTC balance %e", wbtc.balanceOf(address(this)));
+        console2.log("WBTC amount out %e", amountOut);
+        assertGt(amountOut, 0);
+        assertEq(wbtc.balanceOf(address(this)), amountOut);
     }
 
+    // Exercise 3
+    // - Swap maximum of 1000 DAI to obtain exactly 0.1 WETH from DAI/WETH pool with 0.3% fee
+    // - Send WETH from Uniswap V3 to this contract
     function test_exactOutputSingle() public {
-        uint256 amount_in = router.exactOutputSingle(
+        // Write your code here
+        // Call router.exactOutputSingle
+        uint256 amountIn = router.exactOutputSingle(
             ISwapRouter.ExactOutputSingleParams({
                 tokenIn: DAI,
                 tokenOut: WETH,
@@ -68,20 +87,28 @@ contract UniswapV3SwapTest is Test {
                 recipient: address(this),
                 amountOut: 0.1 * 1e18,
                 amountInMaximum: 1000 * 1e18,
-                // NOTE 0 -> (zeroForOne ? TickMath.MIN_SQRT_RATIO + 1 : TickMath.MAX_SQRT_RATIO - 1)
                 sqrtPriceLimitX96: 0
             })
         );
 
-        console2.log("Amount in %e", amount_in);
+        console2.log("DAI amount in %e", amountIn);
+        assertLe(amountIn, 1000 * 1e18);
+        assertEq(weth.balanceOf(address(this)), 0.1 * 1e18);
     }
 
+    // Exercise 4
+    // Swap maximum of 1000 DAI to obtain exactly 0.01 WBTC
+    // - Swap DAI to WETH on pool with 0.3% fee
+    // - Swap WETH to WBTC on pool with 0.3% fee
+    // - Send WBTC from Uniswap V3 to this contract
+    // NOTE: WBTC has 8 decimals
     function test_exactOutput() public {
-        // DAI -> WETH -> WBTC
+        // Write your code here
+        // Call router.exactOutput
         bytes memory path =
             abi.encodePacked(WBTC, uint24(3000), WETH, uint24(3000), DAI);
 
-        uint256 amount_in = router.exactOutput(
+        uint256 amountIn = router.exactOutput(
             ISwapRouter.ExactOutputParams({
                 path: path,
                 recipient: address(this),
@@ -90,7 +117,8 @@ contract UniswapV3SwapTest is Test {
             })
         );
 
-        console2.log("Amount in %e", amount_in);
-        console2.log("WBTC balance %e", wbtc.balanceOf(address(this)));
+        console2.log("DAI amount in %e", amountIn);
+        assertLe(amountIn, 1000 * 1e18);
+        assertEq(wbtc.balanceOf(address(this)), 0.01 * 1e8);
     }
 }
