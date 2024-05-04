@@ -81,7 +81,8 @@
     - [x] [Exercise 4 - multi pool exact output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
     - [x] [Solution 4 - multi pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
   - [ ] Factory
-    - [ ] Code walk 🤔
+    - [ ] Contract call
+    - [ ] Code walk
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] Liquidity
