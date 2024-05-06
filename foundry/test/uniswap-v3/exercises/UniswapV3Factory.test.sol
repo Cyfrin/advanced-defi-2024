@@ -38,7 +38,6 @@ contract UniswapV3FactoryTest is Test {
     function test_createPool() public {
         // Write your code here
         address pool;
-        factory.createPool(address(tokenA), address(tokenB), POOL_FEE);
 
         (address token0, address token1) = address(tokenA) <= address(tokenB)
             ? (address(tokenA), address(tokenB))
