@@ -80,11 +80,13 @@
     - [x] [Solution 4 - single pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
     - [x] [Exercise 4 - multi pool exact output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
     - [x] [Solution 4 - multi pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
-  - [ ] Factory
-    - [x] Contract call
-    - [ ] Code walk
-    - [ ] Exercise 1
-    - [ ] Solution 1
+  - [x] Factory
+    - [x] [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-factory.png)
+    - [x] Code walk
+    - [x] [Exercise 1 - get pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
+    - [x] [Solution 1 - get pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
+    - [x] [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
+    - [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
   - [ ] Liquidity
     - [ ] Liquidity math
       - [ ] How much tokens to add liquidity?
