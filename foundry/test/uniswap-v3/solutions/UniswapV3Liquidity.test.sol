@@ -72,7 +72,25 @@ contract UniswapV3LiquidityTest is Test {
         vm.stopPrank();
     }
 
-    function get_position(uint256 token_id)
+    function mint() private returns (uint256 tokenId) {
+        (tokenId,,,) = manager.mint(
+            INonfungiblePositionManager.MintParams({
+                token0: DAI,
+                token1: WETH,
+                fee: POOL_FEE,
+                tickLower: MIN_TICK / TICK_SPACING * TICK_SPACING,
+                tickUpper: MAX_TICK / TICK_SPACING * TICK_SPACING,
+                amount0Desired: 1000 * 1e18,
+                amount1Desired: 1e18,
+                amount0Min: 0,
+                amount1Min: 0,
+                recipient: address(this),
+                deadline: block.timestamp
+            })
+        );
+    }
+
+    function getPosition(uint256 tokenId)
         private
         view
         returns (Position memory)
@@ -90,7 +108,7 @@ contract UniswapV3LiquidityTest is Test {
             uint256 feeGrowthInside1LastX128,
             uint128 tokensOwed0,
             uint128 tokensOwed1
-        ) = manager.positions(token_id);
+        ) = manager.positions(tokenId);
 
         Position memory position = Position({
             nonce: nonce,
@@ -110,18 +128,28 @@ contract UniswapV3LiquidityTest is Test {
         return position;
     }
 
-    function test_liquidity() public {
+    // Increase liquidity
+    // Decrease liquidity
+    // Collect and remove all liquidity
+
+    // Exercise 1
+    // Mint a new position by adding liquidity to DAI/WETH pool with 0.3% fee.
+    // - You are free to choose the price range
+    // - Ticks must be divisible by tick spacing of the pool
+    // - This test contract is given 3000 DAI and 3 ETH. Put any amount of tokens
+    //   not exceeding this contracts's balance.
+    // - Set recipient of NFT (that represents the ownership of this position) to this contract.
+    function test_mint() public {
+        // Write your code here
         int24 tickLower = MIN_TICK / TICK_SPACING * TICK_SPACING;
         int24 tickUpper = MAX_TICK / TICK_SPACING * TICK_SPACING;
 
-        // Mint
-        (uint256 token_id, uint128 liquidity, uint256 amount0, uint256 amount1)
-        = manager.mint(
+        (uint256 tokenId, uint128 liquidity, uint256 amount0, uint256 amount1) =
+        manager.mint(
             INonfungiblePositionManager.MintParams({
                 token0: DAI,
                 token1: WETH,
                 fee: POOL_FEE,
-                // NOTE - tick must be divisible by tick spacing
                 tickLower: tickLower,
                 tickUpper: tickUpper,
                 amount0Desired: 1000 * 1e18,
@@ -133,14 +161,28 @@ contract UniswapV3LiquidityTest is Test {
             })
         );
 
-        console2.log("--- mint ---");
         console2.log("Amount 0 added %e", amount0);
         console2.log("Amount 1 added %e", amount1);
 
-        // Increase liquidity
-        (liquidity, amount0, amount1) = manager.increaseLiquidity(
+        assertEq(manager.ownerOf(tokenId), address(this));
+
+        Position memory position = getPosition(tokenId);
+        assertEq(position.token0, DAI);
+        assertEq(position.token1, WETH);
+        assertEq(position.tickUpper, tickUpper);
+        assertEq(position.tickLower, tickLower);
+        assertGt(position.liquidity, 0);
+    }
+
+    // Exercise 2 - increase liquidity
+    function test_increaseLiquidity() public {
+        uint256 tokenId = mint();
+        Position memory p0 = getPosition(tokenId);
+
+        (uint256 liquidityDelta, uint256 amount0, uint256 amount1) = manager
+            .increaseLiquidity(
             INonfungiblePositionManager.IncreaseLiquidityParams({
-                tokenId: token_id,
+                tokenId: tokenId,
                 amount0Desired: 500 * 1e18,
                 amount1Desired: 1e18,
                 amount0Min: 0,
@@ -149,62 +191,70 @@ contract UniswapV3LiquidityTest is Test {
             })
         );
 
-        console2.log("--- increase ---");
         console2.log("Amount 0 added %e", amount0);
         console2.log("Amount 1 added %e", amount1);
 
-        // Decrease liquidity
-        Position memory position = get_position(token_id);
+        Position memory p1 = getPosition(tokenId);
+        assertGt(p1.liquidity, p0.liquidity);
+        assertGt(liquidityDelta, 0);
+    }
 
-        // (amount0, amount1) = manager.decreaseLiquidity(
-        //     INonfungiblePositionManager.DecreaseLiquidityParams({
-        //         tokenId: token_id,
-        //         liquidity: position.liquidity,
-        //         amount0Min: 0,
-        //         amount1Min: 0,
-        //         deadline: block.timestamp
-        //     })
-        // );
+    // Exercise 3 -decrease liquidity
+    function test_decreaseLiquidity() public {
+        uint256 tokenId = mint();
+        Position memory p0 = getPosition(tokenId);
 
-        // console2.log("--- decrease ---");
-        // console2.log("Amount 0 removed %e", amount0);
-        // console2.log("Amount 1 removed %e", amount1);
+        (uint256 amount0, uint256 amount1) = manager.decreaseLiquidity(
+            INonfungiblePositionManager.DecreaseLiquidityParams({
+                tokenId: tokenId,
+                liquidity: p0.liquidity,
+                amount0Min: 0,
+                amount1Min: 0,
+                deadline: block.timestamp
+            })
+        );
 
-        // position = get_position(token_id);
+        console2.log("Amount 0 decreased %e", amount0);
+        console2.log("Amount 1 decreased %e", amount1);
 
-        // console2.log("Liquidity %e", position.liquidity);
-        // console2.log("Amount 0 owed %e", position.tokensOwed0);
-        // console2.log("Amount 1 owed %e", position.tokensOwed1);
+        Position memory p1 = getPosition(tokenId);
+        assertEq(p1.liquidity, 0);
+        assertGt(p1.tokensOwed0, 0);
+        assertGt(p1.tokensOwed1, 0);
+    }
 
-        // Collect
-        swap();
+    // Exercise 4 - collect
+    function test_collect() public {
+        uint256 tokenId = mint();
+        Position memory p0 = getPosition(tokenId);
 
-        uint256 dai_bal0 = dai.balanceOf(address(this));
-        uint256 weth_bal0 = weth.balanceOf(address(this));
+        manager.decreaseLiquidity(
+            INonfungiblePositionManager.DecreaseLiquidityParams({
+                tokenId: tokenId,
+                liquidity: p0.liquidity,
+                amount0Min: 0,
+                amount1Min: 0,
+                deadline: block.timestamp
+            })
+        );
 
-        (amount0, amount1) = manager.collect(
+        (uint256 amount0, uint256 amount1) = manager.collect(
             INonfungiblePositionManager.CollectParams({
-                tokenId: token_id,
+                tokenId: tokenId,
                 recipient: address(this),
                 amount0Max: type(uint128).max,
                 amount1Max: type(uint128).max
             })
         );
 
-        uint256 dai_bal1 = dai.balanceOf(address(this));
-        uint256 weth_bal1 = weth.balanceOf(address(this));
-
         console2.log("--- collect ---");
         console2.log("Amount 0 collected %e", amount0);
         console2.log("Amount 1 collected %e", amount1);
 
-        console2.log("DAI diff %e", dai_bal1 - dai_bal0);
-        console2.log("WETH diff %e", weth_bal1 - weth_bal0);
+        Position memory p1 = getPosition(tokenId);
 
-        position = get_position(token_id);
-
-        console2.log("Liquidity %e", position.liquidity);
-        console2.log("Amount 0 owed %e", position.tokensOwed0);
-        console2.log("Amount 1 owed %e", position.tokensOwed1);
+        assertEq(p1.liquidity, 0);
+        assertEq(p1.tokensOwed0, 0);
+        assertEq(p1.tokensOwed1, 0);
     }
 }
