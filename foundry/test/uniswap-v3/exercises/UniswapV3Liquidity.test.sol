@@ -115,25 +115,8 @@ contract UniswapV3LiquidityTest is Test {
     // - Set recipient of NFT (that represents the ownership of this position) to this contract.
     function test_mint() public {
         // Write your code here
-        int24 tickLower = MIN_TICK / TICK_SPACING * TICK_SPACING;
-        int24 tickUpper = MAX_TICK / TICK_SPACING * TICK_SPACING;
-
         (uint256 tokenId, uint128 liquidity, uint256 amount0, uint256 amount1) =
-        manager.mint(
-            INonfungiblePositionManager.MintParams({
-                token0: DAI,
-                token1: WETH,
-                fee: POOL_FEE,
-                tickLower: tickLower,
-                tickUpper: tickUpper,
-                amount0Desired: 1000 * 1e18,
-                amount1Desired: 1e18,
-                amount0Min: 0,
-                amount1Min: 0,
-                recipient: address(this),
-                deadline: block.timestamp
-            })
-        );
+            (0, 0, 0, 0);
 
         console2.log("Amount 0 added %e", amount0);
         console2.log("Amount 1 added %e", amount1);
@@ -156,17 +139,7 @@ contract UniswapV3LiquidityTest is Test {
         Position memory p0 = getPosition(tokenId);
 
         // Write your code here
-        (uint256 liquidityDelta, uint256 amount0, uint256 amount1) = manager
-            .increaseLiquidity(
-            INonfungiblePositionManager.IncreaseLiquidityParams({
-                tokenId: tokenId,
-                amount0Desired: 500 * 1e18,
-                amount1Desired: 1e18,
-                amount0Min: 0,
-                amount1Min: 0,
-                deadline: block.timestamp
-            })
-        );
+        (uint256 liquidityDelta, uint256 amount0, uint256 amount1) = (0, 0, 0);
 
         console2.log("Amount 0 added %e", amount0);
         console2.log("Amount 1 added %e", amount1);
@@ -184,15 +157,7 @@ contract UniswapV3LiquidityTest is Test {
         Position memory p0 = getPosition(tokenId);
 
         // Write your code here
-        (uint256 amount0, uint256 amount1) = manager.decreaseLiquidity(
-            INonfungiblePositionManager.DecreaseLiquidityParams({
-                tokenId: tokenId,
-                liquidity: p0.liquidity,
-                amount0Min: 0,
-                amount1Min: 0,
-                deadline: block.timestamp
-            })
-        );
+        (uint256 amount0, uint256 amount1) = (0, 0);
 
         console2.log("Amount 0 decreased %e", amount0);
         console2.log("Amount 1 decreased %e", amount1);
@@ -213,24 +178,7 @@ contract UniswapV3LiquidityTest is Test {
         Position memory p0 = getPosition(tokenId);
 
         // Write your code here
-        manager.decreaseLiquidity(
-            INonfungiblePositionManager.DecreaseLiquidityParams({
-                tokenId: tokenId,
-                liquidity: p0.liquidity,
-                amount0Min: 0,
-                amount1Min: 0,
-                deadline: block.timestamp
-            })
-        );
-
-        (uint256 amount0, uint256 amount1) = manager.collect(
-            INonfungiblePositionManager.CollectParams({
-                tokenId: tokenId,
-                recipient: address(this),
-                amount0Max: type(uint128).max,
-                amount1Max: type(uint128).max
-            })
-        );
+        (uint256 amount0, uint256 amount1) = (0, 0);
 
         console2.log("--- collect ---");
         console2.log("Amount 0 collected %e", amount0);
