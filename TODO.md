@@ -89,11 +89,12 @@
     - [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
   - [ ] Liquidity
     - [ ] Math 🤔
+      - [ ] Liquidity
+      - [ ] Liquidity delta
       - [ ] How much tokens to add liquidity?
       - [ ] Given tokens -> calc liquidity
-      - [ ] How much fee to receive for providing liquidity?
       - [ ] How much token to receive from remove liquidity?
-      - [ ] liquidity delta
+      - [ ] How much fee to receive for providing liquidity?
     - [ ] Tick spacing
     - [ ] Contract call
       - [ ] UniswapV3Pool
