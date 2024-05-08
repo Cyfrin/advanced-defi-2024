@@ -6,9 +6,7 @@ import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {IWETH} from "../../../src/interfaces/IWETH.sol";
 import {INonfungiblePositionManager} from
     "../../../src/interfaces/uniswap-v3/INonfungiblePositionManager.sol";
-import {ISwapRouter} from "../../../src/interfaces/uniswap-v3/ISwapRouter.sol";
 import {
-    UNISWAP_V3_SWAP_ROUTER_02,
     UNISWAP_V3_NONFUNGIBLE_POSITION_MANAGER,
     DAI,
     WETH
@@ -34,7 +32,6 @@ contract UniswapV3LiquidityTest is Test {
     IERC20 private constant dai = IERC20(DAI);
     INonfungiblePositionManager private constant manager =
         INonfungiblePositionManager(UNISWAP_V3_NONFUNGIBLE_POSITION_MANAGER);
-    ISwapRouter private router = ISwapRouter(UNISWAP_V3_SWAP_ROUTER_02);
 
     // 0.3%
     int24 private constant MIN_TICK = -887272;
@@ -51,25 +48,6 @@ contract UniswapV3LiquidityTest is Test {
 
         weth.approve(address(manager), type(uint256).max);
         dai.approve(address(manager), type(uint256).max);
-    }
-
-    function swap() private {
-        deal(DAI, users[0], 1000 * 1e18);
-        vm.startPrank(users[0]);
-        dai.approve(address(router), type(uint256).max);
-        router.exactInputSingle(
-            ISwapRouter.ExactInputSingleParams({
-                tokenIn: DAI,
-                tokenOut: WETH,
-                fee: POOL_FEE,
-                recipient: users[0],
-                amountIn: 1000 * 1e18,
-                amountOutMinimum: 1,
-                // NOTE 0 -> (zeroForOne ? TickMath.MIN_SQRT_RATIO + 1 : TickMath.MAX_SQRT_RATIO - 1)
-                sqrtPriceLimitX96: 0
-            })
-        );
-        vm.stopPrank();
     }
 
     function mint() private returns (uint256 tokenId) {
@@ -128,10 +106,6 @@ contract UniswapV3LiquidityTest is Test {
         return position;
     }
 
-    // Increase liquidity
-    // Decrease liquidity
-    // Collect and remove all liquidity
-
     // Exercise 1
     // Mint a new position by adding liquidity to DAI/WETH pool with 0.3% fee.
     // - You are free to choose the price range
@@ -174,11 +148,16 @@ contract UniswapV3LiquidityTest is Test {
         assertGt(position.liquidity, 0);
     }
 
-    // Exercise 2 - increase liquidity
+    // Exercise 2
+    // Increase liquidity for the position with token id = `tokenId`.
+    // 3000 DAI and 3 ETH were initially given to this contract.
+    // Some of the tokens where used to mint a new position.
+    // Use any token amount less than or equal to contract's balance.
     function test_increaseLiquidity() public {
         uint256 tokenId = mint();
         Position memory p0 = getPosition(tokenId);
 
+        // Write your code here
         (uint256 liquidityDelta, uint256 amount0, uint256 amount1) = manager
             .increaseLiquidity(
             INonfungiblePositionManager.IncreaseLiquidityParams({
@@ -199,11 +178,14 @@ contract UniswapV3LiquidityTest is Test {
         assertGt(liquidityDelta, 0);
     }
 
-    // Exercise 3 -decrease liquidity
+    // Exercise 3
+    // Decrease liquidity for the position with token id = `tokenId`.
+    // - Amount of liquidity to decrease cannot exceed the position's liquidity.
     function test_decreaseLiquidity() public {
         uint256 tokenId = mint();
         Position memory p0 = getPosition(tokenId);
 
+        // Write your code here
         (uint256 amount0, uint256 amount1) = manager.decreaseLiquidity(
             INonfungiblePositionManager.DecreaseLiquidityParams({
                 tokenId: tokenId,
@@ -223,11 +205,16 @@ contract UniswapV3LiquidityTest is Test {
         assertGt(p1.tokensOwed1, 0);
     }
 
-    // Exercise 4 - collect
+    // Exercise 4
+    // Remove all liquidity (including fees) from a position by calling collect()
+    // - Decrease all liquidity for the position with token id = `tokenId`
+    // - Transfer tokens from NonFungiblePositionManager to this contract
+    //   by calling collect()
     function test_collect() public {
         uint256 tokenId = mint();
         Position memory p0 = getPosition(tokenId);
 
+        // Write your code here
         manager.decreaseLiquidity(
             INonfungiblePositionManager.DecreaseLiquidityParams({
                 tokenId: tokenId,

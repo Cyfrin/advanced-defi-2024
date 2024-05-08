@@ -88,35 +88,32 @@
     - [x] [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
     - [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
   - [ ] Liquidity
-    - [ ] Liquidity math
+    - [ ] Liquidity math 🤔
       - [ ] How much tokens to add liquidity?
       - [ ] How much token to receive from remove liquidity?
+      - [ ] liquidity delta
+    - TODO: tick spacing
     - [ ] Contract call
-    - [ ] Code walk 🤔
+    - [ ] Code walk (NFT manager, v3 pool) 🤔
     - [ ] Position manager
-      - [ ] pool address, key, id
+      - [ ] Pool address, key, id 🤔
       - [ ] Mint
         - [ ] Exercise 1
         - [ ] Solution 1
-      - [ ] increase liquidity
+      - [ ] Increase liquidity
         - [ ] Exercise 1
         - [ ] Solution 1
-      - [ ] decrease liquidity
+      - [ ] Decrease liquidity
         - [ ] Exercise 1
         - [ ] Solution 1
       - [ ] Collect fee and remove liquidity
-        - [ ] Exercise 1
-        - [ ] Solution 1
-        - [ ] Exercise 2
-        - [ ] Solution 2
-      - [ ] Burn
         - [ ] Exercise 1
         - [ ] Solution 1
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] Flash swap arbitrage
+  - [ ] Flash swap arbitrage 🤔
     - [ ] Contract call
     - [ ] Exercise 1
     - [ ] Solution 1
