@@ -90,10 +90,10 @@
   - [ ] Liquidity
     - [ ] Math 🤔
       - [ ] Liquidity
+        - [ ] Given tokens -> calc liquidity
       - [ ] Liquidity delta
-      - [ ] How much tokens to add liquidity?
-      - [ ] Given tokens -> calc liquidity
-      - [ ] How much token to receive from remove liquidity?
+        - [ ] How much tokens to add liquidity?
+        - [ ] How much token to receive from remove liquidity?
       - [ ] How much fee to receive for providing liquidity?
     - [ ] Tick spacing
     - [ ] Contract call
