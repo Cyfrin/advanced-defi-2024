@@ -23,6 +23,7 @@
 - [ ] TODO: Add liquidity (tick spacing)
 
 - [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
+
   - [x] Intro
     - [x] [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
       - [x] Example - DAI/USDC
@@ -88,12 +89,14 @@
     - [x] [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
     - [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
   - [ ] Liquidity
+
     - [ ] Math
       - [x] Liquidity
       - [x] Liquidity delta
       - [ ] How much fee to receive for providing liquidity?
-    - [ ] [Tick spacing](https://www.desmos.com/calculator/nnyoez1bm0)
+    - [ ] [Tick spacing](https://www.desmos.com/calculator/8yq0ovecih)
     - [ ] Contract call
+
       - [ ] UniswapV3Pool
         - [ ] mint
         - [ ] burn
@@ -103,6 +106,7 @@
         - [ ] increaseLiquidity
         - [ ] decreaseLiquidity
         - [ ] burn
+
     - [ ] Code walk (NFT manager, v3 pool) 🤔
     - [ ] Position manager
       - [ ] Mint
@@ -117,6 +121,7 @@
       - [ ] Collect fee and remove liquidity
         - [ ] Exercise 1
         - [ ] Solution 1
+
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
