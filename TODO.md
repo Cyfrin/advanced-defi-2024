@@ -94,7 +94,7 @@
       - [x] Liquidity
       - [x] Liquidity delta
       - [ ] How much fee to receive for providing liquidity?
-    - [ ] [Tick spacing](https://www.desmos.com/calculator/8yq0ovecih)
+    - [ ] [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
     - [ ] Contract call
 
       - [ ] UniswapV3Pool
