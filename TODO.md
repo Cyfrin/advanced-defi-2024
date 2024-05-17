@@ -97,8 +97,14 @@
     - [ ] Contract call
       - [ ] UniswapV3Pool
         - [ ] mint
+          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [ ] code walk
         - [ ] burn
+          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [ ] code walk
         - [ ] collect
+          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [ ] code walk
       - [ ] NonFungiblePositionManager
         - [ ] mint
         - [ ] increaseLiquidity
