@@ -95,16 +95,16 @@
       - [ ] How much fee to receive for providing liquidity?
     - [x] [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
     - [ ] Contract call
-      - [ ] UniswapV3Pool
-        - [ ] mint
-          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
-          - [ ] code walk
-        - [ ] burn
-          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
-          - [ ] code walk
-        - [ ] collect
-          - [ ] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
-          - [ ] code walk
+      - [x] UniswapV3Pool
+        - [x] mint
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L457-L487)
+        - [x] burn
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L517-L543)
+        - [x] collect
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L490-L513)
       - [ ] NonFungiblePositionManager
         - [ ] mint
         - [ ] increaseLiquidity
