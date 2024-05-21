@@ -97,19 +97,18 @@
     - [ ] Contract call
       - [x] UniswapV3Pool
         - [x] mint
-          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
           - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L457-L487)
         - [x] burn
-          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
           - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L517-L543)
         - [x] collect
-          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
+          - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
           - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L490-L513)
       - [ ] NonFungiblePositionManager
-        - [ ] mint
-        - [ ] increaseLiquidity
-        - [ ] decreaseLiquidity
-        - [ ] burn
+        - [ ] [mint](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
+        - [ ] [increaseLiquidity](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
+        - [ ] [decreaseLiquidity](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
     - [ ] Code walk (NFT manager, v3 pool) 🤔
     - [ ] Position manager
       - [ ] Mint
