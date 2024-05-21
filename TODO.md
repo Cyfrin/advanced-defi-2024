@@ -106,23 +106,27 @@
           - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
           - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L490-L513)
       - [ ] NonFungiblePositionManager
-        - [ ] [mint](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
-        - [ ] [increaseLiquidity](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
-        - [ ] [decreaseLiquidity](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
-    - [ ] Code walk (NFT manager, v3 pool) 🤔
-    - [ ] Position manager
-      - [ ] Mint
-        - [ ] Exercise 1
-        - [ ] Solution 1
-      - [ ] Increase liquidity
-        - [ ] Exercise 1
-        - [ ] Solution 1
-      - [ ] Decrease liquidity
-        - [ ] Exercise 1
-        - [ ] Solution 1
-      - [ ] Collect fee and remove liquidity
-        - [ ] Exercise 1
-        - [ ] Solution 1
+        - [ ] mint
+          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
+        - [ ] increaseLiquidity
+          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
+        - [ ] decreaseLiquidity
+          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
+    - [ ] Mint
+      - [ ] Exercise 1
+      - [ ] Solution 1
+    - [ ] Increase liquidity
+      - [ ] Exercise 1
+      - [ ] Solution 1
+    - [ ] Decrease liquidity
+      - [ ] Exercise 1
+      - [ ] Solution 1
+    - [ ] Collect fee and remove liquidity
+      - [ ] Exercise 1
+      - [ ] Solution 1
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
