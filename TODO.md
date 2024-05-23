@@ -105,16 +105,16 @@
         - [x] collect
           - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
           - [x] [code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L490-L513)
-      - [ ] NonFungiblePositionManager
-        - [ ] mint
-          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
-          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
-        - [ ] increaseLiquidity
-          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
-          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
-        - [ ] decreaseLiquidity
-          - [ ] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
-          - [ ] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
+      - [x] NonFungiblePositionManager
+        - [x] mint
+          - [x] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
+        - [x] increaseLiquidity
+          - [x] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
+        - [x] decreaseLiquidity
+          - [x] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
+          - [x] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
     - [ ] Mint
       - [ ] Exercise 1
       - [ ] Solution 1
