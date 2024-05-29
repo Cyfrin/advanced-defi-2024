@@ -40,8 +40,6 @@ contract UniswapV3LiquidityTest is Test {
     uint24 private constant POOL_FEE = 3000;
     int24 private constant TICK_SPACING = 60;
 
-    address[] private users = [address(11), address(12)];
-
     function setUp() public {
         deal(DAI, address(this), 3000 * 1e18);
         deal(WETH, address(this), 3 * 1e18);
