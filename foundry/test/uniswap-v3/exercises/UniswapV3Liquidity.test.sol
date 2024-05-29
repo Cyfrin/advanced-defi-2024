@@ -108,7 +108,7 @@ contract UniswapV3LiquidityTest is Test {
     // Mint a new position by adding liquidity to DAI/WETH pool with 0.3% fee.
     // - You are free to choose the price range
     // - Ticks must be divisible by tick spacing of the pool
-    // - This test contract is given 3000 DAI and 3 ETH. Put any amount of tokens
+    // - This test contract is given 3000 DAI and 3 WETH. Put any amount of tokens
     //   not exceeding this contracts's balance.
     // - Set recipient of NFT (that represents the ownership of this position) to this contract.
     function test_mint() public {
@@ -129,7 +129,7 @@ contract UniswapV3LiquidityTest is Test {
 
     // Exercise 2
     // Increase liquidity for the position with token id = `tokenId`.
-    // 3000 DAI and 3 ETH were initially given to this contract.
+    // 3000 DAI and 3 WETH were initially given to this contract.
     // Some of the tokens where used to mint a new position.
     // Use any token amount less than or equal to contract's balance.
     function test_increaseLiquidity() public {
