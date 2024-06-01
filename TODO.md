@@ -115,33 +115,29 @@
         - [x] decreaseLiquidity
           - [x] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
           - [x] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
-    - [ ] Mint
-      - [ ] Exercise 1
-      - [ ] Solution 1
-    - [ ] Increase liquidity
-      - [ ] Exercise 1
-      - [ ] Solution 1
-    - [ ] Decrease liquidity
-      - [ ] Exercise 1
-      - [ ] Solution 1
-    - [ ] Collect fee and remove liquidity
-      - [ ] Exercise 1
-      - [ ] Solution 1
+    - [x] Mint
+      - [x] Exercise 1
+      - [x] Solution 1
+    - [x] Increase liquidity
+      - [x] Exercise 1
+      - [x] Solution 1
+    - [x] Decrease liquidity
+      - [x] Exercise 1
+      - [x] Solution 1
+    - [x] Collect fee and remove liquidity
+      - [x] Exercise 1
+      - [x] Solution 1
   - [ ] Flash
-    - [ ] Code walk 🤔
-    - [ ] Exercise 1
-    - [ ] Solution 1
-  - [ ] Flash swap arbitrage 🤔
-    - [ ] Contract call
-    - [ ] Exercise 1
-    - [ ] Solution 1
-  - [ ] TWAP Price oracle
-    - [ ] TWAP math
     - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] Tick bitmap algorithm
   - [ ] Fee algorithm
+  - [ ] TWAP Price oracle
+    - [ ] TWAP math
+    - [ ] Code walk 🤔
+    - [ ] Exercise 1
+    - [ ] Solution 1
   - [ ] TODO: Final project 🤔
   - [ ] JIT liquidity 🤔
   - [ ] panoptics 🤔
