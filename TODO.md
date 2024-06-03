@@ -127,12 +127,12 @@
     - [x] Collect fee and remove liquidity
       - [x] Exercise 1
       - [x] Solution 1
+  - [ ] Tick bitmap algorithm 🤔
+  - [ ] Fee algorithm 🤔
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] Tick bitmap algorithm
-  - [ ] Fee algorithm
   - [ ] TWAP Price oracle
     - [ ] TWAP math
     - [ ] Code walk 🤔
