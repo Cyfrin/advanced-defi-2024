@@ -127,9 +127,9 @@
     - [x] Collect fee and remove liquidity
       - [x] Exercise 1
       - [x] Solution 1
-  - [ ] Tick bitmap
-    - [ ] Tick bitmap
-    - [ ] Next tick algorithm
+  - [x] Tick bitmap
+    - [x] Tick bitmap
+    - [x] Next tick algorithm
   - [ ] Fee algorithm 🤔
   - [ ] Flash
     - [ ] Code walk 🤔
