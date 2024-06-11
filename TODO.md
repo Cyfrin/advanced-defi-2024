@@ -129,7 +129,13 @@
   - [x] Tick bitmap
     - [x] [Tick bitmap](./excalidraw/amm/uniswap-v3/uniswap-v3-tick-bitmap.png)
     - [x] [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
-  - [ ] Fee algorithm 🤔
+  - [ ] Fee algorithm
+    - [ ] calc fee
+    - [ ] fee growth
+    - [ ] fee growth inside
+    - [ ] fee growth below
+    - [ ] fee growth above
+    - [ ] fee growth init
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
