@@ -88,13 +88,12 @@
     - [x] [Solution 1 - get pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
     - [x] [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
     - [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
-  - [ ] Liquidity
-    - [ ] Math
+  - [x] Liquidity
+    - [x] Math
       - [x] Liquidity
       - [x] Liquidity delta
-      - [ ] How much fee to receive for providing liquidity?
     - [x] [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
-    - [ ] Contract call
+    - [x] Contract call
       - [x] UniswapV3Pool
         - [x] mint
           - [x] [call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png) 🤔
@@ -116,20 +115,20 @@
           - [x] [contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
           - [x] [code walk](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
     - [x] Mint
-      - [x] Exercise 1
-      - [x] Solution 1
+      - [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Liquidity.test.sol)
+      - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Liquidity.test.sol)
     - [x] Increase liquidity
-      - [x] Exercise 1
-      - [x] Solution 1
+      - [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Liquidity.test.sol)
+      - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Liquidity.test.sol)
     - [x] Decrease liquidity
-      - [x] Exercise 1
-      - [x] Solution 1
+      - [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Liquidity.test.sol)
+      - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Liquidity.test.sol)
     - [x] Collect fee and remove liquidity
-      - [x] Exercise 1
-      - [x] Solution 1
+      - [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Liquidity.test.sol)
+      - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Liquidity.test.sol)
   - [x] Tick bitmap
-    - [x] Tick bitmap
-    - [x] Next tick algorithm
+    - [x] [Tick bitmap](./excalidraw/amm/uniswap-v3/uniswap-v3-tick-bitmap.png)
+    - [x] [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
   - [ ] Fee algorithm 🤔
   - [ ] Flash
     - [ ] Code walk 🤔
