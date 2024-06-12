@@ -131,6 +131,7 @@
     - [x] [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
   - [ ] Fee algorithm
     - [ ] calc fee
+    - [ ] [Fee growth visualization graph](https://www.desmos.com/calculator/npnnrmoq6j)
     - [ ] fee growth
     - [ ] fee growth inside
     - [ ] fee growth below
