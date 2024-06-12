@@ -133,7 +133,7 @@
     - [ ] Fee equation
     - [ ] [Fee growth graph](https://www.desmos.com/calculator/eyyefktyjp)
     - [ ] Fee growth
-    - [ ] [Fee growth inside graph]
+    - [ ] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
     - [ ] Fee growth inside
     - [ ] Fee growth below
     - [ ] Fee growth above
