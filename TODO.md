@@ -138,8 +138,10 @@
     - [ ] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
     - [ ] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
     - [ ] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
-    - [ ] [Fee growth init]
-    - [ ] Code 🤔
+    - [ ] [Position fee - part 1](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
+      - [ ] Code `Tick.update`, `Tick.cross`, `Tick.getFeeGrowthInside`
+    - [ ] [Position fee - part 2](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
+      - [ ] Code `Position.update`
   - [ ] Flash
     - [ ] Code walk 🤔
     - [ ] Exercise 1
