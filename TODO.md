@@ -131,8 +131,8 @@
     - [x] [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
   - [ ] Fee algorithm
     - [x] [Fee equation](./excalidraw/amm/uniswap-v3/uniswap-v3-calc-fee.png)
-    - [ ] [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
-    - [ ] [Fee growth graph](https://www.desmos.com/calculator/eyyefktyjp)
+    - [x] [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
+    - [x] [Fee growth graph](https://www.desmos.com/calculator/eyyefktyjp)
     - [ ] [Fee growth inside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-inside.png)
     - [ ] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
     - [ ] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
