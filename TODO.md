@@ -133,7 +133,7 @@
     - [x] [Fee equation](./excalidraw/amm/uniswap-v3/uniswap-v3-calc-fee.png)
     - [x] [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
     - [x] [Fee growth graph](https://www.desmos.com/calculator/eyyefktyjp)
-    - [ ] [Fee growth inside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-inside.png)
+    - [x] [Fee growth inside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-inside.png)
     - [ ] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
     - [ ] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
     - [ ] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
