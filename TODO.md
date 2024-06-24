@@ -134,9 +134,9 @@
     - [x] [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
     - [x] [Fee growth graph](https://www.desmos.com/calculator/eyyefktyjp)
     - [x] [Fee growth inside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-inside.png)
-    - [ ] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
-    - [ ] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
-    - [ ] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
+    - [x] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
+    - [x] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
+    - [x] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
     - [ ] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
     - [ ] [Position fee](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
     - [ ] Code
