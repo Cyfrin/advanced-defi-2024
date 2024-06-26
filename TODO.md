@@ -137,8 +137,8 @@
     - [x] [Fee growth inside graph](https://www.desmos.com/calculator/3j7xdgxawz)
     - [x] [Fee growth outside](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-outside.png)
     - [x] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
-    - [ ] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
-    - [ ] [Position fee](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
+    - [x] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
+    - [x] [Position fee](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
     - [ ] Code
       - `Tick.update`
       - `Tick.cross`
@@ -150,6 +150,7 @@
     - [ ] Solution 1
   - [ ] TWAP Price oracle
     - [ ] TWAP math
+    - [ ] TWAP inverse price
     - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
