@@ -139,7 +139,7 @@
     - [x] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
     - [x] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
     - [x] [Position fee](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
-    - [ ] Code
+    - [x] Code
       - `Tick.update`
       - `Tick.cross`
       - `Tick.getFeeGrowthInside`
@@ -149,7 +149,7 @@
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] TWAP Price oracle
-    - [ ] TWAP math
+    - [ ] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
     - [ ] TWAP inverse price
     - [ ] Code walk 🤔
     - [ ] Exercise 1
