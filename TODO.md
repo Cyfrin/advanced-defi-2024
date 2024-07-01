@@ -145,17 +145,17 @@
       - `Tick.getFeeGrowthInside`
       - `Position.update`
   - [ ] Flash
-    - [ ] Code walk 🤔
-    - [ ] Exercise 1
-    - [ ] Solution 1
+    - [ ] Code walk
+    - [ ] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
+    - [ ] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
   - [ ] TWAP Price oracle
     - [ ] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
     - [ ] TWAP inverse price
     - [ ] Code walk 🤔
     - [ ] Exercise 1
     - [ ] Solution 1
-  - [ ] TODO: Final project 🤔
   - [ ] JIT liquidity 🤔
+  - [ ] TODO: Final project 🤔
   - [ ] panoptics 🤔
   - Footnotes
     - [ ] [Graph - Constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
