@@ -145,7 +145,7 @@
       - `Tick.getFeeGrowthInside`
       - `Position.update`
   - [ ] Flash
-    - [ ] Code walk
+    - [x] Code walk
     - [ ] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
     - [ ] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
   - [ ] TWAP Price oracle
