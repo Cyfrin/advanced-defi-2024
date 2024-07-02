@@ -58,10 +58,10 @@ contract UniswapV3Flash {
 
         // Task 6 - Repay pool, amount borrowed + fee
         // Repay borrow
-        if (fee0 > 0) {
+        if (decoded.amount0 > 0) {
             token0.transfer(address(pool), decoded.amount0 + fee0);
         }
-        if (fee1 > 0) {
+        if (decoded.amount1 > 0) {
             token1.transfer(address(pool), decoded.amount1 + fee1);
         }
     }
