@@ -144,10 +144,10 @@
       - `Tick.cross`
       - `Tick.getFeeGrowthInside`
       - `Position.update`
-  - [ ] Flash
+  - [x] Flash
     - [x] Code walk
-    - [ ] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
-    - [ ] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
+    - [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
+    - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
   - [ ] TWAP Price oracle
     - [ ] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
     - [ ] TWAP inverse price
