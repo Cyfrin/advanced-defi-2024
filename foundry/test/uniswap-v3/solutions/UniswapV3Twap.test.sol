@@ -17,9 +17,9 @@ contract UniswapV3TwapTest is Test {
     }
 
     function test_twap() public {
-        uint256 usdc_out =
+        uint256 usdcOut =
             twap.getTwapAmountOut({tokenIn: WETH, amountIn: 1e18, dt: 3600});
 
-        console2.log("USDC out %e", usdc_out);
+        console2.log("USDC out %e", usdcOut);
     }
 }

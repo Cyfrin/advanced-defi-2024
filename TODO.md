@@ -150,8 +150,11 @@
     - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
   - [ ] TWAP Price oracle
     - [ ] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
-    - [ ] TWAP inverse price
-    - [ ] Code walk 🤔
+    - [ ] Code walk
+      - `observe`
+      - `transform`
+      - [`consult`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L16-L41)
+      - [`getQuoteAtTick`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L49-L69)
     - [ ] Exercise 1
     - [ ] Solution 1
   - [ ] JIT liquidity 🤔

@@ -17,6 +17,31 @@ contract UniswapV3Twap {
         token1 = pool.token1();
     }
 
+    // Copied from
+    // https://github.com/Uniswap/v3-periphery/blob/0.8/contracts/libraries/OracleLibrary.sol
+    /// @notice Given a tick and a token amount, calculates the amount of token received in exchange
+    function getQuoteAtTick(
+        int24 tick,
+        uint128 baseAmount,
+        address baseToken,
+        address quoteToken
+    ) internal pure returns (uint256 quoteAmount) {
+        uint160 sqrtRatioX96 = TickMath.getSqrtRatioAtTick(tick);
+
+        // Calculate quoteAmount with better precision if it doesn't overflow when multiplied by itself
+        if (sqrtRatioX96 <= type(uint128).max) {
+            uint256 ratioX192 = uint256(sqrtRatioX96) * sqrtRatioX96;
+            quoteAmount = baseToken < quoteToken
+                ? FullMath.mulDiv(ratioX192, baseAmount, 1 << 192)
+                : FullMath.mulDiv(1 << 192, baseAmount, ratioX192);
+        } else {
+            uint256 ratioX128 = FullMath.mulDiv(sqrtRatioX96, sqrtRatioX96, 1 << 64);
+            quoteAmount = baseToken < quoteToken
+                ? FullMath.mulDiv(ratioX128, baseAmount, 1 << 128)
+                : FullMath.mulDiv(1 << 128, baseAmount, ratioX128);
+        }
+    }
+
     function getTwapAmountOut(address tokenIn, uint128 amountIn, uint32 dt)
         external
         view
@@ -34,17 +59,8 @@ contract UniswapV3Twap {
         int56 tickCumulativeDelta = tickCumulatives[1] - tickCumulatives[0];
         // int56 / uint32 = int24
         int24 tick = int24(tickCumulativeDelta / int56(uint56(dt)));
+
         // Always round to negative infinity
-        /*
-        int doesn't round down when it is negative
-
-        int56 a = -3
-        -3 / 10 = -3.3333... so round down to -4
-        but we get
-        a / 10 = -3
-
-        so if tickCumulativeDelta < 0 and division has remainder, then round down
-        */
         if (
             tickCumulativeDelta < 0
                 && (tickCumulativeDelta % int56(uint56(dt)) != 0)
@@ -52,21 +68,6 @@ contract UniswapV3Twap {
             tick--;
         }
 
-        uint160 sqrtRatioX96 = TickMath.getSqrtRatioAtTick(tick);
-
-        // Copied from v3-periphery/libraries/OracleLibrary.sol getQuoteAtTick
-        // Calculate amountOut with better precision if it doesn't overflow when multiplied by itself
-        if (sqrtRatioX96 <= type(uint128).max) {
-            uint256 ratioX192 = uint256(sqrtRatioX96) * sqrtRatioX96;
-            amountOut = tokenIn < tokenOut
-                ? FullMath.mulDiv(ratioX192, amountIn, 1 << 192)
-                : FullMath.mulDiv(1 << 192, amountIn, ratioX192);
-        } else {
-            uint256 ratioX128 =
-                FullMath.mulDiv(sqrtRatioX96, sqrtRatioX96, 1 << 64);
-            amountOut = tokenIn < tokenOut
-                ? FullMath.mulDiv(ratioX128, amountIn, 1 << 128)
-                : FullMath.mulDiv(1 << 128, amountIn, ratioX128);
-        }
+        return getQuoteAtTick(tick, amountIn, tokenIn, tokenOut);
     }
 }
