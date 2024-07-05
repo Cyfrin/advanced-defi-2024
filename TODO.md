@@ -150,7 +150,7 @@
     - [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
   - [ ] TWAP Price oracle
     - [x] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
-    - [ ] Code walk
+    - [x] Code walk
       - [`observe`](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/libraries/Oracle.sol#L300-L325)
       - [`transform`](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/libraries/Oracle.sol#L30-L45)
       - [`consult`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L16-L41)
