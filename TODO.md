@@ -152,7 +152,8 @@
     - [x] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
     - [ ] [Arithmetic and geometric mean]
       - [ ] [TWAP of token x and y](./excalidraw/amm/uniswap-v3/uniswap-v3-twap-x-y.png)
-      - [ ] https://x.com/danrobinson/status/1455237045568348163?lang=en
+      - [ ] [Python simulation](./notebook/uniswap_v3_twap.ipynb)
+        - https://x.com/danrobinson/status/1455237045568348163?lang=en
     - [x] Code walk
       - [`observe`](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/libraries/Oracle.sol#L300-L325)
       - [`transform`](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/libraries/Oracle.sol#L30-L45)
