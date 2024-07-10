@@ -161,7 +161,7 @@
             -   [`getQuoteAtTick`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L49-L69)
         -   [ ] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Twap.sol)
         -   [ ] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Twap.sol)
-    -   [ ] JIT liquidity 🤔
+    -   [ ] JIT liquidity (re-use youtube?) 🤔
     -   [ ] TODO: Final project 🤔
     -   [ ] panoptics 🤔
     -   Footnotes
