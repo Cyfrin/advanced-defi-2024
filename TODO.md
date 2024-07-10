@@ -231,7 +231,7 @@
     -   [ ]Lido
     -   [ ]Rocket pool 🤔
 
-## TODOs
+## TODOs 🤔
 
 -   [ ] Compound
 -   [ ] TWAMM
