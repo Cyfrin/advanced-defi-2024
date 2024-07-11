@@ -154,17 +154,25 @@
 
 -   https://uniswapv3book.com/
 
+### Curve
+
+-   [ ] AMM
+    -   [ ] Curve v1
+        -   [ ] Math
+        -   [ ] Swap
+        -   [ ] Add / remove liquidity
+        -   [ ] TWAP🤔
+    -   [ ] Curve v2🤔
+        -   [ ] Math
+    -   [ ] dy / dx = dfdx / dfdy 🤔
+    -   [ ] Summary
+
+### Curve resources
+
+-   [Curve](https://resources.curve.fi/)
+
 ### TODOs
 
--   [ ] Curve v1
-    -   [ ] Math
-    -   [ ] Swap
-    -   [ ] Add / remove liquidity
-    -   [ ] TWAP🤔
--   [ ] Curve v2🤔
-    -   [ ] Math
--   [ ] dy / dx = dfdx / dfdy 🤔
--   [ ] Summary
 -   [ ] MEV
     -   [ ] Front run, back run and sandwich examples
     -   [ ] Flashbots RPC example
@@ -238,7 +246,4 @@
 
 -   [Aave](https://aave.com/)
 -   [Aave Unleashed](https://calnix.gitbook.io/aave-unleashed/)
-
--   [Curve](https://resources.curve.fi/)
-
 -   [Aave V3 Made Crystal Clear](https://www.youtube.com/watch?v=UzuZp3Q3xg0)
