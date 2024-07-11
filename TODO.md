@@ -6,22 +6,6 @@
 
 #### Concepts and terminologies
 
--   [x] concentrated liquidity
--   [x] real and virtual reserves
--   [x] position
--   [x] tick
--   [x] sqrt price x 96
--   [x] liquidity price graph
--   [x] slot0
--   [ ] fee growth
-
--   [x] How to get the spot price?
--   [x] How does the AMM curve look like for multiple position?
--   [x] How many dx and dy to add between price ranges pa and pb?
--   [x] How many dx for dy when tokens are swapped in a single position?
--   [ ] How to track swap fees for each liquidity provider?
--   [ ] TODO: Add liquidity (tick spacing)
-
 -   [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
 
     -   [x] Intro
@@ -168,7 +152,6 @@
 
 ### uni v3 resource
 
--   https://github.com/Sabnock01/uniswap-resources
 -   https://uniswapv3book.com/
 
 ### TODOs
