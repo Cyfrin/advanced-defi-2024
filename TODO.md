@@ -208,6 +208,7 @@
         -   [ ] Flash mint DAI -> Sell DAI for USDC on Uniswap -> Sell USDC to PSM -> Repay flash loan
         -   [ ] What can we do with DAI and Maker protocol?🤔
         -   [ ] Leverage🤔
+        -   [ ] Endgame? 🤔
         -   [ ] Summary
 -   [ ] Lending
     -   [ ] AAVE 🚧
