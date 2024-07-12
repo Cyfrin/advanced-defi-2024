@@ -50,6 +50,7 @@
         -   [ ] What can we do with DAI and Maker protocol?🤔
         -   [ ] Leverage🤔
         -   [ ] Endgame? 🤔
+        -   [ ] OSM? 🤔
         -   [ ] Summary
 -   [ ] Lending
     -   [ ] AAVE 🚧
