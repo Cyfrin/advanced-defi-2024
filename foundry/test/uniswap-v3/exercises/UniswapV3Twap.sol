@@ -70,6 +70,6 @@ contract UniswapV3Twap {
             tick--;
         }
 
-        // Task 7 - Call getQuoateAtTick
+        // Task 7 - Call getQuoteAtTick
     }
 }
