@@ -13,7 +13,7 @@
         -   [x] [Uniswap V3 core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
         -   [x] [Uniswap v3 periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
         -   [x] [Uniswap swap router contracts](https://github.com/Uniswap/swap-router-contracts)
-    -   [x] Contracts overview
+    -   [x] [Contracts overview](./excalidraw/amm/uniswap-v3/uniswap-v3-contracts.png)
     -   [x] Spot price (sqrt price, tick, sqrt x 96)
         -   [x] slot0 (tick and sqrtPriceX96)
             -   [x] [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
