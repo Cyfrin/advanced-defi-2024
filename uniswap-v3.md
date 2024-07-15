@@ -10,11 +10,14 @@
             -   [x] [Multi positions](https://www.desmos.com/calculator/fyvzeasktd)
             -   [x] ETH/USDT liquiduity price graph example
     -   [x] Repositories overview
+        -   [x] [Uniswap V3 core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
+        -   [x] [Uniswap v3 periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
+        -   [x] [Uniswap swap router contracts](https://github.com/Uniswap/swap-router-contracts)
     -   [x] Contracts overview
     -   [x] Spot price (sqrt price, tick, sqrt x 96)
         -   [x] slot0 (tick and sqrtPriceX96)
-            -   [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
-            -   [Etherscan WETH/USDT](https://etherscan.io/address/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36#code)
+            -   [x] [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
+            -   [x] [Etherscan WETH/USDT](https://etherscan.io/address/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36#code)
         -   [x] [Math - tick to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
         -   [x] [Python code example](./notebook/uniswap_v3_spot_price.ipynb)
         -   [x] [Math - sqrtPriceX96 to price](./excalidraw/amm/uniswap-v3/uniswap-v3-price-tick.png)
@@ -62,8 +65,8 @@
         -   [x] [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
     -   [x] Liquidity
         -   [x] Math
-            -   [x] Liquidity
-            -   [x] Liquidity delta
+            -   [x] [Liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity.png)
+            -   [x] [Liquidity delta](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-delta.png)
         -   [x] [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
         -   [x] Contract call
             -   [x] UniswapV3Pool
@@ -138,7 +141,4 @@
 
 ### Resources
 
--   [Uniswap V3 core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
--   [Uniswap v3 periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
--   [Uniswap swap router contracts](https://github.com/Uniswap/swap-router-contracts)
 -   [Uniswap V3 book](https://uniswapv3book.com/)
