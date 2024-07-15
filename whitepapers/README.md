@@ -12,6 +12,8 @@
 
 [Curve V1 StableSwap](https://resources.curve.fi/pdf/curve-stableswap.pdf)
 
+[Curve V2 CryptoPools](https://resources.curve.fi/pdf/curve-cryptopools.pdf)
+
 ### AAVE
 
 [AAVE V1](https://github.com/aave/aave-protocol/blob/master/docs/Aave_Protocol_Whitepaper_v1_0.pdf)
