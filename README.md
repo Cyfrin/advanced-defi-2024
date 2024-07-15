@@ -24,7 +24,7 @@ forge build
         -   [x] 2. [AMM vs orderbook](./topics/amm/intro/amm_order_book.md)
         -   [x] 3. [Different AMM equations](./topics/amm/intro/amm_equations.md)
     -   [x] [Uniswap v2](./uniswap-v2.md)
-    -   [ ] [Uniswap v3](./uniswap-v3.md)
+    -   [x] [Uniswap v3](./uniswap-v3.md)
     -   [ ] Curve v1
     -   [ ] Curve v2
 -   [ ] MEV

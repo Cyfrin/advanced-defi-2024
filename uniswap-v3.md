@@ -133,13 +133,11 @@
             -   [`transform`](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/libraries/Oracle.sol#L30-L45)
             -   [`consult`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L16-L41)
             -   [`getQuoteAtTick`](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/libraries/OracleLibrary.sol#L49-L69)
-        -   [ ] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Twap.sol)
-        -   [ ] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Twap.sol)
-    -   [ ] JIT liquidity (re-use youtube?) 🤔
-    -   [ ] TODO: Final project 🤔
-    -   [ ] panoptics 🤔
+        -   [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Twap.sol)
+        -   [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Twap.sol)
+    -   [x] [JIT liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-jit.png)
     -   Footnotes
-        -   [ ] [Graph - Constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
+        -   [x] [Graph - Constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
 
 ### Resources
 
