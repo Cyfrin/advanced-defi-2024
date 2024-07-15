@@ -36,15 +36,15 @@
         -   [x] Swap math
             -   [x] [What is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
             -   [x] [Swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
-        -   [x] Code walk swap
+        -   [x] [Code walk swap](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/UniswapV3Pool.sol#L605-L819)
         -   [x] [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-contract-calls.png)
             -   [x] Exact input single
             -   [x] Exact input
             -   [x] Exact output single
             -   [x] Exact output
         -   [x] Code walk SwapRouter02
-            -   [x] Exact input
-            -   [x] Exact output
+            -   [x] [Exact input](https://github.com/Uniswap/swap-router-contracts/blob/70bc2e40dfca294c1cea9bf67a4036732ee54303/contracts/V3SwapRouter.sol#L132-L168)
+            -   [x] [Exact output](https://github.com/Uniswap/swap-router-contracts/blob/70bc2e40dfca294c1cea9bf67a4036732ee54303/contracts/V3SwapRouter.sol#L226-L238)
         -   [x] [Exercise 1 - single pool exact input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
         -   [x] [Solution 1 - single pool exact input](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
         -   [x] [Exercise 2 - multi pool exact input](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
@@ -55,7 +55,7 @@
         -   [x] [Solution 4 - multi pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
     -   [x] Factory
         -   [x] [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-factory.png)
-        -   [x] Code walk
+        -   [x] [Code walk](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Factory.sol#L35-L51)
         -   [x] [Exercise 1 - get pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
         -   [x] [Solution 1 - get pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
         -   [x] [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
@@ -111,18 +111,18 @@
         -   [x] [Fee growth below](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-below.png)
         -   [x] [Fee growth above](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth-above.png)
         -   [x] [Position fee](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-position.png)
-        -   [x] Code
-            -   `Tick.update`
-            -   `Tick.cross`
-            -   `Tick.getFeeGrowthInside`
-            -   `Position.update`
-    -   [x] Flash
         -   [x] Code walk
+            -   [`Tick.update`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Tick.sol#L113-L153)
+            -   [`Tick.cross`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Tick.sol#L171-L192)
+            -   [`Tick.getFeeGrowthInside`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Tick.sol#L61-L98)
+            -   [`Position.update`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Position.sol#L45-L93)
+    -   [x] Flash
+        -   [x] [Code walk](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/UniswapV3Pool.sol#L822-L867)
         -   [x] [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
         -   [x] [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
     -   [ ] TWAP Price oracle
         -   [x] [TWAP math](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
-        -   [ ] [Arithmetic and geometric mean]
+        -   [ ] Arithmetic and geometric mean
             -   [x] [TWAP of token x and y](./excalidraw/amm/uniswap-v3/uniswap-v3-twap-x-y.png)
             -   [x] [Python simulation](./notebook/uniswap_v3_twap.ipynb)
         -   [x] Code walk
@@ -138,4 +138,7 @@
 
 ### Resources
 
--   https://uniswapv3book.com/
+-   [Uniswap V3 core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
+-   [Uniswap v3 periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
+-   [Uniswap swap router contracts](https://github.com/Uniswap/swap-router-contracts)
+-   [Uniswap V3 book](https://uniswapv3book.com/)
