@@ -1,9 +1,6 @@
--   [ ] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
+-   [x] [Uniswap v3](./topics/amm/uniswap-v3/README.md)
     -   [x] Intro
         -   [x] [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
-            -   [x] Example - DAI/USDC
-            -   [x] Virtual reserve and real reserve (concept)
-            -   [x] Concentrated liquidity (concept)
         -   [x] [Difference between v2 and v3](./excalidraw/amm/uniswap-v3/uniswap-v2-v3-diff.png)
         -   [x] Graph
             -   [x] [Concentrated liquidity](https://www.desmos.com/calculator/b2jllbh8xk)
