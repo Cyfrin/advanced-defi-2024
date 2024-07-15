@@ -25,7 +25,7 @@ forge build
         -   [x] 3. [Different AMM equations](./topics/amm/intro/amm_equations.md)
     -   [x] [Uniswap v2](./uniswap-v2.md)
     -   [x] [Uniswap v3](./uniswap-v3.md)
-    -   [ ] Curve v1
+    -   [ ] [Curve v1](./curve-v1.md)
     -   [ ] Curve v2
 -   [ ] MEV
 -   [ ] Price oracle - Chainlink
