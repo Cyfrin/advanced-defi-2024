@@ -42,3 +42,4 @@ address constant UNISWAP_V3_POOL_USDC_WETH_500 =
 
 // Curve v1
 address constant CURVE_3POOL = 0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7;
+address constant CURVE_3CRV = 0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490;
