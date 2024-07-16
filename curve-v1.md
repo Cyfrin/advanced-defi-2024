@@ -8,8 +8,11 @@
 
     -   [ ] Intro (graph)
     -   [ ] Comparison with Uniswap v2 and v3
+        -   vyper
         -   low slippage
         -   single sided liquidity
+        -   imbalance fee on liquidity
+        -   swap fee on token out
     -   [ ] Math
     -   [ ] Newton's method (python)
     -   [ ] Code walk
@@ -28,7 +31,7 @@
         -   [ ] add_liquidity
             -   [ ] imbalance fee
         -   [ ] remove_liquidity
-        -   [ ] remove_liquidity_imbalance (skip)
+        -   [ ] remove_liquidity_imbalance (skip?)
         -   [ ] remove_liquidity_one_coin
             -   [ ] get_y_D
             -   [ ] `_calc_withdraw_one_coin`
