@@ -5,14 +5,13 @@
 -   vyper and solidity challenges
 
 -   [ ] Curve v1
-
-    -   [ ] Intro (graph)
     -   [ ] Comparison with Uniswap v2 and v3
         -   vyper
         -   low slippage
         -   single sided liquidity
         -   imbalance fee on liquidity
         -   swap fee on token out
+    -   [ ] Graph
     -   [ ] Math
     -   [ ] Newton's method (python)
     -   [ ] Code walk
@@ -44,7 +43,7 @@
         -   [ ] Exercise
     -   [ ] Remove liquidity one coin
         -   [ ] Exercise
-    -   [ ] Bonus
+    -   [ ] Bonus?
         -   [ ] Secant's method
 
 ### Resources
