@@ -14,6 +14,8 @@
     -   [ ] Graph
     -   [ ] TODO: Math
     -   [ ] Newton's method (python)
+        -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
+        -   [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
     -   [ ] Code walk
         -   [ ] A
             -   [ ] `ramp_A`
@@ -28,7 +30,7 @@
             -   [ ] `get_dy_underlying`
             -   [ ] TODO: difference between get_dy and get_dy_underlying
         -   [ ] `add_liquidity`
-            -   [ ] imbalance fee
+            -   [ ] TODO: imbalance fee
         -   [ ] `remove_liquidity`
         -   [ ] `remove_liquidity_imbalance` (skip?)
         -   [ ] `remove_liquidity_one_coin`
@@ -55,6 +57,7 @@
 -   [Docs](https://curve.readthedocs.io/)
 -   [Curve resources](https://resources.curve.fi/)
 -   [Curve magic](https://hackmd.io/@alltold/curve-magic)
+-   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
 
 ✅
 
