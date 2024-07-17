@@ -51,6 +51,7 @@
 -   [Curve](https://curve.fi)
 -   [Docs](https://curve.readthedocs.io/)
 -   [Curve resources](https://resources.curve.fi/)
+-   [Curve magic](https://hackmd.io/@alltold/curve-magic)
 
 ✅
 
