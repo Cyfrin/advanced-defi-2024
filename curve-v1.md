@@ -12,37 +12,40 @@
         -   imbalance fee on liquidity
         -   swap fee on token out
     -   [ ] Graph
-    -   [ ] Math
+    -   [ ] TODO: Math
     -   [ ] Newton's method (python)
     -   [ ] Code walk
         -   [ ] A
-            -   [ ] ramp_A
-            -   [ ] stop_ramp_A
+            -   [ ] `ramp_A`
+            -   [ ] `stop_ramp_A`
         -   [ ] `_xp`
         -   [ ] `get_D`
-        -   [ ] get_virtual_price (current price of the pool LP token relative to the underlying pool assets)
-        -   [ ] calc_token_amount (Estimate the amount of LP tokens minted or burned)
+        -   [ ] `get_virtual_price` (current price of the pool LP token relative to the underlying pool assets)
+        -   [ ] `calc_token_amount` (Estimate the amount of LP tokens minted or burned)
         -   [ ] exchange
-            -   [ ] get_y
-            -   [ ] get_dy
-            -   [ ] get_dy_underlying
+            -   [ ] `get_y`
+            -   [ ] `get_dy`
+            -   [ ] `get_dy_underlying`
             -   [ ] TODO: difference between get_dy and get_dy_underlying
-        -   [ ] add_liquidity
+        -   [ ] `add_liquidity`
             -   [ ] imbalance fee
-        -   [ ] remove_liquidity
-        -   [ ] remove_liquidity_imbalance (skip?)
-        -   [ ] remove_liquidity_one_coin
-            -   [ ] get_y_D
+        -   [ ] `remove_liquidity`
+        -   [ ] `remove_liquidity_imbalance` (skip?)
+        -   [ ] `remove_liquidity_one_coin`
+            -   [ ] `get_y_D`
             -   [ ] `_calc_withdraw_one_coin`
     -   [ ] Swap
-        -   [ ] TODO: exercise get_dy?
         -   [ ] Exercise
+        -   [ ] Solution
     -   [ ] Add liquidity
         -   [ ] Exercise
+        -   [ ] Solution
     -   [ ] Remove liquidity
         -   [ ] Exercise
+        -   [ ] Solution
     -   [ ] Remove liquidity one coin
         -   [ ] Exercise
+        -   [ ] Solution
     -   [ ] Bonus?
         -   [ ] Secant's method
 
