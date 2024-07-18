@@ -11,7 +11,7 @@
         -   single sided liquidity
         -   imbalance fee on liquidity
         -   swap fee on token out
-    -   [ ] Graph
+    -   [ ] TODO: Graph
     -   [ ] TODO: Math
     -   [ ] Newton's method (python)
         -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
