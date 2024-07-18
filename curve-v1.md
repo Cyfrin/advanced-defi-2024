@@ -55,6 +55,7 @@
 -   [Docs](https://curve.readthedocs.io/)
 -   [Curve resources](https://resources.curve.fi/)
 -   [Curve magic](https://hackmd.io/@alltold/curve-magic)
+-   [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
 -   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
 
 ✅
