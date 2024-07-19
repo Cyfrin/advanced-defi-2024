@@ -14,7 +14,7 @@
     -   [ ] Newton's method (python)
         -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
         -   [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
-    -   [ ] [Code walkthrough](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
+    -   [ ] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
         -   [ ] `A`
             -   [ ] `ramp_A`
             -   [ ] `stop_ramp_A`
@@ -55,4 +55,5 @@
 -   [Curve resources](https://resources.curve.fi/)
 -   [Curve magic](https://hackmd.io/@alltold/curve-magic)
 -   [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
+-   [Curve V1 StableSwap3Pool](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
 -   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
