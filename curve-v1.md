@@ -11,7 +11,9 @@
         -   single sided liquidity
         -   imbalance fee on liquidity
         -   swap fee on token out
-    -   [ ] TODO: Graph
+    -   [ ] Graph
+        -   https://www.desmos.com/calculator/3xrvh5slce
+        -   https://www.desmos.com/3d/t0jtduq4us
     -   [ ] TODO: Math
     -   [ ] Newton's method (python)
         -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
@@ -28,7 +30,7 @@
             -   [ ] `get_y`
             -   [ ] `get_dy`, `get_dy_underlying`
         -   [ ] `add_liquidity`
-            -   [ ] TODO: imbalance fee
+            -   [ ] imbalance fee
         -   [ ] `remove_liquidity`
         -   [ ] `remove_liquidity_imbalance` (skip)
         -   [ ] `remove_liquidity_one_coin`
