@@ -1,65 +1,58 @@
 ### Curve v1
 
-### TODOs
-
--   vyper and solidity challenges
-
 -   [ ] Curve v1
     -   [ ] Comparison with Uniswap v2 and v3
         -   vyper
         -   low slippage
-        -   single sided liquidity
+        -   single sided liquidity (add and remove)
         -   imbalance fee on liquidity
         -   swap fee on token out
     -   [ ] Graph
         -   https://www.desmos.com/calculator/3xrvh5slce
         -   https://www.desmos.com/3d/t0jtduq4us
-    -   [ ] TODO: Math
+    -   [ ] [Math](https://resources.curve.fi/pdf/curve-stableswap.pdf)
     -   [ ] Newton's method (python)
         -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
         -   [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
-    -   [ ] Code walk
-        -   [ ] A
+    -   [ ] [Code walkthrough](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
+        -   [ ] `A`
             -   [ ] `ramp_A`
             -   [ ] `stop_ramp_A`
         -   [ ] `_xp`
         -   [ ] `get_D`
-        -   [ ] `get_virtual_price` (current price of the pool LP token relative to the underlying pool assets)
-        -   [ ] `calc_token_amount` (Estimate the amount of LP tokens minted or burned)
-        -   [ ] exchange
+        -   [ ] `get_virtual_price`
+        -   [ ] `calc_token_amount`
+        -   [ ] `exchange`
             -   [ ] `get_y`
-            -   [ ] `get_dy`, `get_dy_underlying`
+            -   [ ] `get_dy`
+                -   `get_dy_underlying`
         -   [ ] `add_liquidity`
-            -   [ ] imbalance fee
+            -   imbalance fee
         -   [ ] `remove_liquidity`
-        -   [ ] `remove_liquidity_imbalance` (skip)
         -   [ ] `remove_liquidity_one_coin`
             -   [ ] `get_y_D`
             -   [ ] `_calc_withdraw_one_coin`
     -   [ ] Swap
-        -   [ ] Exercise
-        -   [ ] Solution
+        -   [ ] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+        -   [ ] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+        -   [ ] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+        -   [ ] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
     -   [ ] Add liquidity
-        -   [ ] Exercise
-        -   [ ] Solution
+        -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
     -   [ ] Remove liquidity
-        -   [ ] Exercise
-        -   [ ] Solution
+        -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
     -   [ ] Remove liquidity one coin
-        -   [ ] Exercise
-        -   [ ] Solution
-    -   [ ] Bonus?
-        -   [ ] Secant's method
+        -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
 ### Resources
 
 -   [Curve](https://curve.fi)
 -   [Docs](https://curve.readthedocs.io/)
+-   [Whitepaper](https://resources.curve.fi/pdf/curve-stableswap.pdf)
 -   [Curve resources](https://resources.curve.fi/)
 -   [Curve magic](https://hackmd.io/@alltold/curve-magic)
 -   [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
 -   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
-
-✅
-
-🤔
