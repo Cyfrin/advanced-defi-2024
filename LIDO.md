@@ -7,6 +7,7 @@ https://docs.lido.fi/deployed-contracts/
 -   Validator lifecycle
 -   [deposit contract](https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa#code)
 -   LIDO
+    -   lido impl https://etherscan.io/address/0x17144556fd3424edc8fc8a4c940b2d04936d17eb#code
 -   StETH
 -   WStETH
 -   LDO
