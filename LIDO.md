@@ -17,10 +17,21 @@ https://docs.lido.fi/deployed-contracts/
     -   0x00000000219ab540356cbb839cbe05303d7705fa
     -   incremental merkle tree
 
+# LIDO protocol
+
 -   https://oxor.io/blog/2024-05-24-lido-explained-deposit-oracles/
 -   https://oxor.io/blog/2024-02-22-lido-explained-part-2-consensus-withdraw/
 -   https://oxor.io/blog/2024-05-24-lido-explained-deposit-oracles/
--   https://eth2book.info/
 -   https://blog.lido.fi/vulnerability-response-update/
--   https://medium.com/immunefi/rocketpool-lido-frontrunning-bug-fix-postmortem-e701f26d7971
+
+### ETH2 solo staking
+
 -   https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#deposits
+-   https://eth2book.info/
+-   https://docs.prylabs.network/docs/concepts/nodes-networks
+-   https://www.coincashew.com/coins/overview-eth/archived-guides/guide-or-how-to-setup-a-validator-on-eth2-testnet-prater-1
+-   https://clientdiversity.org/
+
+### Misc
+
+-   https://medium.com/immunefi/rocketpool-lido-frontrunning-bug-fix-postmortem-e701f26d7971
