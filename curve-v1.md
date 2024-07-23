@@ -1,6 +1,6 @@
 ### Curve v1
 
--   [ ] Intro
+-   [x] Intro
 -   [ ] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
 -   [ ] Graph
     -   https://www.desmos.com/calculator/3xrvh5slce
