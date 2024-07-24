@@ -1,6 +1,8 @@
 ### Curve v2
 
+-   [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
 -   [gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
+-   [gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
 
 -   dynamic fee
 -   ema
@@ -9,7 +11,7 @@
 
 ### TODOs
 
--   desmos price graph
+-   desmos price graph?
 -   gamma graph 3D
 -   price vs reserve graph (python)
 
