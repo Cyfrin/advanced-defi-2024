@@ -1,8 +1,8 @@
 ### Curve v1
 
 -   [x] Intro
--   [ ] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
--   [ ] Graph
+-   [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
+-   [x] Graph
     -   https://www.desmos.com/calculator/3xrvh5slce
     -   https://www.desmos.com/3d/t0jtduq4us
 -   [ ] [Math](https://resources.curve.fi/pdf/curve-stableswap.pdf)
