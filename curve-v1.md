@@ -15,10 +15,12 @@
         -   [ ] `stop_ramp_A`
     -   [ ] `_xp`
     -   [ ] `get_D`
+        -   [ ] python code
     -   [ ] `get_virtual_price`
     -   [ ] `calc_token_amount`
     -   [ ] `exchange`
         -   [ ] `get_y`
+            -   [ ] python code
         -   [ ] `get_dy`
             -   `get_dy_underlying`
     -   [ ] `add_liquidity`
