@@ -5,7 +5,7 @@
 -   [x] Graph
     -   https://www.desmos.com/calculator/3xrvh5slce
     -   https://www.desmos.com/3d/t0jtduq4us
--   [ ] [Math](https://resources.curve.fi/pdf/curve-stableswap.pdf)
+-   [x] [Math](https://resources.curve.fi/pdf/curve-stableswap.pdf)
 -   [ ] Newton's method (python)
     -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
     -   [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
