@@ -3,6 +3,7 @@
 -   [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
 -   [gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
 -   [gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+-   [price vs reserve graph (python)](./notebook/amm_dy_dx.ipynb)
 
 -   dynamic fee
 -   ema
@@ -10,10 +11,6 @@
 -   repricing algo
 
 ### TODOs
-
--   desmos price graph?
--   gamma graph 3D
--   price vs reserve graph (python)
 
 ### Resources
 
