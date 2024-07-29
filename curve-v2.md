@@ -14,6 +14,18 @@
 
 -   what is xcp
 
+```
+xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
+xcp = geometric_mean(xp)
+xcp = value of constant-product invariant at equilibrium
+virtual_price = xcp / total_supply (TODO: why?)
+
+```
+
+-   why repping can cause loss for LP
+    -   the loss can occur because it sells at the lower price and rebuys at the higher price
+-   quantify potential loss / gain
+
 ### Resources
 
 -   [Whitepaper](https://resources.curve.fi/pdf/curve-cryptopools.pdf)
@@ -21,3 +33,4 @@
 -   [GitHub](https://github.com/curvefi/tricrypto-ng/blob/acba2ee4fc933cc74df4365e4f357fa7e1582b99/contracts/main/CurveTricryptoOptimizedWETH.vy)
 -   [Tricrypto optimization](https://github.com/curvefi/tricrypto-ng/blob/extended-readme/docs/tricrypto_optimisation.pdf)
 -   [https://docs.kokonutswap.finance/understanding-crypto-pools](Understanding Crypto Pools)
+-   https://x.com/0xstan_/status/1644931391111725057

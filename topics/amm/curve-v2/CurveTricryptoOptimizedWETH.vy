@@ -526,6 +526,9 @@ def add_liquidity(
 
     A_gamma: uint256[2] = self._A_gamma()
     xp: uint256[N_COINS] = self.balances
+    """
+    amountsp = xp - xp_old
+    """
     amountsp: uint256[N_COINS] = empty(uint256[N_COINS])
     xx: uint256[N_COINS] = empty(uint256[N_COINS])
     d_token: uint256 = 0
@@ -548,6 +551,9 @@ def add_liquidity(
         self.balances[i] = bal
     xx = xp
 
+    """
+    xp[i] = (balances[i] + amounts[i]) * price[i]
+    """
     xp[0] *= precisions[0]
     xp_old[0] *= precisions[0]
     for i in range(1, N_COINS):
@@ -887,6 +893,9 @@ def _exchange(
         packed_price_scale
     )
 
+    """
+    transformed balance = token balance * price
+    """
     xp[0] *= precisions[0]
     for k in range(1, N_COINS):
         xp[k] = unsafe_div(
@@ -901,6 +910,9 @@ def _exchange(
     t: uint256 = self.future_A_gamma_time
     if t > block.timestamp:
 
+        """
+        calculate transformed balance for xp[i]
+        """
         x0 *= prec_i
 
         if i > 0:
@@ -1306,6 +1318,9 @@ def get_xcp(D: uint256) -> uint256:
         x[i] = D * 10**18 / (N_COINS * (packed_prices & PRICE_MASK))
         packed_prices = packed_prices >> PRICE_SIZE
 
+    """
+    (D/(N*p1) * D/(N*p2) * D/(N*p3)) ** (1/N)
+    """
     return MATH.geometric_mean(x)
 
 
