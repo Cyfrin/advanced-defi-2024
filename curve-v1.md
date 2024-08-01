@@ -7,8 +7,8 @@
     -   https://www.desmos.com/3d/t0jtduq4us
 -   [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
 -   [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
-    -   [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
-    -   [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
+    -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
+    -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
 -   [ ] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
     -   [ ] `A`
         -   [ ] `ramp_A`
