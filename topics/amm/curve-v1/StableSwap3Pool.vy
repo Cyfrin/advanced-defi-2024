@@ -153,6 +153,17 @@ def _A() -> uint256:
     t1: uint256 = self.future_A_time
     A1: uint256 = self.future_A
 
+    """
+    A1 |           ......
+       |         . |
+       |       .   |
+       |     .     |
+       |   .       |
+    A0 | .         | 
+       |-|----|----|------
+         t0   b    t1
+    """
+
     if block.timestamp < t1:
         A0: uint256 = self.initial_A
         t0: uint256 = self.initial_A_time
