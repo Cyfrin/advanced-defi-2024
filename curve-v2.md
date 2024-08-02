@@ -1,6 +1,6 @@
 ### Curve v2
 
--   b' = b\* p
+-   `b' = b * p`
 -   D
 -   virtual price
 -   dynamic fee
