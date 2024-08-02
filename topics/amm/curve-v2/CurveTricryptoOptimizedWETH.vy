@@ -1006,6 +1006,7 @@ def tweak_price(
     )
 
     total_supply: uint256 = self.totalSupply
+    # TODO: wat is xcp_profit
     old_xcp_profit: uint256 = self.xcp_profit
     old_virtual_price: uint256 = self.virtual_price
     last_prices_timestamp: uint256 = self.last_prices_timestamp
@@ -1091,6 +1092,7 @@ def tweak_price(
     self.xcp_profit = xcp_profit
 
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
+    # TODO: wat dis?
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 
@@ -1111,6 +1113,7 @@ def tweak_price(
                 ratio = unsafe_sub(10**18, ratio)
             norm = unsafe_add(norm, ratio**2)
 
+        # norm = sqrt(sum(|1 - r|)), r = price oracle / price scale
         norm = isqrt(norm)  # <-------------------- isqrt is not in base 1e18.
         adjustment_step: uint256 = max(
             rebalancing_params[1], unsafe_div(norm, 5)
@@ -1738,6 +1741,7 @@ def get_virtual_price() -> uint256:
          virtual price.
     @return uint256 Virtual Price.
     """
+    # TODO: wat dis?
     return 10**18 * self.get_xcp(self.D) / self.totalSupply
 
 
