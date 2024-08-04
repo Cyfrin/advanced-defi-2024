@@ -52,5 +52,6 @@
 -   [Curve resources](https://resources.curve.fi/)
 -   [Curve magic](https://hackmd.io/@alltold/curve-magic)
 -   [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
--   [Curve V1 StableSwap3Pool](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
+-   [Curve V1 StableSwap3Pool code](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
+-   [3pool](https://etherscan.io/address/0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7)
 -   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)

@@ -79,6 +79,8 @@ FEE_DENOMINATOR: constant(uint256) = 10 ** 10
 LENDING_PRECISION: constant(uint256) = 10 ** 18
 PRECISION: constant(uint256) = 10 ** 18  # The precision to convert to
 PRECISION_MUL: constant(uint256[N_COINS]) = [1, 1000000000000, 1000000000000]
+
+# 1e18, 1e30, 1e30
 RATES: constant(uint256[N_COINS]) = [1000000000000000000, 1000000000000000000000000000000, 1000000000000000000000000000000]
 FEE_INDEX: constant(int128) = 2  # Which coin may potentially have fees (USDT)
 
@@ -90,6 +92,7 @@ MAX_A_CHANGE: constant(uint256) = 10
 ADMIN_ACTIONS_DELAY: constant(uint256) = 3 * 86400
 MIN_RAMP_TIME: constant(uint256) = 86400
 
+# DAI, USDC, USDT
 coins: public(address[N_COINS])
 balances: public(uint256[N_COINS])
 fee: public(uint256)  # fee * 1e10
@@ -188,6 +191,9 @@ def A() -> uint256:
 def _xp() -> uint256[N_COINS]:
     result: uint256[N_COINS] = RATES
     for i in range(N_COINS):
+        # DAI  = 1e18 * dai balance  / 1e18 = 18 decimals
+        # USDC = 1e30 * usdc balance / 1e18 = 18 decimals  
+        # USDT = 1e30 * usdc balance / 1e18 = 18 decimals 
         result[i] = result[i] * self.balances[i] / LENDING_PRECISION
     return result
 
@@ -201,9 +207,12 @@ def _xp_mem(_balances: uint256[N_COINS]) -> uint256[N_COINS]:
     return result
 
 
+# What is D?
+# Each token balance is D / N when the pool is perfectly balanced
 @pure
 @internal
 def get_D(xp: uint256[N_COINS], amp: uint256) -> uint256:
+    # sum(x_i)
     S: uint256 = 0
     for _x in xp:
         S += _x
@@ -212,12 +221,15 @@ def get_D(xp: uint256[N_COINS], amp: uint256) -> uint256:
 
     Dprev: uint256 = 0
     D: uint256 = S
+    # A * (N ** N)
     Ann: uint256 = amp * N_COINS
     for _i in range(255):
+        # D ** (N + 1) / (N ** N * prod(x_i))
         D_P: uint256 = D
         for _x in xp:
             D_P = D_P * D / (_x * N_COINS)  # If division by 0, this will be borked: only withdrawal will work. And that is good
         Dprev = D
+        # equivalent to D - f(D) / (df/dD)(D)
         D = (Ann * S + D_P * N_COINS) * D / ((Ann - 1) * D + (N_COINS + 1) * D_P)
         # Equality with the precision of 1
         if D > Dprev:
@@ -377,8 +389,12 @@ def get_y(i: int128, j: int128, x: uint256, xp_: uint256[N_COINS]) -> uint256:
 
     amp: uint256 = self._A()
     D: uint256 = self.get_D(xp_, amp)
+    # p = prod(x_i) for i != j
+    # D ** (N + 1) / (N ** N * p * A * (N ** N))
     c: uint256 = D
+    # sum(x_i) for i != j
     S_: uint256 = 0
+    # A * (N ** N)
     Ann: uint256 = amp * N_COINS
 
     _x: uint256 = 0
@@ -388,6 +404,7 @@ def get_y(i: int128, j: int128, x: uint256, xp_: uint256[N_COINS]) -> uint256:
         elif _i != j:
             _x = xp_[_i]
         else:
+            # i = j
             continue
         S_ += _x
         c = c * D / (_x * N_COINS)
@@ -397,6 +414,7 @@ def get_y(i: int128, j: int128, x: uint256, xp_: uint256[N_COINS]) -> uint256:
     y: uint256 = D
     for _i in range(255):
         y_prev = y
+        # equalivalent to y - f(y) / (df/dy)(y)
         y = (y*y + c) / (2 * y + b - D)
         # Equality with the precision of 1
         if y > y_prev:
