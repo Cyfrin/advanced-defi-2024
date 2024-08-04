@@ -10,9 +10,9 @@
     -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
     -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
 -   [ ] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
-    -   [ ] `A`
-        -   [ ] `ramp_A`
-        -   [ ] `stop_ramp_A`
+    -   [x] `A`
+        -   `ramp_A`
+        -   `stop_ramp_A`
     -   [ ] `_xp`
     -   [ ] `get_D`
         -   [ ] python code
