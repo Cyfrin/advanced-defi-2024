@@ -1006,7 +1006,6 @@ def tweak_price(
     )
 
     total_supply: uint256 = self.totalSupply
-    # TODO: wat is xcp_profit
     old_xcp_profit: uint256 = self.xcp_profit
     old_virtual_price: uint256 = self.virtual_price
     last_prices_timestamp: uint256 = self.last_prices_timestamp
@@ -1160,6 +1159,7 @@ def tweak_price(
             )  # <----- unsafe_div because we did safediv before (if vp>1e18)
 
             # ---------------------------- Proceed if we've got enough profit.
+            # if new virtual price > (1 + xcp_profit) / 2
             if (
                 old_virtual_price > 10**18 and
                 2 * old_virtual_price - 10**18 > xcp_profit
@@ -1308,6 +1308,9 @@ def _fee(xp: uint256[N_COINS]) -> uint256:
     )
 
 
+"""
+xcp = x of constant product?
+"""
 @internal
 @view
 def get_xcp(D: uint256) -> uint256:

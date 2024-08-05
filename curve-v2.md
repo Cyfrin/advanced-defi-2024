@@ -29,13 +29,15 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 -   why repping can cause loss for LP
     -   the loss can occur because it sells at the lower price and rebuys at the higher price
--   quantify potential loss / gain
 
 ### Memo
 
 ```
 concentrated liquidity -> price is mean reverting -> LP profit
                        -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
+
+profit if price reverts to EMA
+loss if AMM must repeg
 ```
 
 ### Resources
