@@ -7,7 +7,6 @@
 -   ema
 -   profit measurement
 -   repricing algo
--   repeg loss graph
 
 -   [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
 -   [gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
@@ -31,6 +30,13 @@ virtual_price = xcp / total_supply (TODO: why?)
 -   why repping can cause loss for LP
     -   the loss can occur because it sells at the lower price and rebuys at the higher price
 -   quantify potential loss / gain
+
+### Memo
+
+```
+concentrated liquidity -> price is mean reverting -> LP profit
+                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
+```
 
 ### Resources
 
