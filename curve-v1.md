@@ -13,9 +13,9 @@
     -   [x] `A`
         -   `ramp_A`
         -   `stop_ramp_A`
-    -   [ ] `_xp`
-    -   [ ] `get_D`
-        -   [ ] python code
+    -   [x] `_xp`
+    -   [x] `get_D`
+        -   [x] [python code](./notebook/curve_v1_equations.ipynb)
     -   [ ] `get_virtual_price`
     -   [ ] `calc_token_amount`
     -   [ ] `exchange`
