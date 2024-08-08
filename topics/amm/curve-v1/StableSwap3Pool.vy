@@ -459,6 +459,7 @@ def get_dy_underlying(i: int128, j: int128, dx: uint256) -> uint256:
 @nonreentrant('lock')
 def exchange(i: int128, j: int128, dx: uint256, min_dy: uint256):
     assert not self.is_killed  # dev: is killed
+    # 1e18, 1e30, 1e30
     rates: uint256[N_COINS] = RATES
 
     old_balances: uint256[N_COINS] = self.balances
@@ -504,6 +505,8 @@ def exchange(i: int128, j: int128, dx: uint256, min_dy: uint256):
     # Change balances exactly in same way as we change actual ERC20 coin amounts
     self.balances[i] = old_balances[i] + dx_w_fee
     # When rounding errors happen, we undercharge admin fee in favor of LP
+    #                                  - (dy - dy_fee) - dy_admin_fee 
+    #                                  -  dy + dy_fee  - dy_admin_fee
     self.balances[j] = old_balances[j] - dy - dy_admin_fee
 
     # "safeTransfer" which works for ERC20s which return bool or not
