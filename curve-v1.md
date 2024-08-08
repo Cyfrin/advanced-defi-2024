@@ -16,8 +16,8 @@
     -   [x] `_xp`
     -   [x] `get_D`
         -   [x] [python code](./notebook/curve_v1_equations.ipynb)
-    -   [ ] `get_virtual_price`
-    -   [ ] `calc_token_amount`
+    -   [x] `get_virtual_price`
+    -   [x] `calc_token_amount`
     -   [ ] `exchange`
         -   [ ] `get_y`
             -   [ ] python code
