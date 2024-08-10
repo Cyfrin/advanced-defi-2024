@@ -18,11 +18,10 @@
         -   [x] [python code](./notebook/curve_v1_equations.ipynb)
     -   [x] `get_virtual_price`
     -   [x] `calc_token_amount`
-    -   [ ] `exchange`
-        -   [ ] `get_y`
-            -   [ ] python code
-        -   [ ] `get_dy`
-            -   `get_dy_underlying`
+    -   [x] `exchange`
+        -   [x] `get_y`
+            -   [x] [python code](./notebook/curve_v1_equations.ipynb)
+    -   [x] `get_dy`
     -   [ ] `add_liquidity`
         -   imbalance fee
     -   [ ] `remove_liquidity`
