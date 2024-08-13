@@ -1077,6 +1077,7 @@ def tweak_price(
         xcp: uint256 = MATH.geometric_mean(xp)
         virtual_price = 10**18 * xcp / total_supply
 
+        # TODO: wat dis? - accumulates change rate of virtual price?
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
             old_virtual_price
@@ -1092,6 +1093,7 @@ def tweak_price(
 
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
     # TODO: wat dis?
+    # new virtual_price > (1 + xcp_profit) / 2 + allowed_extra_profit
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 
@@ -1159,7 +1161,7 @@ def tweak_price(
             )  # <----- unsafe_div because we did safediv before (if vp>1e18)
 
             # ---------------------------- Proceed if we've got enough profit.
-            # if new virtual price > (1 + xcp_profit) / 2
+            # if new virtual_price > (1 + xcp_profit) / 2
             if (
                 old_virtual_price > 10**18 and
                 2 * old_virtual_price - 10**18 > xcp_profit
@@ -1223,6 +1225,7 @@ def _claim_admin_fees():
     #      3. Since half of the profits go to rebalancing the pool, we
     #         are left with half; so divide by 2.
 
+    # TODO: wat dis? why xcp_profit - xcp_profit_a
     fees: uint256 = unsafe_div(
         unsafe_sub(xcp_profit, xcp_profit_a) * ADMIN_FEE, 2 * 10**10
     )
@@ -1232,9 +1235,11 @@ def _claim_admin_fees():
     receiver: address = Factory(self.factory).fee_receiver()
     if receiver != empty(address) and fees > 0:
 
+        # TODO: wat dis?
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
         claimed: uint256 = self.mint_relative(receiver, frac)
 
+        # TODO: why fees * 2?
         xcp_profit -= fees * 2
 
         self.xcp_profit = xcp_profit
