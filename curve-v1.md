@@ -22,7 +22,7 @@
         -   [x] `get_y`
             -   [x] [python code](./notebook/curve_v1_equations.ipynb)
     -   [x] `get_dy`
-    -   [ ] `add_liquidity`
+    -   [x] `add_liquidity`
         -   imbalance fee
     -   [ ] `remove_liquidity`
     -   [ ] `remove_liquidity_one_coin`

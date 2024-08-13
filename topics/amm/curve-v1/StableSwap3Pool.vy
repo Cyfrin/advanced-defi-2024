@@ -674,6 +674,23 @@ def _calc_withdraw_one_coin(_token_amount: uint256, i: int128) -> (uint256, uint
     D1: uint256 = D0 - _token_amount * D0 / total_supply
     xp_reduced: uint256[N_COINS] = xp
 
+
+    """
+    Example of decrease from D0 to D1
+    y = x1
+    Token balances of x0 and x2 are fixed, hence x1 must decrease
+
+     100  100  100
+     _______________ D0 / 3
+    |  | |  | |  |
+    |--|-|--|-|--|-- D1 / 3
+    |  | |  | |  |
+    |  | |--|-|--|-- new_y
+    |  | |  | |  |
+    |__|_|__|_|__|
+     x0   x1   x2
+
+    """
     new_y: uint256 = self.get_y_D(amp, i, xp, D1)
     dy_0: uint256 = (xp[i] - new_y) / precisions[i]  # w/o fees
 
@@ -685,6 +702,7 @@ def _calc_withdraw_one_coin(_token_amount: uint256, i: int128) -> (uint256, uint
             dx_expected = xp[j] - xp[j] * D1 / D0
         xp_reduced[j] -= _fee * dx_expected / FEE_DENOMINATOR
 
+    # dy <= dy_0
     dy: uint256 = xp_reduced[i] - self.get_y_D(amp, i, xp_reduced, D1)
     dy = (dy - 1) / precisions[i]  # Withdraw less to account for rounding errors
 
