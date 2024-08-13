@@ -1237,6 +1237,10 @@ def _claim_admin_fees():
 
         # TODO: wat dis?
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
+        # Mints total_supply * frac / 1e18
+        # fee = (xcp_profit - xcp_profit_a) * ADMIN_FEE / 2
+        # frac = v / (v - fee)
+        # T * (1 + frac)
         claimed: uint256 = self.mint_relative(receiver, frac)
 
         # TODO: why fees * 2?
