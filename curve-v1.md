@@ -9,7 +9,7 @@
 -   [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
     -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
     -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
--   [ ] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
+-   [x] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
     -   [x] `A`
         -   `ramp_A`
         -   `stop_ramp_A`
@@ -24,10 +24,9 @@
     -   [x] `get_dy`
     -   [x] `add_liquidity`
         -   imbalance fee
-    -   [ ] `remove_liquidity`
-    -   [ ] `remove_liquidity_one_coin`
-        -   [ ] `get_y_D`
-        -   [ ] `_calc_withdraw_one_coin`
+    -   [x] `remove_liquidity`
+    -   [x] `remove_liquidity_one_coin`
+        -   [x] `_calc_withdraw_one_coin`
 -   [ ] Swap
     -   [ ] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
     -   [ ] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
