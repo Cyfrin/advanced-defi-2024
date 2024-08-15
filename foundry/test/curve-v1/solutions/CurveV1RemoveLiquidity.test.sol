@@ -13,7 +13,7 @@ import {
     CURVE_3CRV
 } from "../../../src/Constants.sol";
 
-contract CurveV1LiquidityTest is Test {
+contract CurveV1RemoveLiquidityTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
     IERC20 private constant lp = IERC20(CURVE_3CRV);
     IERC20 private constant dai = IERC20(DAI);
@@ -23,27 +23,21 @@ contract CurveV1LiquidityTest is Test {
     function setUp() public {
         deal(DAI, address(this), 1e6 * 1e18);
         dai.approve(address(pool), type(uint256).max);
+
+        uint256[3] memory coins = [uint256(1e6 * 1e18), uint256(0), uint256(0)];
+        pool.add_liquidity(coins, 1);
     }
 
     // Exercise 1
-    // Call add_liquidity
-    // Add 1,000,000 DAI of liquidity to the pool contract
-    function test_add_liquidity() public {
-        // Write your code here
-
-        uint256 lpBal = lp.balanceOf(address(this));
-        assertGt(lpBal, 0);
-    }
-
-    // Exercise 2
     // Call remove_liquidity
     // Get the 3CRV (LP token of 3Pool) balance of this contract and
     // withdraw all LP for 3 stablecoins (DAI, USDC, USDT)
     function test_remove_liquidity() public {
-        uint256[3] memory coins = [uint256(1e6 * 1e18), uint256(0), uint256(0)];
-        pool.add_liquidity(coins, 1);
-
         // Write your code here
+        uint256 lpBal = lp.balanceOf(address(this));
+
+        uint256[3] memory minCoins = [uint256(1), uint256(1), uint256(1)];
+        pool.remove_liquidity(lpBal, minCoins);
 
         assertEq(lp.balanceOf(address(this)), 0, "3CRV balance > 0");
 
@@ -62,15 +56,16 @@ contract CurveV1LiquidityTest is Test {
         console2.log("USDT balance %e", bal);
     }
 
-    // Exercise 3
+    // Exercise 2
     // Call remove_liquidity_one_coin
     // Get the 3CRV (LP token of 3Pool) balance of this contract and
     // withdraw all LP for a single stablecoin (DAI)
     function test_remove_liquidity_one_coin() public {
-        uint256[3] memory coins = [uint256(1e6 * 1e18), uint256(0), uint256(0)];
-        pool.add_liquidity(coins, 1);
-
         // Write your code here
+        uint256 lpBal = lp.balanceOf(address(this));
+        pool.remove_liquidity_one_coin(lpBal, 0, 1);
+
+        assertEq(lp.balanceOf(address(this)), 0, "3CRV balance > 0");
 
         uint256 bal = 0;
 
