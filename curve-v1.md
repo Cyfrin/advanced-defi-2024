@@ -27,20 +27,20 @@
     -   [x] `remove_liquidity`
     -   [x] `remove_liquidity_one_coin`
         -   [x] `_calc_withdraw_one_coin`
--   [ ] Swap
-    -   [ ] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    -   [ ] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
-    -   [ ] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    -   [ ] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
--   [ ] Add liquidity
-    -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
--   [ ] Remove liquidity
-    -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
--   [ ] Remove liquidity one coin
-    -   [ ] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [ ] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+-   [x] Swap
+    -   [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    -   [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+    -   [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    -   [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+-   [x] Add liquidity
+    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+-   [x] Remove liquidity
+    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+-   [x] Remove liquidity one coin
+    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
 ### Resources
 
