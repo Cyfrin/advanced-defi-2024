@@ -50,4 +50,5 @@ loss if AMM must repeg
 - [Tricrypto optimization](https://github.com/curvefi/tricrypto-ng/blob/extended-readme/docs/tricrypto_optimisation.pdf)
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
 - [https://docs.kokonutswap.finance/understanding-crypto-pools](Understanding Crypto Pools)
+- [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
 - https://x.com/0xstan_/status/1644931391111725057
