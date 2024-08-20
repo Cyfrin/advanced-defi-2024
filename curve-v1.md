@@ -1,14 +1,16 @@
 ### Curve v1
 
--   [x] Intro
--   [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
--   [x] Graph
-    -   https://www.desmos.com/calculator/3xrvh5slce
-    -   https://www.desmos.com/3d/t0jtduq4us
--   [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
--   [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
-    -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
-    -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
+- Intro
+    -   [x] Intro
+    -   [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
+- Math
+    -   [x] Graph
+        -   https://www.desmos.com/calculator/3xrvh5slce
+        -   https://www.desmos.com/3d/t0jtduq4us
+    -   [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
+    -   [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
+        -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
+        -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
 -   [x] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
     -   [x] `A`
         -   `ramp_A`
@@ -27,20 +29,21 @@
     -   [x] `remove_liquidity`
     -   [x] `remove_liquidity_one_coin`
         -   [x] `_calc_withdraw_one_coin`
--   [x] Swap
-    -   [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    -   [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
-    -   [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    -   [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
--   [x] Add liquidity
-    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
--   [x] Remove liquidity
-    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
--   [x] Remove liquidity one coin
-    -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+- Exercises
+    -   [x] Swap
+        -   [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+        -   [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+        -   [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+        -   [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+    -   [x] Add liquidity
+        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    -   [x] Remove liquidity
+        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    -   [x] Remove liquidity one coin
+        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
 ### Resources
 
