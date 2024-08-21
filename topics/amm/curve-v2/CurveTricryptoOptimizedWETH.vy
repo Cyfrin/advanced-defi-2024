@@ -1170,6 +1170,7 @@ def tweak_price(
                 packed_price_scale = self._pack_prices(p_new)
 
                 self.D = D
+                # virtual_price = xcp / total_supply, xcp calculated with new price scales
                 self.virtual_price = old_virtual_price
                 self.price_scale_packed = packed_price_scale
 
@@ -1177,6 +1178,7 @@ def tweak_price(
 
     # --------- price_scale was not adjusted. Update the profit counter and D.
     self.D = D_unadjusted
+    # virtual_price = xcp / total_supply
     self.virtual_price = virtual_price
 
     return packed_price_scale
@@ -1244,7 +1246,7 @@ def _claim_admin_fees():
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
         claimed: uint256 = self.mint_relative(receiver, frac)
 
-        # TODO: why fees * 2?
+        # TODO: why fees * 2? 
         xcp_profit -= fees * 2
 
         self.xcp_profit = xcp_profit
