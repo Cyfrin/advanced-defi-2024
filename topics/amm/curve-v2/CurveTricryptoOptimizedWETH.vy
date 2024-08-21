@@ -1234,13 +1234,14 @@ def _claim_admin_fees():
     #                                                of the pool in LP tokens.
     receiver: address = Factory(self.factory).fee_receiver()
     if receiver != empty(address) and fees > 0:
-
-        # TODO: wat dis? HERE
+        # TODO: wat dis?
+        # v = vprice
+        # f = fees
+        # T = total supply
+        # Increase total supply proportional to v / (v - f)
+        # T * (1 + q) / T = v / (v - f)
+        # q = v / (v - f) - 1
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
-        # Mints total_supply * frac / 1e18
-        # fee = (xcp_profit - xcp_profit_a) * ADMIN_FEE / 2
-        # frac = v / (v - fee)
-        # mint amount = frac * total_supply
         claimed: uint256 = self.mint_relative(receiver, frac)
 
         # TODO: why fees * 2?
