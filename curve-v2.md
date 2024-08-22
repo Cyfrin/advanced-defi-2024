@@ -42,6 +42,7 @@ loss if AMM must repeg
 
 ### Resources
 
+- [Curve](https://curve.fi)
 - [Curve resources](https://resources.curve.fi/)
 - [Docs](https://docs.curve.fi/)
 - [Whitepaper](https://resources.curve.fi/pdf/curve-cryptopools.pdf)
