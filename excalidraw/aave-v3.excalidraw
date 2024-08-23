@@ -10485,8 +10485,8 @@
     },
     {
       "type": "text",
-      "version": 869,
-      "versionNonce": 1582621321,
+      "version": 891,
+      "versionNonce": 1202431841,
       "index": "bBG",
       "isDeleted": false,
       "id": "dz8lZytLDxJF_LJHdObeM",
@@ -10496,8 +10496,8 @@
       "roughness": 1,
       "opacity": 100,
       "angle": 0,
-      "x": -919.0168851447897,
-      "y": 13220.321551584082,
+      "x": -924.0168851447897,
+      "y": 13228.654884917414,
       "strokeColor": "#e03131",
       "backgroundColor": "transparent",
       "width": 503.1539306640625,
@@ -10507,16 +10507,16 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723683051650,
+      "updated": 1724373682593,
       "link": null,
       "locked": false,
       "fontSize": 28,
       "fontFamily": 5,
-      "text": "- x apy and apr\n\n- why supply is linear interest\n  and borrow is compound interest?\n\n- x utilization rate\n- x reserve factor\n\n- x atoken = supply\n- x debt token = borrow\n- x rebase token\n- x ray\n\n- variable debt\n- liquidity rate\n- liquidity index\n- variable borrow rate\n- variable borrow index\n\n- x hf\n- x ltv\n- x liquidation threshold\n- x liquidation bonus\n- x close factor\n\n- x supply\n- x withdraw\n- x borrow\n- x repay\n- x liquidation\n- x flash loan\n\n- x e mode\n- x isolation mode\n- x siloed borrowing\n- x borrow cap and debt ceiling\n",
+      "text": "- x apy and apr\n\n- x why supply is linear interest\n  and borrow is compound interest?\n\n- x utilization rate\n- x reserve factor\n\n- x atoken = supply\n- x debt token = borrow\n- x rebase token\n- x ray\n\n- variable debt\n- liquidity rate\n- liquidity index\n- variable borrow rate\n- variable borrow index\n\n- x hf\n- x ltv\n- x liquidation threshold\n- x liquidation bonus\n- x close factor\n\n- x supply\n- x withdraw\n- x borrow\n- x repay\n- x liquidation\n- x flash loan\n\n- x e mode\n- x isolation mode\n- x siloed borrowing\n- x borrow cap and debt ceiling\n",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "- x apy and apr\n\n- why supply is linear interest\n  and borrow is compound interest?\n\n- x utilization rate\n- x reserve factor\n\n- x atoken = supply\n- x debt token = borrow\n- x rebase token\n- x ray\n\n- variable debt\n- liquidity rate\n- liquidity index\n- variable borrow rate\n- variable borrow index\n\n- x hf\n- x ltv\n- x liquidation threshold\n- x liquidation bonus\n- x close factor\n\n- x supply\n- x withdraw\n- x borrow\n- x repay\n- x liquidation\n- x flash loan\n\n- x e mode\n- x isolation mode\n- x siloed borrowing\n- x borrow cap and debt ceiling\n",
+      "originalText": "- x apy and apr\n\n- x why supply is linear interest\n  and borrow is compound interest?\n\n- x utilization rate\n- x reserve factor\n\n- x atoken = supply\n- x debt token = borrow\n- x rebase token\n- x ray\n\n- variable debt\n- liquidity rate\n- liquidity index\n- variable borrow rate\n- variable borrow index\n\n- x hf\n- x ltv\n- x liquidation threshold\n- x liquidation bonus\n- x close factor\n\n- x supply\n- x withdraw\n- x borrow\n- x repay\n- x liquidation\n- x flash loan\n\n- x e mode\n- x isolation mode\n- x siloed borrowing\n- x borrow cap and debt ceiling\n",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -38764,20 +38764,20 @@
     },
     {
       "type": "rectangle",
-      "version": 49,
-      "versionNonce": 592822281,
+      "version": 51,
+      "versionNonce": 155347457,
       "index": "bT9",
       "isDeleted": false,
       "id": "u45cW1q4Q8oxwHkCB8Bia",
       "fillStyle": "solid",
       "strokeWidth": 2,
-      "strokeStyle": "dashed",
+      "strokeStyle": "solid",
       "roughness": 0,
       "opacity": 100,
       "angle": 0,
       "x": -954.3956777854933,
       "y": 13294.009258494516,
-      "strokeColor": "#1971c2",
+      "strokeColor": "#9c36b5",
       "backgroundColor": "transparent",
       "width": 577.1428571428571,
       "height": 85.71428571428623,
@@ -38786,7 +38786,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1723683071611,
+      "updated": 1724373679825,
       "link": null,
       "locked": false
     },
@@ -38843,43 +38843,6 @@
       "roundness": null,
       "boundElements": [],
       "updated": 1723683082639,
-      "link": null,
-      "locked": false,
-      "fontSize": 28,
-      "fontFamily": 5,
-      "text": "WIP",
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "containerId": null,
-      "originalText": "WIP",
-      "autoResize": true,
-      "lineHeight": 1.25
-    },
-    {
-      "type": "text",
-      "version": 33,
-      "versionNonce": 41524553,
-      "index": "bTC",
-      "isDeleted": false,
-      "id": "3cLonzAniO1Npo4FKi72H",
-      "fillStyle": "solid",
-      "strokeWidth": 2,
-      "strokeStyle": "dashed",
-      "roughness": 0,
-      "opacity": 100,
-      "angle": 0,
-      "x": -343.52975676498545,
-      "y": 13319.366401351659,
-      "strokeColor": "#1971c2",
-      "backgroundColor": "transparent",
-      "width": 58.268157958984375,
-      "height": 35,
-      "seed": 1876748647,
-      "groupIds": [],
-      "frameId": null,
-      "roundness": null,
-      "boundElements": [],
-      "updated": 1723683085287,
       "link": null,
       "locked": false,
       "fontSize": 28,
@@ -40708,6 +40671,255 @@
       "updated": 1724366339309,
       "link": null,
       "locked": false
+    },
+    {
+      "id": "IDtO7yWi0cBwjFFbLa1Ep",
+      "type": "freedraw",
+      "x": -494.7911371280627,
+      "y": 13285.098125026392,
+      "width": 76.66666666666674,
+      "height": 245,
+      "angle": 0,
+      "strokeColor": "#9c36b5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "bU5",
+      "roundness": null,
+      "seed": 1599403777,
+      "version": 18,
+      "versionNonce": 126244097,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1724373691433,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          3.333333333333485,
+          -5
+        ],
+        [
+          16.666666666666742,
+          -36.66666666666606
+        ],
+        [
+          25,
+          -60
+        ],
+        [
+          36.66666666666674,
+          -85
+        ],
+        [
+          48.333333333333485,
+          -113.33333333333212
+        ],
+        [
+          56.66666666666674,
+          -141.66666666666606
+        ],
+        [
+          65,
+          -163.33333333333212
+        ],
+        [
+          71.66666666666674,
+          -195
+        ],
+        [
+          75,
+          -213.33333333333212
+        ],
+        [
+          76.66666666666674,
+          -231.66666666666606
+        ],
+        [
+          76.66666666666674,
+          -238.33333333333212
+        ],
+        [
+          76.66666666666674,
+          -241.66666666666606
+        ],
+        [
+          76.66666666666674,
+          -245
+        ],
+        [
+          75,
+          -245
+        ],
+        [
+          75,
+          -245
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        75,
+        -245
+      ]
+    },
+    {
+      "id": "q_y8sm5vAzPGQLpFuxPze",
+      "type": "freedraw",
+      "x": -433.12447046139596,
+      "y": 13053.431458359726,
+      "width": 31.666666666666742,
+      "height": 23.33333333333394,
+      "angle": 0,
+      "strokeColor": "#9c36b5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "bU7",
+      "roundness": null,
+      "seed": 1449530817,
+      "version": 21,
+      "versionNonce": 1377181537,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1724373697305,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          3.3333333333332575,
+          -3.3333333333339397
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          8.333333333333258,
+          -8.33333333333394
+        ],
+        [
+          11.666666666666742,
+          -15
+        ],
+        [
+          13.333333333333258,
+          -15
+        ],
+        [
+          15,
+          -15
+        ],
+        [
+          16.666666666666742,
+          -13.33333333333394
+        ],
+        [
+          18.333333333333258,
+          -11.66666666666606
+        ],
+        [
+          20,
+          -8.33333333333394
+        ],
+        [
+          21.666666666666742,
+          -5
+        ],
+        [
+          23.333333333333258,
+          -1.6666666666660603
+        ],
+        [
+          25,
+          1.6666666666660603
+        ],
+        [
+          28.333333333333258,
+          3.3333333333339397
+        ],
+        [
+          28.333333333333258,
+          5
+        ],
+        [
+          30,
+          6.66666666666606
+        ],
+        [
+          31.666666666666742,
+          6.66666666666606
+        ],
+        [
+          31.666666666666742,
+          8.33333333333394
+        ],
+        [
+          31.666666666666742,
+          8.33333333333394
+        ]
+      ],
+      "pressures": [],
+      "simulatePressure": true,
+      "lastCommittedPoint": [
+        31.666666666666742,
+        8.33333333333394
+      ]
+    },
+    {
+      "id": "OLHtfk5gr9lA7ghRoUmX7",
+      "type": "text",
+      "x": -389.7911371280628,
+      "y": 12853.167712310056,
+      "width": 499.6619873046875,
+      "height": 105,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 0,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "bU8",
+      "roundness": null,
+      "seed": 1865576193,
+      "version": 96,
+      "versionNonce": 1174875937,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1724373747107,
+      "link": null,
+      "locked": false,
+      "text": "- liquidity rate <= debt rate\n- liquidity rate compounds every time\nan user interacts",
+      "fontSize": 28,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "- liquidity rate <= debt rate\n- liquidity rate compounds every time\nan user interacts",
+      "autoResize": true,
+      "lineHeight": 1.25
     }
   ],
   "appState": {
