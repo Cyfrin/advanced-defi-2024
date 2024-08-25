@@ -1048,8 +1048,8 @@ def tweak_price(
     #                  the amount of adjustment to be done to the price_scale.
 
     # ------------------ If new_D is set to 0, calculate it ------------------
-
     # D before adjusting the price
+    # new_D = 0 during swaps
     D_unadjusted: uint256 = new_D
     if new_D == 0:  #  <--------------------------- _exchange sets new_D to 0.
         D_unadjusted = MATH.newton_D(A_gamma[0], A_gamma[1], _xp, K0_prev)
@@ -1081,6 +1081,7 @@ def tweak_price(
         # Calculate D -> xp -> xcp -> virtual_price
         # TODO: wat dis? - accumulates change rate of virtual price?
         # when is xcp_profit != virtual_price / old_virtual_price? -> old_xcp_profit != 1 -> after admin claims fee
+        #                                                          -> virtual price is recalculated after repeg
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
             old_virtual_price

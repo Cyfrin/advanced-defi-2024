@@ -16,8 +16,8 @@
 
 ### TODOs
 
-- what is xcp
-- what is virtual price
+- how does xcp quantify profit / loss?
+
 
 ```
 xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
