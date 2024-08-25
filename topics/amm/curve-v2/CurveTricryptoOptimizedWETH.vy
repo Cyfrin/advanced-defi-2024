@@ -1049,6 +1049,7 @@ def tweak_price(
 
     # ------------------ If new_D is set to 0, calculate it ------------------
 
+    # D before adjusting the price
     D_unadjusted: uint256 = new_D
     if new_D == 0:  #  <--------------------------- _exchange sets new_D to 0.
         D_unadjusted = MATH.newton_D(A_gamma[0], A_gamma[1], _xp, K0_prev)
@@ -1079,6 +1080,7 @@ def tweak_price(
 
         # Calculate D -> xp -> xcp -> virtual_price
         # TODO: wat dis? - accumulates change rate of virtual price?
+        # when is xcp_profit != virtual_price / old_virtual_price? -> old_xcp_profit != 1 -> after admin claims fee
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
             old_virtual_price
@@ -1095,6 +1097,11 @@ def tweak_price(
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
     # TODO: wat dis?
     # new virtual_price > (1 + xcp_profit) / 2 + allowed_extra_profit
+    #  1 + xcp_profit     old vp / old vp + (old xcp profit * new vp) / old vp
+    # ---------------- =  ----------------------------------------------------
+    #        2                                   2
+    #                  = avg of rate of change in old vp to old vp + old vp to new vp x past rates
+    # if xcp_profit ≈ virtual price, condition ≈ vp > (1 + vp) / 2
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 
