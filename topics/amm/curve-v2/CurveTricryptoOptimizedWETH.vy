@@ -1765,7 +1765,6 @@ def get_virtual_price() -> uint256:
          virtual price.
     @return uint256 Virtual Price.
     """
-    # TODO: wat dis?
     return 10**18 * self.get_xcp(self.D) / self.totalSupply
 
 

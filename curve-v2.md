@@ -3,16 +3,57 @@
 - `b' = b * p`
 - D
 - virtual price
-- dynamic fee
-- ema
-- profit measurement
+- xcp
 - repricing algo
+  - repeggins loss
+  - quantifying profit loss
+- ema
+- dynamic fee
 
 - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
 - [gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
 - [gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
 - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
 - [price vs reserve graph (python)](./notebook/amm_dy_dx.ipynb)
+
+- Intro
+  - volatile tokens
+  - concentrated liquidity that algorithmically repegs to EMA?
+- Math
+  - Price transform
+  - Equation
+  - Graph (concentrated liquidity that repegs to EMA)
+  - Python code (concentrated liquidity)
+  - Quantification of profit 
+- Code walkthrough
+  - xp
+  - get_xcp
+  - get_virtual_price
+  - exchange
+    - get_y? (Avdanced math)
+  - add_liquidity
+  - remove_liquidity
+  - remove_liquidity_one_coin
+    - calc_withdraw_one_coin
+  - price_oracle
+    - math
+    - code
+  - tweak_price
+    - xcp_profit
+  - claim_admin_fee?
+  - dynamic fee?
+  - get_dy?
+- Exercises
+  - Swap
+    - get dy
+    - exchange
+  - Add liquidity
+  - Remove liquidity
+  - Remove liquidity one coin
+
+- Footnote
+  - dy / dx
+
 
 ### TODOs
 
@@ -71,4 +112,3 @@ virtual_price = xcp / total_supply (TODO: why?)
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
 - [https://docs.kokonutswap.finance/understanding-crypto-pools](Understanding Crypto Pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
-- https://x.com/0xstan_/status/1644931391111725057
