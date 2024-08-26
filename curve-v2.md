@@ -21,7 +21,7 @@
   - concentrated liquidity that algorithmically repegs to EMA?
   - newton's method and optimizations
 - Math
-  - Price transform
+  - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Equation
   - Graph (concentrated liquidity that repegs to EMA)
   - Python code (concentrated liquidity)
