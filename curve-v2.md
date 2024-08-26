@@ -16,8 +16,18 @@
 
 ### TODOs
 
-- how does xcp quantify profit / loss?
-  - xcp -> 0 imbalanced?, max at equilibrium?
+
+### Memo
+
+```
+concentrated liquidity -> price is mean reverting -> LP profit
+                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
+
+profit if price reverts to EMA
+loss if AMM must repeg
+```
+
+- xcp -> 0 imbalanced?, max at equilibrium?
 
 ```
 # v1
@@ -48,16 +58,6 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 - why repping can cause loss for LP
   - the loss can occur because it sells at the lower price and rebuys at the higher price
-
-### Memo
-
-```
-concentrated liquidity -> price is mean reverting -> LP profit
-                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
-
-profit if price reverts to EMA
-loss if AMM must repeg
-```
 
 ### Resources
 
