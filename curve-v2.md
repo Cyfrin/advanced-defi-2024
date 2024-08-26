@@ -19,6 +19,7 @@
 - Intro
   - volatile tokens
   - concentrated liquidity that algorithmically repegs to EMA?
+  - newton's method and optimizations
 - Math
   - Price transform
   - Equation
@@ -107,8 +108,8 @@ virtual_price = xcp / total_supply (TODO: why?)
 - [Docs](https://docs.curve.fi/)
 - [Whitepaper](https://resources.curve.fi/pdf/curve-cryptopools.pdf)
 - [USDC/WBTC/ETH](https://etherscan.io/address/0x7f86bf177dd4f3494b841a37e810a34dd56c829b)
-- [GitHub](https://github.com/curvefi/tricrypto-ng/blob/acba2ee4fc933cc74df4365e4f357fa7e1582b99/contracts/main/CurveTricryptoOptimizedWETH.vy)
+- [GitHub](https://github.com/curvefi/tricrypto-ng/blob/main/contracts/main/CurveTricryptoOptimizedWETH.vy)
 - [Tricrypto optimization](https://github.com/curvefi/tricrypto-ng/blob/extended-readme/docs/tricrypto_optimisation.pdf)
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
-- [https://docs.kokonutswap.finance/understanding-crypto-pools](Understanding Crypto Pools)
+- [Understanding Crypto Pools](https://docs.kokonutswap.finance/understanding-crypto-pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
