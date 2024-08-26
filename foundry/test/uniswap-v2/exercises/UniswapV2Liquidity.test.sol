@@ -62,11 +62,11 @@ contract UniswapV2LiquidityTest is Test {
             to: user,
             deadline: block.timestamp
         });
+        pair.approve(address(router), liquidity);
 
         // Exercise - Remove liquidity from DAI / WETH pool
         // Write your code here
         // Don’t change any other code
-        pair.approve(address(router), liquidity);
 
         vm.stopPrank();
 
