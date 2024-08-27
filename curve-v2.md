@@ -20,10 +20,13 @@
   - Equation
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
-  - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
-  - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+  - [Gamma]
+    - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
+    - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
   - Quantification of profit (TODO)
-  - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+    - why repping can cause loss for LP
+      - the loss can occur because it sells at the lower price and rebuys at the higher price
+    - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
 - Code walkthrough
   - xp
   - get_xcp
@@ -95,9 +98,6 @@ xcp = value of constant-product invariant at equilibrium
 virtual_price = xcp / total_supply (TODO: why?)
 
 ```
-
-- why repping can cause loss for LP
-  - the loss can occur because it sells at the lower price and rebuys at the higher price
 
 ### Resources
 
