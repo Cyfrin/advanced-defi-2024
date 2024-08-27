@@ -10,11 +10,6 @@
 - ema
 - dynamic fee
 
-- [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
-- [gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
-- [gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
-- [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
-- [price vs reserve graph (python)](./notebook/amm_dy_dx.ipynb)
 
 - Intro
   - volatile tokens
@@ -23,9 +18,12 @@
 - Math
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Equation
-  - Graph (concentrated liquidity that repegs to EMA)
-  - Python code (concentrated liquidity)
-  - Quantification of profit 
+  - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
+  - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
+  - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
+  - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+  - Quantification of profit (TODO)
+  - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
 - Code walkthrough
   - xp
   - get_xcp
