@@ -28,6 +28,33 @@
       - the loss can occur because it sells at the lower price and rebuys at the higher price
     - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
     - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+    - TODO: math
+
+    ```
+    # v1
+    xy / (D / 2)**2 -> max = 1 at balanced
+                    -> 0 when imbalanced
+
+    x = y = D / 2 when balanced
+
+    # v2
+    x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
+    y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
+
+    x'y' / (D / 2)**2 -> max = 1 at balanced
+                      -> 0 when imbalanced
+
+    xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
+    xcp = geometric_mean(xp)
+
+    xcp -> max when x, y at pegged price
+        -> otherwise less loss
+
+    xcp = value of constant-product invariant at equilibrium
+    virtual_price = xcp / total_supply (TODO: why?)
+
+    ```
+
 - Code walkthrough
   - xp
   - get_xcp
@@ -73,32 +100,6 @@ loss if AMM must repeg
 
 - xcp -> 0 imbalanced?, max at equilibrium?
 
-```
-# v1
-xy / (D / 2)**2 -> max = 1 at balanced
-                -> 0 when imbalanced
-
-x = y = D / 2 when balanced
-
-# v2
-x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
-y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
-
-x'y' / (D / 2)**2 -> max = 1 at balanced <- x' = y' = D / 2 <- x = D / (2 * p0) and y = D / (2 * p1)
-                  -> 0 when imbalanced
-
-xcp -> max when x, y at pegged price
-    -> otherwise less loss
-```
-
-
-```
-xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
-xcp = geometric_mean(xp)
-xcp = value of constant-product invariant at equilibrium
-virtual_price = xcp / total_supply (TODO: why?)
-
-```
 
 ### Resources
 
