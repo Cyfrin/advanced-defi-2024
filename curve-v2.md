@@ -11,13 +11,13 @@
 - dynamic fee
 
 
-- Intro
+- Intro (ui video)
   - volatile tokens
   - concentrated liquidity that algorithmically repegs to EMA?
   - newton's method and optimizations
 - Math
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
-  - Equation
+  - Equation (animation)
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
   - [Gamma]
@@ -26,6 +26,7 @@
   - Quantification of profit (TODO)
     - why repping can cause loss for LP
       - the loss can occur because it sells at the lower price and rebuys at the higher price
+    - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
     - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
 - Code walkthrough
   - xp
