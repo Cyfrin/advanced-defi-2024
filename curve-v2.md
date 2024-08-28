@@ -31,17 +31,15 @@
     - TODO: math
 
     ```
-    # v1
-    xy / (D / 2)**2 -> max = 1 at balanced
+    # v1 (for 2 tokens)
+    xy / (D / 2)**2 -> max = 1 at balanced -> xy max at x = y = D / 2
                     -> 0 when imbalanced
 
-    x = y = D / 2 when balanced
-
-    # v2
+    # v2 (for 2 tokens)
     x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
     y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
 
-    x'y' / (D / 2)**2 -> max = 1 at balanced
+    x'y' / (D / 2)**2 -> max = 1 at balanced -> x'y' mat at x' = y' = D / 2
                       -> 0 when imbalanced
 
     xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
