@@ -10,10 +10,11 @@
 - ema
 - dynamic fee
 
-
 - Intro (ui video)
   - volatile tokens
+  - single sided liquidity
   - concentrated liquidity that algorithmically repegs to EMA?
+  - dynamic fees
   - newton's method and optimizations
 - Math
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
@@ -50,7 +51,6 @@
 
     xcp = value of constant-product invariant at equilibrium
     virtual_price = xcp / total_supply (TODO: why?)
-
     ```
 
 - Code walkthrough
@@ -63,12 +63,13 @@
   - remove_liquidity
   - remove_liquidity_one_coin
     - calc_withdraw_one_coin
+  - tweak_price (TODO)
+    - xcp_profit
+    - how to compare xcp_profit and virtual price? (TODO)
+  - claim_admin_fee?
   - price_oracle
     - math
     - code
-  - tweak_price
-    - xcp_profit
-  - claim_admin_fee?
   - dynamic fee?
   - get_dy?
 - Exercises
