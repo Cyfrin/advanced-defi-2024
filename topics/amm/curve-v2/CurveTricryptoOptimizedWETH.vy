@@ -552,7 +552,7 @@ def add_liquidity(
     xx = xp
 
     """
-    xp[i] = (balances[i] + amounts[i]) * price[i]
+    xp[i] = (balances[i] + amounts[i]) * price[i] * precision / PRECISION
     """
     xp[0] *= precisions[0]
     xp_old[0] *= precisions[0]
@@ -610,6 +610,7 @@ def add_liquidity(
 
         old_D = self.D
 
+    # new D after token balance updates
     D: uint256 = MATH.newton_D(A_gamma[0], A_gamma[1], xp, 0)
 
     token_supply: uint256 = self.totalSupply
@@ -894,7 +895,7 @@ def _exchange(
     )
 
     """
-    transformed balance = token balance * price
+    transformed balance = token balance * price scale * precision / PRECISION
     """
     xp[0] *= precisions[0]
     for k in range(1, N_COINS):
@@ -1063,6 +1064,10 @@ def tweak_price(
 
     # ---------- Update profit numbers without price adjustment first --------
 
+    """
+    xp = [D/(N*p0), D/(N*p1), D/(N*p2)]
+    """
+
     xp: uint256[N_COINS] = empty(uint256[N_COINS])
     xp[0] = unsafe_div(D_unadjusted, N_COINS)
     for k in range(N_COINS - 1):
@@ -1078,10 +1083,14 @@ def tweak_price(
         xcp: uint256 = MATH.geometric_mean(xp)
         virtual_price = 10**18 * xcp / total_supply
 
-        # Calculate D -> xp -> xcp -> virtual_price
-        # TODO: wat dis? - accumulates change rate of virtual price?
-        # when is xcp_profit != virtual_price / old_virtual_price? -> old_xcp_profit != 1 -> after admin claims fee
-        #                                                          -> virtual price is recalculated after repeg
+        """"
+        Calculate D -> xp -> xcp -> virtual_price
+        TODO: wat dis? - accumulates change rate of virtual price?
+        when is xcp_profit != virtual_price / old_virtual_price? -> old_xcp_profit != 1 -> after admin claims fee
+                                                                             -> virtual price is recalculated after repeg
+        TODO: virtual price only increase from fees?
+        xcp_profit only increases from fees
+        """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
             old_virtual_price
@@ -1096,13 +1105,15 @@ def tweak_price(
     self.xcp_profit = xcp_profit
 
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
-    # TODO: wat dis?
-    # new virtual_price > (1 + xcp_profit) / 2 + allowed_extra_profit
-    #  1 + xcp_profit     old vp / old vp + (old xcp profit * new vp) / old vp
-    # ---------------- =  ----------------------------------------------------
-    #        2                                   2
-    #                  = avg of rate of change in old vp to old vp + old vp to new vp x past rates
-    # if xcp_profit ≈ virtual price, condition ≈ vp > (1 + vp) / 2
+    """
+    TODO: wat dis?
+    new virtual_price > (1 + xcp_profit) / 2 + allowed_extra_profit
+     1 + xcp_profit     old vp / old vp + (old xcp profit * new vp) / old vp
+    ---------------- =  ----------------------------------------------------
+           2                                   2
+                     = avg of rate of change in old vp to old vp + old vp to new vp x past rates
+    if xcp_profit ≈ virtual price, condition ≈ vp > (1 + vp) / 2
+    """
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 
@@ -1129,6 +1140,9 @@ def tweak_price(
             rebalancing_params[1], unsafe_div(norm, 5)
         )  #           ^------------------------------------- adjustment_step.
 
+        """
+        repeg
+        """
         if norm > adjustment_step:  # <---------- We only adjust prices if the
             #          vector distance between price_oracle and price_scale is
             #             large enough. This check ensures that no rebalancing
@@ -1283,6 +1297,10 @@ def xp() -> uint256[N_COINS]:
     packed_prices: uint256 = self.price_scale_packed
     precisions: uint256[N_COINS] = self._unpack(self.packed_precisions)
 
+    """
+    transformed balance = token balance * precision * price scale
+    """
+
     result[0] *= precisions[0]
     for i in range(1, N_COINS):
         p: uint256 = (packed_prices & PRICE_MASK) * precisions[i]
@@ -1330,7 +1348,11 @@ def _fee(xp: uint256[N_COINS]) -> uint256:
 
 
 """
-xcp = x of constant product?
+xcp = x of constant product
+    = liquidity L of constant product
+
+constant product
+x0*x1*x2*...x(N-1) = L**N = xcp**N
 """
 @internal
 @view
@@ -1346,7 +1368,12 @@ def get_xcp(D: uint256) -> uint256:
         packed_prices = packed_prices >> PRICE_SIZE
 
     """
-    (D/(N*p1) * D/(N*p2) * D/(N*p3)) ** (1/N)
+    (D/(N*p0) * D/(N*p1) ... * D/(N*p(N-1))) ** (1/N)
+
+    Example
+    N = 3
+    p0 = 1
+    xcp = (D/3 * D/(3*p1) * D/(3*p2)) ** (1 / 3)
     """
     return MATH.geometric_mean(x)
 
@@ -1764,6 +1791,11 @@ def get_virtual_price() -> uint256:
     @dev Not to be confused with `self.virtual_price` which is a cached
          virtual price.
     @return uint256 Virtual Price.
+    """
+
+    """
+    get_xcp = constant product liquidity L
+    virtual price = L / total LP supply
     """
     return 10**18 * self.get_xcp(self.D) / self.totalSupply
 
