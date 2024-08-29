@@ -28,7 +28,7 @@
       - the loss can occur because it sells at the lower price and rebuys at the higher price
     - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
     - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
-    - TODO: math
+    - TODO: math (x'y' -> xp -> xcp)
 
     ```
     # v1 (for 2 tokens)
@@ -46,7 +46,7 @@
     xcp = geometric_mean(xp)
 
     xcp -> max when x, y at pegged price
-        -> otherwise less loss
+        -> otherwise loss
 
     xcp = value of constant-product invariant at equilibrium
     virtual_price = xcp / total_supply (TODO: why?)
