@@ -79,6 +79,7 @@
   - Add liquidity
   - Remove liquidity
   - Remove liquidity one coin
+  - Price oracle?
 
 - Footnote
   - dy / dx
