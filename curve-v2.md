@@ -63,13 +63,14 @@
   - remove_liquidity
   - remove_liquidity_one_coin
     - calc_withdraw_one_coin
+  - price_oracle
+    - math
+    - [python code](./notebook/curve_v2_ema.ipynb)
+    - code walkthroug
   - tweak_price (TODO)
     - xcp_profit
     - how to compare xcp_profit and virtual price? (TODO)
   - claim_admin_fee?
-  - price_oracle
-    - math
-    - code
   - dynamic fee?
   - get_dy?
 - Exercises
@@ -79,7 +80,6 @@
   - Add liquidity
   - Remove liquidity
   - Remove liquidity one coin
-  - Price oracle?
 
 - Footnote
   - dy / dx

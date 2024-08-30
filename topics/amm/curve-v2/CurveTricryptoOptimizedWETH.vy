@@ -1830,6 +1830,10 @@ def price_oracle(k: uint256) -> uint256:
         )
 
         # ---- We cap state price that goes into the EMA with 2 x price_scale.
+        """
+        min(last_price, 2 * price_scale) * a + (1 - a) * ma
+        last_price != last trade price
+        """
         return (
             min(last_prices, 2 * price_scale) * (10**18 - alpha) +
             price_oracle * alpha
