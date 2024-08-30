@@ -1067,7 +1067,6 @@ def tweak_price(
     """
     xp = [D/(N*p0), D/(N*p1), D/(N*p2)]
     """
-
     xp: uint256[N_COINS] = empty(uint256[N_COINS])
     xp[0] = unsafe_div(D_unadjusted, N_COINS)
     for k in range(N_COINS - 1):
@@ -1090,6 +1089,8 @@ def tweak_price(
                                                                              -> virtual price is recalculated after repeg
         TODO: virtual price only increase from fees?
         xcp_profit only increases from fees
+
+        TODO: how to compare virtual price and xcp_profit
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
@@ -1114,6 +1115,7 @@ def tweak_price(
                      = avg of rate of change in old vp to old vp + old vp to new vp x past rates
     if xcp_profit ≈ virtual price, condition ≈ vp > (1 + vp) / 2
     """
+
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 
