@@ -67,7 +67,7 @@
     - math
     - [python code](./notebook/curve_v2_ema.ipynb)
     - code walkthroug
-  - tweak_price (TODO)
+  - tweak_price
     - xcp_profit
     - how to compare xcp_profit and virtual price? (TODO)
   - claim_admin_fee?
