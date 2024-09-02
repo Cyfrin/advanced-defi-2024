@@ -1091,6 +1091,7 @@ def tweak_price(
         xcp_profit only increases from fees
 
         TODO: how to compare virtual price and xcp_profit
+        TODO: growth rate of vp only from fee because this calc is done before repeg?
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
