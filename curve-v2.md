@@ -13,7 +13,7 @@
 - Intro (ui video)
   - volatile tokens
   - single sided liquidity
-  - concentrated liquidity that algorithmically repegs to EMA?
+  - concentrated liquidity that algorithmically repegs based on EMA
   - dynamic fees
   - newton's method and optimizations
 - Math
