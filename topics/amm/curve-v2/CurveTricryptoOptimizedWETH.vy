@@ -1083,15 +1083,11 @@ def tweak_price(
         virtual_price = 10**18 * xcp / total_supply
 
         """"
-        Calculate D -> xp -> xcp -> virtual_price
-        TODO: wat dis? - accumulates change rate of virtual price?
-        when is xcp_profit != virtual_price / old_virtual_price? -> old_xcp_profit != 1 -> after admin claims fee
-                                                                             -> virtual price is recalculated after repeg
-        TODO: virtual price only increase from fees?
-        xcp_profit only increases from fees
+        new _xp -> calc D -> calc xp -> calc xcp -> calc virtual_price
 
         TODO: how to compare virtual price and xcp_profit
         TODO: growth rate of vp only from fee because this calc is done before repeg?
+        TODO: future_A_gamma affects virtual price?
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
@@ -1109,12 +1105,19 @@ def tweak_price(
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
     """
     TODO: wat dis?
-    new virtual_price > (1 + xcp_profit) / 2 + allowed_extra_profit
-     1 + xcp_profit     old vp / old vp + (old xcp profit * new vp) / old vp
-    ---------------- =  ----------------------------------------------------
-           2                                   2
-                     = avg of rate of change in old vp to old vp + old vp to new vp x past rates
-    if xcp_profit ≈ virtual price, condition ≈ vp > (1 + vp) / 2
+
+    allowed_extra_profit = 0
+
+    virtual_price > (1 + xcp_profit) / 2
+
+                     = (xcp_profit - 1) / 2 + 1 = half of growth rate of xcp
+    |----------------- xcp_profit
+    |
+    |----------------- virtual_price
+    |----------------- (1 + xcp_profit) / 2
+    |
+    |
+    |----------------- 1
     """
 
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
