@@ -87,6 +87,9 @@
 
 ### TODOs
 
+- when does virtual price increase? decrease?
+- when does xcp_profit change?
+
 
 ### Memo
 
