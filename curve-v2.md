@@ -17,13 +17,13 @@
   - dynamic fees
   - newton's method and optimizations
 - Math
-  - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Equation (animation)
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
   - [Gamma]
     - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
     - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+  - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Quantification of profit (TODO)
     - why repping can cause loss for LP
       - the loss can occur because it sells at the lower price and rebuys at the higher price
