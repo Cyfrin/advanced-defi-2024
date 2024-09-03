@@ -10,17 +10,17 @@
 - ema
 - dynamic fee
 
-- Intro (ui video)
+- Intro (UI video)
   - volatile tokens
   - single sided liquidity
   - concentrated liquidity that algorithmically repegs based on EMA
   - dynamic fees
   - newton's method and optimizations
 - Math
-  - Equation (animation)
+  - Equation
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
-  - [Gamma]
+  - Gamma
     - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
     - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
@@ -116,3 +116,4 @@ loss if AMM must repeg
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
 - [Understanding Crypto Pools](https://docs.kokonutswap.finance/understanding-crypto-pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
+
