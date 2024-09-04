@@ -1085,9 +1085,11 @@ def tweak_price(
         """"
         new _xp -> calc D -> calc xp -> calc xcp -> calc virtual_price
 
-        TODO: how to compare virtual price and xcp_profit
         TODO: growth rate of vp only from fee because this calc is done before repeg?
         TODO: future_A_gamma affects virtual price?
+
+        xcp_profit = initial virtual price * (accumulated profit / loss rate of virtual price before repeg)
+                     initial virtual price = 1
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
