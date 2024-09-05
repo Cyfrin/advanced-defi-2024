@@ -1,56 +1,63 @@
-### Curve v1
+# Curve v1
+
+## Tools
+
+- [Foundry](https://github.com/foundry-rs/foundry/tree/master)
+- [Python / Jupyter lab](https://jupyter.org/)(optional)
+
+## Topics
 
 - Intro
-  - [x] Intro
-  - [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
+  - Intro
+  - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
 - Math
-  - [x] Graph
-    - https://www.desmos.com/calculator/3xrvh5slce
-    - https://www.desmos.com/3d/t0jtduq4us
-  - [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
-  - [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
-    - [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
-    - [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
+  - Graphs
+    - [Curve V1 AMM graph](https://www.desmos.com/calculator/3xrvh5slce)
+    - [Curve V1 xy/(D/2)^2 graph](https://www.desmos.com/3d/t0jtduq4us)
+  - [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
+  - [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
+    - [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
+    - [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
 - [ ] Contract overview
   - Code walkthrough
-    - [x] `A`
+    - `A`
       - `ramp_A`
       - `stop_ramp_A`
-    - [x] `_xp`
-    - [x] `get_D`
-      - [x] [python code](./notebook/curve_v1_equations.ipynb)
-    - [x] `get_virtual_price`
-    - [x] `calc_token_amount`
+    - `_xp`
+    - `get_D`
+      - [Python code](./notebook/curve_v1_equations.ipynb)
+    - `get_virtual_price`
+    - `calc_token_amount`
 - Swap
   - Code walkthrough
-    - [x] `exchange`
-      - [x] `get_y`
-        - [x] [python code](./notebook/curve_v1_equations.ipynb)
-  - [x] `get_dy`
-  - [x] Exercises
-    - [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    - [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
-    - [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-    - [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+    - `exchange`
+      - `get_y`
+        - [Python code](./notebook/curve_v1_equations.ipynb)
+  - `get_dy`
+  - Exercises
+    - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+    - [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    - [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
 - Add liquidity
   - Code walkthrough
-    - [x] `add_liquidity`
-      - imbalance fee
-  - [x] Exercise
-    - [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    - [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    - `add_liquidity`
+      - Imbalance fee
+  - Exercise
+    - [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 - Remove liquidity
   - Code walkthrough
-    - [x] `remove_liquidity`
-    - [x] `remove_liquidity_one_coin`
-      - [x] `_calc_withdraw_one_coin`
+    - `remove_liquidity`
+    - `remove_liquidity_one_coin`
+      - `_calc_withdraw_one_coin`
   - Exercises
-    - [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    - [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
-    - [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-    - [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    - [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
-### Resources
+## Resources
 
 - [Curve](https://curve.fi)
 - [Docs](https://curve.readthedocs.io/)
