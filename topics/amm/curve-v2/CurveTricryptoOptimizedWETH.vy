@@ -1106,13 +1106,11 @@ def tweak_price(
 
     # ------------ Rebalance liquidity if there's enough profits to adjust it:
     """
-    TODO: wat dis?
-
-    allowed_extra_profit = 0
+    when allowed_extra_profit = 0
 
     virtual_price > (1 + xcp_profit) / 2
-
                      = (xcp_profit - 1) / 2 + 1 = half of growth rate of xcp
+
     |----------------- xcp_profit
     |
     |----------------- virtual_price
@@ -1148,9 +1146,6 @@ def tweak_price(
             rebalancing_params[1], unsafe_div(norm, 5)
         )  #           ^------------------------------------- adjustment_step.
 
-        """
-        repeg
-        """
         if norm > adjustment_step:  # <---------- We only adjust prices if the
             #          vector distance between price_oracle and price_scale is
             #             large enough. This check ensures that no rebalancing
