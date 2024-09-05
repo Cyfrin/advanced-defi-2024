@@ -526,9 +526,7 @@ def add_liquidity(
 
     A_gamma: uint256[2] = self._A_gamma()
     xp: uint256[N_COINS] = self.balances
-    """
-    amountsp = xp - xp_old
-    """
+    # amountsp = xp - xp_old
     amountsp: uint256[N_COINS] = empty(uint256[N_COINS])
     xx: uint256[N_COINS] = empty(uint256[N_COINS])
     d_token: uint256 = 0
@@ -551,9 +549,7 @@ def add_liquidity(
         self.balances[i] = bal
     xx = xp
 
-    """
-    xp[i] = (balances[i] + amounts[i]) * price[i] * precision / PRECISION
-    """
+    # xp[i] = (balances[i] + amounts[i]) * price[i] * precision / PRECISION
     xp[0] *= precisions[0]
     xp_old[0] *= precisions[0]
     for i in range(1, N_COINS):
@@ -566,11 +562,8 @@ def add_liquidity(
     # ---------------- transferFrom token into the pool ----------------------
 
     for i in range(N_COINS):
-
         if amounts[i] > 0:
-
             if coins[i] == WETH20:
-
                 self._transfer_in(
                     coins[i],
                     amounts[i],
@@ -582,9 +575,7 @@ def add_liquidity(
                     empty(address),  # <-----------------------
                     use_eth
                 )
-
             else:
-
                 self._transfer_in(
                     coins[i],
                     amounts[i],
@@ -596,18 +587,13 @@ def add_liquidity(
                     empty(address),
                     False  # <-------- use_eth is False if coin is not WETH20.
                 )
-
             amountsp[i] = xp[i] - xp_old[i]
 
     # -------------------- Calculate LP tokens to mint -----------------------
-
     if self.future_A_gamma_time > block.timestamp:  # <--- A_gamma is ramping.
-
         # ----- Recalculate the invariant if A or gamma are undergoing a ramp.
         old_D = MATH.newton_D(A_gamma[0], A_gamma[1], xp_old, 0)
-
     else:
-
         old_D = self.D
 
     # new D after token balance updates
@@ -623,19 +609,14 @@ def add_liquidity(
     assert d_token > 0  # dev: nothing minted
 
     if old_D > 0:
-
         d_token_fee = (
             self._calc_token_fee(amountsp, xp) * d_token / 10**10 + 1
         )
-
         d_token -= d_token_fee
         token_supply += d_token
         self.mint(receiver, d_token)
-
         packed_price_scale = self.tweak_price(A_gamma, xp, D, 0)
-
     else:
-
         self.D = D
         self.virtual_price = 10**18
         self.xcp_profit = 10**18
@@ -695,16 +676,11 @@ def remove_liquidity(
     #           is reset.
 
     if amount == total_supply:  # <----------------------------------- Case 2.
-
         for i in range(N_COINS):
-
             d_balances[i] = balances[i]
             self.balances[i] = 0  # <------------------------- Empty the pool.
-
     else:  # <-------------------------------------------------------- Case 1.
-
         amount -= 1  # <---- To prevent rounding errors, favor LPs a tiny bit.
-
         for i in range(N_COINS):
             d_balances[i] = balances[i] * amount / total_supply
             assert d_balances[i] >= min_amounts[i]
@@ -910,10 +886,6 @@ def _exchange(
 
     t: uint256 = self.future_A_gamma_time
     if t > block.timestamp:
-
-        """
-        calculate transformed balance for xp[i]
-        """
         x0 *= prec_i
 
         if i > 0:
@@ -1086,7 +1058,8 @@ def tweak_price(
         new _xp -> calc D -> calc xp -> calc xcp -> calc virtual_price
 
         TODO: growth rate of vp only from fee because this calc is done before repeg?
-        TODO: future_A_gamma affects virtual price?
+        future_A_gamma affects virtual price?
+        -> yes -> future_A_gamma -> D -> xp -> xcp -> virtual price
 
         xcp_profit = initial virtual price * (accumulated profit / loss rate of virtual price before repeg)
                      initial virtual price = 1
@@ -1119,7 +1092,6 @@ def tweak_price(
     |
     |----------------- 1
     """
-
     if virtual_price * 2 - 10**18 > xcp_profit + 2 * rebalancing_params[0]:
         #                          allowed_extra_profit --------^
 

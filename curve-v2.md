@@ -90,6 +90,7 @@
 
 - when does virtual price increase? decrease?
 - when does xcp_profit change?
+- show how A and gamma changes D?
 
 ### Memo
 
