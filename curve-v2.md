@@ -25,6 +25,7 @@
     - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Quantification of profit (TODO)
+
     - why repping can cause loss for LP
       - the loss can occur because it sells at the lower price and rebuys at the higher price
     - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
@@ -74,6 +75,7 @@
   - dynamic fee?
   - get_dy?
 - Exercises
+
   - Swap
     - get dy
     - exchange
@@ -84,12 +86,10 @@
 - Footnote
   - dy / dx
 
-
 ### TODOs
 
 - when does virtual price increase? decrease?
 - when does xcp_profit change?
-
 
 ### Memo
 
@@ -103,7 +103,6 @@ loss if AMM must repeg
 
 - xcp -> 0 imbalanced?, max at equilibrium?
 
-
 ### Resources
 
 - [Curve](https://curve.fi)
@@ -116,4 +115,3 @@ loss if AMM must repeg
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
 - [Understanding Crypto Pools](https://docs.kokonutswap.finance/understanding-crypto-pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
-
