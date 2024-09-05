@@ -1,58 +1,63 @@
 ### Curve v1
 
 - Intro
-    -   [x] Intro
-    -   [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
+  - [x] Intro
+  - [x] [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
 - Math
-    -   [x] Graph
-        -   https://www.desmos.com/calculator/3xrvh5slce
-        -   https://www.desmos.com/3d/t0jtduq4us
-    -   [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
-    -   [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
-        -   [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
-        -   [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
--   [x] [Code walkthrough](./topics/amm/curve-v1/StableSwap3Pool.vy)
-    -   [x] `A`
-        -   `ramp_A`
-        -   `stop_ramp_A`
-    -   [x] `_xp`
-    -   [x] `get_D`
-        -   [x] [python code](./notebook/curve_v1_equations.ipynb)
-    -   [x] `get_virtual_price`
-    -   [x] `calc_token_amount`
-    -   [x] `exchange`
-        -   [x] `get_y`
-            -   [x] [python code](./notebook/curve_v1_equations.ipynb)
-    -   [x] `get_dy`
-    -   [x] `add_liquidity`
-        -   imbalance fee
-    -   [x] `remove_liquidity`
-    -   [x] `remove_liquidity_one_coin`
-        -   [x] `_calc_withdraw_one_coin`
-- Exercises
-    -   [x] Swap
-        -   [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-        -   [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
-        -   [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
-        -   [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
-    -   [x] Add liquidity
-        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
-    -   [x] Remove liquidity
-        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
-    -   [x] Remove liquidity one coin
-        -   [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-        -   [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+  - [x] Graph
+    - https://www.desmos.com/calculator/3xrvh5slce
+    - https://www.desmos.com/3d/t0jtduq4us
+  - [x] [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
+  - [x] [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
+    - [x] [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
+    - [x] [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
+- [ ] Contract overview
+  - Code walkthrough
+    - [x] `A`
+      - `ramp_A`
+      - `stop_ramp_A`
+    - [x] `_xp`
+    - [x] `get_D`
+      - [x] [python code](./notebook/curve_v1_equations.ipynb)
+    - [x] `get_virtual_price`
+    - [x] `calc_token_amount`
+- Swap
+  - Code walkthrough
+    - [x] `exchange`
+      - [x] `get_y`
+        - [x] [python code](./notebook/curve_v1_equations.ipynb)
+  - [x] `get_dy`
+  - [x] Exercises
+    - [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    - [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+    - [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
+    - [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
+- Add liquidity
+  - Code walkthrough
+    - [x] `add_liquidity`
+      - imbalance fee
+  - [x] Exercise
+    - [x] [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [x] [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+- Remove liquidity
+  - Code walkthrough
+    - [x] `remove_liquidity`
+    - [x] `remove_liquidity_one_coin`
+      - [x] `_calc_withdraw_one_coin`
+  - Exercises
+    - [x] [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [x] [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+    - [x] [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
+    - [x] [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
 ### Resources
 
--   [Curve](https://curve.fi)
--   [Docs](https://curve.readthedocs.io/)
--   [Whitepaper](https://resources.curve.fi/pdf/curve-stableswap.pdf)
--   [Curve resources](https://resources.curve.fi/)
--   [Curve magic](https://hackmd.io/@alltold/curve-magic)
--   [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
--   [Curve V1 StableSwap3Pool code](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
--   [3pool](https://etherscan.io/address/0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7)
--   [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
+- [Curve](https://curve.fi)
+- [Docs](https://curve.readthedocs.io/)
+- [Whitepaper](https://resources.curve.fi/pdf/curve-stableswap.pdf)
+- [Curve resources](https://resources.curve.fi/)
+- [Curve magic](https://hackmd.io/@alltold/curve-magic)
+- [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
+- [Curve V1 StableSwap3Pool code](https://github.com/curvefi/curve-contract/blob/master/contracts/pools/3pool/StableSwap3Pool.vy)
+- [3pool](https://etherscan.io/address/0xbebc44782c7db0a1a60cb6fe97d0b483032ff1c7)
+- [Newton's method](https://en.wikipedia.org/wiki/Newton's_method)
