@@ -66,7 +66,7 @@ TODO: fix
   - [`exchange`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L429-L493)
     - [`get_y`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L354-L397)
       - [Python code - Compute equations for y](./notebook/curve_v1_equations.ipynb)
-- [`get_dy`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L400-L411)
+  - [`get_dy`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L400-L411)
 - Exercises
   - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
   - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
