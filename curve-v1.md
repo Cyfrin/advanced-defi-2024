@@ -10,8 +10,7 @@
 
 ### Intro
 
-What you will learn
-
+> What you will learn
 > - What is Curve AMM
 > - How is it different from Uniswap v2 and v3?
 
@@ -35,9 +34,9 @@ What you will learn
 
 ### [ ] Contract overview
 
-What you will learn
 
 TODO: fix
+> What you will learn
 > - Curve v1 AMM contract overview
 > - Parameter "A" that controls the flatness of the curve of Curve v1
 > - Number "D" that quantifies liquidity of the pool
@@ -58,7 +57,7 @@ TODO: fix
 
 ### Swap
 
-What you will learn
+> What you will learn
 > - How swap function is implemented
 
 - Code walkthrough
@@ -74,7 +73,7 @@ What you will learn
 
 ### Add liquidity
 
-What you will learn
+> What you will learn
 > - How the function to add liquidity is implemented
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
@@ -87,7 +86,7 @@ What you will learn
 
 ### Remove liquidity
 
-What you will learn
+> What you will learn
 > - How the functions to remove liquidity are implemented
 
 - Code walkthrough
