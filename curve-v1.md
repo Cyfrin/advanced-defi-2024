@@ -5,22 +5,23 @@
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
 - [Python / Jupyter lab](https://jupyter.org/)(optional)
 
-
 ## Topics
 
-### Intro
+### Section 1 - Intro
 
 > What you will learn
+>
 > - What is Curve AMM
 > - How is it different from Uniswap v2 and v3?
 
 - Intro
 - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
-- TODO: project setup 
+- TODO: project setup
 
-### Math
+### Section 2 - Math
 
 > What you will learn
+>
 > - Math of Curve v1 AMM
 > - How Curve v1's equation calculates swap amount and liuidity
 
@@ -32,18 +33,18 @@
   - [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
   - [Curve v1 Newton's method](./notebook/curve_v1_newton.ipynb)
 
-### [ ] Contract overview
-
+### Section 3 - Contract overview
 
 TODO: fix
+
 > What you will learn
+>
 > - Curve v1 AMM contract overview
 > - Parameter "A" that controls the flatness of the curve of Curve v1
 > - Number "D" that quantifies liquidity of the pool
 
 - TODO: contract overview
 - TODO: show how A affects D
-
 
 - Code walkthrough
   - `A`
@@ -55,9 +56,10 @@ TODO: fix
   - `get_virtual_price`
   - `calc_token_amount`
 
-### Swap
+### Section 4 - Swap
 
 > What you will learn
+>
 > - How swap function is implemented
 
 - Code walkthrough
@@ -71,9 +73,10 @@ TODO: fix
   - [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
   - [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
 
-### Add liquidity
+### Section 5 - Add liquidity
 
 > What you will learn
+>
 > - How the function to add liquidity is implemented
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
@@ -84,9 +87,10 @@ TODO: fix
   - [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
   - [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
-### Remove liquidity
+### Section 6 - Remove liquidity
 
 > What you will learn
+>
 > - How the functions to remove liquidity are implemented
 
 - Code walkthrough
