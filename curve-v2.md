@@ -21,7 +21,7 @@
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
   - Gamma
-    - [Gamma graph](https://www.desmos.com/calculator/id0zrk0ucr)
+    - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
     - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
   - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
   - Quantification of profit (TODO)
