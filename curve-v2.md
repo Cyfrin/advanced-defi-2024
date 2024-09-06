@@ -91,6 +91,7 @@
 - when does virtual price increase? decrease?
 - when does xcp_profit change?
 - show how A and gamma changes D?
+- how to calculate last price? `get_p`
 
 ### Memo
 
