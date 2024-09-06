@@ -21,8 +21,7 @@ What you will learn
 
 ### Math
 
-What you will learn
-
+> What you will learn
 > - Math of Curve v1 AMM
 > - How Curve v1's equation calculates swap amount and liuidity
 
