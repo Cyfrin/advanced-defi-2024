@@ -1,9 +1,14 @@
 # Curve v1
 
+### TODO:
+- show how A affects D
+
+
 ## Tools
 
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
 - [Python / Jupyter lab](https://jupyter.org/)(optional)
+
 
 ## Topics
 
