@@ -1,9 +1,5 @@
 # Curve v1
 
-### TODO:
-- show how A affects D
-
-
 ## Tools
 
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
@@ -21,6 +17,7 @@ What you will learn
 
 - Intro
 - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
+- TODO: project setup 
 
 ### Math
 
@@ -41,9 +38,14 @@ What you will learn
 
 What you will learn
 
+TODO: fix
 > - Curve v1 AMM contract overview
 > - Parameter "A" that controls the flatness of the curve of Curve v1
 > - Number "D" that quantifies liquidity of the pool
+
+- TODO: contract overview
+- TODO: show how A affects D
+
 
 - Code walkthrough
   - `A`
@@ -56,6 +58,9 @@ What you will learn
   - `calc_token_amount`
 
 ### Swap
+
+What you will learn
+> - How swap function is implemented
 
 - Code walkthrough
   - `exchange`
@@ -70,6 +75,10 @@ What you will learn
 
 ### Add liquidity
 
+What you will learn
+> - How the function to add liquidity is implemented
+> - Imbalance fee for adding liquidity in a way that changes the token ratios
+
 - Code walkthrough
   - `add_liquidity`
     - Imbalance fee
@@ -78,6 +87,9 @@ What you will learn
   - [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
 
 ### Remove liquidity
+
+What you will learn
+> - How the functions to remove liquidity are implemented
 
 - Code walkthrough
   - `remove_liquidity`
