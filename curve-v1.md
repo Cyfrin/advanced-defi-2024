@@ -1,5 +1,9 @@
 # Curve v1
 
+## How to use this section
+
+- Install [tools](#tools)
+
 ## Prerequisites
 
 - Intermediate Solidity
@@ -7,7 +11,7 @@
 - Knowledge of constant sum (`x + y = K`) and constant product (`xy = K`) AMM
 - Python (optional)
 
-## Tools
+##[Tools](#tools)
 
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
 - [Python / Jupyter lab](https://jupyter.org/)(optional)
@@ -42,13 +46,11 @@
 
 ### Section 3 - Contract overview
 
-TODO: fix
-
 > What you will learn
 >
 > - Curve v1 AMM contract overview
-> - Parameter "A" that controls the flatness of the curve of Curve v1
-> - Number "D" that quantifies liquidity of the pool
+> - Parameter `A` that controls the flatness of the curve of Curve v1
+> - Number `D` that quantifies liquidity of the pool
 
 - TODO: contract overview
 - TODO: show how A affects D
