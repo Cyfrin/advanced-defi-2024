@@ -11,7 +11,7 @@
 - Knowledge of constant sum (`x + y = K`) and constant product (`xy = K`) AMM
 - Python (optional)
 
-##[Tools](#tools)
+## Tools
 
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
 - [Python / Jupyter lab](https://jupyter.org/)(optional)
