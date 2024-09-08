@@ -14,7 +14,7 @@
 ## Tools
 
 - [Foundry](https://github.com/foundry-rs/foundry/tree/master)
-- [Python / Jupyter lab](https://jupyter.org/)(optional)
+- [Python / Jupyter lab](https://jupyter.org/) (optional)
 
 ## Topics
 
