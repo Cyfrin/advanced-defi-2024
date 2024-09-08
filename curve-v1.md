@@ -2,7 +2,11 @@
 
 ## How to use this section
 
+- Check [prerequisites](#prerequistes)
 - Install [tools](#tools)
+- Watch videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve-v1)
+- Do exercises under [topics](#topics)
+- Ask questions on
 
 ## Prerequisites
 
