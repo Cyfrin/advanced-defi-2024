@@ -10,9 +10,42 @@ foundryup
 
 ## Exercises and solutions
 
+Exercises and solutions are located in [foundry/test](./foundry/test)
+
+Tests are grouped by DeFi protocal.
+
+For each DeFi protocol there are `exercises` and `solutions` folder.
+
+`exercises` are for you to write your code.
+
+`solutions` are for you to check you code.
+
 ```shell
+# Make sure to execute foundry command inside the foundry founder
 cd foundry
+
+# Compile
 forge build
+```
+
+```shell
+# Make sure to execute foundry command inside the foundry founder
+cd foundry
+
+# Set FORK_URL
+FORK_URL= rpc url for testing on fork
+
+# Test exercises
+forge test --fork-url $FORK_URL \
+--match-path test/[name of DeFi protocol]/exercises/[name of test].test.sol \
+--match-test name_of_test \
+-vvv
+
+# Test solutions
+forge test --fork-url $FORK_URL \
+--match-path test/[name of DeFi protocol]/solutions/[name of test].test.sol \
+--match-test name_of_test \
+-vvv
 ```
 
 ## Topics
