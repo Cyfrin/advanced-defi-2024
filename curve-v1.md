@@ -6,7 +6,7 @@
 - Install [tools](#tools)
 - Watch videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve-v1)
 - Do exercises under [topics](#topics)
-- Ask questions on
+- Ask questions on [GitHub discussions](https://github.com/Cyfrin/advanced-defi-2024/discussions)
 
 ## Prerequisites
 
