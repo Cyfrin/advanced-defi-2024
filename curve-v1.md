@@ -1,6 +1,6 @@
-# Curve v1
+# Curve V1
 
-## How to use this section
+## How to use this
 
 - Check [prerequisites](#prerequisites)
 - Install [tools](#tools)
@@ -33,13 +33,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - What is Curve AMM
 > - How is it different from Uniswap v2 and v3?
 
-- TODO: course intro
-  - optional (uni v2, uni v3, DeFi, python)
-- TODO: lead instructor
-- TODO: best practices
-  - TODO: project setup, how to run exercises
+- Course intro
+- Lead instructor
+- Best practices
 - Curve intro
-  - TODO: Curve v1 AMM intro -> add DAI / USDC explanation
 - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
 
 ### Section 2 - Math
@@ -65,10 +62,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Parameter `A` that controls the flatness of the curve of Curve v1
 > - Number `D` that quantifies liquidity of the pool
 
-- TODO: contract overview
-- TODO: contract call for functions
-- TODO: show how A affects D
-
+- Contract overview
+- How A affects D
 - Code walkthrough
   - [`A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L147-L172)
     - [`ramp_A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L701-L716)
@@ -85,8 +80,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 >
 > - How swap function is implemented
 
-- TODO: contract call for functions
-
+- Contract calls
 - Code walkthrough
   - [`exchange`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L429-L493)
     - [`get_y`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L354-L397)
@@ -105,8 +99,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - How the function to add liquidity is implemented
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
-- TODO: contract call for functions
-
+- Contract calls
 - Code walkthrough
   - [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
     - Imbalance fee
@@ -120,8 +113,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 >
 > - How the functions to remove liquidity are implemented
 
-- TODO: contract call for functions
-
+- Contract calls
 - Code walkthrough
   - [`remove_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L496-L524)
   - [`remove_liquidity_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L668-L697)
