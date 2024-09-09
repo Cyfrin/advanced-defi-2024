@@ -22,6 +22,8 @@
 
 ## Topics
 
+Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve-v1) for each lesson.
+
 ### Section 1 - Intro
 
 > What you will learn
