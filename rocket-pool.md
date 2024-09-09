@@ -1,21 +1,20 @@
 - Smart contracts
-    - Overview / architecture / how smart contracts work together
-    - RocketStorage
-    - rETH
-    - RPL
-        - auction
-    - staking pool
-    - minipools
-        - create
-        - withdrawals
-        - penalties
-    - bonded and unbonded validator
-    - protocol dao
-    - oracle dao
-    - rpl tokenomics
-    - staking, unstaking, rewards, penalties flows
+  - Overview / architecture / how smart contracts work together
+  - Flow chart for ETH, RETH and RPL (staking, validator, rewards, exit, penalties)
+    - How validators become active and deactive
+    - How ETH are pooled into validators
+    - How ETH rewards are distributed
+    - Purpose of RPL and how it is used in the protocol
+  - Flow chart for stakers
+  - Flow chart for validators
+  - RETH
+  - RPL
+    - Tokenomics
+    - Auction
+  - Minipools
+  - Protocol DAO
+  - Oracle DAO
 - Node operator
-
 
 ### Resources
 
