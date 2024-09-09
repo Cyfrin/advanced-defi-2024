@@ -99,8 +99,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
   - [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
     - Imbalance fee
 - Exercise
-  - [Exercise](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-  - [Solution](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+  - [Exercise](./foundry/test/curve-v1/exercises/CurveV1AddLiquidity.test.sol)
+  - [Solution](./foundry/test/curve-v1/solutions/CurveV1AddLiquidity.test.sol)
 
 ### Section 6 - Remove liquidity
 
@@ -113,10 +113,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
   - [`remove_liquidity_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L668-L697)
     - [`_calc_withdraw_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L628-L659)
 - Exercises
-  - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-  - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
-  - [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1Liquidity.test.sol)
-  - [Solution 2](./foundry/test/curve-v1/solutions/CurveV1Liquidity.test.sol)
+  - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1RemoveLiquidity.test.sol)
+  - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1RemoveLiquidity.test.sol)
+  - [Exercise 2](./foundry/test/curve-v1/exercises/CurveV1RemoveLiquidity.test.sol)
+  - [Solution 2](./foundry/test/curve-v1/solutions/CurveV1RemoveLiquidity.test.sol)
 
 ## Resources
 
