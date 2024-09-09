@@ -37,7 +37,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
   - optional (uni v2, uni v3, DeFi, python)
 - TODO: lead instructor
 - TODO: best practices
-- TODO: project setup, how to run exercises
+  - TODO: project setup, how to run exercises
 - Curve intro
   - TODO: Curve v1 AMM intro -> add DAI / USDC explanation
 - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
