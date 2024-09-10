@@ -62,7 +62,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Parameter `A` that controls the flatness of the curve of Curve v1
 > - Number `D` that quantifies liquidity of the pool
 
-- Contract overview
+- [Contract overview](./excalidraw/amm/curve-v1/curve-v1-contract.png)
 - How A affects D
 - Code walkthrough
   - [`A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L147-L172)
@@ -80,7 +80,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 >
 > - How swap function is implemented
 
-- Contract calls
+- [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
 - Code walkthrough
   - [`exchange`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L429-L493)
     - [`get_y`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L354-L397)
@@ -99,7 +99,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - How the function to add liquidity is implemented
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
-- Contract calls
+- [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
 - Code walkthrough
   - [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
     - Imbalance fee
@@ -113,7 +113,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 >
 > - How the functions to remove liquidity are implemented
 
-- Contract calls
+- [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
 - Code walkthrough
   - [`remove_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L496-L524)
   - [`remove_liquidity_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L668-L697)
