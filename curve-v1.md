@@ -36,6 +36,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - Course intro
 - Lead instructor
 - Best practices
+- Setup repo for exercises
+- How to execute exercises
 - Curve intro
 - [Comparison with Uniswap v2 and v3](./topics/amm/curve-v1/comparisons.md)
 
