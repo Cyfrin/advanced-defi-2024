@@ -1,4 +1,4 @@
-# advanced-defi-2024
+# Advanced Defi 2024
 
 - [How to use this repo](#how-to-use-this-repo)
 - [Topics](#topics)
