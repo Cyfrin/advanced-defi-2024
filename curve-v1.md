@@ -48,9 +48,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Math of Curve v1 AMM
 > - How Curve v1's equation calculates swap amount and liuidity
 
-- Graphs
-  - [Curve V1 AMM graph](https://www.desmos.com/calculator/3xrvh5slce)
-  - [Curve V1 xy/(D/2)^2 graph](https://www.desmos.com/3d/t0jtduq4us)
+- Graph [Curve V1 AMM](https://www.desmos.com/calculator/3xrvh5slce)
+- Graph [Curve V1 xy/(D/2)^2](https://www.desmos.com/3d/t0jtduq4us)
 - [Math](./excalidraw/amm/curve-v1/curve-v1-eq.png)
 - [Newton's method](./excalidraw/amm/curve-v1/curve-v1-newton.png)
   - [Curve v1 equations](./notebook/curve_v1_equations.ipynb)
@@ -65,15 +64,15 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Number `D` that quantifies liquidity of the pool
 
 - [Contract overview](./excalidraw/amm/curve-v1/curve-v1-contract.png)
-- How A affects D
-  - [Code walkthrough `A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L147-L172)
-    - [Code walkthrough `ramp_A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L701-L716)
-    - [Code walkthrough `stop_ramp_A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L719-L730)
-  - [Code walkthrough `_xp`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L175-L181)
-  - [Code walkthrough `get_D`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L193-L218)
-    - [Python code - Compute equations for D](./notebook/curve_v1_equations.ipynb)
-  - [Code walkthrough `get_virtual_price`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L227-L238)
-  - [Code walkthrough `calc_token_amount`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L241-L265)
+- Graph [How A affects D](https://www.desmos.com/calculator/3xrvh5slce)
+- Code walkthrough [`A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L147-L172)
+  - Code walkthrough [`ramp_A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L701-L716)
+  - Code walkthrough [`stop_ramp_A`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L719-L730)
+- Code walkthrough [`_xp`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L175-L181)
+- Code walkthrough [`get_D`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L193-L218)
+  - Python [Compute equations for D](./notebook/curve_v1_equations.ipynb)
+- Code walkthrough[`get_virtual_price`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L227-L238)
+- Code walkthrough[`calc_token_amount`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L241-L265)
 
 ### Section 4 - Swap
 
@@ -82,11 +81,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - How swap function is implemented
 
 - [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
-- Code walkthrough
-  - [`exchange`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L429-L493)
-    - [`get_y`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L354-L397)
-      - [Python code - Compute equations for y](./notebook/curve_v1_equations.ipynb)
-  - [`get_dy`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L400-L411)
+- Code walkthrough [`exchange`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L429-L493)
+  - Code walkthrough [`get_y`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L354-L397)
+    - Python [Compute equations for y](./notebook/curve_v1_equations.ipynb)
+- Code walkthrough [`get_dy`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L400-L411)
 - Exercises
   - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1Swap.test.sol)
   - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1Swap.test.sol)
@@ -101,9 +99,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
 - [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
-- Code walkthrough
-  - [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
-    - Imbalance fee
+- Code walkthrough [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
+  - TODO: Imbalance fee
 - Exercise
   - [Exercise](./foundry/test/curve-v1/exercises/CurveV1AddLiquidity.test.sol)
   - [Solution](./foundry/test/curve-v1/solutions/CurveV1AddLiquidity.test.sol)
@@ -115,11 +112,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - How the functions to remove liquidity are implemented
 
 - [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
-- Code walkthrough
-  - [`remove_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L496-L524)
-  - [Graph - calc_withdraw_one_coin](https://www.desmos.com/calculator/hufylr9evo)
-  - [`remove_liquidity_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L668-L697)
-    - [`_calc_withdraw_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L628-L659)
+- Code walkthrough [`remove_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L496-L524)
+- TODO: Graph [calc_withdraw_one_coin](https://www.desmos.com/calculator/hufylr9evo)
+- Code walkthrough [`remove_liquidity_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L668-L697)
+  - Code walkthrough [`_calc_withdraw_one_coin`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L628-L659)
 - Exercises
   - [Exercise 1](./foundry/test/curve-v1/exercises/CurveV1RemoveLiquidity.test.sol)
   - [Solution 1](./foundry/test/curve-v1/solutions/CurveV1RemoveLiquidity.test.sol)
