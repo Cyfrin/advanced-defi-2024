@@ -99,8 +99,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > - Imbalance fee for adding liquidity in a way that changes the token ratios
 
 - [Contract calls](./excalidraw/amm/curve-v1/curve-v1-contract.png)
+- [Imbalance fee](./notebook/curve_v1_imbalance_fee.ipynb)
 - Code walkthrough [`add_liquidity`](https://github.com/curvefi/curve-contract/blob/b0bbf77f8f93c9c5f4e415bce9cd71f0cdee960e/contracts/pools/3pool/StableSwap3Pool.vy#L268-L351)
-  - TODO: [Imbalance fee](./notebook/curve_v1_imbalance_fee.ipynb)
 - Exercise
   - [Exercise](./foundry/test/curve-v1/exercises/CurveV1AddLiquidity.test.sol)
   - [Solution](./foundry/test/curve-v1/solutions/CurveV1AddLiquidity.test.sol)
