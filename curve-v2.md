@@ -1,5 +1,25 @@
 ### Curve v2
 
+TODO:
+
+- readme
+- reorg contents
+
+# section 1
+
+- course intro
+- what you'll learn
+- lead instructor
+- best practices
+- setup repo
+- how to execute exercises
+
+# section 2
+
+# others
+- contract overview
+- function outlines
+
 - `b' = b * p`
 - D
 - virtual price
@@ -17,6 +37,7 @@
   - dynamic fees
   - newton's method and optimizations
 - Math
+
   - Equation
   - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
   - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
@@ -54,7 +75,9 @@
     virtual_price = xcp / total_supply (TODO: why?)
     ```
 
+- contract overview
 - Code walkthrough
+  - function outline
   - xp
   - get_xcp
   - get_virtual_price
