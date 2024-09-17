@@ -4,6 +4,9 @@ TODO:
 
 - readme
 - reorg contents
+- contract overview
+- function outlines
+- how state variables `D`, `virtual_price` and `xcp_profit` update
 
 # section 1
 
@@ -17,8 +20,6 @@ TODO:
 # section 2
 
 # others
-- contract overview
-- function outlines
 
 - `b' = b * p`
 - D
