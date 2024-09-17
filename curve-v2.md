@@ -1,5 +1,7 @@
 ### Curve v2
 
+- not covered - advance math
+
 TODO:
 
 - readme
@@ -7,6 +9,9 @@ TODO:
 - contract overview
 - function outlines
 - how state variables `D`, `virtual_price` and `xcp_profit` update
+- claim_admin_fee?
+- dynamic fee?
+- get_dy?
 
 # section 1
 
