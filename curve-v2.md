@@ -12,6 +12,7 @@ TODO:
 - claim_admin_fee?
 - dynamic fee?
 - get_dy?
+- calc_withdraw_one_coin?
 
 # section 1
 
