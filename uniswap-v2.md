@@ -23,7 +23,6 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 1 - overview
 
-- [Uniswap V2](./topics/amm/uniswap-v2/README.md)
 - [Graph](https://www.desmos.com/calculator/z7z2donayo)
 - [Contracts overview](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
 
@@ -41,7 +40,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - [`getAmountsIn`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/libraries/UniswapV2Library.sol#L73-L82)
   - [`getAmountsIn` fork](./foundry/test/uniswap-v2/UniswapV2SwapAmounts.test.sol)
   - `getAmountsIn` example
-- [Code walkthrough `pair.swap`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159-L187)
+- Code walkthrough [`pair.swap`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159-L187)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Swap.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Swap.test.sol)
 - [Exercise 2](./foundry/test/uniswap-v2/exercises/UniswapV2Swap.test.sol)
@@ -52,7 +51,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 3 - Create pool
 
-- Code walkthrough `createPair`
+- Code walkthrough [`createPair`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Factory.sol#L23-L38)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Factory.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Factory.test.sol)
 
@@ -72,9 +71,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - Liquidity functions - 2x
   - Summary
 - [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
-- Code walkthrough
-  - `addLiquidity`
-  - `mint`
+- Code walkthrough [`addLiquidity`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/UniswapV2Router02.sol#L77-L100)
+- Code walkthrough [`mint`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L110-L131)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Liquidity.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Liquidity.test.sol)
 
@@ -87,9 +85,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - Liquidity functions
   - Liquidity delta with liquidity function = sqrt
 - [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
-- Code walkthrough
-  - `removeLiquidity`
-  - `burn`
+- Code walkthrough [`removeLiquidity`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/UniswapV2Router02.sol#L103-L119)
+- Code walkthrough [`burn`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L134-L156)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Liquidity.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Liquidity.test.sol)
 
@@ -97,7 +94,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 - [Flash swap fee math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
 - [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
-- Code walkthrough
+- Code walkthrough [`swap`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L172)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2FlashSwap.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2FlashSwap.sol)
 
@@ -110,7 +107,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - Example
   - TWAP approximation to current time
   - Misconception
-- Code walkthrough
+- Code walkthrough [`_update`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L75-L81)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Twap.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Twap.sol)
 
