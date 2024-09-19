@@ -32,16 +32,16 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Swap math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
 - [Swap fee math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
 - [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
-- Code walkthrough periphery and core repositories
-- Code walkthrough `swapExactTokensForTokens`
-  - `getAmountsOut`
+- Code walkthrough [periphery](https://github.com/Uniswap/v2-periphery) and [core](https://github.com/Uniswap/v2-core) repositories
+- Code walkthrough [`swapExactTokensForTokens`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/UniswapV2Router02.sol#L224-L237)
+  - [`getAmountsOut`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/libraries/UniswapV2Library.sol#L62-L70)
   - [`getAmountsOut` fork](./foundry/test/uniswap-v2/UniswapV2SwapAmounts.test.sol)
   - `getAmountsOut` example
 - Code walkthrough `swapTokensForExactTokens`
-  - `getAmountsIn`
+  - [`getAmountsIn`](https://github.com/Uniswap/v2-periphery/blob/0335e8f7e1bd1e8d8329fd300aea2ef2f36dd19f/contracts/libraries/UniswapV2Library.sol#L73-L82)
   - [`getAmountsIn` fork](./foundry/test/uniswap-v2/UniswapV2SwapAmounts.test.sol)
   - `getAmountsIn` example
-- Code walkthrough `pair.swap`
+- [Code walkthrough `pair.swap`](https://github.com/Uniswap/v2-core/blob/ee547b17853e71ed4e0101ccfd52e70d5acded58/contracts/UniswapV2Pair.sol#L159-L187)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Swap.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Swap.test.sol)
 - [Exercise 2](./foundry/test/uniswap-v2/exercises/UniswapV2Swap.test.sol)
