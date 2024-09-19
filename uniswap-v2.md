@@ -58,53 +58,53 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 4 - Add liquidity
 
-- Pool shares intro
+- [Pool shares intro](./excalidraw/amm/pool_shares.png)
   - Pool shares mint math
   - Pool shares mint math example
   - Pool shares burn
   - Pool shares burn math
   - Pool shares burn math example
-- Add liquidity graph
-- Add liquidity math
-- Add liquidity pool shares math intro
+- [Add liquidity graph](https://www.desmos.com/calculator/z7z2donayo)
+- [Add liquidity math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
+  - Add liquidity pool shares math intro
   - Liquidity functions
   - Liquidity functions - sqrt
   - Liquidity functions - 2x
   - Summary
-- Contract calls diagram
+- [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
 - Code walkthrough
-  - addLiquidity
-  - mint
+  - `addLiquidity`
+  - `mint`
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Liquidity.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Liquidity.test.sol)
 
 ### Section 5 - Remove liquidity
 
-- Remove liquidity graph
-- Remove liquidity math
+- [Remove liquidity graph](https://www.desmos.com/calculator/z7z2donayo)
+- [Remove liquidity math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
   - How many dx and dy to remove?
   - Pool shares intro
   - Liquidity functions
   - Liquidity delta with liquidity function = sqrt
-- Contract calls diagram
+- [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
 - Code walkthrough
-  - removeLiquidity
-  - burn
+  - `removeLiquidity`
+  - `burn`
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Liquidity.test.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Liquidity.test.sol)
 
 ### Section 6 - Flash swap
 
-- Flash swap fee math
-- Contract calls diagram
+- [Flash swap fee math](./excalidraw/amm/uniswap-v2/uniswap_v2_math.png)
+- [Contract calls](./excalidraw/amm/uniswap-v2/uniswap_v2.png)
 - Code walkthrough
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2FlashSwap.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2FlashSwap.sol)
 
 ### Section 7 - TWAP
 
-- Spot price manipulation
-- TWAP math
+- [Spot price manipulation](./excalidraw/amm/uniswap-v2/uniswap_v2_spot_price_oracle.png)
+- [TWAP math](./excalidraw/amm/uniswap-v2/uniswap_v2_twap.png)
   - Intro
   - Cumulative price
   - Example
@@ -116,14 +116,12 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 8 - Application - Flash swap arbitrage
 
-- Intro
-  - arbitrage, flash swap -> swap -> swap)
-  - flash swap -> swap
+- [Intro](./excalidraw/amm/uniswap-v2/uniswap_v2_arb.png)
 - [Exercise 1](./foundry/test/uniswap-v2/exercises/UniswapV2Arb1.sol)
 - [Solution 1](./foundry/test/uniswap-v2/solutions/UniswapV2Arb1.sol)
 - [Exercise 2](./foundry/test/uniswap-v2/exercises/UniswapV2Arb2.sol)
 - [Solution 2](./foundry/test/uniswap-v2/solutions/UniswapV2Arb2.sol)
-- Optimal amount in math (optional)
+- [Optimal amount in math (optional)](./excalidraw/amm/uniswap-v2/uniswap_v2_arb_optimal_amount_in.png)
 
 ### Resources
 
