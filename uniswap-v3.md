@@ -69,7 +69,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
     - Graph - [liquidity net](https://www.desmos.com/calculator/mkoyc4wm9t)
 - Swap math
   - Math - [what is the price after +/- dx or dy](./excalidraw/amm/uniswap-v3/uniswap-v3-delta-price.png)
-  - Math - [wwap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
+  - Math - [swap fee](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-fee.png)
 - [Code walkthrough swap](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/UniswapV3Pool.sol#L605-L819)
 - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-contract-calls.png)
   - Exact input single
