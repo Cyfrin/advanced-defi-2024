@@ -21,7 +21,7 @@
 
 ## Topics
 
-Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/uniswap-v2) for each lesson.
+Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/uniswap-v3) for each lesson.
 
 ### Section 1 - Intro
 
