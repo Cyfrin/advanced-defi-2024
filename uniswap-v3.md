@@ -39,7 +39,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - [Uniswap swap router contracts](https://github.com/Uniswap/swap-router-contracts)
 - [Contracts overview](./excalidraw/amm/uniswap-v3/uniswap-v3-contracts.png)
 
-### Section ? - Spot price (sqrt price, tick, sqrt x 96)
+### Section 2 - Spot price (sqrt price, tick, sqrt x 96)
 
 - `slot0` (tick and sqrtPriceX96)
   - [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
@@ -53,13 +53,13 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3SpotPrice.test.sol)
 - [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3SpotPrice.test.sol)
 
-### Section ? - Math
+### Section 3 - Math
 
 - Math - [equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
 - Math - [curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
 - Math - [how many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
 
-### Section ? - Swap
+### Section 4 - Swap
 
 - Swap algorithm
   - [Single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
@@ -88,7 +88,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Exercise 4 - multi pool exact output](./foundry/test/uniswap-v3/exercises/UniswapV3Swap.test.sol)
 - [Solution 4 - multi pool exact output](./foundry/test/uniswap-v3/solutions/UniswapV3Swap.test.sol)
 
-### Section ? - Factory
+### Section 5 - Factory
 
 - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-factory.png)
 - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Factory.sol#L35-L51)
@@ -97,31 +97,30 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Exercise 2 - create pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
 - [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
 
-## Section ? - Liquidity
+## Section 6 - Liquidity
 
-- Math
-  - [Liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity.png)
-  - [Liquidity delta](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-delta.png)
-- [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
+- Math - [Liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity.png)
+- Math - [Liquidity delta](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-delta.png)
+- Graph - [Tick spacing](https://www.desmos.com/calculator/x31s77joxw)
 - Contract call
-  - UniswapV3Pool
-    - mint
+  - `UniswapV3Pool`
+    - `mint`
       - [Call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L457-L487)
-    - burn
+    - `burn`
       - [Call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L517-L543)
-    - collect
+    - `collect`
       - [Call trace](./excalidraw/amm/uniswap-v3/uniswap-v3-pool-call-trace.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L490-L513)
-  - NonFungiblePositionManager
-    - mint
+  - `NonFungiblePositionManager`
+    - `mint`
       - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L128-L182)
-    - increaseLiquidity
+    - `increaseLiquidity`
       - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L198-L254)
-    - decreaseLiquidity
+    - `decreaseLiquidity`
       - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-position-manager.png)
       - [Code walkthrough](https://github.com/Uniswap/v3-periphery/blob/697c2474757ea89fec12a4e6db16a574fe259610/contracts/NonfungiblePositionManager.sol#L257-L306)
 - Mint
@@ -137,12 +136,12 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Liquidity.test.sol)
   - [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Liquidity.test.sol)
 
-### Section ? - Tick bitmap
+### Section 6 - Tick bitmap
 
 - [Tick bitmap](./excalidraw/amm/uniswap-v3/uniswap-v3-tick-bitmap.png)
 - [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
 
-### Section ? - Fee algorithm
+### Section 7 - Fee algorithm
 
 - Math - [Fee equation](./excalidraw/amm/uniswap-v3/uniswap-v3-calc-fee.png)
 - [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
@@ -159,13 +158,13 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
   - [`Tick.getFeeGrowthInside`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Tick.sol#L61-L98)
   - [`Position.update`](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/libraries/Position.sol#L45-L93)
 
-### Section ? - Flash
+### Section 8 - Flash
 
 - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/UniswapV3Pool.sol#L822-L867)
 - [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
 - [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
 
-### Section ? - TWAP price oracle
+### Section 9 - TWAP price oracle
 
 - Math - [TWAP](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
 - Math - [TWAP of token x and y](./excalidraw/amm/uniswap-v3/uniswap-v3-twap-x-y.png)
@@ -178,10 +177,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Twap.sol)
 - [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Twap.sol)
 
-### Section ? - Footnotes
+### Section 10 - Footnotes
 
 - [JIT liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-jit.png)
-- Graph -[constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
+- Graph - [constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
 
 ### Resources
 
