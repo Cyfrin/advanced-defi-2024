@@ -1316,6 +1316,10 @@ def _A_gamma() -> uint256[2]:
 def _fee(xp: uint256[N_COINS]) -> uint256:
     fee_params: uint256[3] = self._unpack(self.packed_fee_params)
     f: uint256 = MATH.reduction_coefficient(xp, fee_params[2])
+    # fee_gamma[0], fee_gamma[1], fee_gamma[2]
+    #      mid_fee,      out_fee,    fee_gamma
+    # (imbalanced pool) fee_gamma / (1 + fee_gamma) <= f <= 1 (balanced pool) 
+    # fee = mid_fee * f + out_fee * (1 - f)
     return unsafe_div(
         fee_params[0] * f + fee_params[1] * (10**18 - f),
         10**18
@@ -1355,8 +1359,9 @@ def get_xcp(D: uint256) -> uint256:
 
 @view
 @internal
+#                   amounts[i] = dx[i] * price_scale[i]
 def _calc_token_fee(amounts: uint256[N_COINS], xp: uint256[N_COINS]) -> uint256:
-    # fee = sum(amounts_i - avg(amounts)) * fee' / sum(amounts)
+    # fee = _fee * N / (4 * (N - 1))
     fee: uint256 = unsafe_div(
         unsafe_mul(self._fee(xp), N_COINS),
         unsafe_mul(4, unsafe_sub(N_COINS, 1))
@@ -1375,6 +1380,8 @@ def _calc_token_fee(amounts: uint256[N_COINS], xp: uint256[N_COINS]) -> uint256:
         else:
             Sdiff += unsafe_sub(avg, _x)
 
+    # fee = sum(|amounts[i] - avg(amounts)|) * fee / sum(amounts)
+    #     = 0 when amounts[0] = amounts[1] = amounts[2] 
     return fee * Sdiff / S + NOISE_FEE
 
 
