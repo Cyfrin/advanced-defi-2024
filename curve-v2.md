@@ -2,10 +2,24 @@
 
 - not covered - advance math
 
-TODO:
+### TODOs
 
 - readme
 - how state variables `D`, `virtual_price` and `xcp_profit` update
+- when does virtual price increase? decrease?
+- when does xcp_profit change?
+- show how A and gamma changes D?
+- how to calculate last price? `get_p`
+
+```
+concentrated liquidity -> price is mean reverting -> LP profit
+                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
+
+profit if price reverts to EMA
+loss if AMM must repeg
+```
+
+- xcp -> 0 imbalanced?, max at equilibrium?
 
 # Section 1 - Intro
 
@@ -19,11 +33,11 @@ TODO:
 # Section 2 - Math
 
 - Equation
-    - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
-    - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
+  - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
+  - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
 - Gamma
-    - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
-    - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+  - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
+  - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
 - Quantification of profit (TODO)
 
@@ -55,101 +69,52 @@ xcp = value of constant-product invariant at equilibrium
 virtual_price = xcp / total_supply (TODO: why?)
 ```
 
-
 # Section 3 - Contract overview
+
 - contract overview
-- A, gamma
-# Section ? - virtual price?
-- virtual price, xcp, D
+- packed state variables
+- A and gamma
+  - `ramp_A_gamma` and `stop_ramp_A_gamma`
+- xp, xcp, virtual price, D?
+- xcp exercise?
+- get_virtual_price exercise?
+
 # Section ? - Swap
+
 - contract call
 - trace
 - dynamic fee
 - get_dy
 - code walkthrough
 - exercise
+
 # Section ? - Add liquidity
+
 # Section ? - Remove liquidity
+
 - remove_liquidity
 - remove_liquidity_one_coin
 - calc_withdraw_one_coin?
-# Section Price repegging
+
+# Section ? - Price repegging
+
 - EMA
+  - math
+  - python code example
+  - code walkthrough
 - tweak_price
+  - trace
+  - `xcp_profit`
+  - code walkthrough
 - claim_admin_fees
+  - trace
+  - `xcp_profit` and `xcp_profit_a`
+  - code walkthrough
+- EMA exercises?
 
-# others
+# Section ? - Footnote
 
-- `b' = b * p`
-- D
-- virtual price
-- xcp
-- repricing algo
-  - repeggins loss
-  - quantifying profit loss
-- ema
-- dynamic fee
-
-- Intro (UI video)
-  - volatile tokens
-  - single sided liquidity
-  - concentrated liquidity that algorithmically repegs based on EMA
-  - dynamic fees
-  - newton's method and optimizations
-- Math
-
-- contract overview
-- Code walkthrough
-  - function outline
-  - xp
-  - get_xcp
-  - get_virtual_price
-  - exchange
-    - get_y? (Avdanced math)
-  - add_liquidity
-  - remove_liquidity
-  - remove_liquidity_one_coin
-    - calc_withdraw_one_coin
-  - price_oracle
-    - math
-    - [python code](./notebook/curve_v2_ema.ipynb)
-    - code walkthroug
-  - tweak_price
-    - xcp_profit
-    - how to compare xcp_profit and virtual price? (TODO)
-  - claim_admin_fee?
-  - dynamic fee?
-  - get_dy?
-- Exercises
-
-  - Swap
-    - get dy
-    - exchange
-  - Add liquidity
-  - Remove liquidity
-  - Remove liquidity one coin
-
-- Footnote
-  - dy / dx
-
-### TODOs
-
-- when does virtual price increase? decrease?
-- when does xcp_profit change?
-- show how A and gamma changes D?
-- how to calculate last price? `get_p`
-
-### Memo
-
-```
-concentrated liquidity -> price is mean reverting -> LP profit
-                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
-
-profit if price reverts to EMA
-loss if AMM must repeg
-```
-
-- xcp -> 0 imbalanced?, max at equilibrium?
+- dy / dx
 
 ### Resources
 
