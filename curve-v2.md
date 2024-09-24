@@ -30,12 +30,19 @@ loss if AMM must repeg
 - setup repo
 - how to execute exercises
 
+- prerequisites
+  - Basic DeFi knowledge (DAI, WETH, WBTC, etc)
+  - curve v1 (CPAMM, CSAMM)
+  - Foundry
+  - Python (optional)
+
 # Section 2 - Math
 
+- Curve V2 intro
 - Equation
-  - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
-  - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
-- Gamma
+- Graph - [Curve V2](https://www.desmos.com/calculator/ms7fqtmpxu)
+- Python code - [concentrated liquidity](./notebook/amm_dy_dx.ipynb)
+- Graph - gamma (answer how gamma controls concentrated liquidity)
   - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
   - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
