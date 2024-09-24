@@ -42,14 +42,11 @@ loss if AMM must repeg
 - Equation
 - Graph - [Curve V2](https://www.desmos.com/calculator/ms7fqtmpxu)
 - Python code - [concentrated liquidity](./notebook/amm_dy_dx.ipynb)
-- TODO: how to visualize gamma
-- Graph - gamma (TODO: answer how gamma controls concentrated liquidity)
-  - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
-  - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+- Graph - [Gamma](https://www.desmos.com/3d/3ebvcluqdr)
+- TODO: recap
+- TODO: answer how token balances are normalized to D/2
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
-    - answer how token balances are normalized to D/2
 - Quantification of profit (TODO)
-
 - why repping can cause loss for LP
   - the loss can occur because it sells at the lower price and rebuys at the higher price
     - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
@@ -99,11 +96,20 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 # Section ? - Add liquidity
 
+- contract call
+- trace
+- code walkthrough
+- exercise
+
 # Section ? - Remove liquidity
 
-- remove_liquidity
-- remove_liquidity_one_coin
-- calc_withdraw_one_coin?
+- contract call
+- trace
+- code walkthrough
+  - remove_liquidity
+  - remove_liquidity_one_coin
+  - calc_withdraw_one_coin?
+- exercise
 
 # Section ? - Price repegging
 
