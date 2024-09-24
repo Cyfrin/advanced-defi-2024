@@ -5,16 +5,9 @@
 TODO:
 
 - readme
-- reorg contents
-- contract overview
-- function outlines
 - how state variables `D`, `virtual_price` and `xcp_profit` update
-- claim_admin_fee?
-- dynamic fee?
-- get_dy?
-- calc_withdraw_one_coin?
 
-# section 1
+# Section 1 - Intro
 
 - course intro
 - what you'll learn
@@ -23,7 +16,67 @@ TODO:
 - setup repo
 - how to execute exercises
 
-# section 2
+# Section 2 - Math
+
+- Equation
+    - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
+    - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
+- Gamma
+    - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
+    - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
+- [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
+- Quantification of profit (TODO)
+
+- why repping can cause loss for LP
+  - the loss can occur because it sells at the lower price and rebuys at the higher price
+    - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
+    - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+- TODO?: math (x'y' -> xp -> xcp)
+
+```
+# v1 (for 2 tokens)
+xy / (D / 2)**2 -> max = 1 at balanced -> xy max at x = y = D / 2
+                -> 0 when imbalanced
+
+# v2 (for 2 tokens)
+x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
+y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
+
+x'y' / (D / 2)**2 -> max = 1 at balanced -> x'y' mat at x' = y' = D / 2
+                  -> 0 when imbalanced
+
+xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
+xcp = geometric_mean(xp)
+
+xcp -> max when x, y at pegged price
+    -> otherwise loss
+
+xcp = value of constant-product invariant at equilibrium
+virtual_price = xcp / total_supply (TODO: why?)
+```
+
+
+# Section 3 - Contract overview
+- contract overview
+- A, gamma
+# Section ? - virtual price?
+- virtual price, xcp, D
+# Section ? - Swap
+- contract call
+- trace
+- dynamic fee
+- get_dy
+- code walkthrough
+- exercise
+# Section ? - Add liquidity
+# Section ? - Remove liquidity
+- remove_liquidity
+- remove_liquidity_one_coin
+- calc_withdraw_one_coin?
+# Section Price repegging
+- EMA
+- tweak_price
+- claim_admin_fees
 
 # others
 
@@ -44,43 +97,6 @@ TODO:
   - dynamic fees
   - newton's method and optimizations
 - Math
-
-  - Equation
-  - [Curve v2 graph](https://www.desmos.com/calculator/ms7fqtmpxu)
-  - [Concentrated liquidity - Python code](./notebook/amm_dy_dx.ipynb)
-  - Gamma
-    - [Gamma graph](https://www.desmos.com/calculator/c1yc2loglv)
-    - [Gamma graph 3D](https://www.desmos.com/3d/siehqqoi40)
-  - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
-  - Quantification of profit (TODO)
-
-    - why repping can cause loss for LP
-      - the loss can occur because it sells at the lower price and rebuys at the higher price
-    - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-    - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
-    - TODO: math (x'y' -> xp -> xcp)
-
-    ```
-    # v1 (for 2 tokens)
-    xy / (D / 2)**2 -> max = 1 at balanced -> xy max at x = y = D / 2
-                    -> 0 when imbalanced
-
-    # v2 (for 2 tokens)
-    x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
-    y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
-
-    x'y' / (D / 2)**2 -> max = 1 at balanced -> x'y' mat at x' = y' = D / 2
-                      -> 0 when imbalanced
-
-    xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
-    xcp = geometric_mean(xp)
-
-    xcp -> max when x, y at pegged price
-        -> otherwise loss
-
-    xcp = value of constant-product invariant at equilibrium
-    virtual_price = xcp / total_supply (TODO: why?)
-    ```
 
 - contract overview
 - Code walkthrough
