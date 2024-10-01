@@ -43,14 +43,15 @@ loss if AMM must repeg
 - Graph - [Curve V2](https://www.desmos.com/calculator/ms7fqtmpxu)
 - Python code - [concentrated liquidity](./notebook/amm_dy_dx.ipynb)
 - Graph - [Gamma](https://www.desmos.com/3d/3ebvcluqdr)
-- TODO: recap
-- TODO: answer how token balances are normalized to D/2
+- Recap
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
+- [Price scale and concentrated liquidity](./excalidraw/amm/curve-v2/curve-v2-price-scale-amm-eq.pprice-scale.png)
+- Python code - [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
 - Quantification of profit (TODO)
-- why repping can cause loss for LP
-  - the loss can occur because it sells at the lower price and rebuys at the higher price
-    - [Graph constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-    - [Graph repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+  - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
+  - Graph - [repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+    - why repping can cause loss for LP
+    - the loss can occur because it sells at the lower price and rebuys at the higher price
 - TODO?: math (x'y' -> xp -> xcp)
 
 ```
