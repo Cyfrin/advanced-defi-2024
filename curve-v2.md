@@ -46,7 +46,7 @@ loss if AMM must repeg
 - Recap
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
 - [Price scale and concentrated liquidity](./excalidraw/amm/curve-v2/curve-v2-price-scale-amm-eq.pprice-scale.png)
-- Python code - [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
+- Python code (optional) - [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
 - Quantification of profit (TODO)
   - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
   - Graph - [repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
