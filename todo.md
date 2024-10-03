@@ -51,6 +51,8 @@
     - [ ] Leverage🤔
     - [ ] Endgame? 🤔
     - [ ] OSM? 🤔
+    - [ ] RWA?
+    - [ ] SKY?
     - [ ] Summary
 - [ ] Lending
   - [ ] AAVE 🚧
