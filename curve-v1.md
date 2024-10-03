@@ -10,7 +10,7 @@
 
 ## Prerequisites
 
-- Intermediate Solidity
+- Advanced Solidity developer
 - Experience with Foundry
 - Knowledge of constant sum (`x + y = K`) and constant product (`xy = K`) AMM
 - Python (optional)
