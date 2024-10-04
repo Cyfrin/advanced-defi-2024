@@ -51,6 +51,9 @@ loss if AMM must repeg
 - Graph - [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
 - Quantification of profit (TODO)
   - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
+  - Graph - [Curve V2 increase of liquidity](https://www.desmos.com/calculator/reh4elo7d9)
+  - Graph - TODO: quantification of profit
+  - Math - TODO?: quantification of profit?
   - Graph - [repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
     - why repping can cause loss for LP
     - the loss can occur because it sells at the lower price and rebuys at the higher price
