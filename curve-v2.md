@@ -53,7 +53,7 @@ loss if AMM must repeg
 
   - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
   - Graph - [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
-  - Graph - [quantifying profit]
+  - Graph - [quantifying pool value]
 
     - cpamm and curve v2 -> swap collects fees -> liquidity increases -> profit
     - cpamm -> easy to quantify profit
