@@ -33,6 +33,7 @@ loss if AMM must repeg
 - prerequisites
   - Basic DeFi knowledge (DAI, WETH, WBTC, etc)
   - curve v1 (CPAMM, CSAMM)
+  - uni v3 (concentrated liq)?
   - Foundry
   - Python (optional)
 
@@ -52,19 +53,21 @@ loss if AMM must repeg
 - Quantification of profit (TODO)
 
   - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-  - Graph - [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
-  - Graph - [quantifying pool value]
+  - Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
+  - Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
 
     - cpamm and curve v2 -> swap collects fees -> liquidity increases -> profit
-    - cpamm -> easy to quantify profit
+    - cpamm -> easy to compare liquidity and quantify profit
+    - review how curve v2 graph is constructed
     - curve v2 -> cannot directly quantify profit
-    - transformed balances are equilibrium -> constant product
+    - transformed balances at equilibrium -> constant product
     - does it make sense?
 
   - Math - TODO?: quantification of profit?
-  - Graph - [repegging loss](https://www.desmos.com/calculator/57yktysovy)
+  - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
     - why repping can cause loss for LP
     - the loss can occur because it sells at the lower price and rebuys at the higher price
+    - ema price lags behind spot
 
 - TODO?: math (x'y' -> xp -> xcp)
 
