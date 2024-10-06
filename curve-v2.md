@@ -50,13 +50,22 @@ loss if AMM must repeg
 - [Repegging with price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale-repeg.png)
 - Graph - [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
 - Quantification of profit (TODO)
+
   - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-  - Graph - [Curve V2 increase of liquidity](https://www.desmos.com/calculator/reh4elo7d9)
-  - Graph - TODO: quantification of profit
+  - Graph - [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
+  - Graph - [quantifying profit]
+
+    - cpamm and curve v2 -> swap collects fees -> liquidity increases -> profit
+    - cpamm -> easy to quantify profit
+    - curve v2 -> cannot directly quantify profit
+    - transformed balances are equilibrium -> constant product
+    - does it make sense?
+
   - Math - TODO?: quantification of profit?
-  - Graph - [repegging loss](https://www.desmos.com/calculator/km1yqb12ik)
+  - Graph - [repegging loss](https://www.desmos.com/calculator/57yktysovy)
     - why repping can cause loss for LP
     - the loss can occur because it sells at the lower price and rebuys at the higher price
+
 - TODO?: math (x'y' -> xp -> xcp)
 
 ```
