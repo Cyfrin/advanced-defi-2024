@@ -1138,6 +1138,7 @@ def tweak_price(
             # ---------------- Update stale xp (using price_scale) with p_new.
             xp = _xp
             for k in range(N_COINS - 1):
+                # _xp = token balances * old price_scale
                 xp[k + 1] = unsafe_div(_xp[k + 1] * p_new[k], price_scale[k])
                 # unsafe_div because we did safediv before ----^
 
