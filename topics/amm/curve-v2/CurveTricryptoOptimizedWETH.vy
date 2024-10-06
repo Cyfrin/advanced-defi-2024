@@ -914,6 +914,7 @@ def _exchange(
     dy -= fee  # <--------------------- Subtract fee from the outgoing amount.
     assert dy >= min_dy, "Slippage"
 
+    # y = y - (dy - fee)
     y -= dy
     self.balances[j] = y  # <----------- Update pool balance of outgoing coin.
 
@@ -1244,7 +1245,7 @@ def _claim_admin_fees():
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
         claimed: uint256 = self.mint_relative(receiver, frac)
 
-        # TODO: why fees * 2? 
+        # TODO: why fees * 2?
         xcp_profit -= fees * 2
 
         self.xcp_profit = xcp_profit
@@ -1318,7 +1319,7 @@ def _fee(xp: uint256[N_COINS]) -> uint256:
     f: uint256 = MATH.reduction_coefficient(xp, fee_params[2])
     # fee_gamma[0], fee_gamma[1], fee_gamma[2]
     #      mid_fee,      out_fee,    fee_gamma
-    # (imbalanced pool) fee_gamma / (1 + fee_gamma) <= f <= 1 (balanced pool) 
+    # (imbalanced pool) fee_gamma / (1 + fee_gamma) <= f <= 1 (balanced pool)
     # fee = mid_fee * f + out_fee * (1 - f)
     return unsafe_div(
         fee_params[0] * f + fee_params[1] * (10**18 - f),
@@ -1381,7 +1382,7 @@ def _calc_token_fee(amounts: uint256[N_COINS], xp: uint256[N_COINS]) -> uint256:
             Sdiff += unsafe_sub(avg, _x)
 
     # fee = sum(|amounts[i] - avg(amounts)|) * fee / sum(amounts)
-    #     = 0 when amounts[0] = amounts[1] = amounts[2] 
+    #     = 0 when amounts[0] = amounts[1] = amounts[2]
     return fee * Sdiff / S + NOISE_FEE
 
 
