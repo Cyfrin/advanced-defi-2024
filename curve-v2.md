@@ -61,9 +61,9 @@ loss if AMM must repeg
     - review how curve v2 graph is constructed
     - curve v2 -> cannot directly quantify profit
     - transformed balances at equilibrium -> constant product
-    - does it make sense?
 
   - Math - TODO?: quantification of profit?
+    - does it make sense?
   - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
     - why repping can cause loss for LP
     - the loss can occur because it sells at the lower price and rebuys at the higher price
