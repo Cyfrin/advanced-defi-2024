@@ -103,6 +103,7 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 - contract call
 - trace
+- imbalance fee
 - code walkthrough
 - exercise
 
@@ -110,6 +111,7 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 - contract call
 - trace
+- imbalance fee
 - code walkthrough
   - remove_liquidity
   - remove_liquidity_one_coin
