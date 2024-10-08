@@ -50,15 +50,13 @@ loss if AMM must repeg
 - Python code (optional) - [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
 - [Repegging with price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale-repeg.png)
 - Graph - [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
-- Quantification of profit (TODO)
-
-  - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-  - Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
-  - Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
-  - Math - TODO?: quantification of profit?
+- Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
+- Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
+- Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
+- Math - TODO?: quantification of profit?
     - does it make sense?
-  - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
-- TODO?: math (x'y' -> xp -> xcp)
+    - TODO?: math (x'y' -> xp -> xcp)
+- Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
 
 ```
 # v1 (for 2 tokens)
