@@ -845,6 +845,7 @@ def _unpack_prices(_packed_prices: uint256) -> uint256[2]:
         # PRICE_SIZE: constant(uint128) = 256 / (N_COINS - 1)
         # PRICE_MASK: constant(uint256) = 2**PRICE_SIZE - 1
         #                                    128 bits mask
+        # packed_prices = 128 bits | 128 bits
         unpacked_prices[k] = packed_prices & PRICE_MASK
         #               shift packed prices by 128 bits to the right
         packed_prices = packed_prices >> PRICE_SIZE
