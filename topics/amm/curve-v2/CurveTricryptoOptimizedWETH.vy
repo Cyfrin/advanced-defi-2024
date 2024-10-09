@@ -782,6 +782,8 @@ def _pack(x: uint256[3]) -> uint256:
     @param x The uint256[3] to pack
     @return uint256 Integer with packed values
     """
+    #      | 128 bits | 64 bits | 64 bits |
+    #          x[0]      x[1]      x[2]
     return (x[0] << 128) | (x[1] << 64) | x[2]
 
 
@@ -794,6 +796,7 @@ def _unpack(_packed: uint256) -> uint256[3]:
     @return uint256[3] A list of length 3 with unpacked integers
     """
     return [
+        #                  2**64 - 1
         (_packed >> 128) & 18446744073709551615,
         (_packed >> 64) & 18446744073709551615,
         _packed & 18446744073709551615,
@@ -810,17 +813,27 @@ def _pack_prices(prices_to_pack: uint256[N_COINS-1]) -> uint256:
     """
     packed_prices: uint256 = 0
     p: uint256 = 0
+
+    # PRICE_SIZE: constant(uint128) = 256 / (N_COINS - 1)
+    # PRICE_MASK: constant(uint256) = 2**PRICE_SIZE - 1
+
     for k in range(N_COINS - 1):
+        # Shift 128 bits to the left
         packed_prices = packed_prices << PRICE_SIZE
+        #                  k | 3 - 2 - k | prices
+        #                  0 | 1         | prices[1]
+        #                  1 | 0         | prices[0]
         p = prices_to_pack[N_COINS - 2 - k]
         assert p < PRICE_MASK
         packed_prices = p | packed_prices
+    # prices[1] | prices[0]
     return packed_prices
 
 
 @internal
 @view
 def _unpack_prices(_packed_prices: uint256) -> uint256[2]:
+    # Returns uint256[2], price scale of coin[0] is 1 so no need to store
     """
     @notice Unpacks N_COINS-1 prices from a uint256.
     @param _packed_prices The packed prices
@@ -829,9 +842,14 @@ def _unpack_prices(_packed_prices: uint256) -> uint256[2]:
     unpacked_prices: uint256[N_COINS-1] = empty(uint256[N_COINS-1])
     packed_prices: uint256 = _packed_prices
     for k in range(N_COINS - 1):
+        # PRICE_SIZE: constant(uint128) = 256 / (N_COINS - 1)
+        # PRICE_MASK: constant(uint256) = 2**PRICE_SIZE - 1
+        #                                    128 bits mask
         unpacked_prices[k] = packed_prices & PRICE_MASK
+        #               shift packed prices by 128 bits to the right
         packed_prices = packed_prices >> PRICE_SIZE
-
+    # unpacked prices = 128 bits |  128 bits
+    #                  prices[1] | prices[0]
     return unpacked_prices
 
 
@@ -1293,6 +1311,8 @@ def _A_gamma() -> uint256[2]:
     t1: uint256 = self.future_A_gamma_time
 
     A_gamma_1: uint256 = self.future_A_gamma
+    # 128 bits | 128 bits
+    #    A     | gamma
     gamma1: uint256 = A_gamma_1 & 2**128 - 1
     A1: uint256 = A_gamma_1 >> 128
 
@@ -1300,13 +1320,31 @@ def _A_gamma() -> uint256[2]:
 
         # --------------- Handle ramping up and down of A --------------------
 
+        """
+           |      _______ A1
+           |     /|
+           |    / |
+           |   x  |
+           |  /|  |
+           | / |  |
+        A0_|/__|__|_______
+           t0  b  t1
+        """
         A_gamma_0: uint256 = self.initial_A_gamma
         t0: uint256 = self.initial_A_gamma_time
 
+        # Sliding t0 and t1 by - t0
         t1 -= t0
         t0 = block.timestamp - t0
         t2: uint256 = t1 - t0
 
+        # t1 = t1 - t0
+        # t0 = b - t0
+        # t2 = (t1 - t0) - (b - t0) = t1 - b
+
+        # A = A0 when b = t0
+        #   = A1 when b = t1
+        #    (A0 * (t1 - b) + A1 * (b - t0)) / (t1 - t0)
         A1 = ((A_gamma_0 >> 128) * t2 + A1 * t0) / t1
         gamma1 = ((A_gamma_0 & 2**128 - 1) * t2 + gamma1 * t0) / t1
 
