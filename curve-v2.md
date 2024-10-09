@@ -14,9 +14,6 @@
 ```
 concentrated liquidity -> price is mean reverting -> LP profit
                        -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
-
-profit if price reverts to EMA
-loss if AMM must repeg
 ```
 
 - xcp -> 0 imbalanced?, max at equilibrium?
@@ -32,6 +29,7 @@ loss if AMM must repeg
 
 - prerequisites
   - Basic DeFi knowledge (DAI, WETH, WBTC, etc)
+  - Advanced Solidity developer
   - curve v1 (CPAMM, CSAMM)
   - uni v3 (concentrated liq)?
   - Foundry
@@ -54,8 +52,8 @@ loss if AMM must repeg
 - Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
 - Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
 - Math - TODO?: quantification of profit?
-    - does it make sense?
-    - TODO?: math (x'y' -> xp -> xcp)
+  - does it make sense?
+  - TODO?: math (x'y' -> xp -> xcp)
 - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
 
 ```
@@ -83,7 +81,7 @@ virtual_price = xcp / total_supply (TODO: why?)
 # Section 3 - Contract overview
 
 - contract overview
-- packed state variables
+- packed state variables, `_pack` and `_unpack`
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
 - xp, xcp, virtual price, D?
