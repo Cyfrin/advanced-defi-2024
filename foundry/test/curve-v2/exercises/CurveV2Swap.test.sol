@@ -7,7 +7,7 @@ import {IStableSwap3Pool} from
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {DAI, USDC, USDT, CURVE_3POOL} from "../../../src/Constants.sol";
 
-contract CurveV1SwapTest is Test {
+contract CurveV2SwapTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
     IERC20 private constant dai = IERC20(DAI);
     IERC20 private constant usdc = IERC20(USDC);

@@ -13,7 +13,7 @@ import {
     CURVE_3CRV
 } from "../../../src/Constants.sol";
 
-contract CurveV1RemoveLiquidityTest is Test {
+contract CurveV2RemoveLiquidityTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
     IERC20 private constant lp = IERC20(CURVE_3CRV);
     IERC20 private constant dai = IERC20(DAI);
