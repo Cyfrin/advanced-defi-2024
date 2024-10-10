@@ -57,23 +57,8 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
 
 ```
-# v1 (for 2 tokens)
-xy / (D / 2)**2 -> max = 1 at balanced -> xy max at x = y = D / 2
-                -> 0 when imbalanced
-
-# v2 (for 2 tokens)
-x' = p0 * x = D / 2 when balanced -> x = D / (2 * p0)
-y' = p1 * y = D / 2 when balanced -> y = D / (2 * p1)
-
-x'y' / (D / 2)**2 -> max = 1 at balanced -> x'y' mat at x' = y' = D / 2
-                  -> 0 when imbalanced
-
 xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
 xcp = geometric_mean(xp)
-
-xcp -> max when x, y at pegged price
-    -> otherwise loss
-
 xcp = value of constant-product invariant at equilibrium
 virtual_price = xcp / total_supply (TODO: why?)
 ```
@@ -86,8 +71,9 @@ virtual_price = xcp / total_supply (TODO: why?)
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
 - xp, xcp, virtual price, D?
-- xcp exercise?
-- get_virtual_price exercise?
+- TODO: price scale exercises?
+- TODO: xcp exercise?
+- TODO: get_virtual_price exercise?
 
 # Section ? - Swap
 
