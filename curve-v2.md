@@ -82,6 +82,7 @@ virtual_price = xcp / total_supply (TODO: why?)
 
 - contract overview
 - packed state variables, `_pack` and `_unpack`
+- TODO: transformed balances exercise?
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
 - xp, xcp, virtual price, D?
