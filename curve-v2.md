@@ -70,8 +70,7 @@ virtual_price = xcp / total_supply (TODO: why?)
 - TODO: transformed balances exercise?
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
-- xp, xcp, virtual price, D?
-- TODO: price scale exercises?
+- `get_virtual_price`
 - TODO: xcp exercise?
 - TODO: get_virtual_price exercise?
 
