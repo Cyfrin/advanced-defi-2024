@@ -1383,6 +1383,9 @@ def get_xcp(D: uint256) -> uint256:
     packed_prices: uint256 = self.price_scale_packed  # <-- No precisions here
     #                                 because we don't switch to "real" units.
 
+    # PRICE_SIZE: constant(uint128) = 256 / (N_COINS - 1)
+    # PRICE_MASK: constant(uint256) = 2**PRICE_SIZE - 1
+
     for i in range(1, N_COINS):
         x[i] = D * 10**18 / (N_COINS * (packed_prices & PRICE_MASK))
         packed_prices = packed_prices >> PRICE_SIZE
