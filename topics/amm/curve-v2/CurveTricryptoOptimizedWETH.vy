@@ -1389,6 +1389,11 @@ def get_xcp(D: uint256) -> uint256:
     for i in range(1, N_COINS):
         x[i] = D * 10**18 / (N_COINS * (packed_prices & PRICE_MASK))
         packed_prices = packed_prices >> PRICE_SIZE
+    """
+    x[0] = D / (N * p0)
+    x[1] = D / (N * p1)
+    x[2] = D / (N * p2)
+    """
 
     """
     (D/(N*p0) * D/(N*p1) ... * D/(N*p(N-1))) ** (1/N)
