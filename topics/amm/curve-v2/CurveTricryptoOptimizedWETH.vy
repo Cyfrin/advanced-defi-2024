@@ -1378,6 +1378,11 @@ x0*x1*x2*...x(N-1) = L**N = xcp**N
 @view
 def get_xcp(D: uint256) -> uint256:
 
+    """
+    x[0] = D / (N * p0) = D / N
+    x[1] = D / (N * p1)
+    x[2] = D / (N * p2)
+    """
     x: uint256[N_COINS] = empty(uint256[N_COINS])
     x[0] = D / N_COINS
     packed_prices: uint256 = self.price_scale_packed  # <-- No precisions here
@@ -1389,11 +1394,6 @@ def get_xcp(D: uint256) -> uint256:
     for i in range(1, N_COINS):
         x[i] = D * 10**18 / (N_COINS * (packed_prices & PRICE_MASK))
         packed_prices = packed_prices >> PRICE_SIZE
-    """
-    x[0] = D / (N * p0)
-    x[1] = D / (N * p1)
-    x[2] = D / (N * p2)
-    """
 
     """
     (D/(N*p0) * D/(N*p1) ... * D/(N*p(N-1))) ** (1/N)
@@ -1826,6 +1826,18 @@ def get_virtual_price() -> uint256:
 
     """
     get_xcp = constant product liquidity L
+    xy = L^2
+    x0 * ... * x(n-1) = L^N
+
+    x'i = D / N
+    xi * pi = D / N
+    xi = D / (N * pi)
+    x0 * ... * x(n-1) = D/N
+                        * D / (N * p1)
+                        * D / (N * p2)
+                        * ...
+                        * D / (N * p(n-1))
+
     virtual price = L / total LP supply
     """
     return 10**18 * self.get_xcp(self.D) / self.totalSupply
