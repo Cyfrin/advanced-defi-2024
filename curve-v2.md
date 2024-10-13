@@ -55,6 +55,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
   - does it make sense?
   - TODO?: math (x'y' -> xp -> xcp)
 - Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
+  - TODO: add video -> to go back to original token balances, external deposits must be made
 
 ```
 xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
