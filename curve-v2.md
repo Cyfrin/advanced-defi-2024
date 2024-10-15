@@ -70,8 +70,8 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 # Section ? - Swap
 
-- contract call
-- trace
+- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - dynamic fee
 - get_dy
 - code walkthrough
@@ -79,16 +79,16 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 # Section ? - Add liquidity
 
-- contract call
-- trace
+- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee
 - code walkthrough
 - exercise
 
 # Section ? - Remove liquidity
 
-- contract call
-- trace
+- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee
 - code walkthrough
   - remove_liquidity
