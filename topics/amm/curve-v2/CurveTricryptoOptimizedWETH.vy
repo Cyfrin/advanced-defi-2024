@@ -860,8 +860,11 @@ def _unpack_prices(_packed_prices: uint256) -> uint256[2]:
 @internal
 def _exchange(
     sender: address,
+    # msg.value
     mvalue: uint256,
+    # token in
     i: uint256,
+    # token out
     j: uint256,
     dx: uint256,
     min_dy: uint256,
