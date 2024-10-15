@@ -54,15 +54,8 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - Math - TODO?: quantification of profit?
   - does it make sense?
   - TODO?: math (x'y' -> xp -> xcp)
-- Graph - [repegging loss](https://www.desmos.com/calculator/weg6ff1pgk)
-  - TODO: add video -> to go back to original token balances, external deposits must be made
-
-```
-xp = [D / (p0 * N), D / (p1 * N), D / (p2 * N), ...]
-xcp = geometric_mean(xp)
-xcp = value of constant-product invariant at equilibrium
-virtual_price = xcp / total_supply (TODO: why?)
-```
+- Graph - [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
+- Graph - [repegging loss part 2](https://www.desmos.com/calculator/weg6ff1pgk)
 
 # Section 3 - Contract overview
 
