@@ -22,6 +22,8 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - course intro
 - what you'll learn
+  - what won't be covered
+    - advanced math (`get_y`)
 - lead instructor
 - best practices
 - setup repo
@@ -72,9 +74,10 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- dynamic fee
+- code walkthrough - `swap`
+- code walkthrough - `_fee`
+- Graph - [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
 - get_dy
-- code walkthrough
 - exercise
 
 # Section ? - Add liquidity
@@ -128,3 +131,4 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [Curve magic](https://hackmd.io/@alltold/curve-magic)
 - [Understanding Crypto Pools](https://docs.kokonutswap.finance/understanding-crypto-pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
+- [Deep Dive: Curve v2 Parameters](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters)

@@ -641,11 +641,10 @@ def wad_exp(_power: int256) -> uint256:
 @pure
 def _reduction_coefficient(x: uint256[N_COINS], fee_gamma: uint256) -> uint256:
 
-    # reduction coefficient = fee_gamma / (fee_gamma + (1 - K))
-    # where
-    # K = prod(x) / (sum(x) / N)**N
-    # K = 1 -> reduction coeff = 1 
-    # K = 0 -> reduction coeff = fee_gamma / (fee_gamma + 1)
+    # reduction coefficient = fee_gamma / (fee_gamma + 1 - K)
+    # K = x[0] ... x[N-1] / ((x[0] + ... + x[N-1]) / N)**N
+    # 0 <= K <= 1
+    # fee_gamma / (fee_gamma + 1) <= reduction coefficient <= 1
 
     S: uint256 = x[0] + x[1] + x[2]
 
