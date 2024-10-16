@@ -36,7 +36,7 @@ contract UniswapV2SwapAmountsTest is Test {
         path[1] = DAI;
         path[2] = MKR;
 
-        uint256 amountOut = 1e18;
+        uint256 amountOut = 1e17;
         uint256[] memory amounts = router.getAmountsIn(amountOut, path);
 
         console2.log("WETH", amounts[0]);
