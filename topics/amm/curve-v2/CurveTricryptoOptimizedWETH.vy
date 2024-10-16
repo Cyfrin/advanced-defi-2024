@@ -1359,11 +1359,21 @@ def _A_gamma() -> uint256[2]:
 @view
 def _fee(xp: uint256[N_COINS]) -> uint256:
     fee_params: uint256[3] = self._unpack(self.packed_fee_params)
+    # fee_params[0], fee_params[1], fee_params[2]
+    #       mid_fee,       out_fee,     fee_gamma
+    # mid_fee = min fee multiplier
+    # out_fee = max fee multiplier
+    # fee_gamma = set how quick mid_fee increases to out_fee
+
     f: uint256 = MATH.reduction_coefficient(xp, fee_params[2])
-    # fee_gamma[0], fee_gamma[1], fee_gamma[2]
-    #      mid_fee,      out_fee,    fee_gamma
-    # (imbalanced pool) fee_gamma / (1 + fee_gamma) <= f <= 1 (balanced pool)
-    # fee = mid_fee * f + out_fee * (1 - f)
+    # f = fee_gamma / (fee_gamma + 1 - K)
+    # K = x[0] ... x[N-1] / ((x[0] + ... + x[N-1]) / N)**N
+    # 0 <= K <= 1
+    # fee_gamma / (fee_gamma + 1) <= f <= 1
+
+    # mid_fee * f + out_fee * (1 - f)
+    # balances pool   -> K = 1  -> f = 1  -> mid_fee
+    # imbalanced pool -> K -> 0 -> f -> 0 -> out_fee
     return unsafe_div(
         fee_params[0] * f + fee_params[1] * (10**18 - f),
         10**18
