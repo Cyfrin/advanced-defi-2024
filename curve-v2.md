@@ -72,18 +72,17 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 # Section ? - Swap
 
-- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- code walkthrough - `swap`
-- code walkthrough - `_fee`
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- Code walkthrough - `swap`
+- Code walkthrough - `_fee`
 - Graph - [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
-- get_dy
 - exercise
 
 # Section ? - Add liquidity
 
-- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee
 - code walkthrough
 - exercise
