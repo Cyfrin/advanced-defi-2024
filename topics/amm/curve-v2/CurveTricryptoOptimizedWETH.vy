@@ -525,6 +525,7 @@ def add_liquidity(
     """
 
     A_gamma: uint256[2] = self._A_gamma()
+    # transformed balances
     xp: uint256[N_COINS] = self.balances
     # amountsp = xp - xp_old
     amountsp: uint256[N_COINS] = empty(uint256[N_COINS])
@@ -603,6 +604,7 @@ def add_liquidity(
     if old_D > 0:
         d_token = token_supply * D / old_D - token_supply
     else:
+        # (D/(N*p0) * D/(N*p1) ... * D/(N*p(N-1))) ** (1/N)
         d_token = self.get_xcp(D)  # <------------------------- Making initial
         #                                            virtual price equal to 1.
 
