@@ -85,6 +85,8 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee
 - code walkthrough
+  - add_liquidity
+  - calc_token_fee
 - exercise
 
 # Section ? - Remove liquidity
