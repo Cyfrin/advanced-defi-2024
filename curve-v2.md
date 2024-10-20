@@ -131,3 +131,4 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [Understanding Crypto Pools](https://docs.kokonutswap.finance/understanding-crypto-pools)
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
 - [Deep Dive: Curve v2 Parameters](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters)
+- [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
