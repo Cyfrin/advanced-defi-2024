@@ -1476,7 +1476,9 @@ def _calc_withdraw_one_coin(
     for k in range(1, N_COINS):
         p: uint256 = (packed_prices & PRICE_MASK)
         if i == k:
+            #               price scale * precision
             price_scale_i = p * xp[i]
+        #       precision * balances[i] * price_scale[i] / PRECISION
         xp[k] = unsafe_div(xp[k] * xx[k] * p, PRECISION)
         packed_prices = packed_prices >> PRICE_SIZE
 
@@ -1500,9 +1502,16 @@ def _calc_withdraw_one_coin(
     #   default. This is because the fee calculation will otherwise underflow.
 
     xp_imprecise: uint256[N_COINS] = xp
+    # balanced withdrawal = from xp[0] -> xp[0] * token_amount / token_supply
+    #                       from xp[1] -> xp[1] * token_amount / token_supply
+    #                       from xp[2] -> xp[2] * token_amount / token_supply
+    # imbalanced withdrawal
+    # assumes xp[0] ~= xp[1] ~= xp[2]  -> xp[i] * N * token_amount / token_supply
     xp_correction: uint256 = xp[i] * N_COINS * token_amount / token_supply
     fee: uint256 = self._unpack(self.packed_fee_params)[1]  # <- self.out_fee.
 
+    # Deduct xp[i] * N * token_amount / token_supply from xp[i]
+    # and calculate fee
     if xp_correction < xp_imprecise[i]:
         xp_imprecise[i] -= xp_correction
         fee = self._fee(xp_imprecise)
@@ -1517,6 +1526,13 @@ def _calc_withdraw_one_coin(
     # ------------------------------------------------------------------------
     D -= (dD - D_fee)  # <----------------------------------- Charge fee on D.
     # --------------------------------- Calculate `y_out`` with `(D - D_fee)`.
+    # D0 = D before -dD
+    # y0 = xp[i]
+    # y1 = MATH.get_y(A_gamma[0], A_gamma[1], xp, D0 - dD, i)[0]
+    #
+    # D0 >= D0 - dD + D_fee >= D0 - dD
+    # y0 >= y >= y1
+    # y0 - y1 >= y0 - y = dy
     y: uint256 = MATH.get_y(A_gamma[0], A_gamma[1], xp, D, i)[0]
     dy: uint256 = (xp[i] - y) * PRECISION / price_scale_i
     xp[i] = y
