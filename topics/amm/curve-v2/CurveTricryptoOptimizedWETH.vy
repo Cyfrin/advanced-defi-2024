@@ -65,7 +65,7 @@ event Transfer:
     receiver: indexed(address)
     value: uint256
 
-event Approval:
+event Approvale
     owner: indexed(address)
     spender: indexed(address)
     value: uint256
@@ -690,6 +690,7 @@ def remove_liquidity(
             balances[i] = d_balances[i]  # <-- Now it's the amounts going out.
 
     D: uint256 = self.D
+    # D1 / D0 = (total_supply - amount) / total_supply
     self.D = D - unsafe_div(D * amount, total_supply)  # <----------- Reduce D
     #      proportional to the amount of tokens leaving. Since withdrawals are
     #       balanced, this is a simple subtraction. If amount == total_supply,
