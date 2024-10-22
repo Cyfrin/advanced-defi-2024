@@ -83,7 +83,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- imbalance fee
+- imbalance fee?
 - code walkthrough
   - add_liquidity
   - calc_token_fee
@@ -93,7 +93,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- imbalance fee
+- imbalance fee?
 - code walkthrough
   - remove_liquidity
   - remove_liquidity_one_coin
@@ -107,11 +107,11 @@ concentrated liquidity -> price is mean reverting -> LP profit
   - python code example
   - code walkthrough
 - tweak_price
-  - trace
+  - code outline
   - `xcp_profit`
   - code walkthrough
 - claim_admin_fees
-  - trace
+  - code outline
   - `xcp_profit` and `xcp_profit_a`
   - code walkthrough
 - EMA exercises?
