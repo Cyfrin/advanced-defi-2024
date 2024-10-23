@@ -1478,7 +1478,7 @@ def _calc_withdraw_one_coin(
         if i == k:
             #               price scale * precision
             price_scale_i = p * xp[i]
-        #       precision * balances[i] * price_scale[i] / PRECISION
+        #       precision[k] * balances[k] * price_scale[k] / PRECISION
         xp[k] = unsafe_div(xp[k] * xx[k] * p, PRECISION)
         packed_prices = packed_prices >> PRICE_SIZE
 
