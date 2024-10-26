@@ -121,6 +121,11 @@ contract AaveV3Test is Test {
 }
 
 contract AaveV3FlashLoanSimpleTest is Test {
+    error NotDAI();
+    error InvalidAmount();
+    error NotAuthorized();
+    error InvalidInitiator();
+
     IPool private constant pool = IPool(POOL_PROXY);
     IERC20 private constant dai = IERC20(DAI);
 
@@ -136,15 +141,22 @@ contract AaveV3FlashLoanSimpleTest is Test {
         address initiator,
         bytes calldata params
     ) external returns (bool) {
-        require(asset == DAI, "not DAI");
-        require(amount == 1e6 * 1e18, "invalid amount");
+        if (asset != DAI) {
+            revert NotDAI();
+        }
+        if (amount != 1e6 * 1e18) {
+            revert InvalidAmount();
+        }
 
         console2.log("DAI", dai.balanceOf(address(this)));
         console2.log("fee", premium);
 
-        require(msg.sender == address(pool), "not authorized");
-        require(initiator == address(this), "invalid initiator");
-
+        if (msg.sender != address(pool)) {
+            revert NotAuthorized();
+        }
+        if (initiator != address(this)) {
+            revert InvalidInitiator();
+        }
         (uint256 num, address addr) = abi.decode(params, (uint256, address));
         console2.log("NUM", num);
         console2.log("addr", addr);

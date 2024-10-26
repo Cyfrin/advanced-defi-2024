@@ -5,6 +5,8 @@ import {IUniswapV2Pair} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Pair.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 
+error InsufficientProfit();
+
 contract UniswapV2Arb2 {
     struct FlashSwapData {
         // Caller of flashSwap (msg.sender inside flashSwap)
@@ -108,7 +110,9 @@ contract UniswapV2Arb2 {
         IERC20(tokenIn).transfer(params.pair0, params.amountIn);
 
         uint256 profit = amountOut - params.amountIn;
-        require(profit >= params.minProfit, "profit < min");
+        if (profit < params.minProfit) {
+            revert InsufficientProfit();
+        }
         IERC20(tokenIn).transfer(params.caller, profit);
     }
 

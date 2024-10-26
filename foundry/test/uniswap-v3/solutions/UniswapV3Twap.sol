@@ -6,6 +6,8 @@ import {FullMath} from "../../../src/uniswap-v3/FullMath.sol";
 import {IUniswapV3Pool} from
     "../../../src/interfaces/uniswap-v3/IUniswapV3Pool.sol";
 
+error InvalidToken();
+
 contract UniswapV3Twap {
     IUniswapV3Pool public immutable pool;
     address public immutable token0;
@@ -49,8 +51,9 @@ contract UniswapV3Twap {
         returns (uint256 amountOut)
     {
         // Task 1 - Require tokenIn is token0 or token1
-        require(tokenIn == token0 || tokenIn == token1, "invalid token");
-        // Task 2 - Assign tokenOut
+        if (tokenIn != token0 && tokenIn != token1) {
+            revert InvalidToken();
+        } // Task 2 - Assign tokenOut
         address tokenOut = tokenIn == token0 ? token1 : token0;
 
         // Task 3 - Fill out timeDeltas with dt and 0

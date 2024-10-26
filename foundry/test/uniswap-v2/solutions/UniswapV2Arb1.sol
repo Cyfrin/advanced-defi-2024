@@ -7,6 +7,8 @@ import {IUniswapV2Router02} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Router02.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 
+error InsufficientProfit();
+
 contract UniswapV2Arb1 {
     struct SwapParams {
         // Router to execute first swap - tokenIn for tokenOut
@@ -71,7 +73,9 @@ contract UniswapV2Arb1 {
             msg.sender, address(this), params.amountIn
         );
         uint256 amountOut = _swap(params);
-        require(amountOut - params.amountIn >= params.minProfit, "profit < min");
+        if (amountOut - params.amountIn < params.minProfit) {
+            revert InsufficientProfit();
+        }
         IERC20(params.tokenIn).transfer(msg.sender, amountOut);
     }
 
@@ -117,8 +121,9 @@ contract UniswapV2Arb1 {
         uint256 amountToRepay = params.amountIn + fee;
 
         uint256 profit = amountOut - amountToRepay;
-        require(profit >= params.minProfit, "profit < min");
-
+        if (profit < params.minProfit) {
+            revert InsufficientProfit();
+        }
         IERC20(params.tokenIn).transfer(address(pair), amountToRepay);
         IERC20(params.tokenIn).transfer(caller, profit);
     }

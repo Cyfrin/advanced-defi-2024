@@ -7,6 +7,10 @@ import {FixedPoint} from "../../../src/uniswap-v2/FixedPoint.sol";
 
 // Modified from https://github.com/Uniswap/v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol
 // Do not use this contract in production
+
+error InsufficientTimeElapsed();
+error InvalidToken();
+
 contract UniswapV2Twap {
     using FixedPoint for *;
 
@@ -94,8 +98,9 @@ contract UniswapV2Twap {
         //    updated in this contract
         uint32 dt = blockTimestamp - updatedAt;
         // 3. Require time elapsed >= MIN_WAIT
-        require(dt >= MIN_WAIT, "dt < min wait");
-
+        if (dt < MIN_WAIT) {
+            revert InsufficientTimeElapsed();
+        }
         // 4. Call the internal function _getCurrentCumulativePrices to get
         //    current cumulative prices
         (uint256 price0Cumulative, uint256 price1Cumulative) =
@@ -132,8 +137,9 @@ contract UniswapV2Twap {
         returns (uint256 amountOut)
     {
         // 1. Require tokenIn is either token0 or token1
-        require(tokenIn == token0 || tokenIn == token1, "invalid token");
-
+        if (tokenIn != token0 && tokenIn != token1) {
+            revert InvalidToken();
+        }
         // 2. Calculate amountOut
         //    - amountOut = TWAP of tokenIn * amountIn
         //    - Use FixePoint.mul to multiply TWAP of tokenIn with amountIn
