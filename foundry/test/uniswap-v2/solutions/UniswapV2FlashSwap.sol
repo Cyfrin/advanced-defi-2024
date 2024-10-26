@@ -5,6 +5,10 @@ import {IUniswapV2Pair} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Pair.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 
+error InvalidToken();
+error NotPair();
+error NotSender();
+
 contract UniswapV2FlashSwap {
     IUniswapV2Pair private immutable pair;
     address private immutable token0;
@@ -17,8 +21,9 @@ contract UniswapV2FlashSwap {
     }
 
     function flashSwap(address token, uint256 amount) external {
-        require(token == token0 || token == token1, "invalid token");
-
+        if (token != token0 && token != token1) {
+            revert InvalidToken();
+        }
         // Write your code here
         // Don’t change any other code
 
@@ -54,9 +59,13 @@ contract UniswapV2FlashSwap {
         //                    <-- sender = FlashSwap --
         // Eve ------------ to = FlashSwap -----------> UniswapV2Pair
         //          FlashSwap <-- sender = Eve --------
-        require(msg.sender == address(pair), "not pair");
-        require(sender == address(this), "not sender");
-
+        if (msg.sender != address(pair)) {
+            revert NotPair();
+        }
+        // 2. Check sender is this contract
+        if (sender != address(this)) {
+            revert NotSender();
+        }
         // 3. Decode token and caller from data
         (address token, address caller) = abi.decode(data, (address, address));
         // 4. Determine amount borrowed (only one of them is > 0)

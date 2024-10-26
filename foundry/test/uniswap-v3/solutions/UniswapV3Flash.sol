@@ -5,6 +5,8 @@ import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {IUniswapV3Pool} from
     "../../../src/interfaces/uniswap-v3/IUniswapV3Pool.sol";
 
+error NotAuthorized();
+
 contract UniswapV3Flash {
     struct FlashCallbackData {
         uint256 amount0;
@@ -42,7 +44,9 @@ contract UniswapV3Flash {
         bytes calldata data
     ) external {
         // Task 3 - Check msg.sender is pool
-        require(msg.sender == address(pool), "not authorized");
+        if (msg.sender != address(pool)) {
+            revert NotAuthorized();
+        }
 
         // Task 4 - Decode data into FlashCallbackData
         FlashCallbackData memory decoded = abi.decode(data, (FlashCallbackData));

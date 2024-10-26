@@ -5,6 +5,8 @@ import {IUniswapV2Pair} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Pair.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 
+error InvalidToken();
+
 contract UniswapV2FlashSwap {
     IUniswapV2Pair private immutable pair;
     address private immutable token0;
@@ -17,7 +19,9 @@ contract UniswapV2FlashSwap {
     }
 
     function flashSwap(address token, uint256 amount) external {
-        require(token == token0 || token == token1, "invalid token");
+        if (token != token0 && token != token1) {
+            revert InvalidToken();
+        }
 
         // Write your code here
         // Don’t change any other code
