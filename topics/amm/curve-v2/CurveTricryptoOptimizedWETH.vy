@@ -1897,11 +1897,12 @@ def price_oracle(k: uint256) -> uint256:
 
         last_prices: uint256 = self._unpack_prices(self.last_prices_packed)[k]
         ma_time: uint256 = self._unpack(self.packed_rebalancing_params)[2]
-        # ma_time = half decay time / ln(2)
-        # a = e**(ln(0.5) * dt / H)
+        # ma_time = half life / ln(2)
+        # alpha = e**(ln(0.5) * dt / H)
+        #
         # ln(0.5) = ln(1/2) = -ln(2)
         #
-        # e**(-dt / ma_time)
+        # e**(-dt / ma_time) = e**(-ln(2) * dt / half life)
         alpha: uint256 = MATH.wad_exp(
             -convert(
                 (block.timestamp - last_prices_timestamp) * 10**18 / ma_time,
