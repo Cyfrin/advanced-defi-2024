@@ -109,10 +109,11 @@ concentrated liquidity -> price is mean reverting -> LP profit
     - graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
   - [python code example - regular interval](./notebook/curve_v2_ema.ipynb)
   - [python code example - irregular interval](./notebook/curve_v2_ema.ipynb)
+  - Word about math and code (alpha = 1 - a)
   - `price_oracle` code walkthrough
 - tweak_price
   - code outline
-  - `xcp_profit`
+  - how does `xcp_profit` track profit / loss?
   - code walkthrough
 - claim_admin_fees
   - code outline

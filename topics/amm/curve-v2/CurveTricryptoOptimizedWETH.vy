@@ -1033,6 +1033,7 @@ def tweak_price(
 
             # ----------------- We cap state price that goes into the EMA with
             #                                                 2 x price_scale.
+            # new EMA = min(last price, 2 * price scale) * (1 - alpha) + old EMA * alpha
             price_oracle[k] = unsafe_div(
                 min(last_prices[k], 2 * price_scale[k]) * (10**18 - alpha) +
                 price_oracle[k] * alpha,  # ^-------- Cap spot price into EMA.
@@ -1081,14 +1082,14 @@ def tweak_price(
         virtual_price = 10**18 * xcp / total_supply
 
         """"
-        new _xp -> calc D -> calc xp -> calc xcp -> calc virtual_price
-
-        TODO: growth rate of vp only from fee because this calc is done before repeg?
-        future_A_gamma affects virtual price?
-        -> yes -> future_A_gamma -> D -> xp -> xcp -> virtual price
-
         xcp_profit = initial virtual price * (accumulated profit / loss rate of virtual price before repeg)
                      initial virtual price = 1
+
+        virtual price at time t = v0, v1, v2, ..., vn
+        v0 = 1
+        xcp_profit = v1 / v0 * v2 / v1 * v3 / v2 ... * vn / v_(n-1)
+                   = vn / v0
+                   = how much increase or decrease from initial virtual price
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
@@ -1154,6 +1155,8 @@ def tweak_price(
 
             p_new: uint256[N_COINS - 1] = empty(uint256[N_COINS - 1])
             for k in range(N_COINS - 1):
+                # p_new = (price_scale * (norm - adj_step) + adj_step * EMA)) / norm
+                #       =  price_scale * (1 - adj_step / norm) + adj_step / norm * EMA
                 p_new[k] = unsafe_div(
                     price_scale[k] * unsafe_sub(norm, adjustment_step)
                     + adjustment_step * price_oracle[k],
