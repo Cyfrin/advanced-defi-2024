@@ -111,6 +111,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
   - [python code example - irregular interval](./notebook/curve_v2_ema.ipynb)
   - Word about math and code (alpha = 1 - a)
   - `price_oracle` code walkthrough
+- when tweak_price is called
 - tweak_price
   - code outline
   - how does `xcp_profit` track profit / loss?
