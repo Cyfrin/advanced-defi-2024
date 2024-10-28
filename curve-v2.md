@@ -104,8 +104,10 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - EMA
   - math
+    - [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
+    - [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png]
   - python code example
-  - code walkthrough
+  - `price_oracle` code walkthrough
 - tweak_price
   - code outline
   - `xcp_profit`
