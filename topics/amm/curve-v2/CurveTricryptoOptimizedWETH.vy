@@ -1087,7 +1087,11 @@ def tweak_price(
 
         virtual price at time t = v0, v1, v2, ..., vn
         v0 = 1
-        xcp_profit = v1 / v0 * v2 / v1 * v3 / v2 ... * vn / v_(n-1)
+        xcp_profit = v1_new / v0 * v2_new / v1_old * v3 / v2_new ... * vn / v_(n-1)
+                   vi_new <= vi_old after claim admin fees
+                   vi_new >= or <= vi_old after repeg
+
+                   when vi_new = vi_old
                    = vn / v0
                    = how much increase or decrease from initial virtual price
         """
