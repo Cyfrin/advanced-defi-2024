@@ -53,11 +53,9 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
 - Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
 - Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
-- Math - TODO?: quantification of profit?
-  - does it make sense?
-  - TODO?: math (x'y' -> xp -> xcp)
 - Graph - [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
 - Graph - [repegging loss part 2](https://www.desmos.com/calculator/weg6ff1pgk)
+- Math - Pool value
 
 # Section 3 - Contract overview
 
