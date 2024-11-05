@@ -61,6 +61,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 - contract overview
 - packed state variables, `_pack` and `_unpack`
+- price scale
 - TODO: transformed balances exercise?
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
@@ -89,11 +90,16 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 # Section ? - Remove liquidity
 
+- remove_liquidity
+- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- code walkthrough
+  - remove_liquidity
+- exercise
 - [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee?
 - code walkthrough
-  - remove_liquidity
   - remove_liquidity_one_coin
   - calc_withdraw_one_coin?
 - exercise
@@ -103,12 +109,13 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - EMA
   - math
     - [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
+  - [python code example - regular interval](./notebook/curve_v2_ema.ipynb)
+  - math
     - [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png]
     - graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
-  - [python code example - regular interval](./notebook/curve_v2_ema.ipynb)
   - [python code example - irregular interval](./notebook/curve_v2_ema.ipynb)
   - Word about math and code (alpha = 1 - a)
-  - `price_oracle` code walkthrough
+  - `price_oracle` code walkthrough?
 - when tweak_price is called
 - tweak_price
   - code outline
