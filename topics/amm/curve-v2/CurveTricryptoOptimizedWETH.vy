@@ -1258,8 +1258,9 @@ def _claim_admin_fees():
     #         (50% => half of 100% => 10**10 / 2 => 5 * 10**9).
     #      3. Since half of the profits go to rebalancing the pool, we
     #         are left with half; so divide by 2.
-
-    # TODO: wat dis? why xcp_profit - xcp_profit_a
+    #   (xcp_profit - xcp_profit_a) * (5 * 1e9)  / (2 * 1e10)
+    # = (xcp_profit - xcp_profit_a) * 5  / (2 * 10)
+    # = (xcp_profit - xcp_profit_a) * 1 / 4
     fees: uint256 = unsafe_div(
         unsafe_sub(xcp_profit, xcp_profit_a) * ADMIN_FEE, 2 * 10**10
     )
@@ -1268,17 +1269,18 @@ def _claim_admin_fees():
     #                                                of the pool in LP tokens.
     receiver: address = Factory(self.factory).fee_receiver()
     if receiver != empty(address) and fees > 0:
-        # TODO: wat dis?
         # v = vprice
         # f = fees
         # T = total supply
+        # q = frac = % growth of vprice from v - f to v
+        # Similar to LP provider increasing liquidity from v - f to v.
         # Increase total supply proportional to v / (v - f)
         # T * (1 + q) / T = v / (v - f)
         # q = v / (v - f) - 1
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
         claimed: uint256 = self.mint_relative(receiver, frac)
 
-        # TODO: why fees * 2?
+        # fees * 2 = (xcp_profit - xcp_profit_a) * 1 / 2
         xcp_profit -= fees * 2
 
         self.xcp_profit = xcp_profit
