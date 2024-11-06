@@ -1113,7 +1113,6 @@ def tweak_price(
     when allowed_extra_profit = 0
 
     virtual_price > (1 + xcp_profit) / 2
-                     = (xcp_profit - 1) / 2 + 1 = half of growth rate of xcp
 
     |----------------- xcp_profit
     |
@@ -1258,6 +1257,22 @@ def _claim_admin_fees():
     #         (50% => half of 100% => 10**10 / 2 => 5 * 10**9).
     #      3. Since half of the profits go to rebalancing the pool, we
     #         are left with half; so divide by 2.
+
+    # |---------- xcp_profit            ----
+    # |---------- virtual_price             | profit used for rebalancing
+    # |---------- (1 + xcp_profit) / 2  ----
+    # |---------- 1                         | profit to be split by admin
+    #
+    # ------- xcp_profit -------
+    #                          |
+    # --------------------------
+    #                          |
+    # --------------------------- 50% of profit
+    #                          |
+    # --------------------------- 1/2 of 50% profit = admin's claim
+    #                          |
+    # ------- xcp_profit_a -----
+    #
     #   (xcp_profit - xcp_profit_a) * (5 * 1e9)  / (2 * 1e10)
     # = (xcp_profit - xcp_profit_a) * 5  / (2 * 10)
     # = (xcp_profit - xcp_profit_a) * 1 / 4
@@ -1280,7 +1295,8 @@ def _claim_admin_fees():
         frac: uint256 = vprice * 10**18 / (vprice - fees) - 10**18
         claimed: uint256 = self.mint_relative(receiver, frac)
 
-        # fees * 2 = (xcp_profit - xcp_profit_a) * 1 / 2
+        # fees * 2 = (xcp_profit - xcp_profit_a) / 2
+        # TODO: why -= profit / 2?
         xcp_profit -= fees * 2
 
         self.xcp_profit = xcp_profit
