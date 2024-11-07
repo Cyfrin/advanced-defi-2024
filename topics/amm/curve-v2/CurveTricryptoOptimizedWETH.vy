@@ -1085,15 +1085,27 @@ def tweak_price(
         xcp_profit = initial virtual price * (accumulated profit / loss rate of virtual price before repeg)
                      initial virtual price = 1
 
-        virtual price at time t = v0, v1, v2, ..., vn
-        v0 = 1
-        xcp_profit = v1_new / v0 * v2_new / v1_old * v3 / v2_new ... * vn / v_(n-1)
-                   vi_new <= vi_old after claim admin fees
-                   vi_new >= or <= vi_old after repeg
+        v_old[i] = virtual price stored in state variable at time i
+        v_new[i] = virtual price calculated at time i
+        v_old[0] = 1
 
-                   when vi_new = vi_old
-                   = vn / v0
-                   = how much increase or decrease from initial virtual price
+        xcp_profit = 1 * (v_new[0] / v_old[0]) * (v_new[1] / v_old[1]) * (v_new[2] / v_old[2]) * .. * (v_new[n] / v_old[n])
+
+        Virtual price is updated
+        - here, further down in the code
+        - claim_admin_fees
+
+        (1) Simple example without updates from claim_admin_fees
+        Imagine self.virtual_price doesn't change in between calls to tweak_price
+        v_new[i] = v_old[i + 1]
+
+        xcp_profit = v_new[n] / v_old[0]
+                   = v_new[n]
+
+        (2) Example with updates from claim_admin_fees
+        self.virtual_price may change in between calls to tweak_price
+
+        xcp_profit = 1 * (v_new[0] / v_old[0]) * (v_new[1] / v_old[1]) * (v_new[2] / v_old[2]) * .. * (v_new[n] / v_old[n])
         """
         xcp_profit = unsafe_div(
             old_xcp_profit * virtual_price,
