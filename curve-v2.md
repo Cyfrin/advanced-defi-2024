@@ -76,7 +76,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - Code walkthrough - `swap`
 - Code walkthrough - `_fee`
 - Graph - [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
-- exercise
+- [ ] exercise
 
 # Section ? - Add liquidity
 
@@ -86,7 +86,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - code walkthrough
   - add_liquidity
   - calc_token_fee
-- exercise
+- [ ] exercise
 
 # Section ? - Remove liquidity
 
@@ -95,14 +95,14 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - code walkthrough
   - remove_liquidity
-- exercise
+- [ ] exercise
 - [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - imbalance fee?
 - code walkthrough
   - remove_liquidity_one_coin
-  - calc_withdraw_one_coin?
-- exercise
+  - TODO: ? calc_withdraw_one_coin?
+- [ ] exercise
 
 # Section ? - Price repegging
 
@@ -120,17 +120,17 @@ concentrated liquidity -> price is mean reverting -> LP profit
   - when tweak_price is called
   - code outline
   - code walkthrough
-  - how does `xcp_profit` track profit / loss?
-- claim_admin_fees
+  - [ ] how does `xcp_profit` track profit / loss?
+- [ ] claim_admin_fees
   - when claim_admin_fees is called
   - code outline
   - code walkthrough
   - `xcp_profit` and `xcp_profit_a`
-- EMA exercises?
+- TODO: EMA exercises?
 
 # Section ? - Footnote
 
-- dy / dx
+- [ ] dy / dx
 
 ### Resources
 
