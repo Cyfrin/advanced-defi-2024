@@ -120,7 +120,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
   - when tweak_price is called
   - code outline
   - code walkthrough
-  - [ ] how does `xcp_profit` track profit / loss?
+  - [x] how does `xcp_profit` track profit / loss?
 - [ ] claim_admin_fees
   - when claim_admin_fees is called
   - code outline
