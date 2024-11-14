@@ -17,6 +17,14 @@ contract CurveV2PriceScaleTest is Test {
         uint256[3] memory xp = [uint256(0), uint256(0), uint256(0)];
         uint256[3] memory precisions = pool.precisions();
 
+        // Write your code here
+        xp[0] = pool.balances(0) * precisions[0];
+        for (uint256 i = 1; i < 3; i++) {
+            uint256 bal = pool.balances(i);
+            uint256 p = pool.price_scale(i - 1);
+            xp[i] = bal * p * precisions[i] / PRECISIONS;
+        }
+
         console2.log("xp[0] = %e", xp[0]);
         console2.log("xp[1] = %e", xp[1]);
         console2.log("xp[2] = %e", xp[2]);

@@ -1270,11 +1270,6 @@ def _claim_admin_fees():
     #      3. Since half of the profits go to rebalancing the pool, we
     #         are left with half; so divide by 2.
 
-    # |---------- xcp_profit            ----
-    # |---------- virtual_price             | profit used for rebalancing
-    # |---------- (1 + xcp_profit) / 2  ----
-    # |---------- 1                         | profit to be split by admin
-    #
     # ------- xcp_profit -------
     #                          |
     # --------------------------
@@ -1286,7 +1281,7 @@ def _claim_admin_fees():
     # ------- xcp_profit_a -----
     #
     #   (xcp_profit - xcp_profit_a) * (5 * 1e9)  / (2 * 1e10)
-    # = (xcp_profit - xcp_profit_a) * 5  / (2 * 10)
+    # = (xcp_profit - xcp_profit_a) * 5 / (2 * 10)
     # = (xcp_profit - xcp_profit_a) * 1 / 4
     fees: uint256 = unsafe_div(
         unsafe_sub(xcp_profit, xcp_profit_a) * ADMIN_FEE, 2 * 10**10
