@@ -13,6 +13,13 @@ import {
     CURVE_3CRV
 } from "../../../src/Constants.sol";
 
+/*
+forge test \
+--evm-version cancun \
+--fork-url $FORK_URL \
+--match-path test/curve-v2/exercises/CurveV2AddLiquidity.test.sol -vvv
+*/
+
 contract CurveV2AddLiquidityTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
     IERC20 private constant lp = IERC20(CURVE_3CRV);

@@ -7,6 +7,14 @@ import {IStableSwap3Pool} from
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {DAI, USDC, USDT, CURVE_3POOL} from "../../../src/Constants.sol";
 
+/*
+forge test \
+--evm-version cancun \
+--fork-url $FORK_URL \
+--match-test test_get_dy \
+--match-path test/curve-v2/exercises/CurveV2Swap.test.sol -vvv
+*/
+
 contract CurveV2SwapTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
     IERC20 private constant dai = IERC20(DAI);

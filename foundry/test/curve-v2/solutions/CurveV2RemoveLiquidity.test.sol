@@ -6,6 +6,14 @@ import {ITriCrypto} from "../../../src/interfaces/curve/ITriCrypto.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {USDC, WBTC, WETH, CURVE_TRI_CRYPTO} from "../../../src/Constants.sol";
 
+/*
+forge test \
+--evm-version cancun \
+--fork-url $FORK_URL \
+--match-test test_remove_liquidity \
+--match-path test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol -vvv
+*/
+
 contract CurveV2RemoveLiquidityTest is Test {
     ITriCrypto private constant pool = ITriCrypto(CURVE_TRI_CRYPTO);
     IERC20 private constant usdc = IERC20(USDC);

@@ -8,6 +8,13 @@ import {CURVE_TRI_CRYPTO} from "../../../src/Constants.sol";
 
 uint256 constant PRECISIONS = 1e18;
 
+/*
+forge test \
+--evm-version cancun \
+--fork-url $FORK_URL \
+--match-path test/curve-v2/exercises/CurveV2PriceScale.test.sol -vvv
+*/
+
 contract CurveV2PriceScaleTest is Test {
     IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_TRI_CRYPTO);
 
