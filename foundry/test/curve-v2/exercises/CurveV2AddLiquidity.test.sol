@@ -2,8 +2,7 @@
 pragma solidity 0.8.24;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {IStableSwap3Pool} from
-    "../../../src/interfaces/curve/IStableSwap3Pool.sol";
+import {ITriCrypto} from "../../../src/interfaces/curve/ITriCrypto.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {
     DAI,
@@ -21,7 +20,7 @@ forge test \
 */
 
 contract CurveV2AddLiquidityTest is Test {
-    IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
+    ITriCrypto private constant pool = ITriCrypto(CURVE_3POOL);
     IERC20 private constant lp = IERC20(CURVE_3CRV);
     IERC20 private constant dai = IERC20(DAI);
     IERC20 private constant usdc = IERC20(USDC);

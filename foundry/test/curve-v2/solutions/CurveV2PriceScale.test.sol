@@ -2,8 +2,7 @@
 pragma solidity 0.8.24;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {IStableSwap3Pool} from
-    "../../../src/interfaces/curve/IStableSwap3Pool.sol";
+import {ITriCrypto} from "../../../src/interfaces/curve/ITriCrypto.sol";
 import {CURVE_TRI_CRYPTO} from "../../../src/Constants.sol";
 
 uint256 constant PRECISIONS = 1e18;
@@ -16,7 +15,7 @@ forge test \
 */
 
 contract CurveV2PriceScaleTest is Test {
-    IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_TRI_CRYPTO);
+    ITriCrypto private constant pool = ITriCrypto(CURVE_TRI_CRYPTO);
 
     // Exercise 1
     // Calculate transformed balances

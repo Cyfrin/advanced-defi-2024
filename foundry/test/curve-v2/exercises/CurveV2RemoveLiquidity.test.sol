@@ -2,8 +2,7 @@
 pragma solidity 0.8.24;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {IStableSwap3Pool} from
-    "../../../src/interfaces/curve/IStableSwap3Pool.sol";
+import {ITriCrypto} from "../../../src/interfaces/curve/ITriCrypto.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {
     DAI,
@@ -22,7 +21,7 @@ forge test \
 */
 
 contract CurveV2RemoveLiquidityTest is Test {
-    IStableSwap3Pool private constant pool = IStableSwap3Pool(CURVE_3POOL);
+    ITriCrypto private constant pool = ITriCrypto(CURVE_3POOL);
     IERC20 private constant lp = IERC20(CURVE_3CRV);
     IERC20 private constant dai = IERC20(DAI);
     IERC20 private constant usdc = IERC20(USDC);
@@ -32,8 +31,13 @@ contract CurveV2RemoveLiquidityTest is Test {
         deal(DAI, address(this), 1e6 * 1e18);
         dai.approve(address(pool), type(uint256).max);
 
-        uint256[3] memory coins = [uint256(1e6 * 1e18), uint256(0), uint256(0)];
-        pool.add_liquidity(coins, 1);
+        uint256[3] memory amounts = [uint256(1e3 * 1e6), uint256(0), uint256(0)];
+        pool.add_liquidity({
+            amounts: amounts,
+            min_lp: 1,
+            use_eth: false,
+            receiver: address(this)
+        });
     }
 
     // Exercise 1

@@ -13,7 +13,6 @@ forge test \
 --match-path test/curve-v2/solutions/CurveV2AddLiquidity.test.sol -vvv
 */
 
-
 contract CurveV2AddLiquidityTest is Test {
     ITriCrypto private constant pool = ITriCrypto(CURVE_TRI_CRYPTO);
     IERC20 private constant usdc = IERC20(USDC);
