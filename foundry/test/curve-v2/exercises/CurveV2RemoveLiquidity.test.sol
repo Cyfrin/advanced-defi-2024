@@ -4,13 +4,7 @@ pragma solidity 0.8.24;
 import {Test, console2} from "forge-std/Test.sol";
 import {ITriCrypto} from "../../../src/interfaces/curve/ITriCrypto.sol";
 import {IERC20} from "../../../src/interfaces/IERC20.sol";
-import {
-    DAI,
-    USDC,
-    USDT,
-    CURVE_3POOL,
-    CURVE_3CRV
-} from "../../../src/Constants.sol";
+import {USDC, WBTC, WETH, CURVE_TRI_CRYPTO} from "../../../src/Constants.sol";
 
 /*
 forge test \
@@ -21,15 +15,14 @@ forge test \
 */
 
 contract CurveV2RemoveLiquidityTest is Test {
-    ITriCrypto private constant pool = ITriCrypto(CURVE_3POOL);
-    IERC20 private constant lp = IERC20(CURVE_3CRV);
-    IERC20 private constant dai = IERC20(DAI);
+    ITriCrypto private constant pool = ITriCrypto(CURVE_TRI_CRYPTO);
     IERC20 private constant usdc = IERC20(USDC);
-    IERC20 private constant usdt = IERC20(USDT);
+    IERC20 private constant wbtc = IERC20(WBTC);
+    IERC20 private constant weth = IERC20(WETH);
 
     function setUp() public {
-        deal(DAI, address(this), 1e6 * 1e18);
-        dai.approve(address(pool), type(uint256).max);
+        deal(USDC, address(this), 1e3 * 1e6);
+        usdc.approve(address(pool), type(uint256).max);
 
         uint256[3] memory amounts = [uint256(1e3 * 1e6), uint256(0), uint256(0)];
         pool.add_liquidity({
@@ -42,47 +35,53 @@ contract CurveV2RemoveLiquidityTest is Test {
 
     // Exercise 1
     // Call remove_liquidity
-    // Get the 3CRV (LP token of 3Pool) balance of this contract and
-    // withdraw all LP for 3 stablecoins (DAI, USDC, USDT)
+    // Get the LP balance of TriCrypto of this contract and
+    // withdraw all LP for all 3 tokens (USDC, WBTC, WETH)
     function test_remove_liquidity() public {
+        uint256 wethBalBefore = weth.balanceOf(address(this));
+
         // Write your code here
 
-        assertEq(lp.balanceOf(address(this)), 0, "3CRV balance > 0");
+        assertEq(pool.balanceOf(address(this)), 0, "3CRV balance > 0");
 
         uint256 bal = 0;
-
-        bal = dai.balanceOf(address(this));
-        assertGt(bal, 0, "DAI balance = 0");
-        console2.log("DAI balance %e", bal);
 
         bal = usdc.balanceOf(address(this));
         assertGt(bal, 0, "USDC balance = 0");
         console2.log("USDC balance %e", bal);
 
-        bal = usdt.balanceOf(address(this));
-        assertGt(bal, 0, "USDT balance = 0");
-        console2.log("USDT balance %e", bal);
+        bal = wbtc.balanceOf(address(this));
+        assertGt(bal, 0, "WBTC balance = 0");
+        console2.log("WBTC balance %e", bal);
+
+        bal = weth.balanceOf(address(this));
+        assertGt(bal, wethBalBefore, "WETH balance = 0");
+        console2.log("WETH balance %e", bal - wethBalBefore);
     }
 
     // Exercise 2
     // Call remove_liquidity_one_coin
-    // Get the 3CRV (LP token of 3Pool) balance of this contract and
-    // withdraw all LP for a single stablecoin (DAI)
+    // Get the LP balance of TriCrypto of this contract and
+    // withdraw all LP for a single token (USDC)
     function test_remove_liquidity_one_coin() public {
+        uint256 wethBalBefore = weth.balanceOf(address(this));
+
         // Write your code here
+
+        assertEq(pool.balanceOf(address(this)), 0, "3CRV balance > 0");
 
         uint256 bal = 0;
 
-        bal = dai.balanceOf(address(this));
-        assertGt(bal, 0, "DAI balance = 0");
-        console2.log("DAI balance %e", bal);
-
         bal = usdc.balanceOf(address(this));
-        assertEq(bal, 0, "USDC balance > 0");
+        assertGt(bal, 0, "USDC balance = 0");
         console2.log("USDC balance %e", bal);
 
-        bal = usdt.balanceOf(address(this));
-        assertEq(bal, 0, "USDT balance > 0");
-        console2.log("USDT balance %e", bal);
+        bal = wbtc.balanceOf(address(this));
+        assertEq(bal, 0, "WBTC balance > 0");
+        console2.log("WBTC balance %e", bal);
+
+        bal = weth.balanceOf(address(this));
+        assertEq(bal, wethBalBefore, "WETH balance > 0");
+        console2.log("WETH balance %e", bal - wethBalBefore);
     }
 }
