@@ -10,7 +10,7 @@ import {USDC, WBTC, WETH, CURVE_TRI_CRYPTO} from "../../../src/Constants.sol";
 forge test \
 --evm-version cancun \
 --fork-url $FORK_URL \
---match-test test_remove_liquidity \
+--match-test test_remove_liquidity\\b \
 --match-path test/curve-v2/exercises/CurveV2RemoveLiquidity.test.sol -vvv
 */
 
