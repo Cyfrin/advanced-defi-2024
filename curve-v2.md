@@ -124,8 +124,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [ ] claim_admin_fees
   - when claim_admin_fees is called
   - code walkthrough
-  - `xcp_profit` and `xcp_profit_a`
-- TODO: EMA exercises?
+    - `xcp_profit` and `xcp_profit_a`
 
 # Section ? - Footnote
 
