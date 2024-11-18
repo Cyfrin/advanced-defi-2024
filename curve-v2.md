@@ -2,22 +2,6 @@
 
 - not covered - advance math
 
-### TODOs
-
-- readme
-- how state variables `D`, `virtual_price` and `xcp_profit` update
-- when does virtual price increase? decrease?
-- when does xcp_profit change?
-- show how A and gamma changes D?
-- how to calculate last price? `get_p`
-
-```
-concentrated liquidity -> price is mean reverting -> LP profit
-                       -> amplifies IL -> price doesn't revert -> AMM repegs -> LP loss
-```
-
-- xcp -> 0 imbalanced?, max at equilibrium?
-
 # Section 1 - Intro
 
 - course intro
@@ -51,7 +35,6 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - [Repegging with price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale-repeg.png)
 - Graph - [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
 - Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-- Graph - TODO: remove? [Curve V2 increase of liquidity](https://www.desmos.com/calculator/ojeble8ou4)
 - Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
 - Math - Pool value
 - Graph - [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
@@ -62,12 +45,10 @@ concentrated liquidity -> price is mean reverting -> LP profit
 - contract overview
 - packed state variables, `_pack` and `_unpack`
 - price scale
-- TODO: transformed balances exercise?
+- transformed balances exercise
 - A and gamma
   - `ramp_A_gamma` and `stop_ramp_A_gamma`
 - `get_virtual_price`
-- TODO: xcp exercise?
-- TODO: get_virtual_price exercise?
 
 # Section ? - Swap
 
@@ -128,7 +109,7 @@ concentrated liquidity -> price is mean reverting -> LP profit
 
 # Section ? - Footnote
 
-- [ ] dy / dx
+- [ ] TODO: dy / dx
 
 ### Resources
 
