@@ -60,11 +60,11 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 ### Section 3 - Contract overview
 
 - [Contract overview](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- Code walkthrough packed state variables
-- Code walkthrough price scale
-- Code walkthrough `A`
-- Code walkthrough `ramp_A_gamma`
-- Code walkthrough `get_virtual_price`
+- [Code walkthrough packed state variables](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L796-L819)
+- [Code walkthrough price scale](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L822-L854)
+- [Code walkthrough `A`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1261-L1284)
+- [Code walkthrough `ramp_A_gamma`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1961-L2008)
+- [Code walkthrough `get_virtual_price`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1718-L1728)
 - [Exercise transformed balances](./foundry/test/curve-v2/exercises/CurveV2PriceScale.test.sol)
 - [Solution transformed balances](./foundry/test/curve-v2/solutions/CurveV2PriceScale.test.sol)
 
@@ -72,8 +72,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
-- Code walkthrough `swap`
-- Code walkthrough `_fee`
+- [Code walkthrough `exchange`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L860-L960)
+- [Code walkthrough `_fee`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1287-L1295)
 - Graph [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
 - [Exercise 1 `get_dy`](./foundry/test/curve-v2/exercises/CurveV2Swap.test.sol)
 - [Solution 1 `get_dy`](./foundry/test/curve-v2/solutions/CurveV2Swap.test.sol)
@@ -84,8 +84,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
-- Code walkthrough `add_liquidity`
-- Code walkthrough `calc_token_fee`
+- [Code walkthrough `add_liquidity`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L511-L648)
+- [Code walkthrough `calc_token_fee`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1314-L1336)
 - [Exercise `add_liquidity`](./foundry/test/curve-v2/exercises/CurveV2AddLiquidity.test.sol)
 - [Solution `add_liquidity`](./foundry/test/curve-v2/solutions/CurveV2AddLiquidity.test.sol)
 
@@ -93,13 +93,13 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
-- Code walkthrough `remove_liquidity`
+- [Code walkthrough `remove_liquidity`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L651-L722)
 - [Exercise 1 `remove_liquidity`](./foundry/test/curve-v2/exercises/CurveV2RemoveLiquidity.test.sol)
 - [Solution 1 `remove_liquidity`](./foundry/test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol)
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
-- Code walkthrough `remove_liquidity_one_coin`
-- Code walkthrough `calc_withdraw_one_coin`
+- [Code walkthrough `remove_liquidity_one_coin`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L725-L781)
+- [Code walkthrough `calc_withdraw_one_coin`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1339-L1410)
 - [Exercise 2 `remove_liquidity_one_coin`](./foundry/test/curve-v2/exercises/CurveV2RemoveLiquidity.test.sol)
 - [Solution 2 `remove_liquidity_one_coin`](./foundry/test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol)
 
@@ -111,13 +111,13 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - Graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
 - Python [example irregular interval](./notebook/curve_v2_ema.ipynb)
 - Difference between math and code
-- Code walkthrough `price_oracle`
-- When is `tweak_price` called
+- [Code walkthrough `price_oracle`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1731-L1766)
+- [When is `tweak_price` called](./excalidraw/amm/curve-v2/curve-v2-contract.excalidraw)
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `tweak_price`
-- Code walkthrough `tweak_price`
+- [Code walkthrough `tweak_price`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L963-L1167)
 - How does `xcp_profit` track profit and loss?
-- When is `claim_admin_fees` called
-- Code walkthrough `claim_admin_fees`
+- [When is `claim_admin_fees` called](./excalidraw/amm/curve-v2/curve-v2-contract.png)
+- [Code walkthrough `claim_admin_fees`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1170-L1241)
 
 ### Section 8 - Footnote
 
@@ -143,5 +143,4 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ## TODO
 
-- links to code
 - description of each section
