@@ -31,7 +31,7 @@ Here are the general steps to follow for each course.
   - [x] [Uniswap v2](./uniswap-v2.md)
   - [x] [Uniswap v3](./uniswap-v3.md)
   - [x] [Curve v1](./curve-v1.md)
-  - [ ] Curve v2
+  - [x] [Curve v2](./curve-v2.md)
 - [ ] MEV
 - [ ] Price oracle - Chainlink
 - [ ] Stablecoin

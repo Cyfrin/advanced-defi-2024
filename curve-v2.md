@@ -3,31 +3,57 @@
 ## TODO
 
 - readme
+- course intro
 - links to code
 - links to exercises
+- description of each section
 
-- not covered - advance math
+## How to use this
 
-# Section 1 - Intro
+- Check [prerequisites](#prerequisites)
+- Install [tools](#tools)
+- Watch videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve-v2)
+- Do exercises under [topics](#topics)
+- Ask questions on [GitHub discussions](https://github.com/Cyfrin/advanced-defi-2024/discussions)
 
-- course intro
-- what you'll learn
+## Prerequisites
+
+- Advanced Solidity developer
+- Experience with Foundry
+- Knowledge of Curve V1
+- Basic understanding of DeFi
+- Python (optional)
+
+## Tools
+
+- [Foundry](https://github.com/foundry-rs/foundry/tree/master)
+- [Python / Jupyter lab](https://jupyter.org/) (optional)
+
+## Topics
+
+Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve-v2) for each lesson.
+
+### Section 1 - Intro
+
+- Course intro
+- What you'll learn
   - what won't be covered
-    - advanced math (`get_y`)
-- lead instructor
-- best practices
-- setup repo
-- how to execute exercises
+    - advanced math
+- Lead instructor
+- Setup repo
 
-- prerequisites
+  - How to execute Foundry exercises
+  - Where are the Python code?
+  - Where are the diagrams?
+
+- Prerequisites
   - Basic DeFi knowledge (DAI, WETH, WBTC, etc)
   - Advanced Solidity developer
-  - curve v1 (CPAMM, CSAMM)
-  - uni v3 (concentrated liq)?
+  - Curve V1
   - Foundry
   - Python (optional)
 
-# Section 2 - Math
+### Section 2 - Math
 
 - Curve V2 intro
 - AMM equation
@@ -46,7 +72,7 @@
 - Graph [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
 - Graph [repegging loss part 2](https://www.desmos.com/calculator/weg6ff1pgk)
 
-# Section 3 - Contract overview
+### Section 3 - Contract overview
 
 - Contract overview
 - Code walkthrough packed state variables
@@ -57,7 +83,7 @@
 - Exercise transformed balances
 - Solution transformed balances
 
-# Section 4 - Exchange
+### Section 4 - Exchange
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
@@ -69,7 +95,7 @@
 - Exercise 2 `exchange`
 - Solution 2 `exchange`
 
-# Section 5 - Add liquidity
+### Section 5 - Add liquidity
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
@@ -78,7 +104,7 @@
 - Exercise `add_liquidity`
 - Solution `add_liquidity`
 
-# Section 6 - Remove liquidity
+### Section 6 - Remove liquidity
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
@@ -92,7 +118,7 @@
 - Exercise 2 `remove_liquidity_one_coin`
 - Solution 2 `remove_liquidity_one_coin`
 
-# Section 7 - Price repeg
+### Section 7 - Price repeg
 
 - Math EMA [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
 - Python [example regular interval](./notebook/curve_v2_ema.ipynb)
@@ -108,7 +134,7 @@
 - When is `claim_admin_fees` called
 - Code walkthrough `claim_admin_fees`
 
-# Section 8 - Footnote
+### Section 8 - Footnote
 
 - [ ] TODO: dy / dx
 
@@ -126,4 +152,6 @@
 - [Repegging of Curve v2 CryptoSwap|Curve|code review • 0xreviews.xyz](https://0xreviews.xyz/posts/2022-03-04-Curve-CryptoSwap-repegging)
 - [Deep Dive: Curve v2 Parameters](https://nagaking.substack.com/p/deep-dive-curve-v2-parameters)
 - [Imbalance fee](https://ethereum.stackexchange.com/questions/124850/curve-amm-how-is-fee-calculated-when-adding-liquidity)
+- [Implicit function](https://en.wikipedia.org/wiki/Implicit_function)
+- [Implicit differentiation](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-2/v/implicit-differentiation-1)
 - https://x.com/Kurt_M_Barry/status/1404496489703952384?s=20&t=5sGVQL4HbLrwzA_ALxivhA
