@@ -38,13 +38,6 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
   - Where are the Python code?
   - Where are the diagrams?
 
-- Prerequisites
-  - Basic DeFi knowledge (DAI, WETH, WBTC, etc)
-  - Advanced Solidity developer
-  - Curve V1
-  - Foundry
-  - Python (optional)
-
 ### Section 2 - Math
 
 - Curve V2 intro
@@ -66,14 +59,14 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ### Section 3 - Contract overview
 
-- Contract overview
+- [Contract overview](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - Code walkthrough packed state variables
 - Code walkthrough price scale
 - Code walkthrough `A`
 - Code walkthrough `ramp_A_gamma`
 - Code walkthrough `get_virtual_price`
-- Exercise transformed balances
-- Solution transformed balances
+- [Exercise transformed balances](./foundry/test/curve-v2/exercises/CurveV2PriceScale.test.sol)
+- [Solution transformed balances](./foundry/test/curve-v2/solutions/CurveV2PriceScale.test.sol)
 
 ### Section 4 - Exchange
 
@@ -82,10 +75,10 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - Code walkthrough `swap`
 - Code walkthrough `_fee`
 - Graph [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
-- Exercise 1 `get_dy`
-- Solution 1 `get_dy`
-- Exercise 2 `exchange`
-- Solution 2 `exchange`
+- [Exercise 1 `get_dy`](./foundry/test/curve-v2/exercises/CurveV2Swap.test.sol)
+- [Solution 1 `get_dy`](./foundry/test/curve-v2/solutions/CurveV2Swap.test.sol)
+- [Exercise 2 `exchange`](./foundry/test/curve-v2/exercises/CurveV2Swap.test.sol)
+- [Solution 2 `exchange`](./foundry/test/curve-v2/solutions/CurveV2Swap.test.sol)
 
 ### Section 5 - Add liquidity
 
@@ -93,22 +86,22 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
 - Code walkthrough `add_liquidity`
 - Code walkthrough `calc_token_fee`
-- Exercise `add_liquidity`
-- Solution `add_liquidity`
+- [Exercise `add_liquidity`](./foundry/test/curve-v2/exercises/CurveV2AddLiquidity.test.sol)
+- [Solution `add_liquidity`](./foundry/test/curve-v2/solutions/CurveV2AddLiquidity.test.sol)
 
 ### Section 6 - Remove liquidity
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
 - Code walkthrough `remove_liquidity`
-- Exercise 1 `remove_liquidity`
-- Solution 1 `remove_liquidity`
+- [Exercise 1 `remove_liquidity`](./foundry/test/curve-v2/exercises/CurveV2RemoveLiquidity.test.sol)
+- [Solution 1 `remove_liquidity`](./foundry/test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol)
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
 - Code walkthrough `remove_liquidity_one_coin`
 - Code walkthrough `calc_withdraw_one_coin`
-- Exercise 2 `remove_liquidity_one_coin`
-- Solution 2 `remove_liquidity_one_coin`
+- [Exercise 2 `remove_liquidity_one_coin`](./foundry/test/curve-v2/exercises/CurveV2RemoveLiquidity.test.sol)
+- [Solution 2 `remove_liquidity_one_coin`](./foundry/test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol)
 
 ### Section 7 - Price repeg
 
@@ -128,7 +121,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ### Section 8 - Footnote
 
-- [ ] TODO: dy / dx
+- [AMM spot price dy / dx](./notebook/amm_dy_dx.ipynb)
 
 ### Resources
 
@@ -150,8 +143,5 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ## TODO
 
-- readme
-- course intro
 - links to code
-- links to exercises
 - description of each section
