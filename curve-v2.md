@@ -1,5 +1,11 @@
 ### Curve v2
 
+## TODO
+
+- readme
+- links to code
+- links to exercises
+
 - not covered - advance math
 
 # Section 1 - Intro
@@ -24,90 +30,85 @@
 # Section 2 - Math
 
 - Curve V2 intro
-- Equation
-- Graph - [Curve V2](https://www.desmos.com/calculator/ms7fqtmpxu)
-- Python code - [concentrated liquidity](./notebook/amm_dy_dx.ipynb)
-- Graph - [Gamma](https://www.desmos.com/3d/3ebvcluqdr)
+- AMM equation
+- Graph [Curve V2](https://www.desmos.com/calculator/ms7fqtmpxu)
+- Python code [concentrated liquidity](./notebook/amm_dy_dx.ipynb)
+- Graph [Gamma](https://www.desmos.com/3d/3ebvcluqdr)
 - Recap
 - [Price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale.png)
 - [Price scale and concentrated liquidity](./excalidraw/amm/curve-v2/curve-v2-price-scale-amm-eq.pprice-scale.png)
-- Python code (optional) - [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
-- [Repegging with price scale](./excalidraw/amm/curve-v2/curve-v2-price-scale-repeg.png)
-- Graph - [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
-- Graph - [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
-- Graph - [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
-- Math - Pool value
-- Graph - [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
-- Graph - [repegging loss part 2](https://www.desmos.com/calculator/weg6ff1pgk)
+- Python code (optional) [swap with price scale](./notebook/curve_v2_swap_price_scale.ipynb)
+- [Price scale repeg](./excalidraw/amm/curve-v2/curve-v2-price-scale-repeg.png)
+- Graph [AMM with price scale](https://www.desmos.com/calculator/v0ubb9g4oj)
+- Graph [review of constant product liquidity](https://www.desmos.com/calculator/mg1evrmbdq)
+- Graph [Quantifying pool value](https://www.desmos.com/calculator/weg6ff1pgk)
+- Math pool value
+- Graph [repegging loss part 1](https://www.desmos.com/calculator/weg6ff1pgk)
+- Graph [repegging loss part 2](https://www.desmos.com/calculator/weg6ff1pgk)
 
 # Section 3 - Contract overview
 
-- contract overview
-- packed state variables, `_pack` and `_unpack`
-- price scale
-- transformed balances exercise
-- A and gamma
-  - `ramp_A_gamma` and `stop_ramp_A_gamma`
-- `get_virtual_price`
+- Contract overview
+- Code walkthrough packed state variables
+- Code walkthrough price scale
+- Code walkthrough `A`
+- Code walkthrough `ramp_A_gamma`
+- Code walkthrough `get_virtual_price`
+- Exercise transformed balances
+- Solution transformed balances
 
-# Section ? - Swap
+# Section 4 - Exchange
 
-- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- Code walkthrough - `swap`
-- Code walkthrough - `_fee`
-- Graph - [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
-- [ ] exercise
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
+- [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
+- Code walkthrough `swap`
+- Code walkthrough `_fee`
+- Graph [dynamic fee](https://www.desmos.com/calculator/64npil5ieq)
+- Exercise 1 `get_dy`
+- Solution 1 `get_dy`
+- Exercise 2 `exchange`
+- Solution 2 `exchange`
 
-# Section ? - Add liquidity
+# Section 5 - Add liquidity
 
-- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [Trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- imbalance fee?
-- code walkthrough
-  - add_liquidity
-  - calc_token_fee
-- [ ] exercise
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
+- [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
+- Code walkthrough `add_liquidity`
+- Code walkthrough `calc_token_fee`
+- Exercise `add_liquidity`
+- Solution `add_liquidity`
 
-# Section ? - Remove liquidity
+# Section 6 - Remove liquidity
 
-- remove_liquidity
-- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- code walkthrough
-  - remove_liquidity
-- [ ] exercise
-- [contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- [trace](./excalidraw/amm/curve-v2/curve-v2-contract.png)
-- imbalance fee?
-- code walkthrough
-  - remove_liquidity_one_coin
-  - TODO: ? calc_withdraw_one_coin?
-- [ ] exercise
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
+- [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
+- Code walkthrough `remove_liquidity`
+- Exercise 1 `remove_liquidity`
+- Solution 1 `remove_liquidity`
+- [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
+- [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity_one_coin`
+- Code walkthrough `remove_liquidity_one_coin`
+- Code walkthrough `calc_withdraw_one_coin`
+- Exercise 2 `remove_liquidity_one_coin`
+- Solution 2 `remove_liquidity_one_coin`
 
-# Section ? - Price repegging
+# Section 7 - Price repeg
 
-- EMA
-  - math
-    - [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
-  - [python code example - regular interval](./notebook/curve_v2_ema.ipynb)
-  - math
-    - [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png]
-    - graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
-  - [python code example - irregular interval](./notebook/curve_v2_ema.ipynb)
-  - Word about math and code (alpha = 1 - a)
-  - `price_oracle` code walkthrough
-- tweak_price
-  - when tweak_price is called
-  - code outline
-  - code walkthrough
-  - [x] how does `xcp_profit` track profit / loss?
-- [ ] claim_admin_fees
-  - when claim_admin_fees is called
-  - code walkthrough
-    - `xcp_profit` and `xcp_profit_a`
+- Math EMA [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
+- Python [example regular interval](./notebook/curve_v2_ema.ipynb)
+- Math EMA [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png]
+- Graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
+- Python [example irregular interval](./notebook/curve_v2_ema.ipynb)
+- Difference between math and code
+- Code walkthrough `price_oracle`
+- When is `tweak_price` called
+- [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `tweak_price`
+- Code walkthrough `tweak_price`
+- How does `xcp_profit` track profit and loss?
+- When is `claim_admin_fees` called
+- Code walkthrough `claim_admin_fees`
 
-# Section ? - Footnote
+# Section 8 - Footnote
 
 - [ ] TODO: dy / dx
 
