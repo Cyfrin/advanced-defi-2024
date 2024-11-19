@@ -1,13 +1,5 @@
 ### Curve v2
 
-## TODO
-
-- readme
-- course intro
-- links to code
-- links to exercises
-- description of each section
-
 ## How to use this
 
 - Check [prerequisites](#prerequisites)
@@ -155,3 +147,11 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Implicit function](https://en.wikipedia.org/wiki/Implicit_function)
 - [Implicit differentiation](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-2/v/implicit-differentiation-1)
 - https://x.com/Kurt_M_Barry/status/1404496489703952384?s=20&t=5sGVQL4HbLrwzA_ALxivhA
+
+## TODO
+
+- readme
+- course intro
+- links to code
+- links to exercises
+- description of each section
