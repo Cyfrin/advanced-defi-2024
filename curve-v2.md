@@ -27,18 +27,15 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ### Section 1 - Intro
 
+> This section explains what the course will teach, who the course is for and how to do the exercises
+
 - Course intro
-- What you'll learn
-  - what won't be covered
-    - advanced math
 - Lead instructor
 - Setup repo
 
-  - How to execute Foundry exercises
-  - Where are the Python code?
-  - Where are the diagrams?
-
 ### Section 2 - Math
+
+> This section explains the math of Curve V2's AMM, how liquidity is concentrated and how the AMM decides to repeg the pool's liquidity at a different price.
 
 - Curve V2 intro
 - AMM equation
@@ -59,6 +56,9 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ### Section 3 - Contract overview
 
+> Here you will learn about what functions to call to interact with the AMM.
+> You will also learn about how state variables such as `A`, `gamma` and `price_scale` are stored.
+
 - [Contract overview](./excalidraw/amm/curve-v2/curve-v2-contract.png)
 - [Code walkthrough packed state variables](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L796-L819)
 - [Code walkthrough price scale](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L822-L854)
@@ -69,6 +69,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Solution transformed balances](./foundry/test/curve-v2/solutions/CurveV2PriceScale.test.sol)
 
 ### Section 4 - Exchange
+
+> This section explains how the function `exchange` works, how to call to swap tokens, followed by exercises to simulate a swap.
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `exchange`
@@ -82,6 +84,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 
 ### Section 5 - Add liquidity
 
+> This section explains how the function `add_liquidity` is implemented, how to add liquidity, followed by a exercise.
+
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `add_liquidity`
 - [Code walkthrough `add_liquidity`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L511-L648)
@@ -90,6 +94,9 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Solution `add_liquidity`](./foundry/test/curve-v2/solutions/CurveV2AddLiquidity.test.sol)
 
 ### Section 6 - Remove liquidity
+
+> There are 2 ways to remove liquidity (`remove_liquidity` and `remove_liquidity_one_coin`).
+> This section will explain how both functions work, followed by exercises.
 
 - [Contract call](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
 - [Code outline](./excalidraw/amm/curve-v2/curve-v2-contract.png) `remove_liquidity`
@@ -104,6 +111,9 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Solution 2 `remove_liquidity_one_coin`](./foundry/test/curve-v2/solutions/CurveV2RemoveLiquidity.test.sol)
 
 ### Section 7 - Price repeg
+
+> Curve V2 has an internal price oracle that decides to re-concentrate liquidity when the internal price and the current price deviates significantly.
+> This section explains the math of how the internal price oracle track prices the function that is responsible for repegging (`tweak_price`).
 
 - Math EMA [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
 - Python [example regular interval](./notebook/curve_v2_ema.ipynb)
@@ -120,6 +130,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Code walkthrough `claim_admin_fees`](https://github.com/curvefi/tricrypto-ng/blob/584591e6613cb6cdb46e4659488a8cccdfff69ad/contracts/main/CurveTricryptoOptimizedWETH.vy#L1170-L1241)
 
 ### Section 8 - Footnote
+
+> Footnote on how the spot price of AMM such as constant sum, constant product, Curve V1 and V2 can be calculated by a mathematical technique called implicit differentiation.
 
 - [AMM spot price dy / dx](./notebook/amm_dy_dx.ipynb)
 
@@ -140,7 +152,3 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 - [Implicit function](https://en.wikipedia.org/wiki/Implicit_function)
 - [Implicit differentiation](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/ab-3-2/v/implicit-differentiation-1)
 - https://x.com/Kurt_M_Barry/status/1404496489703952384?s=20&t=5sGVQL4HbLrwzA_ALxivhA
-
-## TODO
-
-- description of each section
