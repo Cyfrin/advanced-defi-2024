@@ -6,8 +6,14 @@ import {IERC20} from "../../../src/interfaces/IERC20.sol";
 import {IWETH} from "../../../src/interfaces/IWETH.sol";
 import {IUniswapV2Router02} from
     "../../../src/interfaces/uniswap-v2/IUniswapV2Router02.sol";
+import {IUniswapV2Pair} from
+    "../../../src/interfaces/uniswap-v2/IUniswapV2Pair.sol";
 import {
-    DAI, WETH, MKR, UNISWAP_V2_ROUTER_02
+    DAI,
+    WETH,
+    MKR,
+    UNISWAP_V2_PAIR_DAI_MKR,
+    UNISWAP_V2_ROUTER_02
 } from "../../../src/Constants.sol";
 
 contract UniswapV2SwapTest is Test {
@@ -17,6 +23,8 @@ contract UniswapV2SwapTest is Test {
 
     IUniswapV2Router02 private constant router =
         IUniswapV2Router02(UNISWAP_V2_ROUTER_02);
+    IUniswapV2Pair private constant pair =
+        IUniswapV2Pair(UNISWAP_V2_PAIR_DAI_MKR);
 
     address private constant user = address(100);
 
@@ -26,6 +34,11 @@ contract UniswapV2SwapTest is Test {
         weth.deposit{value: 100 * 1e18}();
         weth.approve(address(router), type(uint256).max);
         vm.stopPrank();
+
+        // Add MKR liquidity to DAI/MKR pool
+        deal(DAI, address(pair), 1e6 * 1e18);
+        deal(MKR, address(pair), 1e5 * 1e18);
+        pair.sync();
     }
 
     // Swap all input tokens for as many output tokens as possible
