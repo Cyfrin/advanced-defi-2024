@@ -184,26 +184,15 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Resources
 
-[Uniswap](https://uniswap.org/)
-
-[Whitepaper](https://uniswap.org/whitepaper-v3.pdf)
-
-[App](https://app.uniswap.org/)
-
-[Uniswap V3 Core](https://github.com/Uniswap/v3-core/)
-
-[Uniswap V3 Core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
-
-[Uniswap V3 Periphery](https://github.com/Uniswap/v3-periphery/)
-
-[Uniswap V3 Periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
-
-[Uniswap V3 Swap Router](https://github.com/Uniswap/swap-router-contracts)
-
-[Uniswap V3 Docs](https://docs.uniswap.org/contracts/v3/overview)
-
-[Uniswap V3 Analytics](https://info.uniswap.org/)
-
-[A Primer on Uniswap v3 Math](https://blog.uniswap.org/uniswap-v3-math-primer)
-
-[Uniswap V3 book](https://uniswapv3book.com/)
+- [Uniswap](https://uniswap.org/)
+- [Whitepaper](https://uniswap.org/whitepaper-v3.pdf)
+- [App](https://app.uniswap.org/)
+- [Uniswap V3 Core](https://github.com/Uniswap/v3-core/)
+- [Uniswap V3 Core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
+- [Uniswap V3 Periphery](https://github.com/Uniswap/v3-periphery/)
+- [Uniswap V3 Periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)
+- [Uniswap V3 Swap Router](https://github.com/Uniswap/swap-router-contracts)
+- [Uniswap V3 Docs](https://docs.uniswap.org/contracts/v3/overview)
+- [Uniswap V3 Analytics](https://info.uniswap.org/)
+- [A Primer on Uniswap v3 Math](https://blog.uniswap.org/uniswap-v3-math-primer)
+- [Uniswap V3 book](https://uniswapv3book.com/)
