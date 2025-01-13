@@ -10,7 +10,7 @@
 
 ## Prerequisites
 
-- Intermediate Solidity
+- Advanced Solidity
 - Experience with Foundry
 - [Uniswap V2](./uniswap-v2.md)
 
@@ -24,6 +24,8 @@
 Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/uniswap-v3) for each lesson.
 
 ### Section 1 - Intro
+
+> Introduction to Uniswap V3, how is it different from Uniswap V2 and what is concentrated liquidity?
 
 - [Concentrated liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-intro.png)
 - [Difference between v2 and v3](./excalidraw/amm/uniswap-v3/uniswap-v2-v3-diff.png)
@@ -41,6 +43,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 2 - Spot price (sqrt price, tick, sqrt x 96)
 
+> Math for spot price and values specific to how Uniswap V3 stores prices (`slot0`, `sqrtPriceX96` and `tick`).
+
 - `slot0` (tick and sqrtPriceX96)
   - [Code](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Pool.sol#L56-L74)
   - Etherscan [WETH/USDT](https://etherscan.io/address/0x4e68Ccd3E89f51C3074ca5072bbAC773960dFa36#code)
@@ -55,11 +59,15 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 3 - Math
 
+> How to derive the equations for concentrated liquidity.
+
 - Math - [equation for x and y from liquidity and price](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-equations.png)
 - Math - [curve of real reserves](./excalidraw/amm/uniswap-v3/uniswap-v3-curve-real-reserves.png)
 - Math - [how many token x and y between pa and pb?](./excalidraw/amm/uniswap-v3/uniswap-v3-xy-amounts.png)
 
 ### Section 4 - Swap
+
+> Swap algorithm, math, code and exercises swapping tokens with the router contract.
 
 - Swap algorithm
   - [Single position](./excalidraw/amm/uniswap-v3/uniswap-v3-swap-algo.png)
@@ -90,6 +98,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 5 - Factory
 
+> Contract architecture of the factory contract.
+
 - [Contract call](./excalidraw/amm/uniswap-v3/uniswap-v3-factory.png)
 - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/d8b1c635c275d2a9450bd6a78f3fa2484fef73eb/contracts/UniswapV3Factory.sol#L35-L51)
 - [Exercise 1 - get pool](./foundry/test/uniswap-v3/exercises/UniswapV3Factory.test.sol)
@@ -98,6 +108,8 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - [Solution 2 - create pool](./foundry/test/uniswap-v3/solutions/UniswapV3Factory.test.sol)
 
 ## Section 6 - Liquidity
+
+> Math of how liquidity is calculated followed by code and exercises.
 
 - Math - [Liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity.png)
 - Math - [Liquidity delta](./excalidraw/amm/uniswap-v3/uniswap-v3-liquidity-delta.png)
@@ -138,10 +150,14 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 6 - Tick bitmap
 
+> Algorithm for how the next liquidity position is efficiently searched.
+
 - [Tick bitmap](./excalidraw/amm/uniswap-v3/uniswap-v3-tick-bitmap.png)
 - [Next tick algorithm](./excalidraw/amm/uniswap-v3/uniswap-v3-next-tick.png)
 
 ### Section 7 - Fee algorithm
+
+> How fee is tracked internally and calculated for all liquidity providers.
 
 - Math - [Fee equation](./excalidraw/amm/uniswap-v3/uniswap-v3-calc-fee.png)
 - [Fee growth](./excalidraw/amm/uniswap-v3/uniswap-v3-fee-growth.png)
@@ -160,11 +176,15 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 ### Section 8 - Flash
 
+> How to get flash loans from Uniswap V3 pools
+
 - [Code walkthrough](https://github.com/Uniswap/v3-core/blob/6562c52e8f75f0c10f9deaf44861847585fc8129/contracts/UniswapV3Pool.sol#L822-L867)
 - [Exercise 1](./foundry/test/uniswap-v3/exercises/UniswapV3Flash.sol)
 - [Solution 1](./foundry/test/uniswap-v3/solutions/UniswapV3Flash.sol)
 
 ### Section 9 - TWAP price oracle
+
+> How to calculate a time-weighted average pricing of tokens using Uniswap V3
 
 - Math - [TWAP](./excalidraw/amm/uniswap-v3/uniswap-v3-twap.png)
 - Math - [TWAP of token x and y](./excalidraw/amm/uniswap-v3/uniswap-v3-twap-x-y.png)
