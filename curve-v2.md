@@ -115,9 +115,9 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > Curve V2 has an internal price oracle that decides to re-concentrate liquidity when the internal price and the current price deviates significantly.
 > This section explains the math of how the internal price oracle track prices the function that is responsible for repegging (`tweak_price`).
 
-- Math EMA [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png]
+- Math EMA [regular interval](./excalidraw/amm/curve-v2/curve-v2-ema-regular-interval.png)
 - Python [example regular interval](./notebook/curve_v2_ema.ipynb)
-- Math EMA [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png]
+- Math EMA [irregular interval](./excalidraw/amm/curve-v2/curve-v2-ema-irregular-interval.png)
 - Graph [half life](https://www.desmos.com/calculator/m5xmw1poez)
 - Python [example irregular interval](./notebook/curve_v2_ema.ipynb)
 - Difference between math and code
