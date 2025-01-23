@@ -33,27 +33,33 @@ contract CurveV1RemoveLiquidityTest is Test {
     // Get the 3CRV (LP token of 3Pool) balance of this contract and
     // withdraw all LP for 3 stablecoins (DAI, USDC, USDT)
     function test_remove_liquidity() public {
+        uint256[3] memory balsBefore = [
+            dai.balanceOf(address(this)),
+            usdc.balanceOf(address(this)),
+            usdt.balanceOf(address(this))
+        ];
+
         // Write your code here
         uint256 lpBal = lp.balanceOf(address(this));
-
         uint256[3] memory minCoins = [uint256(1), uint256(1), uint256(1)];
         pool.remove_liquidity(lpBal, minCoins);
 
+        uint256[3] memory balsAfter = [
+            dai.balanceOf(address(this)),
+            usdc.balanceOf(address(this)),
+            usdt.balanceOf(address(this))
+        ];
+
         assertEq(lp.balanceOf(address(this)), 0, "3CRV balance > 0");
 
-        uint256 bal = 0;
+        console2.log("DAI balance %e", balsAfter[0]);
+        assertGt(balsAfter[0], balsBefore[0], "DAI balance = 0");
 
-        bal = dai.balanceOf(address(this));
-        assertGt(bal, 0, "DAI balance = 0");
-        console2.log("DAI balance %e", bal);
+        console2.log("USDC balance %e", balsAfter[1]);
+        assertGt(balsAfter[1], balsBefore[1], "USDC balance = 0");
 
-        bal = usdc.balanceOf(address(this));
-        assertGt(bal, 0, "USDC balance = 0");
-        console2.log("USDC balance %e", bal);
-
-        bal = usdt.balanceOf(address(this));
-        assertGt(bal, 0, "USDT balance = 0");
-        console2.log("USDT balance %e", bal);
+        console2.log("USDT balance %e", balsAfter[2]);
+        assertGt(balsAfter[2], balsBefore[2], "USDT balance = 0");
     }
 
     // Exercise 2
@@ -61,24 +67,31 @@ contract CurveV1RemoveLiquidityTest is Test {
     // Get the 3CRV (LP token of 3Pool) balance of this contract and
     // withdraw all LP for a single stablecoin (DAI)
     function test_remove_liquidity_one_coin() public {
+        uint256[3] memory balsBefore = [
+            dai.balanceOf(address(this)),
+            usdc.balanceOf(address(this)),
+            usdt.balanceOf(address(this))
+        ];
+
         // Write your code here
         uint256 lpBal = lp.balanceOf(address(this));
         pool.remove_liquidity_one_coin(lpBal, 0, 1);
 
+        uint256[3] memory balsAfter = [
+            dai.balanceOf(address(this)),
+            usdc.balanceOf(address(this)),
+            usdt.balanceOf(address(this))
+        ];
+
         assertEq(lp.balanceOf(address(this)), 0, "3CRV balance > 0");
 
-        uint256 bal = 0;
+        console2.log("DAI balance %e", balsAfter[0]);
+        assertGt(balsAfter[0], balsBefore[0], "DAI balance before == after");
 
-        bal = dai.balanceOf(address(this));
-        assertGt(bal, 0, "DAI balance = 0");
-        console2.log("DAI balance %e", bal);
+        console2.log("USDC balance %e", balsAfter[1]);
+        assertEq(balsAfter[1], balsBefore[1], "USDC balance before != after");
 
-        bal = usdc.balanceOf(address(this));
-        assertEq(bal, 0, "USDC balance > 0");
-        console2.log("USDC balance %e", bal);
-
-        bal = usdt.balanceOf(address(this));
-        assertEq(bal, 0, "USDT balance > 0");
-        console2.log("USDT balance %e", bal);
+        console2.log("USDT balance %e", balsAfter[2]);
+        assertEq(balsAfter[2], balsBefore[2], "USDT balance before != after");
     }
 }
