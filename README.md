@@ -102,7 +102,7 @@ For each DeFi protocol there are `exercises` and `solutions` folder.
 cd foundry
 
 # Compile
-forge build
+forge build --via-ir
 ```
 
 ```shell
