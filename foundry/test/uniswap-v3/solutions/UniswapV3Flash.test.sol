@@ -18,13 +18,13 @@ contract UniswapV3FlashTest is Test {
     function setUp() public {
         uni = new UniswapV3Flash(UNISWAP_V3_POOL_DAI_WETH_3000);
 
-        deal(DAI, address(this), 1e6 * 1e18);
+        deal(DAI, address(this), 1e3 * 1e18);
         dai.approve(address(uni), type(uint256).max);
     }
 
     function test_flash() public {
         uint256 daiBefore = dai.balanceOf(address(this));
-        uni.flash(1e6 * 1e18, 0);
+        uni.flash(1e3 * 1e18, 0);
         uint256 daiAfter = dai.balanceOf(address(this));
 
         uint256 fee = daiBefore - daiAfter;
