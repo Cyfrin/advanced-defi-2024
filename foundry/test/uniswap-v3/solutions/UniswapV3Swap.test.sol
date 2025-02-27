@@ -28,6 +28,8 @@ contract UniswapV3SwapTest is Test {
     // - Swap 1000 DAI for WETH on DAI/WETH pool with 0.3% fee
     // - Send WETH from Uniswap V3 to this contract
     function test_exactInputSingle() public {
+        uint256 wethBefore = weth.balanceOf(address(this));
+
         // Write your code here
         // Call router.exactInputSingle
         uint256 amountOut = router.exactInputSingle(
@@ -42,9 +44,11 @@ contract UniswapV3SwapTest is Test {
             })
         );
 
+        uint256 wethAfter = weth.balanceOf(address(this));
+
         console2.log("WETH amount out %e", amountOut);
         assertGt(amountOut, 0);
-        assertEq(weth.balanceOf(address(this)), amountOut);
+        assertEq(wethAfter - wethBefore, amountOut);
     }
 
     // Exercise 2
@@ -77,6 +81,8 @@ contract UniswapV3SwapTest is Test {
     // - Swap maximum of 1000 DAI to obtain exactly 0.1 WETH from DAI/WETH pool with 0.3% fee
     // - Send WETH from Uniswap V3 to this contract
     function test_exactOutputSingle() public {
+        uint256 wethBefore = weth.balanceOf(address(this));
+
         // Write your code here
         // Call router.exactOutputSingle
         uint256 amountIn = router.exactOutputSingle(
@@ -91,9 +97,11 @@ contract UniswapV3SwapTest is Test {
             })
         );
 
+        uint256 wethAfter = weth.balanceOf(address(this));
+
         console2.log("DAI amount in %e", amountIn);
         assertLe(amountIn, 1000 * 1e18);
-        assertEq(weth.balanceOf(address(this)), 0.1 * 1e18);
+        assertEq(wethAfter - wethBefore, 0.1 * 1e18);
     }
 
     // Exercise 4
