@@ -4,8 +4,7 @@ pragma solidity 0.8.24;
 import {Test, console2} from "forge-std/Test.sol";
 import {IERC20} from "../../src/interfaces/IERC20.sol";
 import {IWETH} from "../../src/interfaces/IWETH.sol";
-import {IUniswapV2Router02} from
-    "../../src/interfaces/uniswap-v2/IUniswapV2Router02.sol";
+import {IUniswapV2Router02} from "../../src/interfaces/uniswap-v2/IUniswapV2Router02.sol";
 import {DAI, WETH, MKR, UNISWAP_V2_ROUTER_02} from "../../src/Constants.sol";
 
 contract UniswapV2SwapAmountsTest is Test {
@@ -36,7 +35,7 @@ contract UniswapV2SwapAmountsTest is Test {
         path[1] = DAI;
         path[2] = MKR;
 
-        uint256 amountOut = 1e17;
+        uint256 amountOut = 1e16;
         uint256[] memory amounts = router.getAmountsIn(amountOut, path);
 
         console2.log("WETH", amounts[0]);
