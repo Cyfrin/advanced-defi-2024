@@ -133,3 +133,5 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 [Uniswap V2 Analytics](https://v2.info.uniswap.org/home)
 
 [What is slippage?](https://support.uniswap.org/hc/en-us/articles/8643879653261-What-is-Price-Slippage)
+
+[Uniswap V2 notes](./notes/uni-v2)
