@@ -25,14 +25,7 @@ contract UniswapV3Flash {
     function flash(uint256 amount0, uint256 amount1) external {
 
         // Task 1 - ABI encode FlashCallbackData
-        bytes memory data = abi.encode(FlashCallbackData({
-            amount0: amount0,
-            amount1: amount1,
-            caller: msg.sender 
-        }));
         // Task 2 - Call IUniswapV3Pool.flash
-        
-        pool.flash(address(this), amount0, amount1, data);
     }
 
     function uniswapV3FlashCallback(
@@ -42,23 +35,9 @@ contract UniswapV3Flash {
         bytes calldata data
     ) external {
         // Task 3 - Check msg.sender is pool
-        require(msg.sender == address(pool), "UniswapV3Flash: Unauthorized");
         // Task 4 - Decode data into FlashCallbackData
         // FlashCallbackData memory decodedData = abi.decode(data, (FlashCallbackData));
-        FlashCallbackData memory decodedData = abi.decode(data, (FlashCallbackData));
         // Task 5  - Transfer fees from FlashCallbackData.caller
-        if(fee0 != 0){
-            token0.transferFrom(decodedData.caller, address(this), fee0);
-        }
-        if(fee1 != 0){
-            token0.transferFrom(decodedData.caller, address(this), fee1);
-        }
         // Task 6 - Repay pool, amount borrowed + fee
-        if(decodedData.amount0 != 0){
-            token0.transfer(address(pool), decodedData.amount0 + fee0);
-        }
-        if(decodedData.amount1 != 0){
-            token1.transfer(address(pool), decodedData.amount1 + fee1);
-        }
     }
 }
