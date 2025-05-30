@@ -53,19 +53,19 @@ contract UniswapV3Flash {
 
         // Task 5  - Transfer fees from FlashCallbackData.caller
         // Write custom code here
-        if (fee0 > 0) {
+        if (fee0 != 0) {
             token0.transferFrom(decoded.caller, address(this), fee0);
         }
-        if (fee1 > 0) {
+        if (fee1 != 0) {
             token1.transferFrom(decoded.caller, address(this), fee1);
         }
 
         // Task 6 - Repay pool, amount borrowed + fee
         // Repay borrow
-        if (decoded.amount0 > 0) {
+        if (decoded.amount0 != 0) {
             token0.transfer(address(pool), decoded.amount0 + fee0);
         }
-        if (decoded.amount1 > 0) {
+        if (decoded.amount1 != 0) {
             token1.transfer(address(pool), decoded.amount1 + fee1);
         }
     }
