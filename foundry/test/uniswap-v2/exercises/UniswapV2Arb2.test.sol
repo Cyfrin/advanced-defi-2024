@@ -64,7 +64,7 @@ contract UniswapV2Arb2Test is Test {
         );
         uint256 bal1 = dai.balanceOf(user);
 
-        assertGe(bal1, bal0, "no profit");
+        assertGt(bal1, bal0, "no profit");
         assertEq(dai.balanceOf(address(arb)), 0, "DAI balance of arb != 0");
         console2.log("profit", bal1 - bal0);
     }
