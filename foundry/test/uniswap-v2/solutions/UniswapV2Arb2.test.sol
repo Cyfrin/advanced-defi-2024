@@ -44,7 +44,7 @@ contract UniswapV2Arb2Test is Test {
         path[1] = DAI;
 
         uni_router.swapExactTokensForTokens({
-            amountIn: 100 * 1e18,
+            amountIn: 10 * 1e18,
             amountOutMin: 1,
             path: path,
             to: user,
