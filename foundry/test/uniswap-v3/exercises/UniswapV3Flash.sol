@@ -23,6 +23,7 @@ contract UniswapV3Flash {
     }
 
     function flash(uint256 amount0, uint256 amount1) external {
+
         // Task 1 - ABI encode FlashCallbackData
         // Task 2 - Call IUniswapV3Pool.flash
     }
@@ -35,6 +36,7 @@ contract UniswapV3Flash {
     ) external {
         // Task 3 - Check msg.sender is pool
         // Task 4 - Decode data into FlashCallbackData
+        // FlashCallbackData memory decodedData = abi.decode(data, (FlashCallbackData));
         // Task 5  - Transfer fees from FlashCallbackData.caller
         // Task 6 - Repay pool, amount borrowed + fee
     }
