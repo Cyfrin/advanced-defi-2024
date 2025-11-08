@@ -34,7 +34,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 - Graph - [tick on constant product curve](https://www.desmos.com/calculator/3xpagfgcl2)
 - Graph - [single position](https://www.desmos.com/calculator/afw6llbs8z)
 - Graph - [multi positions](https://www.desmos.com/calculator/fyvzeasktd)
-- [ETH/USDT](https://app.uniswap.org/explore/pools/ethereum/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640) liquiduity price graph example
+- [ETH/USDT](https://app.uniswap.org/explore/pools/ethereum/0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640) liquidity price graph example
 - Repositories overview
   - [Uniswap V3 core Solidity 0.8](https://github.com/Uniswap/v3-core/tree/0.8)
   - [Uniswap V3 periphery Solidity 0.8](https://github.com/Uniswap/v3-periphery/tree/0.8)

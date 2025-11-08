@@ -89,7 +89,7 @@ foundryup
 
 Exercises and solutions are located in [foundry/test](./foundry/test)
 
-Tests are grouped by DeFi protocal.
+Tests are grouped by DeFi protocol.
 
 For each DeFi protocol there are `exercises` and `solutions` folder.
 
@@ -98,7 +98,7 @@ For each DeFi protocol there are `exercises` and `solutions` folder.
 `solutions` are for you to check you code.
 
 ```shell
-# Make sure to execute foundry command inside the foundry founder
+# Make sure to execute foundry command inside the foundry folder
 cd foundry
 
 # Compile
@@ -106,7 +106,7 @@ forge build --via-ir
 ```
 
 ```shell
-# Make sure to execute foundry command inside the foundry founder
+# Make sure to execute foundry command inside the foundry folder
 cd foundry
 
 # Set FORK_URL

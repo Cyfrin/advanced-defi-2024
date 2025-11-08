@@ -26,7 +26,7 @@
 - [ ] MEV
   - [ ] Front run, back run and sandwich examples
   - [ ] Flashbots RPC example
-  - [ ] MEV sandwicsh uni v2 🤔
+  - [ ] MEV sandwich uni v2 🤔
   - [ ] Summary
 - [ ] Price oracle ✅
   - [ ] Chainlink
@@ -65,7 +65,7 @@
     - [ ] GHO 🤔
     - [ ] portal 🤔
     - [ ] stake AAVE 🤔
-    - [ ] govenance 🤔
+    - [ ] governance 🤔
     - [ ] apps -> flash loan, farm gov tokens, leverage, short 🤔
   - [ ] Compound 🤔
   - [ ] Flash loan
