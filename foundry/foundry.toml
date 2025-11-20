@@ -4,7 +4,10 @@ out = "out"
 libs = ["lib"]
 # solc_version = "0.8.24"
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+[lint]
+lint_on_build = false
 
 [fmt]
 line_length = 80
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
