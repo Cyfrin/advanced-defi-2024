@@ -120,7 +120,7 @@ contract UniswapV3SwapTest is Test {
             ISwapRouter.ExactOutputParams({
                 path: path,
                 recipient: address(this),
-                amountOut: 0.01 * 1e8,
+                amountOut: 0.001 * 1e8, //lower output 
                 amountInMaximum: 1000 * 1e18
             })
         );
