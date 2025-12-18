@@ -46,7 +46,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/curve
 > What you will learn
 >
 > - Math of Curve v1 AMM
-> - How Curve v1's equation calculates swap amount and liuidity
+> - How Curve v1's equation calculates swap amount and liquidity
 
 - Graph [Curve V1 AMM](https://www.desmos.com/calculator/3xrvh5slce)
 - Graph [Curve V1 xy/(D/2)^2](https://www.desmos.com/3d/t0jtduq4us)
