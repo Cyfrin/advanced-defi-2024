@@ -8,3 +8,8 @@ libs = ["lib"]
 
 [fmt]
 line_length = 80
+
+
+[rpc_endpoints]
+mainnet = "https://mainnet.gateway.tenderly.co"
+
