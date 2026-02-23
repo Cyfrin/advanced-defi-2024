@@ -201,6 +201,7 @@ Check out the videos on [Cyfrin Updraft](https://updraft.cyfrin.io/courses/unisw
 
 - [JIT liquidity](./excalidraw/amm/uniswap-v3/uniswap-v3-jit.png)
 - Graph - [constant product AMM liquidity and price impact](https://www.desmos.com/calculator/vs8qodrrl6)
+- [Arbitrage algorithm](./notes/uni-v3/README.md)
 
 ### Resources
 

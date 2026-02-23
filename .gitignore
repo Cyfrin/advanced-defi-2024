@@ -2,6 +2,7 @@ tmp
 node_modules
 package-lock.json
 .ipynb_checkpoints
+__pycache__
 tmp.ipynb
 tmp.excalidraw
 tmp.txt
